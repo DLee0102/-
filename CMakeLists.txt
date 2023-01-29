@@ -17,4 +17,4 @@ project(青年大学习统计工具 CXX)
 
 add_subdirectory(vendors/OpenXLSX)
 
-add_subdirectory(src)
+add_subdirectory(src/Test)
