@@ -1,0 +1,6 @@
+# Binaries
+build/
+
+
+# Vscode files and folder
+.vscode/
