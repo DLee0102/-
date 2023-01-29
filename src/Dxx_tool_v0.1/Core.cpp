@@ -4,7 +4,7 @@ namespace DXXTL {
     Excelops::Excelops(std::string obj_)
     {
         if (init(obj_)) {
-            std::cout << "                    ³õÊ¼»¯Íê³É..." << std::endl;
+            std::cout << "                    åˆå§‹åŒ–å®Œæˆ..." << std::endl;
         }
     }
 
@@ -48,8 +48,8 @@ namespace DXXTL {
 
     bool Excelops::init(std::string obj_)
     {
-        total_path = "./Èí¼þÑ§Ôº2021¼¶ÇàÄê´óÑ§Ï°Ñ§Ï°Çé¿ö¼ÇÂ¼.xlsx";
-        temp_path = "./Ñ§Ï°ÓÃ»§Ã÷Ï¸.xlsx";
+        total_path = "./è½¯ä»¶å­¦é™¢2021çº§é’å¹´å¤§å­¦ä¹ å­¦ä¹ æƒ…å†µè®°å½•.xlsx";
+        temp_path = "./å­¦ä¹ ç”¨æˆ·æ˜Žç»†.xlsx";
 
         doc_total.open(total_path);
         wks_total = doc_total.workbook().worksheet(obj_);
@@ -60,10 +60,10 @@ namespace DXXTL {
         temp_length = getRowlength(wks_temp, 1);
         total_length = getRowlength(wks_total, 1);
         col_length = getCollength(wks_total);
-        std::cout << "                    OpenXLSX¿ò¼Ü³õÊ¼»¯Íê³É..." << std::endl;
+        std::cout << "                    OpenXLSXæ¡†æž¶åˆå§‹åŒ–å®Œæˆ..." << std::endl;
 
         writeValues_total.resize(total_length - 2);
-        if (initWritevector(writeValues_total, total_length - 2)) {std::cout << "                    Ð´Èë³ÌÐò³õÊ¼»¯Íê³É..." << std::endl;}
+        if (initWritevector(writeValues_total, total_length - 2)) {std::cout << "                    å†™å…¥ç¨‹åºåˆå§‹åŒ–å®Œæˆ..." << std::endl;}
 
         return true;
     }
@@ -92,15 +92,15 @@ namespace DXXTL {
 
     void Excelops::loadData(int start_row)
     {
-        std::cout << "                    ÕýÔÚÌîÈëÊý¾Ý£¬ÇëÉÔµÈ..." << std::endl;
-        std::cout << "                    ÌîÈëÊý¾ÝÁ¿Îª£º" << " ";
+        std::cout << "                    æ­£åœ¨å¡«å…¥æ•°æ®ï¼Œè¯·ç¨ç­‰..." << std::endl;
+        std::cout << "                    å¡«å…¥æ•°æ®é‡ä¸ºï¼š" << " ";
         std::cout << writeValues_total.size() << std::endl;
         for (int i = 0; i < writeValues_total.size(); i++) {
             wks_total.cell(start_row + i, col_length + 1).value() = writeValues_total[i];
-            std::cout << writeValues_total[i] << std::endl;
+            // std::cout << writeValues_total[i] << std::endl;
         }
 
-        std::cout << "                    Íê³É!" << std::endl;
+        std::cout << "                    å®Œæˆ!" << std::endl;
     }
 
     Excelops::~Excelops()
