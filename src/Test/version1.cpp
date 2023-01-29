@@ -77,7 +77,7 @@ int main() {
         }
     }
 
-    std::cout << writeValues.size();
+    std::cout << writeValues.size() << std::endl;
     for (int i = 0; i < writeValues.size(); i++) {
         wks_total.cell(3 + i, col_length + 1).value() = writeValues[i];
         std::cout << writeValues[i] << std::endl;
