@@ -20,10 +20,11 @@ target_link_libraries(Demo1 PRIVATE OpenXLSX::OpenXLSX)
 # Define Demo1A target
 #=======================================================================================================================
 if(${OPENXLSX_ENABLE_LIBZIP})
-    find_package(LIBZIP MODULE REQUIRED)
+    find_package(LIBZIP NO_MODULE REQUIRED)
     add_executable(Demo1A Demo1A.cpp)
     target_link_libraries(Demo1A PRIVATE OpenXLSX::OpenXLSX libzip::zip)
 endif()
+    target_include_directories(Demo1A PRIVATE ${PROJECT_SOURCE_DIR}/external/nowide/include)
 
 #=======================================================================================================================
 # Define Demo2 target

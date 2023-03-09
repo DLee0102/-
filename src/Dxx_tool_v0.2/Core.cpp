@@ -58,10 +58,11 @@ namespace DXXTL {
         total_start_row = total_start_row_;
 
         total_path = "./软件学院2021级青年大学习学习情况记录.xlsx";
-        temp_path = "./学习用户明细.xlsx";
+        // temp_path = "./学习用户明细.xlsx";
+        temp_path = obj_;
 
         doc_total.open(total_path);
-        wks_total = doc_total.workbook().worksheet(obj_);
+        wks_total = doc_total.workbook().worksheet("21级2班团支部");
 
         doc_temp.open(temp_path);
         wks_temp = doc_temp.workbook().sheet(1).get<OpenXLSX::XLWorksheet>();
@@ -99,18 +100,18 @@ namespace DXXTL {
         }
     }
 
-    void Excelops::loadData()
-    {
-        std::cout << "                    正在填入数据，请稍等..." << std::endl;
-        std::cout << "                    填入数据量为：" << " ";
-        std::cout << writeValues_total.size() << std::endl;
-        for (int i = 0; i < writeValues_total.size(); i++) {
-            wks_total.cell(total_start_row + i, col_length + 1).value() = writeValues_total[i];
-            // std::cout << writeValues_total[i] << std::endl;
-        }
+    // void Excelops::loadData()
+    // {
+    //     std::cout << "                    正在填入数据，请稍等..." << std::endl;
+    //     std::cout << "                    填入数据量为：" << " ";
+    //     std::cout << writeValues_total.size() << std::endl;
+    //     for (int i = 0; i < writeValues_total.size(); i++) {
+    //         wks_total.cell(total_start_row + i, col_length + 1).value() = writeValues_total[i];
+    //         // std::cout << writeValues_total[i] << std::endl;
+    //     }
 
-        std::cout << "                    完成!" << std::endl;
-    }
+    //     std::cout << "                    完成!" << std::endl;
+    // }
 
     Excelops::~Excelops()
     {
@@ -119,5 +120,10 @@ namespace DXXTL {
 
         doc_total.save();
         doc_total.close();
+
+        readValues_total.clear();
+        writeValues_total.clear();
+        readValues_temp.clear();
+
     }
 }

@@ -3,6 +3,7 @@
 #include <string>
 #include <OpenXLSX.hpp>
 #include <iostream>
+#include <vector>
 
 namespace DXXTL{
     class Excelops
@@ -14,7 +15,9 @@ namespace DXXTL{
         bool initWritevector(std::vector<OpenXLSX::XLCellValue>& writeValues, int length);    // 初始化写入向量
         bool init(std::string obj_, int temp_start_row_, int total_start_row_);    // 初始化框架
         void fillWriteValues(int checkedNamecol, int loadedNamecol);    // 将数据读取到写入向量中
-        void loadData();    // 将写入向量中的数据写到指定表中
+        // void loadData();    // 将写入向量中的数据写到指定表中    待重写
+
+        void findTerms();   // 匹配待登记的期数
         ~Excelops();    // 关闭表格文件
     
     private:

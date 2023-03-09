@@ -22,6 +22,7 @@ set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/output)
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/output)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/output)
 
+
 #=======================================================================================================================
 # Add build options
 #=======================================================================================================================
@@ -29,7 +30,7 @@ option(OPENXLSX_CREATE_DOCS "Build library documentation (requires Doxygen and G
 option(OPENXLSX_BUILD_SAMPLES "Build sample programs" ON)
 option(OPENXLSX_BUILD_TESTS "Build and run library tests" ON)
 option(OPENXLSX_BUILD_BENCHMARKS "Build and run library benchmarks" ON)
-option(OPENXLSX_ENABLE_LIBZIP "Enable using libzip" OFF)
+option(OPENXLSX_ENABLE_LIBZIP "Enable using libzip" ON)
 
 #=======================================================================================================================
 # Add project subdirectories

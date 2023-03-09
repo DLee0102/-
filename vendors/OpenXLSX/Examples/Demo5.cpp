@@ -37,7 +37,7 @@ int main()
     // Create a cell range using the 'range()' method of the XLWorksheet class.
     // The 'range()' method takes two XLCellReference objects; one for the cell
     // in the upper left corner, and one for the cell in the lower right corner.
-    // OpenXLSX defines two constants: MAX_ROWS which is the maximum number of
+    // OpenXLSX defines two constants: MAX_ROWS which is the maximum number of      MAX_ROWS: vendors\OpenXLSX\OpenXLSX\headers\XLConstants.hpp
     // rows in a worksheet, and MAX_COLS which is the maximum number of columns.
     auto rng = wks.range(XLCellReference("A1"), XLCellReference(OpenXLSX::MAX_ROWS, 8));
 
