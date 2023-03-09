@@ -9,15 +9,8 @@ namespace DXXTL{
     class Excelops
     {
     public:
-        Excelops(std::string obj_, int temp_start_row_, int total_start_row_);    // 初始化框架
-        int getRowlength(OpenXLSX::XLWorksheet wks, int start_row);    // 获取行长度
-        int getCollength(OpenXLSX::XLWorksheet wks, int start_row);    // 获取列长度
-        bool initWritevector(std::vector<OpenXLSX::XLCellValue>& writeValues, int length);    // 初始化写入向量
-        bool init(std::string obj_, int temp_start_row_, int total_start_row_);    // 初始化框架
-        void fillWriteValues(int checkedNamecol, int loadedNamecol);    // 将数据读取到写入向量中
-        // void loadData();    // 将写入向量中的数据写到指定表中    待重写
-
-        void findTerms();   // 匹配待登记的期数
+        Excelops(std::string obj_, std::vector<std::string>& files_, int temp_start_row_, int total_start_row_);    // 初始化框架
+        void traverseFiles();
         ~Excelops();    // 关闭表格文件
     
     private:
@@ -40,6 +33,9 @@ namespace DXXTL{
         OpenXLSX::XLWorksheet wks_temp;
         std::vector<OpenXLSX::XLCellValue> readValues_temp;
 
+        // 待检索的文件路径数组
+        std::vector<std::string> files;
+
         int temp_length;
         int total_length;
         int col_length;
@@ -47,5 +43,15 @@ namespace DXXTL{
         // 数据从第几行开始
         int temp_start_row;
         int total_start_row;
+
+        int getRowlength(OpenXLSX::XLWorksheet wks, int start_row);    // 获取行长度
+        int getCollength(OpenXLSX::XLWorksheet wks, int start_row);    // 获取列长度
+        bool initWritevector(std::vector<OpenXLSX::XLCellValue>& writeValues, int length);    // 初始化写入向量
+        bool init(std::string obj_, std::vector<std::string>& files_, int temp_start_row_, int total_start_row_);    // 初始化框架
+        void fillWriteValues(int checkedNamecol, int loadedNamecol);    // 将数据读取到写入向量中
+        // void loadData();    // 将写入向量中的数据写到指定表中    待重写
+        void findTerms();   // 匹配待登记的期数
+        void retrieveFile(std::string file_);
+        void retriveSheet();
     };
 }

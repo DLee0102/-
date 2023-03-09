@@ -1,9 +1,9 @@
 #include "Core.h"
 
 namespace DXXTL {
-    Excelops::Excelops(std::string obj_, int temp_start_row_, int total_start_row_)
+    Excelops::Excelops(std::string obj_, std::vector<std::string>& files_, int temp_start_row_, int total_start_row_)
     {
-        if (init(obj_, temp_start_row_, total_start_row_)) {
+        if (init(obj_, files, temp_start_row_, total_start_row_)) {
             std::cout << "                    初始化完成..." << std::endl;
         }
     }
@@ -52,28 +52,47 @@ namespace DXXTL {
         }
     }
 
-    bool Excelops::init(std::string obj_, int temp_start_row_, int total_start_row_)
+    void Excelops::traverseFiles()
     {
+        std::vector<std::string>::iterator pd;
+        for (pd = files.begin(); pd != files.end(); pd ++)
+        {
+            retrieveFile(*pd);
+        }
+    }
+
+    void Excelops::retrieveFile(std::string file_)
+    {
+        doc_total.open(total_path);
+        wks_total = doc_total.workbook().worksheet("21级2班团支部");
+    }
+
+    void Excelops::retriveSheet()
+    {
+
+    }
+
+    bool Excelops::init(std::string obj_, std::vector<std::string>& files_, int temp_start_row_, int total_start_row_)
+    {
+        total_path = obj_;
+        files.assign(files_.begin(), files_.end());
+
         temp_start_row = temp_start_row_;
         total_start_row = total_start_row_;
 
-        total_path = "./软件学院2021级青年大学习学习情况记录.xlsx";
-        // temp_path = "./学习用户明细.xlsx";
-        temp_path = obj_;
+        // doc_total.open(total_path);
+        // wks_total = doc_total.workbook().worksheet("21级2班团支部");
 
-        doc_total.open(total_path);
-        wks_total = doc_total.workbook().worksheet("21级2班团支部");
+        // doc_temp.open(temp_path);
+        // wks_temp = doc_temp.workbook().sheet(1).get<OpenXLSX::XLWorksheet>();
 
-        doc_temp.open(temp_path);
-        wks_temp = doc_temp.workbook().sheet(1).get<OpenXLSX::XLWorksheet>();
+        // temp_length = getRowlength(wks_temp, 1);
+        // total_length = getRowlength(wks_total, 1);
+        // col_length = getCollength(wks_total, total_start_row);
+        // std::cout << "                    OpenXLSX框架初始化完成..." << std::endl;
 
-        temp_length = getRowlength(wks_temp, 1);
-        total_length = getRowlength(wks_total, 1);
-        col_length = getCollength(wks_total, total_start_row);
-        std::cout << "                    OpenXLSX框架初始化完成..." << std::endl;
-
-        writeValues_total.resize(total_length - 2);
-        if (initWritevector(writeValues_total, total_length - 2)) {std::cout << "                    写入程序初始化完成..." << std::endl;}
+        // writeValues_total.resize(total_length - 2);
+        // if (initWritevector(writeValues_total, total_length - 2)) {std::cout << "                    写入程序初始化完成..." << std::endl;}
 
         return true;
     }
