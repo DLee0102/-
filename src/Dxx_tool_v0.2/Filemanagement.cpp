@@ -7,8 +7,8 @@ namespace DXXTL {
         files_.clear();
     }
     void FileManagement::setPath(std::string path_) { path = path_; }
-    void FileManagement::settFilepath(std::string path_) { totalfile_path = path_; }
-    std::string FileManagement::gettFilepath() { return totalfile_path; }
+    void FileManagement::setFilepath(std::string path_) { totalfile_path = path_; }
+    std::string FileManagement::getFilepath() { return totalfile_path; }
     void FileManagement::getFileNames(std::string path_, std::vector<std::string>& files)
     {
         files.clear();

@@ -6,6 +6,13 @@
 #include <vector>
 
 namespace DXXTL{
+    struct FileNamesplit
+    {
+        std::string fgrade;
+        std::string fclass;
+        std::string fterms;
+    };
+
     class Excelops
     {
     public:
@@ -35,6 +42,8 @@ namespace DXXTL{
 
         // 待检索的文件路径数组
         std::vector<std::string> files;
+        // 文件名中包含的各个属性
+        FileNamesplit* temp_fns;
 
         int temp_length;
         int total_length;
@@ -51,7 +60,8 @@ namespace DXXTL{
         void fillWriteValues(int checkedNamecol, int loadedNamecol);    // 将数据读取到写入向量中
         // void loadData();    // 将写入向量中的数据写到指定表中    待重写
         void findTerms();   // 匹配待登记的期数
-        void retrieveFile(std::string file_);
-        void retriveSheet();
+        void retrieveFile(std::string file_);   // 检索一个文件
+        std::string getNameproperty(std::string file_);      // 由文件路径获取文件名
+        void assignFilenamepro(std::string file_);   // 给文件名属性赋值
     };
 }

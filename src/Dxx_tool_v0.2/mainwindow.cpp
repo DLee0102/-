@@ -38,7 +38,7 @@ void MainWindow::openfolderSlot()
     else{
         ui->textBrowser->insertPlainText("待检索的文件夹为：\n" + folderName + "\n");
         filemanager->searchFiles(folderName.toStdString());
-        filemanager->printFiles();
+        // filemanager->printFiles();
     }
 }
 
@@ -53,8 +53,8 @@ void MainWindow::openfileSlot()
     else
     {
         ui->textBrowser->insertPlainText("选择的总文件为：\n" + fileName + "\n");
-        filemanager->settFilepath(fileName.toStdString());
-        std::cout << filemanager->gettFilepath();
+        filemanager->setFilepath(fileName.toStdString());
+        std::cout << filemanager->getFilepath();
         // DXXTL::FileManagement* f = new DXXTL::FileManagement();
         // f->searchFiles("./temp/21/2");
         // f->printFiles();
@@ -74,12 +74,12 @@ void MainWindow::openfileSlot()
 
 void MainWindow::startOpenxlsxSlot()
 {
-    if (filemanager->gettFilepath().empty() || filemanager->getFiles().empty())
+    if (filemanager->getFilepath().empty() || filemanager->getFiles().empty())
     {
         QMessageBox::warning(this, "警告", "请先选择待检索的文件夹以及总文件！");
     }
     else
     {
-        // excleops = new DXXTL::Excelops()
+        excleops = new DXXTL::Excelops(filemanager->getFilepath(), filemanager->getFiles(), 0, 0);
     }
 }

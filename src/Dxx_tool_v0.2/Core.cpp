@@ -1,13 +1,28 @@
 #include "Core.h"
 
 namespace DXXTL {
+    /**
+     * @brief 构造一个新的 Excelops:: Excelops 对象
+     * 
+     * @param obj_ 
+     * @param files_ 
+     * @param temp_start_row_ 
+     * @param total_start_row_ 
+     */
     Excelops::Excelops(std::string obj_, std::vector<std::string>& files_, int temp_start_row_, int total_start_row_)
     {
-        if (init(obj_, files, temp_start_row_, total_start_row_)) {
+        if (init(obj_, files_, temp_start_row_, total_start_row_)) {
             std::cout << "                    初始化完成..." << std::endl;
         }
     }
 
+    /**
+     * @brief 获取行数
+     * 
+     * @param wks 
+     * @param start_row 
+     * @return int 
+     */
     int Excelops::getRowlength(OpenXLSX::XLWorksheet wks, int start_row)
     {
         start_row--;
@@ -45,6 +60,14 @@ namespace DXXTL {
         return col_length;
     }
 
+    /**
+     * @brief 初始化写入Vector
+     * 
+     * @param writeValues 
+     * @param length 
+     * @return true 
+     * @return false 
+     */
     bool Excelops::initWritevector(std::vector<OpenXLSX::XLCellValue>& writeValues, int length)
     {
         for (int i = 0; i < length; i++) {
@@ -52,6 +75,10 @@ namespace DXXTL {
         }
     }
 
+    /**
+     * @brief 遍历文件夹下的所有文件
+     * 
+     */
     void Excelops::traverseFiles()
     {
         std::vector<std::string>::iterator pd;
@@ -61,17 +88,46 @@ namespace DXXTL {
         }
     }
 
+    std::string Excelops::getNameproperty(std::string file_)
+    {
+        std::string filename_;
+        int namepos = 0;
+        // std::cout << file_ << std::endl;
+        namepos = file_.rfind('/');
+        filename_.assign(file_.begin() + namepos + 1, file_.end());
+        // std::cout << filename_ << std::endl;
+
+        return filename_;
+    }
+
+    void Excelops::assignFilenamepro(std::string file_)
+    {
+        temp_fns->fgrade.assign(file_.begin(), file_.begin() + file_.find('_'));
+        temp_fns->fclass.assign(file_.begin() + file_.find('_') + 1, file_.begin() + file_.find('_', file_.find('_') + 1));
+        temp_fns->fterms.assign(file_.begin() + file_.find('_', file_.find('_') + 1) + 1, file_.begin() + file_.find('_', file_.find('_', file_.find('_') + 1) + 1));
+        std::cout << temp_fns->fgrade << " " << temp_fns->fclass << " " << temp_fns->fterms << std::endl;
+        // std::cout << temp_fns->fgrade << std::endl;
+    }
+
+    // 匹配文件的思路：用string的rfind()或find_last_one()函数找到'/'出现的最后位置（详细说明见C++Primer）
     void Excelops::retrieveFile(std::string file_)
     {
-        doc_total.open(total_path);
-        wks_total = doc_total.workbook().worksheet("21级2班团支部");
-    }
-
-    void Excelops::retriveSheet()
-    {
+        std::string filename_;
+        filename_ = getNameproperty(file_);
+        assignFilenamepro(filename_);
 
     }
 
+    /**
+     * @brief 初始化属性值
+     * 
+     * @param obj_ 
+     * @param files_ 
+     * @param temp_start_row_ 
+     * @param total_start_row_ 
+     * @return true 
+     * @return false 
+     */
     bool Excelops::init(std::string obj_, std::vector<std::string>& files_, int temp_start_row_, int total_start_row_)
     {
         total_path = obj_;
@@ -79,6 +135,11 @@ namespace DXXTL {
 
         temp_start_row = temp_start_row_;
         total_start_row = total_start_row_;
+
+        // 一定要初始化
+        temp_fns = new FileNamesplit;
+
+        traverseFiles();
 
         // doc_total.open(total_path);
         // wks_total = doc_total.workbook().worksheet("21级2班团支部");
@@ -143,6 +204,8 @@ namespace DXXTL {
         readValues_total.clear();
         writeValues_total.clear();
         readValues_temp.clear();
+
+        delete temp_fns;
 
     }
 }
