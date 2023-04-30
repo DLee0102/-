@@ -82,6 +82,7 @@ void MainWindow::startOpenxlsxSlot()
     {
         excleops = new DXXTL::Excelops(filemanager->getFilepath(), filemanager->getFiles(), 0, 0);
         excleops->traverseFiles();
+        ui->textBrowser->insertPlainText("已完成，请点击右上角退出以保存修改。\n");
         // excleops->~Excelops();
     }
 }
