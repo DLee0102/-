@@ -1,0 +1,426 @@
+\hypertarget{class_open_x_l_s_x_1_1_x_l_cell_value}{}\doxysection{Open\+XLSX\+::XLCell\+Value Class Reference}
+\label{class_open_x_l_s_x_1_1_x_l_cell_value}\index{OpenXLSX::XLCellValue@{OpenXLSX::XLCellValue}}
+
+
+Class encapsulating a cell value.  
+
+
+
+
+{\ttfamily \#include $<$XLCell\+Value.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_cell_value_af76f3f7e02c4dddd0763ea49fac1ada6}\label{class_open_x_l_s_x_1_1_x_l_cell_value_af76f3f7e02c4dddd0763ea49fac1ada6}} 
+{\bfseries XLCell\+Value} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T , typename std\+::enable\+\_\+if$<$ std\+::is\+\_\+integral\+\_\+v$<$ T $>$$\vert$$\vert$std\+::is\+\_\+floating\+\_\+point\+\_\+v$<$ T $>$$\vert$$\vert$std\+::is\+\_\+same\+\_\+v$<$ std\+::decay\+\_\+t$<$ T $>$, std\+::string $>$$\vert$$\vert$std\+::is\+\_\+same\+\_\+v$<$ std\+::decay\+\_\+t$<$ T $>$, std\+::string\+\_\+view $>$$\vert$$\vert$std\+::is\+\_\+same\+\_\+v$<$ std\+::decay\+\_\+t$<$ T $>$, const char $\ast$ $>$$\vert$$\vert$std\+::is\+\_\+same\+\_\+v$<$ std\+::decay\+\_\+t$<$ T $>$, char $\ast$ $>$$\vert$$\vert$std\+::is\+\_\+same\+\_\+v$<$ T, \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_date_time}{XLDate\+Time}} $>$ $>$\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value_afe1fef5f4eb9128be5ea3422ced06150}{\+::type}} $\ast$  = nullptr$>$ }\\\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value_a63da90fb2a5972799ece07f7b71f6c3b}{XLCell\+Value}} (T value)
+\begin{DoxyCompactList}\small\item\em A templated constructor. Any value convertible to a valid cell value can be used as argument. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value_ac946fd4f28354e03f8da5aa269ee1145}{XLCell\+Value}} (const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{XLCell\+Value}} \&other)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value_a968c791130e8009b63ce04690ef7e371}{XLCell\+Value}} (\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{XLCell\+Value}} \&\&other) noexcept
+\begin{DoxyCompactList}\small\item\em Move constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_cell_value_aaa25f49f989be216f6a13ee0b8ce6647}\label{class_open_x_l_s_x_1_1_x_l_cell_value_aaa25f49f989be216f6a13ee0b8ce6647}} 
+{\bfseries $\sim$\+XLCell\+Value} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{XLCell\+Value}} \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value_ab6646dd28ebbd53c5c5da244dd5c96cc}{operator=}} (const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{XLCell\+Value}} \&other)
+\begin{DoxyCompactList}\small\item\em Copy assignment operator. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{XLCell\+Value}} \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value_ae84fa2c70e1cc7de2dc97586fe99743f}{operator=}} (\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{XLCell\+Value}} \&\&other) noexcept
+\begin{DoxyCompactList}\small\item\em Move assignment operator. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T , typename std\+::enable\+\_\+if$<$ std\+::is\+\_\+integral\+\_\+v$<$ T $>$$\vert$$\vert$std\+::is\+\_\+floating\+\_\+point\+\_\+v$<$ T $>$$\vert$$\vert$std\+::is\+\_\+same\+\_\+v$<$ std\+::decay\+\_\+t$<$ T $>$, std\+::string $>$$\vert$$\vert$std\+::is\+\_\+same\+\_\+v$<$ std\+::decay\+\_\+t$<$ T $>$, std\+::string\+\_\+view $>$$\vert$$\vert$std\+::is\+\_\+same\+\_\+v$<$ std\+::decay\+\_\+t$<$ T $>$, const char $\ast$ $>$$\vert$$\vert$std\+::is\+\_\+same\+\_\+v$<$ std\+::decay\+\_\+t$<$ T $>$, char $\ast$ $>$$\vert$$\vert$std\+::is\+\_\+same\+\_\+v$<$ T, \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_date_time}{XLDate\+Time}} $>$ $>$\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value_afe1fef5f4eb9128be5ea3422ced06150}{\+::type}} $\ast$  = nullptr$>$ }\\\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{XLCell\+Value}} \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value_a2d3e0849f48fc586ac04beef482201c2}{operator=}} (T value)
+\begin{DoxyCompactList}\small\item\em Templated copy assignment operator. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T , typename std\+::enable\+\_\+if$<$ std\+::is\+\_\+same\+\_\+v$<$ T, \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{XLCell\+Value}} $>$$\vert$$\vert$std\+::is\+\_\+integral\+\_\+v$<$ T $>$$\vert$$\vert$std\+::is\+\_\+floating\+\_\+point\+\_\+v$<$ T $>$$\vert$$\vert$std\+::is\+\_\+same\+\_\+v$<$ std\+::decay\+\_\+t$<$ T $>$, std\+::string $>$$\vert$$\vert$std\+::is\+\_\+same\+\_\+v$<$ std\+::decay\+\_\+t$<$ T $>$, std\+::string\+\_\+view $>$$\vert$$\vert$std\+::is\+\_\+same\+\_\+v$<$ std\+::decay\+\_\+t$<$ T $>$, const char $\ast$ $>$$\vert$$\vert$std\+::is\+\_\+same\+\_\+v$<$ std\+::decay\+\_\+t$<$ T $>$, char $\ast$ $>$$\vert$$\vert$std\+::is\+\_\+same\+\_\+v$<$ T, \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_date_time}{XLDate\+Time}} $>$ $>$\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value_afe1fef5f4eb9128be5ea3422ced06150}{\+::type}} $\ast$  = nullptr$>$ }\\void \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value_a047fc2abc7ee7ad90dfbbcb6bd55c010}{set}} (T number\+Value)
+\begin{DoxyCompactList}\small\item\em Templated setter for integral and bool types. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T , typename std\+::enable\+\_\+if$<$ std\+::is\+\_\+integral\+\_\+v$<$ T $>$$\vert$$\vert$std\+::is\+\_\+floating\+\_\+point\+\_\+v$<$ T $>$$\vert$$\vert$std\+::is\+\_\+same\+\_\+v$<$ std\+::decay\+\_\+t$<$ T $>$, std\+::string $>$$\vert$$\vert$std\+::is\+\_\+same\+\_\+v$<$ std\+::decay\+\_\+t$<$ T $>$, std\+::string\+\_\+view $>$$\vert$$\vert$std\+::is\+\_\+same\+\_\+v$<$ std\+::decay\+\_\+t$<$ T $>$, const char $\ast$ $>$$\vert$$\vert$std\+::is\+\_\+same\+\_\+v$<$ std\+::decay\+\_\+t$<$ T $>$, char $\ast$ $>$$\vert$$\vert$std\+::is\+\_\+same\+\_\+v$<$ T, \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_date_time}{XLDate\+Time}} $>$ $>$\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value_afe1fef5f4eb9128be5ea3422ced06150}{\+::type}} $\ast$  = nullptr$>$ }\\T \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value_ac04a773ad4b81245b94b650a055083f0}{get}} () const
+\begin{DoxyCompactList}\small\item\em Templated getter. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T , typename std\+::enable\+\_\+if$<$ std\+::is\+\_\+integral\+\_\+v$<$ T $>$$\vert$$\vert$std\+::is\+\_\+floating\+\_\+point\+\_\+v$<$ T $>$$\vert$$\vert$std\+::is\+\_\+same\+\_\+v$<$ std\+::decay\+\_\+t$<$ T $>$, std\+::string $>$$\vert$$\vert$std\+::is\+\_\+same\+\_\+v$<$ std\+::decay\+\_\+t$<$ T $>$, std\+::string\+\_\+view $>$$\vert$$\vert$std\+::is\+\_\+same\+\_\+v$<$ std\+::decay\+\_\+t$<$ T $>$, const char $\ast$ $>$$\vert$$\vert$std\+::is\+\_\+same\+\_\+v$<$ std\+::decay\+\_\+t$<$ T $>$, char $\ast$ $>$$\vert$$\vert$std\+::is\+\_\+same\+\_\+v$<$ T, \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_date_time}{XLDate\+Time}} $>$ $>$\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value_afe1fef5f4eb9128be5ea3422ced06150}{\+::type}} $\ast$  = nullptr$>$ }\\\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value_ac7aff0d9a169de958d6e1eda066c8965}{operator T}} () const
+\begin{DoxyCompactList}\small\item\em Explicit conversion operator for easy conversion to supported types. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{XLCell\+Value}} \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value_a11ca60dcfeb9e8683e210bd11d80963b}{clear}} ()
+\begin{DoxyCompactList}\small\item\em Clears the contents of the \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{XLCell\+Value}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{XLCell\+Value}} \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value_a04e1bc5560043f01e2f342e0031881c9}{set\+Error}} (const std\+::string \&error)
+\begin{DoxyCompactList}\small\item\em Sets the value type to XLValue\+Type\+::\+Error. \end{DoxyCompactList}\item 
+XLValue\+Type \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value_afe1fef5f4eb9128be5ea3422ced06150}{type}} () const
+\begin{DoxyCompactList}\small\item\em Get the value type of the current object. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value_a0e04adac468c036f23f42775c0419177}{type\+As\+String}} () const
+\begin{DoxyCompactList}\small\item\em Get the value type of the current object, as a string representation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value_a4d4d2d914c0f2a43a9f37fbfa45e2321}{operator==}} (const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{XLCell\+Value}} \&lhs, const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{XLCell\+Value}} \&rhs)
+\item 
+bool \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value_acc5089b30f6bf94619a1507670b03aa8}{operator!=}} (const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{XLCell\+Value}} \&lhs, const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{XLCell\+Value}} \&rhs)
+\item 
+bool \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value_a421d6bf3f17c68dca3b3f1664ed0ead7}{operator$<$}} (const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{XLCell\+Value}} \&lhs, const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{XLCell\+Value}} \&rhs)
+\item 
+bool \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value_a9336b460ca3e18331b281e685be8c012}{operator$>$}} (const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{XLCell\+Value}} \&lhs, const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{XLCell\+Value}} \&rhs)
+\item 
+bool \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value_a9a892b4a06094903e1da472b07507e68}{operator$<$=}} (const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{XLCell\+Value}} \&lhs, const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{XLCell\+Value}} \&rhs)
+\item 
+bool \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value_aeb47e799ff4bf5a6468163539444dff8}{operator$>$=}} (const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{XLCell\+Value}} \&lhs, const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{XLCell\+Value}} \&rhs)
+\item 
+std\+::ostream \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value_a7c849116a39019e7622ec463e99378df}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{XLCell\+Value}} \&value)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class encapsulating a cell value. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_cell_value_a63da90fb2a5972799ece07f7b71f6c3b}\label{class_open_x_l_s_x_1_1_x_l_cell_value_a63da90fb2a5972799ece07f7b71f6c3b}} 
+\index{OpenXLSX::XLCellValue@{OpenXLSX::XLCellValue}!XLCellValue@{XLCellValue}}
+\index{XLCellValue@{XLCellValue}!OpenXLSX::XLCellValue@{OpenXLSX::XLCellValue}}
+\doxysubsubsection{\texorpdfstring{XLCellValue()}{XLCellValue()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$typename T , typename std\+::enable\+\_\+if$<$ std\+::is\+\_\+integral\+\_\+v$<$ T $>$$\vert$$\vert$std\+::is\+\_\+floating\+\_\+point\+\_\+v$<$ T $>$$\vert$$\vert$std\+::is\+\_\+same\+\_\+v$<$ std\+::decay\+\_\+t$<$ T $>$, std\+::string $>$$\vert$$\vert$std\+::is\+\_\+same\+\_\+v$<$ std\+::decay\+\_\+t$<$ T $>$, std\+::string\+\_\+view $>$$\vert$$\vert$std\+::is\+\_\+same\+\_\+v$<$ std\+::decay\+\_\+t$<$ T $>$, const char $\ast$ $>$$\vert$$\vert$std\+::is\+\_\+same\+\_\+v$<$ std\+::decay\+\_\+t$<$ T $>$, char $\ast$ $>$$\vert$$\vert$std\+::is\+\_\+same\+\_\+v$<$ T, \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_date_time}{XLDate\+Time}} $>$ $>$\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value_afe1fef5f4eb9128be5ea3422ced06150}{\+::type}} $\ast$  = nullptr$>$ \\
+Open\+XLSX\+::\+XLCell\+Value\+::\+XLCell\+Value (\begin{DoxyParamCaption}\item[{T}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+A templated constructor. Any value convertible to a valid cell value can be used as argument. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of the argument (will be automatically deduced). \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000001}{Todo}}]Consider changing the enable\+\_\+if statement to check for objects with a .c\+\_\+str() member function. \end{DoxyRefDesc}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_cell_value_ac946fd4f28354e03f8da5aa269ee1145}\label{class_open_x_l_s_x_1_1_x_l_cell_value_ac946fd4f28354e03f8da5aa269ee1145}} 
+\index{OpenXLSX::XLCellValue@{OpenXLSX::XLCellValue}!XLCellValue@{XLCellValue}}
+\index{XLCellValue@{XLCellValue}!OpenXLSX::XLCellValue@{OpenXLSX::XLCellValue}}
+\doxysubsubsection{\texorpdfstring{XLCellValue()}{XLCellValue()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Open\+XLSX\+::\+XLCell\+Value\+::\+XLCell\+Value (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{XLCell\+Value}} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Copy constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The object to be copied. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_cell_value_a968c791130e8009b63ce04690ef7e371}\label{class_open_x_l_s_x_1_1_x_l_cell_value_a968c791130e8009b63ce04690ef7e371}} 
+\index{OpenXLSX::XLCellValue@{OpenXLSX::XLCellValue}!XLCellValue@{XLCellValue}}
+\index{XLCellValue@{XLCellValue}!OpenXLSX::XLCellValue@{OpenXLSX::XLCellValue}}
+\doxysubsubsection{\texorpdfstring{XLCellValue()}{XLCellValue()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Open\+XLSX\+::\+XLCell\+Value\+::\+XLCell\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{XLCell\+Value}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Move constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The object to be moved. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_cell_value_a11ca60dcfeb9e8683e210bd11d80963b}\label{class_open_x_l_s_x_1_1_x_l_cell_value_a11ca60dcfeb9e8683e210bd11d80963b}} 
+\index{OpenXLSX::XLCellValue@{OpenXLSX::XLCellValue}!clear@{clear}}
+\index{clear@{clear}!OpenXLSX::XLCellValue@{OpenXLSX::XLCellValue}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{XLCell\+Value}} \& Open\+XLSX\+::\+XLCell\+Value\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Clears the contents of the \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{XLCell\+Value}} object. 
+
+\begin{DoxyReturn}{Returns}
+Returns a reference to the current object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_cell_value_ac04a773ad4b81245b94b650a055083f0}\label{class_open_x_l_s_x_1_1_x_l_cell_value_ac04a773ad4b81245b94b650a055083f0}} 
+\index{OpenXLSX::XLCellValue@{OpenXLSX::XLCellValue}!get@{get}}
+\index{get@{get}!OpenXLSX::XLCellValue@{OpenXLSX::XLCellValue}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily template$<$typename T , typename std\+::enable\+\_\+if$<$ std\+::is\+\_\+integral\+\_\+v$<$ T $>$$\vert$$\vert$std\+::is\+\_\+floating\+\_\+point\+\_\+v$<$ T $>$$\vert$$\vert$std\+::is\+\_\+same\+\_\+v$<$ std\+::decay\+\_\+t$<$ T $>$, std\+::string $>$$\vert$$\vert$std\+::is\+\_\+same\+\_\+v$<$ std\+::decay\+\_\+t$<$ T $>$, std\+::string\+\_\+view $>$$\vert$$\vert$std\+::is\+\_\+same\+\_\+v$<$ std\+::decay\+\_\+t$<$ T $>$, const char $\ast$ $>$$\vert$$\vert$std\+::is\+\_\+same\+\_\+v$<$ std\+::decay\+\_\+t$<$ T $>$, char $\ast$ $>$$\vert$$\vert$std\+::is\+\_\+same\+\_\+v$<$ T, \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_date_time}{XLDate\+Time}} $>$ $>$\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value_afe1fef5f4eb9128be5ea3422ced06150}{\+::type}} $\ast$  = nullptr$>$ \\
+T Open\+XLSX\+::\+XLCell\+Value\+::get (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Templated getter. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of the value to be returned. \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+The value as a type T object. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_value_type_error}{XLValue\+Type\+Error}}} & if the \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{XLCell\+Value}} object does not contain a compatible type. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_cell_value_ac7aff0d9a169de958d6e1eda066c8965}\label{class_open_x_l_s_x_1_1_x_l_cell_value_ac7aff0d9a169de958d6e1eda066c8965}} 
+\index{OpenXLSX::XLCellValue@{OpenXLSX::XLCellValue}!operator T@{operator T}}
+\index{operator T@{operator T}!OpenXLSX::XLCellValue@{OpenXLSX::XLCellValue}}
+\doxysubsubsection{\texorpdfstring{operator T()}{operator T()}}
+{\footnotesize\ttfamily template$<$typename T , typename std\+::enable\+\_\+if$<$ std\+::is\+\_\+integral\+\_\+v$<$ T $>$$\vert$$\vert$std\+::is\+\_\+floating\+\_\+point\+\_\+v$<$ T $>$$\vert$$\vert$std\+::is\+\_\+same\+\_\+v$<$ std\+::decay\+\_\+t$<$ T $>$, std\+::string $>$$\vert$$\vert$std\+::is\+\_\+same\+\_\+v$<$ std\+::decay\+\_\+t$<$ T $>$, std\+::string\+\_\+view $>$$\vert$$\vert$std\+::is\+\_\+same\+\_\+v$<$ std\+::decay\+\_\+t$<$ T $>$, const char $\ast$ $>$$\vert$$\vert$std\+::is\+\_\+same\+\_\+v$<$ std\+::decay\+\_\+t$<$ T $>$, char $\ast$ $>$$\vert$$\vert$std\+::is\+\_\+same\+\_\+v$<$ T, \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_date_time}{XLDate\+Time}} $>$ $>$\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value_afe1fef5f4eb9128be5ea3422ced06150}{\+::type}} $\ast$  = nullptr$>$ \\
+Open\+XLSX\+::\+XLCell\+Value\+::operator T (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Explicit conversion operator for easy conversion to supported types. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type to cast to. \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+The \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{XLCell\+Value}} object cast to requested type. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_value_type_error}{XLValue\+Type\+Error}}} & if the \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{XLCell\+Value}} object does not contain a compatible type. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_cell_value_ab6646dd28ebbd53c5c5da244dd5c96cc}\label{class_open_x_l_s_x_1_1_x_l_cell_value_ab6646dd28ebbd53c5c5da244dd5c96cc}} 
+\index{OpenXLSX::XLCellValue@{OpenXLSX::XLCellValue}!operator=@{operator=}}
+\index{operator=@{operator=}!OpenXLSX::XLCellValue@{OpenXLSX::XLCellValue}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{XLCell\+Value}} \& Open\+XLSX\+::\+XLCell\+Value\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{XLCell\+Value}} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Copy assignment operator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Object to be copied. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to the copied-\/to object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_cell_value_a2d3e0849f48fc586ac04beef482201c2}\label{class_open_x_l_s_x_1_1_x_l_cell_value_a2d3e0849f48fc586ac04beef482201c2}} 
+\index{OpenXLSX::XLCellValue@{OpenXLSX::XLCellValue}!operator=@{operator=}}
+\index{operator=@{operator=}!OpenXLSX::XLCellValue@{OpenXLSX::XLCellValue}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$typename T , typename std\+::enable\+\_\+if$<$ std\+::is\+\_\+integral\+\_\+v$<$ T $>$$\vert$$\vert$std\+::is\+\_\+floating\+\_\+point\+\_\+v$<$ T $>$$\vert$$\vert$std\+::is\+\_\+same\+\_\+v$<$ std\+::decay\+\_\+t$<$ T $>$, std\+::string $>$$\vert$$\vert$std\+::is\+\_\+same\+\_\+v$<$ std\+::decay\+\_\+t$<$ T $>$, std\+::string\+\_\+view $>$$\vert$$\vert$std\+::is\+\_\+same\+\_\+v$<$ std\+::decay\+\_\+t$<$ T $>$, const char $\ast$ $>$$\vert$$\vert$std\+::is\+\_\+same\+\_\+v$<$ std\+::decay\+\_\+t$<$ T $>$, char $\ast$ $>$$\vert$$\vert$std\+::is\+\_\+same\+\_\+v$<$ T, \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_date_time}{XLDate\+Time}} $>$ $>$\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value_afe1fef5f4eb9128be5ea3422ced06150}{\+::type}} $\ast$  = nullptr$>$ \\
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{XLCell\+Value}} \& Open\+XLSX\+::\+XLCell\+Value\+::operator= (\begin{DoxyParamCaption}\item[{T}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Templated copy assignment operator. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of the value argument. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reference to the assigned-\/to object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_cell_value_ae84fa2c70e1cc7de2dc97586fe99743f}\label{class_open_x_l_s_x_1_1_x_l_cell_value_ae84fa2c70e1cc7de2dc97586fe99743f}} 
+\index{OpenXLSX::XLCellValue@{OpenXLSX::XLCellValue}!operator=@{operator=}}
+\index{operator=@{operator=}!OpenXLSX::XLCellValue@{OpenXLSX::XLCellValue}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{XLCell\+Value}} \& Open\+XLSX\+::\+XLCell\+Value\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{XLCell\+Value}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Move assignment operator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Object to be moved. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to the moved-\/to object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_cell_value_a047fc2abc7ee7ad90dfbbcb6bd55c010}\label{class_open_x_l_s_x_1_1_x_l_cell_value_a047fc2abc7ee7ad90dfbbcb6bd55c010}} 
+\index{OpenXLSX::XLCellValue@{OpenXLSX::XLCellValue}!set@{set}}
+\index{set@{set}!OpenXLSX::XLCellValue@{OpenXLSX::XLCellValue}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}}
+{\footnotesize\ttfamily template$<$typename T , typename std\+::enable\+\_\+if$<$ std\+::is\+\_\+same\+\_\+v$<$ T, \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{XLCell\+Value}} $>$$\vert$$\vert$std\+::is\+\_\+integral\+\_\+v$<$ T $>$$\vert$$\vert$std\+::is\+\_\+floating\+\_\+point\+\_\+v$<$ T $>$$\vert$$\vert$std\+::is\+\_\+same\+\_\+v$<$ std\+::decay\+\_\+t$<$ T $>$, std\+::string $>$$\vert$$\vert$std\+::is\+\_\+same\+\_\+v$<$ std\+::decay\+\_\+t$<$ T $>$, std\+::string\+\_\+view $>$$\vert$$\vert$std\+::is\+\_\+same\+\_\+v$<$ std\+::decay\+\_\+t$<$ T $>$, const char $\ast$ $>$$\vert$$\vert$std\+::is\+\_\+same\+\_\+v$<$ std\+::decay\+\_\+t$<$ T $>$, char $\ast$ $>$$\vert$$\vert$std\+::is\+\_\+same\+\_\+v$<$ T, \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_date_time}{XLDate\+Time}} $>$ $>$\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value_afe1fef5f4eb9128be5ea3422ced06150}{\+::type}} $\ast$  = nullptr$>$ \\
+void Open\+XLSX\+::\+XLCell\+Value\+::set (\begin{DoxyParamCaption}\item[{T}]{number\+Value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Templated setter for integral and bool types. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of the value argument. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em number\+Value} & The value \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_cell_value_a04e1bc5560043f01e2f342e0031881c9}\label{class_open_x_l_s_x_1_1_x_l_cell_value_a04e1bc5560043f01e2f342e0031881c9}} 
+\index{OpenXLSX::XLCellValue@{OpenXLSX::XLCellValue}!setError@{setError}}
+\index{setError@{setError}!OpenXLSX::XLCellValue@{OpenXLSX::XLCellValue}}
+\doxysubsubsection{\texorpdfstring{setError()}{setError()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{XLCell\+Value}} \& Open\+XLSX\+::\+XLCell\+Value\+::set\+Error (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{error }\end{DoxyParamCaption})}
+
+
+
+Sets the value type to XLValue\+Type\+::\+Error. 
+
+\begin{DoxyReturn}{Returns}
+Returns a reference to the current object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_cell_value_afe1fef5f4eb9128be5ea3422ced06150}\label{class_open_x_l_s_x_1_1_x_l_cell_value_afe1fef5f4eb9128be5ea3422ced06150}} 
+\index{OpenXLSX::XLCellValue@{OpenXLSX::XLCellValue}!type@{type}}
+\index{type@{type}!OpenXLSX::XLCellValue@{OpenXLSX::XLCellValue}}
+\doxysubsubsection{\texorpdfstring{type()}{type()}}
+{\footnotesize\ttfamily XLValue\+Type Open\+XLSX\+::\+XLCell\+Value\+::type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the value type of the current object. 
+
+\begin{DoxyReturn}{Returns}
+An XLValue\+Type for the current object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_cell_value_a0e04adac468c036f23f42775c0419177}\label{class_open_x_l_s_x_1_1_x_l_cell_value_a0e04adac468c036f23f42775c0419177}} 
+\index{OpenXLSX::XLCellValue@{OpenXLSX::XLCellValue}!typeAsString@{typeAsString}}
+\index{typeAsString@{typeAsString}!OpenXLSX::XLCellValue@{OpenXLSX::XLCellValue}}
+\doxysubsubsection{\texorpdfstring{typeAsString()}{typeAsString()}}
+{\footnotesize\ttfamily std\+::string Open\+XLSX\+::\+XLCell\+Value\+::type\+As\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the value type of the current object, as a string representation. 
+
+\begin{DoxyReturn}{Returns}
+A std\+::string representation of the value type. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_cell_value_acc5089b30f6bf94619a1507670b03aa8}\label{class_open_x_l_s_x_1_1_x_l_cell_value_acc5089b30f6bf94619a1507670b03aa8}} 
+\index{OpenXLSX::XLCellValue@{OpenXLSX::XLCellValue}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!OpenXLSX::XLCellValue@{OpenXLSX::XLCellValue}}
+\doxysubsubsection{\texorpdfstring{operator"!=}{operator!=}}
+{\footnotesize\ttfamily bool operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{XLCell\+Value}} \&}]{lhs,  }\item[{const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{XLCell\+Value}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em lhs} & \\
+\hline
+{\em rhs} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_cell_value_a421d6bf3f17c68dca3b3f1664ed0ead7}\label{class_open_x_l_s_x_1_1_x_l_cell_value_a421d6bf3f17c68dca3b3f1664ed0ead7}} 
+\index{OpenXLSX::XLCellValue@{OpenXLSX::XLCellValue}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!OpenXLSX::XLCellValue@{OpenXLSX::XLCellValue}}
+\doxysubsubsection{\texorpdfstring{operator$<$}{operator<}}
+{\footnotesize\ttfamily bool operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{XLCell\+Value}} \&}]{lhs,  }\item[{const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{XLCell\+Value}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em lhs} & \\
+\hline
+{\em rhs} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_cell_value_a7c849116a39019e7622ec463e99378df}\label{class_open_x_l_s_x_1_1_x_l_cell_value_a7c849116a39019e7622ec463e99378df}} 
+\index{OpenXLSX::XLCellValue@{OpenXLSX::XLCellValue}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!OpenXLSX::XLCellValue@{OpenXLSX::XLCellValue}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{XLCell\+Value}} \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & \\
+\hline
+{\em value} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_cell_value_a9a892b4a06094903e1da472b07507e68}\label{class_open_x_l_s_x_1_1_x_l_cell_value_a9a892b4a06094903e1da472b07507e68}} 
+\index{OpenXLSX::XLCellValue@{OpenXLSX::XLCellValue}!operator$<$=@{operator$<$=}}
+\index{operator$<$=@{operator$<$=}!OpenXLSX::XLCellValue@{OpenXLSX::XLCellValue}}
+\doxysubsubsection{\texorpdfstring{operator$<$=}{operator<=}}
+{\footnotesize\ttfamily bool operator$<$= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{XLCell\+Value}} \&}]{lhs,  }\item[{const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{XLCell\+Value}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em lhs} & \\
+\hline
+{\em rhs} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_cell_value_a4d4d2d914c0f2a43a9f37fbfa45e2321}\label{class_open_x_l_s_x_1_1_x_l_cell_value_a4d4d2d914c0f2a43a9f37fbfa45e2321}} 
+\index{OpenXLSX::XLCellValue@{OpenXLSX::XLCellValue}!operator==@{operator==}}
+\index{operator==@{operator==}!OpenXLSX::XLCellValue@{OpenXLSX::XLCellValue}}
+\doxysubsubsection{\texorpdfstring{operator==}{operator==}}
+{\footnotesize\ttfamily bool operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{XLCell\+Value}} \&}]{lhs,  }\item[{const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{XLCell\+Value}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em lhs} & \\
+\hline
+{\em rhs} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_cell_value_a9336b460ca3e18331b281e685be8c012}\label{class_open_x_l_s_x_1_1_x_l_cell_value_a9336b460ca3e18331b281e685be8c012}} 
+\index{OpenXLSX::XLCellValue@{OpenXLSX::XLCellValue}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!OpenXLSX::XLCellValue@{OpenXLSX::XLCellValue}}
+\doxysubsubsection{\texorpdfstring{operator$>$}{operator>}}
+{\footnotesize\ttfamily bool operator$>$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{XLCell\+Value}} \&}]{lhs,  }\item[{const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{XLCell\+Value}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em lhs} & \\
+\hline
+{\em rhs} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_cell_value_aeb47e799ff4bf5a6468163539444dff8}\label{class_open_x_l_s_x_1_1_x_l_cell_value_aeb47e799ff4bf5a6468163539444dff8}} 
+\index{OpenXLSX::XLCellValue@{OpenXLSX::XLCellValue}!operator$>$=@{operator$>$=}}
+\index{operator$>$=@{operator$>$=}!OpenXLSX::XLCellValue@{OpenXLSX::XLCellValue}}
+\doxysubsubsection{\texorpdfstring{operator$>$=}{operator>=}}
+{\footnotesize\ttfamily bool operator$>$= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{XLCell\+Value}} \&}]{lhs,  }\item[{const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{XLCell\+Value}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em lhs} & \\
+\hline
+{\em rhs} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Youth\+\_\+learning\+\_\+autoload/vendors/\+Open\+XLSX/\+Open\+XLSX/headers/XLCell\+Value.\+hpp\end{DoxyCompactItemize}

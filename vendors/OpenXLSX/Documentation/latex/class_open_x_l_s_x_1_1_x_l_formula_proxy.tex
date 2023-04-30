@@ -1,0 +1,166 @@
+\hypertarget{class_open_x_l_s_x_1_1_x_l_formula_proxy}{}\doxysection{Open\+XLSX\+::XLFormula\+Proxy Class Reference}
+\label{class_open_x_l_s_x_1_1_x_l_formula_proxy}\index{OpenXLSX::XLFormulaProxy@{OpenXLSX::XLFormulaProxy}}
+
+
+The \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_formula_proxy}{XLFormula\+Proxy}} serves as a placeholder for \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_formula}{XLFormula}} objects. This enable getting and setting formulas through the same interface.  
+
+
+
+
+{\ttfamily \#include $<$XLFormula.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_formula_proxy_a1be04a72f20d00f79663f901c6f16f08}\label{class_open_x_l_s_x_1_1_x_l_formula_proxy_a1be04a72f20d00f79663f901c6f16f08}} 
+{\bfseries $\sim$\+XLFormula\+Proxy} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_formula_proxy}{XLFormula\+Proxy}} \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_formula_proxy_a051017453ad656570b4357b35a99bac5}{operator=}} (const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_formula_proxy}{XLFormula\+Proxy}} \&other)
+\begin{DoxyCompactList}\small\item\em Copy assignment operator. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T , typename std\+::enable\+\_\+if$<$ std\+::is\+\_\+same\+\_\+v$<$ std\+::decay\+\_\+t$<$ T $>$, \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_formula}{XLFormula}} $>$$\vert$$\vert$std\+::is\+\_\+same\+\_\+v$<$ std\+::decay\+\_\+t$<$ T $>$, std\+::string $>$$\vert$$\vert$std\+::is\+\_\+same\+\_\+v$<$ std\+::decay\+\_\+t$<$ T $>$, std\+::string\+\_\+view $>$$\vert$$\vert$std\+::is\+\_\+same\+\_\+v$<$ std\+::decay\+\_\+t$<$ T $>$, const char $\ast$ $>$$\vert$$\vert$std\+::is\+\_\+same\+\_\+v$<$ std\+::decay\+\_\+t$<$ T $>$, char $\ast$ $>$ $>$\+::type $\ast$  = nullptr$>$ }\\\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_formula_proxy}{XLFormula\+Proxy}} \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_formula_proxy_ae9caf50ed35ddb7a23ede750b0dd3cd4}{operator=}} (T formula)
+\begin{DoxyCompactList}\small\item\em Templated assignment operator, taking a string-\/type argument. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T , typename std\+::enable\+\_\+if$<$ std\+::is\+\_\+same\+\_\+v$<$ std\+::decay\+\_\+t$<$ T $>$, std\+::string $>$$\vert$$\vert$std\+::is\+\_\+same\+\_\+v$<$ std\+::decay\+\_\+t$<$ T $>$, std\+::string\+\_\+view $>$$\vert$$\vert$std\+::is\+\_\+same\+\_\+v$<$ std\+::decay\+\_\+t$<$ T $>$, const char $\ast$ $>$$\vert$$\vert$std\+::is\+\_\+same\+\_\+v$<$ std\+::decay\+\_\+t$<$ T $>$, char $\ast$ $>$ $>$\+::type $\ast$  = nullptr$>$ }\\void \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_formula_proxy_aea5475cfc92493e2c9c1cd68b00d5fc1}{set}} (T formula)
+\begin{DoxyCompactList}\small\item\em Templated setter, taking a string-\/type argument. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_formula_proxy_ae25446ef8ede0ee2dbccce8c2ace50bd}{get}} () const
+\begin{DoxyCompactList}\small\item\em Get the forumla as a std\+::string. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_formula_proxy}{XLFormula\+Proxy}} \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_formula_proxy_a1f0d3eef399992d4c6b4af7947c30304}{clear}} ()
+\begin{DoxyCompactList}\small\item\em Clear the formula. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_formula_proxy_abd97fd37e32f75163b53a892af52e40f}{operator std\+::string}} () const
+\begin{DoxyCompactList}\small\item\em Conversion operator, for converting the object to a std\+::string. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_formula_proxy_a1f5136c0ee22d5fbaf6f3d0937b065a8}{operator XLFormula}} () const
+\begin{DoxyCompactList}\small\item\em Implicit conversion to \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_formula}{XLFormula}} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_formula_proxy_abf7a395af4a94b0e5bfb77d8ec4ea7d9}\label{class_open_x_l_s_x_1_1_x_l_formula_proxy_abf7a395af4a94b0e5bfb77d8ec4ea7d9}} 
+class {\bfseries XLCell}
+\item 
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_formula_proxy_a2c9c4fe76cf0d38bbb1dfea88af74989}\label{class_open_x_l_s_x_1_1_x_l_formula_proxy_a2c9c4fe76cf0d38bbb1dfea88af74989}} 
+class {\bfseries XLFormula}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_formula_proxy}{XLFormula\+Proxy}} serves as a placeholder for \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_formula}{XLFormula}} objects. This enable getting and setting formulas through the same interface. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_formula_proxy_a1f0d3eef399992d4c6b4af7947c30304}\label{class_open_x_l_s_x_1_1_x_l_formula_proxy_a1f0d3eef399992d4c6b4af7947c30304}} 
+\index{OpenXLSX::XLFormulaProxy@{OpenXLSX::XLFormulaProxy}!clear@{clear}}
+\index{clear@{clear}!OpenXLSX::XLFormulaProxy@{OpenXLSX::XLFormulaProxy}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_formula_proxy}{XLFormula\+Proxy}} \& Open\+XLSX\+::\+XLFormula\+Proxy\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Clear the formula. 
+
+\begin{DoxyReturn}{Returns}
+Return a reference to the cleared object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_formula_proxy_ae25446ef8ede0ee2dbccce8c2ace50bd}\label{class_open_x_l_s_x_1_1_x_l_formula_proxy_ae25446ef8ede0ee2dbccce8c2ace50bd}} 
+\index{OpenXLSX::XLFormulaProxy@{OpenXLSX::XLFormulaProxy}!get@{get}}
+\index{get@{get}!OpenXLSX::XLFormulaProxy@{OpenXLSX::XLFormulaProxy}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily std\+::string Open\+XLSX\+::\+XLFormula\+Proxy\+::get (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the forumla as a std\+::string. 
+
+\begin{DoxyReturn}{Returns}
+A std\+::string with the formula. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_formula_proxy_abd97fd37e32f75163b53a892af52e40f}\label{class_open_x_l_s_x_1_1_x_l_formula_proxy_abd97fd37e32f75163b53a892af52e40f}} 
+\index{OpenXLSX::XLFormulaProxy@{OpenXLSX::XLFormulaProxy}!operator std::string@{operator std::string}}
+\index{operator std::string@{operator std::string}!OpenXLSX::XLFormulaProxy@{OpenXLSX::XLFormulaProxy}}
+\doxysubsubsection{\texorpdfstring{operator std::string()}{operator std::string()}}
+{\footnotesize\ttfamily Open\+XLSX\+::\+XLFormula\+Proxy\+::operator std\+::string (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Conversion operator, for converting the object to a std\+::string. 
+
+\begin{DoxyReturn}{Returns}
+The formula as a std\+::string. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_formula_proxy_a1f5136c0ee22d5fbaf6f3d0937b065a8}\label{class_open_x_l_s_x_1_1_x_l_formula_proxy_a1f5136c0ee22d5fbaf6f3d0937b065a8}} 
+\index{OpenXLSX::XLFormulaProxy@{OpenXLSX::XLFormulaProxy}!operator XLFormula@{operator XLFormula}}
+\index{operator XLFormula@{operator XLFormula}!OpenXLSX::XLFormulaProxy@{OpenXLSX::XLFormulaProxy}}
+\doxysubsubsection{\texorpdfstring{operator XLFormula()}{operator XLFormula()}}
+{\footnotesize\ttfamily Open\+XLSX\+::\+XLFormula\+Proxy\+::operator \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_formula}{XLFormula}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Implicit conversion to \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_formula}{XLFormula}} object. 
+
+\begin{DoxyReturn}{Returns}
+Returns the corresponding \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_formula}{XLFormula}} object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_formula_proxy_a051017453ad656570b4357b35a99bac5}\label{class_open_x_l_s_x_1_1_x_l_formula_proxy_a051017453ad656570b4357b35a99bac5}} 
+\index{OpenXLSX::XLFormulaProxy@{OpenXLSX::XLFormulaProxy}!operator=@{operator=}}
+\index{operator=@{operator=}!OpenXLSX::XLFormulaProxy@{OpenXLSX::XLFormulaProxy}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_formula_proxy}{XLFormula\+Proxy}} \& Open\+XLSX\+::\+XLFormula\+Proxy\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_formula_proxy}{XLFormula\+Proxy}} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Copy assignment operator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Object to be copied. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reference to the copied-\/to object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_formula_proxy_ae9caf50ed35ddb7a23ede750b0dd3cd4}\label{class_open_x_l_s_x_1_1_x_l_formula_proxy_ae9caf50ed35ddb7a23ede750b0dd3cd4}} 
+\index{OpenXLSX::XLFormulaProxy@{OpenXLSX::XLFormulaProxy}!operator=@{operator=}}
+\index{operator=@{operator=}!OpenXLSX::XLFormulaProxy@{OpenXLSX::XLFormulaProxy}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T , typename std\+::enable\+\_\+if$<$ std\+::is\+\_\+same\+\_\+v$<$ std\+::decay\+\_\+t$<$ T $>$, \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_formula}{XLFormula}} $>$$\vert$$\vert$std\+::is\+\_\+same\+\_\+v$<$ std\+::decay\+\_\+t$<$ T $>$, std\+::string $>$$\vert$$\vert$std\+::is\+\_\+same\+\_\+v$<$ std\+::decay\+\_\+t$<$ T $>$, std\+::string\+\_\+view $>$$\vert$$\vert$std\+::is\+\_\+same\+\_\+v$<$ std\+::decay\+\_\+t$<$ T $>$, const char $\ast$ $>$$\vert$$\vert$std\+::is\+\_\+same\+\_\+v$<$ std\+::decay\+\_\+t$<$ T $>$, char $\ast$ $>$ $>$\+::type $\ast$  = nullptr$>$ \\
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_formula_proxy}{XLFormula\+Proxy}} \& Open\+XLSX\+::\+XLFormula\+Proxy\+::operator= (\begin{DoxyParamCaption}\item[{T}]{formula }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Templated assignment operator, taking a string-\/type argument. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Type of argument. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em formula} & The formula string to be assigned. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reference to the copied-\/to object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_formula_proxy_aea5475cfc92493e2c9c1cd68b00d5fc1}\label{class_open_x_l_s_x_1_1_x_l_formula_proxy_aea5475cfc92493e2c9c1cd68b00d5fc1}} 
+\index{OpenXLSX::XLFormulaProxy@{OpenXLSX::XLFormulaProxy}!set@{set}}
+\index{set@{set}!OpenXLSX::XLFormulaProxy@{OpenXLSX::XLFormulaProxy}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}}
+{\footnotesize\ttfamily template$<$typename T , typename std\+::enable\+\_\+if$<$ std\+::is\+\_\+same\+\_\+v$<$ std\+::decay\+\_\+t$<$ T $>$, std\+::string $>$$\vert$$\vert$std\+::is\+\_\+same\+\_\+v$<$ std\+::decay\+\_\+t$<$ T $>$, std\+::string\+\_\+view $>$$\vert$$\vert$std\+::is\+\_\+same\+\_\+v$<$ std\+::decay\+\_\+t$<$ T $>$, const char $\ast$ $>$$\vert$$\vert$std\+::is\+\_\+same\+\_\+v$<$ std\+::decay\+\_\+t$<$ T $>$, char $\ast$ $>$ $>$\+::type $\ast$  = nullptr$>$ \\
+void Open\+XLSX\+::\+XLFormula\+Proxy\+::set (\begin{DoxyParamCaption}\item[{T}]{formula }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Templated setter, taking a string-\/type argument. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Type of argument. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em formula} & The formula string to be assigned. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Youth\+\_\+learning\+\_\+autoload/vendors/\+Open\+XLSX/\+Open\+XLSX/headers/XLFormula.\+hpp\end{DoxyCompactItemize}

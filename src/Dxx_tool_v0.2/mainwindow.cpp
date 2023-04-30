@@ -81,5 +81,7 @@ void MainWindow::startOpenxlsxSlot()
     else
     {
         excleops = new DXXTL::Excelops(filemanager->getFilepath(), filemanager->getFiles(), 0, 0);
+        excleops->traverseFiles();
+        // excleops->~Excelops();
     }
 }

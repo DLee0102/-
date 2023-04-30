@@ -1,0 +1,227 @@
+\hypertarget{_x_l_formula_8hpp_source}{}\doxysection{XLFormula.\+hpp}
+\label{_x_l_formula_8hpp_source}\index{D:/Youth\_learning\_autoload/vendors/OpenXLSX/OpenXLSX/headers/XLFormula.hpp@{D:/Youth\_learning\_autoload/vendors/OpenXLSX/OpenXLSX/headers/XLFormula.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ \ \ \_\_\_\_\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_\_\_\ \ \ \ \ \ \_\_\_\ \_\_\_\_\ \ \ \ \ \ \ \_\_\_\_\ \ \_\_\_\_\ \ \ \ \ \ \_\_\_}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ \ 6MMMMb\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ `MM(\ \ \ \ \ \ )M'\ `MM'\ \ \ \ \ \ 6MMMMb\(\backslash\)`MM(\ \ \ \ \ \ )M'}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ 8P\ \ \ \ Y8\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ `MM.\ \ \ \ \ d'\ \ \ MM\ \ \ \ \ \ 6M'\ \ \ \ `\ `MM.\ \ \ \ \ d'}}
+\DoxyCodeLine{00006\ \textcolor{comment}{6M\ \ \ \ \ \ Mb\ \_\_\ \_\_\_\_\ \ \ \ \ \_\_\_\_\ \ \_\_\_\ \ \_\_\ \ \ \ `MM.\ \ \ d'\ \ \ \ MM\ \ \ \ \ \ MM\ \ \ \ \ \ \ \ `MM.\ \ \ d'}}
+\DoxyCodeLine{00007\ \textcolor{comment}{MM\ \ \ \ \ \ MM\ `M6MMMMb\ \ \ 6MMMMb\ `MM\ 6MMb\ \ \ \ `MM.\ d'\ \ \ \ \ MM\ \ \ \ \ \ YM.\ \ \ \ \ \ \ \ `MM.\ d'}}
+\DoxyCodeLine{00008\ \textcolor{comment}{MM\ \ \ \ \ \ MM\ \ MM'\ \ `Mb\ 6M'\ \ `Mb\ MMM9\ `Mb\ \ \ \ `MMd\ \ \ \ \ \ \ MM\ \ \ \ \ \ \ YMMMMb\ \ \ \ \ `MMd}}
+\DoxyCodeLine{00009\ \textcolor{comment}{MM\ \ \ \ \ \ MM\ \ MM\ \ \ \ MM\ MM\ \ \ \ MM\ MM'\ \ \ MM\ \ \ \ \ dMM.\ \ \ \ \ \ MM\ \ \ \ \ \ \ \ \ \ \ `Mb\ \ \ \ \ dMM.}}
+\DoxyCodeLine{00010\ \textcolor{comment}{MM\ \ \ \ \ \ MM\ \ MM\ \ \ \ MM\ MMMMMMMM\ MM\ \ \ \ MM\ \ \ \ d'`MM.\ \ \ \ \ MM\ \ \ \ \ \ \ \ \ \ \ \ MM\ \ \ \ d'`MM.}}
+\DoxyCodeLine{00011\ \textcolor{comment}{YM\ \ \ \ \ \ M9\ \ MM\ \ \ \ MM\ MM\ \ \ \ \ \ \ MM\ \ \ \ MM\ \ \ d'\ \ `MM.\ \ \ \ MM\ \ \ \ \ \ \ \ \ \ \ \ MM\ \ \ d'\ \ `MM.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{\ 8b\ \ \ \ d8\ \ \ MM.\ \ ,M9\ YM\ \ \ \ d9\ MM\ \ \ \ MM\ \ d'\ \ \ \ `MM.\ \ \ MM\ \ \ \ /\ L\ \ \ \ ,M9\ \ d'\ \ \ \ `MM.}}
+\DoxyCodeLine{00013\ \textcolor{comment}{\ \ YMMMM9\ \ \ \ MMYMMM9\ \ \ YMMMM9\ \_MM\_\ \ \_MM\_M(\_\ \ \ \ \_)MM\_\ \_MMMMMMM\ MYMMMM9\ \_M(\_\ \ \ \ \_)MM\_}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ MM}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ MM}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \_MM\_}}
+\DoxyCodeLine{00017\ \textcolor{comment}{}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\ \ Copyright\ (c)\ 2018,\ Kenneth\ Troldal\ Balslev}}
+\DoxyCodeLine{00019\ \textcolor{comment}{}}
+\DoxyCodeLine{00020\ \textcolor{comment}{\ \ All\ rights\ reserved.}}
+\DoxyCodeLine{00021\ \textcolor{comment}{}}
+\DoxyCodeLine{00022\ \textcolor{comment}{\ \ Redistribution\ and\ use\ in\ source\ and\ binary\ forms,\ with\ or\ without}}
+\DoxyCodeLine{00023\ \textcolor{comment}{\ \ modification,\ are\ permitted\ provided\ that\ the\ following\ conditions\ are\ met:}}
+\DoxyCodeLine{00024\ \textcolor{comment}{\ \ -\/\ Redistributions\ of\ source\ code\ must\ retain\ the\ above\ copyright}}
+\DoxyCodeLine{00025\ \textcolor{comment}{\ \ \ \ notice,\ this\ list\ of\ conditions\ and\ the\ following\ disclaimer.}}
+\DoxyCodeLine{00026\ \textcolor{comment}{\ \ -\/\ Redistributions\ in\ binary\ form\ must\ reproduce\ the\ above\ copyright}}
+\DoxyCodeLine{00027\ \textcolor{comment}{\ \ \ \ notice,\ this\ list\ of\ conditions\ and\ the\ following\ disclaimer\ in\ the}}
+\DoxyCodeLine{00028\ \textcolor{comment}{\ \ \ \ documentation\ and/or\ other\ materials\ provided\ with\ the\ distribution.}}
+\DoxyCodeLine{00029\ \textcolor{comment}{\ \ -\/\ Neither\ the\ name\ of\ the\ author\ nor\ the}}
+\DoxyCodeLine{00030\ \textcolor{comment}{\ \ \ \ names\ of\ any\ contributors\ may\ be\ used\ to\ endorse\ or\ promote\ products}}
+\DoxyCodeLine{00031\ \textcolor{comment}{\ \ \ \ derived\ from\ this\ software\ without\ specific\ prior\ written\ permission.}}
+\DoxyCodeLine{00032\ \textcolor{comment}{}}
+\DoxyCodeLine{00033\ \textcolor{comment}{\ \ THIS\ SOFTWARE\ IS\ PROVIDED\ BY\ THE\ COPYRIGHT\ HOLDERS\ AND\ CONTRIBUTORS\ "{}AS\ IS"{}\ AND}}
+\DoxyCodeLine{00034\ \textcolor{comment}{\ \ ANY\ EXPRESS\ OR\ IMPLIED\ WARRANTIES,\ INCLUDING,\ BUT\ NOT\ LIMITED\ TO,\ THE\ IMPLIED}}
+\DoxyCodeLine{00035\ \textcolor{comment}{\ \ WARRANTIES\ OF\ MERCHANTABILITY\ AND\ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE\ ARE}}
+\DoxyCodeLine{00036\ \textcolor{comment}{\ \ DISCLAIMED.\ IN\ NO\ EVENT\ SHALL\ THE\ AUTHOR\ BE\ LIABLE\ FOR\ ANY}}
+\DoxyCodeLine{00037\ \textcolor{comment}{\ \ DIRECT,\ INDIRECT,\ INCIDENTAL,\ SPECIAL,\ EXEMPLARY,\ OR\ CONSEQUENTIAL\ DAMAGES}}
+\DoxyCodeLine{00038\ \textcolor{comment}{\ \ (INCLUDING,\ BUT\ NOT\ LIMITED\ TO,\ PROCUREMENT\ OF\ SUBSTITUTE\ GOODS\ OR\ SERVICES;}}
+\DoxyCodeLine{00039\ \textcolor{comment}{\ \ LOSS\ OF\ USE,\ DATA,\ OR\ PROFITS;\ OR\ BUSINESS\ INTERRUPTION)\ HOWEVER\ CAUSED\ AND}}
+\DoxyCodeLine{00040\ \textcolor{comment}{\ \ ON\ ANY\ THEORY\ OF\ LIABILITY,\ WHETHER\ IN\ CONTRACT,\ STRICT\ LIABILITY,\ OR\ TORT}}
+\DoxyCodeLine{00041\ \textcolor{comment}{\ \ (INCLUDING\ NEGLIGENCE\ OR\ OTHERWISE)\ ARISING\ IN\ ANY\ WAY\ OUT\ OF\ THE\ USE\ OF\ THIS}}
+\DoxyCodeLine{00042\ \textcolor{comment}{\ \ SOFTWARE,\ EVEN\ IF\ ADVISED\ OF\ THE\ POSSIBILITY\ OF\ SUCH\ DAMAGE.}}
+\DoxyCodeLine{00043\ \textcolor{comment}{}}
+\DoxyCodeLine{00044\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \textcolor{preprocessor}{\#ifndef\ OPENXLSX\_XLFORMULA\_HPP}}
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\#define\ OPENXLSX\_XLFORMULA\_HPP}}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#pragma\ warning(push)}}
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#pragma\ warning(disable\ :\ 4251)}}
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\#pragma\ warning(disable\ :\ 4275)}}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \textcolor{comment}{//\ =====\ External\ Includes\ =====\ //}}
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#include\ <cstdint>}}
+\DoxyCodeLine{00055\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00057\ \textcolor{preprocessor}{\#include\ <variant>}}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \textcolor{comment}{//\ =====\ OpenXLSX\ Includes\ =====\ //}}
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\#include\ "{}OpenXLSX-\/Exports.hpp"{}}}
+\DoxyCodeLine{00061\ \textcolor{preprocessor}{\#include\ "{}XLException.hpp"{}}}
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\#include\ "{}XLXmlParser.hpp"{}}}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \textcolor{comment}{//\ ==========\ CLASS\ AND\ ENUM\ TYPE\ DEFINITIONS\ ==========\ //}}
+\DoxyCodeLine{00065\ \textcolor{keyword}{namespace\ }OpenXLSX}
+\DoxyCodeLine{00066\ \{}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Forward\ Declarations\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\///}}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keyword}{class\ }XLFormulaProxy;}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keyword}{class\ }XLCell;}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keyword}{class\ }OPENXLSX\_EXPORT\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_formula}{XLFormula}}}
+\DoxyCodeLine{00080\ \ \ \ \ \{}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Friend\ Declarations\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\///}}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keywordtype}{bool}\ \ \ \ \ \ \ \ \ \ operator==(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_formula}{XLFormula}}\&\ lhs,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_formula}{XLFormula}}\&\ rhs);}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keywordtype}{bool}\ \ \ \ \ \ \ \ \ \ operator!=(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_formula}{XLFormula}}\&\ lhs,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_formula}{XLFormula}}\&\ rhs);}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ std::ostream\&\ operator<<(std::ostream\&\ os,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_formula}{XLFormula}}\&\ value);}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_formula_a7ceb28d510fc20a796992c45c3d5be43}{XLFormula}}();}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T,}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{typename}\ std::enable\_if<}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::is\_same\_v<std::decay\_t<T>,\ std::string>\ ||\ std::is\_same\_v<std::decay\_t<T>,\ std::string\_view>\ ||}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::is\_same\_v<std::decay\_t<T>,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*>\ ||\ std::is\_same\_v<std::decay\_t<T>,\ \textcolor{keywordtype}{char}*>>::type*\ =\ \textcolor{keyword}{nullptr}>}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_formula_a096401ba783f2b75f91351022c4377d7}{XLFormula}}(T\ formula)}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ =====\ If\ the\ argument\ is\ a\ const\ char\ *,\ use\ the\ argument\ directly;\ otherwise,\ assume\ it\ has\ a\ .c\_str()\ function.}}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ \textcolor{keyword}{constexpr}\ (std::is\_same\_v<std::decay\_t<T>,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*>\ ||\ std::is\_same\_v<std::decay\_t<T>,\ \textcolor{keywordtype}{char}*>)}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_formulaString\ =\ formula;}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ \textcolor{keyword}{constexpr}\ (std::is\_same\_v<std::decay\_t<T>,\ std::string\_view>)}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_formulaString\ =\ std::string(formula);}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_formulaString\ =\ formula.c\_str();}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_formula_a73ee37e29ca28032acd3a935848c197f}{XLFormula}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_formula}{XLFormula}}\&\ other);}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_formula_a9a8cb8b47e60b45bb9c7f6cd8e94737c}{XLFormula}}(\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_formula}{XLFormula}}\&\&\ other)\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_formula_a750cc677a56c837c82a5ebfbc6fbf5a0}{\string~XLFormula}}();}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_formula}{XLFormula}}\&\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_formula_af87ca472758b6e0804b18b8b066ea92b}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_formula}{XLFormula}}\&\ other);}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_formula}{XLFormula}}\&\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_formula_a7ebe2ffc5e5404e6b19d7a6421faabe3}{operator=}}(\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_formula}{XLFormula}}\&\&\ other)\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00143\ }
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T,}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{typename}\ std::enable\_if<}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::is\_same\_v<std::decay\_t<T>,\ std::string>\ ||\ std::is\_same\_v<std::decay\_t<T>,\ std::string\_view>\ ||}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::is\_same\_v<std::decay\_t<T>,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*>\ ||\ std::is\_same\_v<std::decay\_t<T>,\ \textcolor{keywordtype}{char}*>>::type*\ =\ \textcolor{keyword}{nullptr}>}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_formula}{XLFormula}}\&\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_formula_a661902c15bf5f289c5574f879ca52c56}{operator=}}(T\ formula)}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_formula}{XLFormula}}\ temp(formula);}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \ \ \ \ std::swap(*\textcolor{keyword}{this},\ temp);}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00160\ }
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T,}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{typename}\ std::enable\_if<}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::is\_same\_v<std::decay\_t<T>,\ std::string>\ ||\ std::is\_same\_v<std::decay\_t<T>,\ std::string\_view>\ ||}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::is\_same\_v<std::decay\_t<T>,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*>\ ||\ std::is\_same\_v<std::decay\_t<T>,\ \textcolor{keywordtype}{char}*>>::type*\ =\ \textcolor{keyword}{nullptr}>}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_formula_a75cc23a8636d2e4c5baf4b814acc8ac6}{set}}(T\ formula)}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \ \ \ \ *\textcolor{keyword}{this}\ =\ formula;}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00174\ }
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_formula_add5265193964e8a73dcd7f2240ac3a06}{get}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00180\ }
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \textcolor{keyword}{operator}\ std::string()\ \textcolor{keyword}{const};\ \ \ \ \textcolor{comment}{//\ NOLINT}}
+\DoxyCodeLine{00186\ }
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_formula}{XLFormula}}\&\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_formula_a8611eb5e0869bcfa3b1cfa8ba45d8f6c}{clear}}();}
+\DoxyCodeLine{00192\ }
+\DoxyCodeLine{00193\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ std::string\ m\_formulaString;\ }
+\DoxyCodeLine{00195\ \ \ \ \ \};}
+\DoxyCodeLine{00196\ }
+\DoxyCodeLine{00201\ \ \ \ \ \textcolor{keyword}{class\ }OPENXLSX\_EXPORT\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_formula_proxy}{XLFormulaProxy}}}
+\DoxyCodeLine{00202\ \ \ \ \ \{}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell}{XLCell}};}
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_formula}{XLFormula}};}
+\DoxyCodeLine{00205\ }
+\DoxyCodeLine{00206\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_formula_proxy_a1be04a72f20d00f79663f901c6f16f08}{\string~XLFormulaProxy}}();}
+\DoxyCodeLine{00211\ }
+\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_formula_proxy}{XLFormulaProxy}}\&\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_formula_proxy_a051017453ad656570b4357b35a99bac5}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_formula_proxy}{XLFormulaProxy}}\&\ other);}
+\DoxyCodeLine{00218\ }
+\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<}
+\DoxyCodeLine{00226\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{typename}\ T,}
+\DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{typename}\ std::enable\_if<std::is\_same\_v<std::decay\_t<T>,\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_formula}{XLFormula}}>\ ||\ std::is\_same\_v<std::decay\_t<T>,\ std::string>\ ||}
+\DoxyCodeLine{00228\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::is\_same\_v<std::decay\_t<T>,\ std::string\_view>\ ||\ std::is\_same\_v<std::decay\_t<T>,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*>\ ||}
+\DoxyCodeLine{00229\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::is\_same\_v<std::decay\_t<T>,\ \textcolor{keywordtype}{char}*>>::type*\ =\ \textcolor{keyword}{nullptr}>}
+\DoxyCodeLine{00230\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_formula_proxy}{XLFormulaProxy}}\&\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_formula_proxy_ae9caf50ed35ddb7a23ede750b0dd3cd4}{operator=}}(T\ formula)}
+\DoxyCodeLine{00231\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00232\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ \textcolor{keyword}{constexpr}\ (std::is\_same\_v<std::decay\_t<T>,\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_formula}{XLFormula}}>)}
+\DoxyCodeLine{00233\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ setFormulaString(formula.get().c\_str());}
+\DoxyCodeLine{00234\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ \textcolor{keyword}{constexpr}\ (std::is\_same\_v<std::decay\_t<T>,\ std::string>)}
+\DoxyCodeLine{00235\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ setFormulaString(formula.c\_str());}
+\DoxyCodeLine{00236\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ \textcolor{keyword}{constexpr}\ (std::is\_same\_v<std::decay\_t<T>,\ std::string\_view>)}
+\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ setFormulaString(std::string(formula).c\_str());}
+\DoxyCodeLine{00238\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ setFormulaString(formula);}
+\DoxyCodeLine{00240\ }
+\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00243\ }
+\DoxyCodeLine{00249\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T,}
+\DoxyCodeLine{00250\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{typename}\ std::enable\_if<}
+\DoxyCodeLine{00251\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::is\_same\_v<std::decay\_t<T>,\ std::string>\ ||\ std::is\_same\_v<std::decay\_t<T>,\ std::string\_view>\ ||}
+\DoxyCodeLine{00252\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::is\_same\_v<std::decay\_t<T>,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*>\ ||\ std::is\_same\_v<std::decay\_t<T>,\ \textcolor{keywordtype}{char}*>>::type*\ =\ \textcolor{keyword}{nullptr}>}
+\DoxyCodeLine{00253\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_formula_proxy_aea5475cfc92493e2c9c1cd68b00d5fc1}{set}}(T\ formula)}
+\DoxyCodeLine{00254\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00255\ \ \ \ \ \ \ \ \ \ \ \ \ *\textcolor{keyword}{this}\ =\ formula;}
+\DoxyCodeLine{00256\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00257\ }
+\DoxyCodeLine{00262\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_formula_proxy_ae25446ef8ede0ee2dbccce8c2ace50bd}{get}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00263\ }
+\DoxyCodeLine{00268\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_formula_proxy}{XLFormulaProxy}}\&\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_formula_proxy_a1f0d3eef399992d4c6b4af7947c30304}{clear}}();}
+\DoxyCodeLine{00269\ }
+\DoxyCodeLine{00274\ \ \ \ \ \ \ \ \ \textcolor{keyword}{operator}\ std::string()\ \textcolor{keyword}{const};\ \ \ \ \textcolor{comment}{//\ NOLINT}}
+\DoxyCodeLine{00275\ }
+\DoxyCodeLine{00280\ \ \ \ \ \ \ \ \ \textcolor{keyword}{operator}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_formula}{XLFormula}}()\ \textcolor{keyword}{const};\ \ \ \ \textcolor{comment}{//\ NOLINT}}
+\DoxyCodeLine{00281\ }
+\DoxyCodeLine{00282\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00288\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_formula_proxy}{XLFormulaProxy}}(\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell}{XLCell}}*\ cell,\ XMLNode*\ cellNode);}
+\DoxyCodeLine{00289\ }
+\DoxyCodeLine{00294\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_formula_proxy}{XLFormulaProxy}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_formula_proxy}{XLFormulaProxy}}\&\ other);}
+\DoxyCodeLine{00295\ }
+\DoxyCodeLine{00300\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_formula_proxy}{XLFormulaProxy}}(\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_formula_proxy}{XLFormulaProxy}}\&\&\ other)\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00301\ }
+\DoxyCodeLine{00307\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_formula_proxy}{XLFormulaProxy}}\&\ operator=(\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_formula_proxy}{XLFormulaProxy}}\&\&\ other)\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00308\ }
+\DoxyCodeLine{00313\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ setFormulaString(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ formulaString);}
+\DoxyCodeLine{00314\ }
+\DoxyCodeLine{00320\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_formula}{XLFormula}}\ getFormula()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00321\ }
+\DoxyCodeLine{00322\ \ \ \ \ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Private\ Member\ Variables\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ //}}
+\DoxyCodeLine{00323\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell}{XLCell}}*\ \ m\_cell;\ \ \ \ \ }
+\DoxyCodeLine{00324\ \ \ \ \ \ \ \ \ XMLNode*\ m\_cellNode;\ }
+\DoxyCodeLine{00325\ \ \ \ \ \};}
+\DoxyCodeLine{00326\ \}\ \ \ \ \textcolor{comment}{//\ namespace\ OpenXLSX}}
+\DoxyCodeLine{00327\ }
+\DoxyCodeLine{00328\ \textcolor{comment}{//\ ==========\ FRIEND\ FUNCTION\ IMPLEMENTATIONS\ ==========\ //}}
+\DoxyCodeLine{00329\ \textcolor{keyword}{namespace\ }OpenXLSX}
+\DoxyCodeLine{00330\ \{}
+\DoxyCodeLine{00337\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{bool}\ operator==(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_formula}{XLFormula}}\&\ lhs,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_formula}{XLFormula}}\&\ rhs)}
+\DoxyCodeLine{00338\ \ \ \ \ \{}
+\DoxyCodeLine{00339\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ lhs.m\_formulaString\ ==\ rhs.m\_formulaString;}
+\DoxyCodeLine{00340\ \ \ \ \ \}}
+\DoxyCodeLine{00341\ }
+\DoxyCodeLine{00348\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{bool}\ operator!=(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_formula}{XLFormula}}\&\ lhs,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_formula}{XLFormula}}\&\ rhs)}
+\DoxyCodeLine{00349\ \ \ \ \ \{}
+\DoxyCodeLine{00350\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ lhs.m\_formulaString\ !=\ rhs.m\_formulaString;}
+\DoxyCodeLine{00351\ \ \ \ \ \}}
+\DoxyCodeLine{00352\ }
+\DoxyCodeLine{00359\ \ \ \ \ \textcolor{keyword}{inline}\ std::ostream\&\ operator<<(std::ostream\&\ os,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_formula}{XLFormula}}\&\ value)}
+\DoxyCodeLine{00360\ \ \ \ \ \{}
+\DoxyCodeLine{00361\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ os\ <<\ value.m\_formulaString;}
+\DoxyCodeLine{00362\ \ \ \ \ \}}
+\DoxyCodeLine{00363\ \}\ \ \ \ \textcolor{comment}{//\ namespace\ OpenXLSX}}
+\DoxyCodeLine{00364\ }
+\DoxyCodeLine{00365\ \textcolor{preprocessor}{\#endif\ \ \ \ }\textcolor{comment}{//\ OPENXLSX\_XLFORMULA\_HPP}}
+
+\end{DoxyCode}

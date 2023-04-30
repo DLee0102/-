@@ -1,0 +1,152 @@
+\hypertarget{class_open_x_l_s_x_1_1_x_l_column}{}\doxysection{Open\+XLSX\+::XLColumn Class Reference}
+\label{class_open_x_l_s_x_1_1_x_l_column}\index{OpenXLSX::XLColumn@{OpenXLSX::XLColumn}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_column_a14e64e5109bfd76417eb66d72dc3f6d9}{XLColumn}} (const XMLNode \&\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_column_ad9868bd252696aa9d8ec8656b816c9f0}{column\+Node}})
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_column_a2fff669857beba2663fc4af3842a2530}\label{class_open_x_l_s_x_1_1_x_l_column_a2fff669857beba2663fc4af3842a2530}} 
+{\bfseries XLColumn} (const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_column}{XLColumn}} \&other)
+\begin{DoxyCompactList}\small\item\em Copy Constructor \mbox{[}deleted\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_column_af0bb18f8c5c60a09c539e00ee35efa39}{XLColumn}} (\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_column}{XLColumn}} \&\&other) noexcept
+\begin{DoxyCompactList}\small\item\em Move Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_column_a9799c7f44468ffb1fea0e87e533a5197}\label{class_open_x_l_s_x_1_1_x_l_column_a9799c7f44468ffb1fea0e87e533a5197}} 
+{\bfseries $\sim$\+XLColumn} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_column_a049fa9862a78c0a83c0130982bb788fc}\label{class_open_x_l_s_x_1_1_x_l_column_a049fa9862a78c0a83c0130982bb788fc}} 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_column}{XLColumn}} \& {\bfseries operator=} (const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_column}{XLColumn}} \&other)
+\begin{DoxyCompactList}\small\item\em Copy assignment operator \mbox{[}deleted\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_column}{XLColumn}} \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_column_a6cf9e1126503edeeb352e55a82413f3c}{operator=}} (\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_column}{XLColumn}} \&\&other) noexcept=default
+\item 
+float \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_column_aab89c74a99e39be7b7cc535f7678cdf7}{width}} () const
+\begin{DoxyCompactList}\small\item\em Get the width of the column. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_column_ada714b19a0df58d3850f473cc3af06fd}{set\+Width}} (float \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_column_aab89c74a99e39be7b7cc535f7678cdf7}{width}})
+\begin{DoxyCompactList}\small\item\em Set the width of the column. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_column_a2a1ffec22393b30bb3118b56cd2a5f70}{is\+Hidden}} () const
+\begin{DoxyCompactList}\small\item\em Is the column hidden? \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_column_a5a1af27c7408ba0034ed45acdf377d08}{set\+Hidden}} (bool state)
+\begin{DoxyCompactList}\small\item\em Set the column to be shown or hidden. \end{DoxyCompactList}\item 
+XMLNode \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_column_ad9868bd252696aa9d8ec8656b816c9f0}{column\+Node}} () const
+\begin{DoxyCompactList}\small\item\em Get the XMLNode object for the column. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_column_a14e64e5109bfd76417eb66d72dc3f6d9}\label{class_open_x_l_s_x_1_1_x_l_column_a14e64e5109bfd76417eb66d72dc3f6d9}} 
+\index{OpenXLSX::XLColumn@{OpenXLSX::XLColumn}!XLColumn@{XLColumn}}
+\index{XLColumn@{XLColumn}!OpenXLSX::XLColumn@{OpenXLSX::XLColumn}}
+\doxysubsubsection{\texorpdfstring{XLColumn()}{XLColumn()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Open\+XLSX\+::\+XLColumn\+::\+XLColumn (\begin{DoxyParamCaption}\item[{const XMLNode \&}]{column\+Node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em column\+Node} & A pointer to the XMLNode for the column. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_column_af0bb18f8c5c60a09c539e00ee35efa39}\label{class_open_x_l_s_x_1_1_x_l_column_af0bb18f8c5c60a09c539e00ee35efa39}} 
+\index{OpenXLSX::XLColumn@{OpenXLSX::XLColumn}!XLColumn@{XLColumn}}
+\index{XLColumn@{XLColumn}!OpenXLSX::XLColumn@{OpenXLSX::XLColumn}}
+\doxysubsubsection{\texorpdfstring{XLColumn()}{XLColumn()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Open\+XLSX\+::\+XLColumn\+::\+XLColumn (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_column}{XLColumn}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Move Constructor. 
+
+\begin{DoxyNote}{Note}
+The move constructor has been explicitly deleted. 
+\end{DoxyNote}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_column_ad9868bd252696aa9d8ec8656b816c9f0}\label{class_open_x_l_s_x_1_1_x_l_column_ad9868bd252696aa9d8ec8656b816c9f0}} 
+\index{OpenXLSX::XLColumn@{OpenXLSX::XLColumn}!columnNode@{columnNode}}
+\index{columnNode@{columnNode}!OpenXLSX::XLColumn@{OpenXLSX::XLColumn}}
+\doxysubsubsection{\texorpdfstring{columnNode()}{columnNode()}}
+{\footnotesize\ttfamily XMLNode \& Open\+XLSX\+::\+XLColumn\+::column\+Node (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the XMLNode object for the column. 
+
+\begin{DoxyReturn}{Returns}
+The XMLNode for the column 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_column_a2a1ffec22393b30bb3118b56cd2a5f70}\label{class_open_x_l_s_x_1_1_x_l_column_a2a1ffec22393b30bb3118b56cd2a5f70}} 
+\index{OpenXLSX::XLColumn@{OpenXLSX::XLColumn}!isHidden@{isHidden}}
+\index{isHidden@{isHidden}!OpenXLSX::XLColumn@{OpenXLSX::XLColumn}}
+\doxysubsubsection{\texorpdfstring{isHidden()}{isHidden()}}
+{\footnotesize\ttfamily bool Open\+XLSX\+::\+XLColumn\+::is\+Hidden (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Is the column hidden? 
+
+\begin{DoxyReturn}{Returns}
+The state of the column. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_column_a6cf9e1126503edeeb352e55a82413f3c}\label{class_open_x_l_s_x_1_1_x_l_column_a6cf9e1126503edeeb352e55a82413f3c}} 
+\index{OpenXLSX::XLColumn@{OpenXLSX::XLColumn}!operator=@{operator=}}
+\index{operator=@{operator=}!OpenXLSX::XLColumn@{OpenXLSX::XLColumn}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_column}{XLColumn}} \& Open\+XLSX\+::\+XLColumn\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_column}{XLColumn}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_column_a5a1af27c7408ba0034ed45acdf377d08}\label{class_open_x_l_s_x_1_1_x_l_column_a5a1af27c7408ba0034ed45acdf377d08}} 
+\index{OpenXLSX::XLColumn@{OpenXLSX::XLColumn}!setHidden@{setHidden}}
+\index{setHidden@{setHidden}!OpenXLSX::XLColumn@{OpenXLSX::XLColumn}}
+\doxysubsubsection{\texorpdfstring{setHidden()}{setHidden()}}
+{\footnotesize\ttfamily void Open\+XLSX\+::\+XLColumn\+::set\+Hidden (\begin{DoxyParamCaption}\item[{bool}]{state }\end{DoxyParamCaption})}
+
+
+
+Set the column to be shown or hidden. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & The state of the column. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_column_ada714b19a0df58d3850f473cc3af06fd}\label{class_open_x_l_s_x_1_1_x_l_column_ada714b19a0df58d3850f473cc3af06fd}} 
+\index{OpenXLSX::XLColumn@{OpenXLSX::XLColumn}!setWidth@{setWidth}}
+\index{setWidth@{setWidth}!OpenXLSX::XLColumn@{OpenXLSX::XLColumn}}
+\doxysubsubsection{\texorpdfstring{setWidth()}{setWidth()}}
+{\footnotesize\ttfamily void Open\+XLSX\+::\+XLColumn\+::set\+Width (\begin{DoxyParamCaption}\item[{float}]{width }\end{DoxyParamCaption})}
+
+
+
+Set the width of the column. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & The width of the column \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_column_aab89c74a99e39be7b7cc535f7678cdf7}\label{class_open_x_l_s_x_1_1_x_l_column_aab89c74a99e39be7b7cc535f7678cdf7}} 
+\index{OpenXLSX::XLColumn@{OpenXLSX::XLColumn}!width@{width}}
+\index{width@{width}!OpenXLSX::XLColumn@{OpenXLSX::XLColumn}}
+\doxysubsubsection{\texorpdfstring{width()}{width()}}
+{\footnotesize\ttfamily float Open\+XLSX\+::\+XLColumn\+::width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the width of the column. 
+
+\begin{DoxyReturn}{Returns}
+The width of the column. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Youth\+\_\+learning\+\_\+autoload/vendors/\+Open\+XLSX/\+Open\+XLSX/headers/XLColumn.\+hpp\end{DoxyCompactItemize}

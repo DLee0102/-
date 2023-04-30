@@ -4,6 +4,11 @@
 #include <OpenXLSX.hpp>
 #include <iostream>
 #include <vector>
+#define STARTROW_TOTAL 3
+#define STARTROW_TEMP 2
+#define STARTCOL_TOTAL 5
+#define CHECKEDNAMECOL 1
+#define LOADEDNAMECOL 3
 
 namespace DXXTL{
     struct FileNamesplit
@@ -53,13 +58,12 @@ namespace DXXTL{
         int temp_start_row;
         int total_start_row;
 
-        int getRowlength(OpenXLSX::XLWorksheet wks, int start_row);    // 获取行长度
-        int getCollength(OpenXLSX::XLWorksheet wks, int start_row);    // 获取列长度
+        int getrowCount(OpenXLSX::XLWorksheet wks);    // 获取行长度
+        int getcolumnCount(OpenXLSX::XLWorksheet wks);    // 获取列长度
         bool initWritevector(std::vector<OpenXLSX::XLCellValue>& writeValues, int length);    // 初始化写入向量
         bool init(std::string obj_, std::vector<std::string>& files_, int temp_start_row_, int total_start_row_);    // 初始化框架
         void fillWriteValues(int checkedNamecol, int loadedNamecol);    // 将数据读取到写入向量中
-        // void loadData();    // 将写入向量中的数据写到指定表中    待重写
-        void findTerms();   // 匹配待登记的期数
+        void loadData(int termnumber);    // 将写入向量中的数据写到指定表中    待重写
         void retrieveFile(std::string file_);   // 检索一个文件
         std::string getNameproperty(std::string file_);      // 由文件路径获取文件名
         void assignFilenamepro(std::string file_);   // 给文件名属性赋值

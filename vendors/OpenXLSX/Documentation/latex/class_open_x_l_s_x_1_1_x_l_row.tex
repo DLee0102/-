@@ -1,0 +1,447 @@
+\hypertarget{class_open_x_l_s_x_1_1_x_l_row}{}\doxysection{Open\+XLSX\+::XLRow Class Reference}
+\label{class_open_x_l_s_x_1_1_x_l_row}\index{OpenXLSX::XLRow@{OpenXLSX::XLRow}}
+
+
+The \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row}{XLRow}} class represent a row in an Excel spreadsheet. Using \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row}{XLRow}} objects, various row formatting options can be set and modified.  
+
+
+
+
+{\ttfamily \#include $<$XLRow.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_row_ac3f5b7d8735c348ed179adbc0ed115fc}\label{class_open_x_l_s_x_1_1_x_l_row_ac3f5b7d8735c348ed179adbc0ed115fc}} 
+{\bfseries XLRow} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_ad2905c3d4af69b466be53dbde9518ad3}{XLRow}} (const XMLNode \&row\+Node, const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_shared_strings}{XLShared\+Strings}} \&shared\+Strings)
+\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_a068b1b0971038bfae6f53cecfc48f53c}{XLRow}} (const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row}{XLRow}} \&other)
+\begin{DoxyCompactList}\small\item\em Copy Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_a701754a3f8bf3d01399880cc9639cf1b}{XLRow}} (\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row}{XLRow}} \&\&other) noexcept
+\begin{DoxyCompactList}\small\item\em Move Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_a520b031fbb5bd104f025697a318aac56}{$\sim$\+XLRow}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row}{XLRow}} \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_a10e72a10226fd0667bc59c526ab20a15}{operator=}} (const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row}{XLRow}} \&other)
+\begin{DoxyCompactList}\small\item\em Copy assignment operator. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row}{XLRow}} \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_a44e1c4421557bc5144111b394fc0f9d3}{operator=}} (\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row}{XLRow}} \&\&other) noexcept
+\begin{DoxyCompactList}\small\item\em Move assignment operator. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_a2c55740b10b95c63220c4d433ef65254}{height}} () const
+\begin{DoxyCompactList}\small\item\em Get the height of the row. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_a0c6fed8566be867acddf88a818ac4706}{set\+Height}} (float \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_a2c55740b10b95c63220c4d433ef65254}{height}})
+\begin{DoxyCompactList}\small\item\em Set the height of the row. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_a114d437369f9171d6f82d44fa8d1b49f}{descent}} () const
+\begin{DoxyCompactList}\small\item\em Get the descent of the row, which is the vertical distance in pixels from the bottom of the cells in the current row to the typographical baseline of the cell content. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_aacf8e9a0d3d264311fc4e4695c636a0e}{set\+Descent}} (float \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_a114d437369f9171d6f82d44fa8d1b49f}{descent}})
+\begin{DoxyCompactList}\small\item\em Set the descent of the row, which is he vertical distance in pixels from the bottom of the cells in the current row to the typographical baseline of the cell content. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_af5fa82fc2cfc3b3e3d7a14e82ff3c14e}{is\+Hidden}} () const
+\begin{DoxyCompactList}\small\item\em Is the row hidden? \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_ac5522e4f83fb10c8839ec1b58c513ac6}{set\+Hidden}} (bool state)
+\begin{DoxyCompactList}\small\item\em Set the row to be hidden or visible. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_a5c401b7e349ee7087549063b4126a30e}{row\+Number}} () const
+\item 
+unsigned int \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_aed79c2471a2fdcfa3821e576603060ab}{cell\+Count}} () const
+\begin{DoxyCompactList}\small\item\em Get the number of cells in the row. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_proxy}{XLRow\+Data\+Proxy}} \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_a608b68dd8c8178e62ff7f483fc5fe547}{values}} ()
+\item 
+const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_proxy}{XLRow\+Data\+Proxy}} \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_a787aa766accc641b881aa5ed4306324b}{values}} () const
+\item 
+{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_a63f4992ece23d42e75cb692b341b47f0}{values}} () const
+\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_range}{XLRow\+Data\+Range}} \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_a71b804423b63238bfb5070804143a5fa}{cells}} () const
+\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_range}{XLRow\+Data\+Range}} \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_ac86cbd1dd66b68541f558d3de48ad03d}{cells}} (uint16\+\_\+t \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_aed79c2471a2fdcfa3821e576603060ab}{cell\+Count}}) const
+\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_range}{XLRow\+Data\+Range}} \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_af3bab41d61a32d11ed31fb9517031560}{cells}} (uint16\+\_\+t first\+Cell, uint16\+\_\+t last\+Cell) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_row_a6f2c419d53e1c86fe1be073be17beeb1}\label{class_open_x_l_s_x_1_1_x_l_row_a6f2c419d53e1c86fe1be073be17beeb1}} 
+class {\bfseries XLRow\+Iterator}
+\item 
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_row_af2bb74ae142ebbf9803133e610399375}\label{class_open_x_l_s_x_1_1_x_l_row_af2bb74ae142ebbf9803133e610399375}} 
+class {\bfseries XLRow\+Data\+Proxy}
+\item 
+bool \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_ad1ce2aeeada035d805d3e1c965626e1a}{operator==}} (const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row}{XLRow}} \&lhs, const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row}{XLRow}} \&rhs)
+\item 
+bool \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_ac28a312996fae18732e47e3e143e23ff}{operator!=}} (const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row}{XLRow}} \&lhs, const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row}{XLRow}} \&rhs)
+\item 
+bool \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_a634c461be345637e17362113a83b40da}{operator$<$}} (const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row}{XLRow}} \&lhs, const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row}{XLRow}} \&rhs)
+\item 
+bool \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_ac870355bc3fef09a270943c38ad5b71b}{operator$>$}} (const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row}{XLRow}} \&lhs, const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row}{XLRow}} \&rhs)
+\item 
+bool \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_a7e29861c95b0cf87c99e6855bb03cd14}{operator$<$=}} (const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row}{XLRow}} \&lhs, const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row}{XLRow}} \&rhs)
+\item 
+bool \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_a295e0c836e17b82c94d4a95b64aed3df}{operator$>$=}} (const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row}{XLRow}} \&lhs, const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row}{XLRow}} \&rhs)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row}{XLRow}} class represent a row in an Excel spreadsheet. Using \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row}{XLRow}} objects, various row formatting options can be set and modified. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_row_ad2905c3d4af69b466be53dbde9518ad3}\label{class_open_x_l_s_x_1_1_x_l_row_ad2905c3d4af69b466be53dbde9518ad3}} 
+\index{OpenXLSX::XLRow@{OpenXLSX::XLRow}!XLRow@{XLRow}}
+\index{XLRow@{XLRow}!OpenXLSX::XLRow@{OpenXLSX::XLRow}}
+\doxysubsubsection{\texorpdfstring{XLRow()}{XLRow()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Open\+XLSX\+::\+XLRow\+::\+XLRow (\begin{DoxyParamCaption}\item[{const XMLNode \&}]{row\+Node,  }\item[{const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_shared_strings}{XLShared\+Strings}} \&}]{shared\+Strings }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em row\+Node} & \\
+\hline
+{\em shared\+Strings} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_row_a068b1b0971038bfae6f53cecfc48f53c}\label{class_open_x_l_s_x_1_1_x_l_row_a068b1b0971038bfae6f53cecfc48f53c}} 
+\index{OpenXLSX::XLRow@{OpenXLSX::XLRow}!XLRow@{XLRow}}
+\index{XLRow@{XLRow}!OpenXLSX::XLRow@{OpenXLSX::XLRow}}
+\doxysubsubsection{\texorpdfstring{XLRow()}{XLRow()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Open\+XLSX\+::\+XLRow\+::\+XLRow (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row}{XLRow}} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Copy Constructor. 
+
+\begin{DoxyNote}{Note}
+The copy constructor is explicitly deleted 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_row_a701754a3f8bf3d01399880cc9639cf1b}\label{class_open_x_l_s_x_1_1_x_l_row_a701754a3f8bf3d01399880cc9639cf1b}} 
+\index{OpenXLSX::XLRow@{OpenXLSX::XLRow}!XLRow@{XLRow}}
+\index{XLRow@{XLRow}!OpenXLSX::XLRow@{OpenXLSX::XLRow}}
+\doxysubsubsection{\texorpdfstring{XLRow()}{XLRow()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Open\+XLSX\+::\+XLRow\+::\+XLRow (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row}{XLRow}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Move Constructor. 
+
+\begin{DoxyNote}{Note}
+The move constructor has been explicitly deleted. 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_row_a520b031fbb5bd104f025697a318aac56}\label{class_open_x_l_s_x_1_1_x_l_row_a520b031fbb5bd104f025697a318aac56}} 
+\index{OpenXLSX::XLRow@{OpenXLSX::XLRow}!````~XLRow@{$\sim$XLRow}}
+\index{````~XLRow@{$\sim$XLRow}!OpenXLSX::XLRow@{OpenXLSX::XLRow}}
+\doxysubsubsection{\texorpdfstring{$\sim$XLRow()}{~XLRow()}}
+{\footnotesize\ttfamily Open\+XLSX\+::\+XLRow\+::$\sim$\+XLRow (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor. 
+
+\begin{DoxyNote}{Note}
+The destructor has a default implementation. 
+\end{DoxyNote}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_row_aed79c2471a2fdcfa3821e576603060ab}\label{class_open_x_l_s_x_1_1_x_l_row_aed79c2471a2fdcfa3821e576603060ab}} 
+\index{OpenXLSX::XLRow@{OpenXLSX::XLRow}!cellCount@{cellCount}}
+\index{cellCount@{cellCount}!OpenXLSX::XLRow@{OpenXLSX::XLRow}}
+\doxysubsubsection{\texorpdfstring{cellCount()}{cellCount()}}
+{\footnotesize\ttfamily unsigned int Open\+XLSX\+::\+XLRow\+::cell\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the number of cells in the row. 
+
+\begin{DoxyReturn}{Returns}
+The number of cells in the row. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_row_a71b804423b63238bfb5070804143a5fa}\label{class_open_x_l_s_x_1_1_x_l_row_a71b804423b63238bfb5070804143a5fa}} 
+\index{OpenXLSX::XLRow@{OpenXLSX::XLRow}!cells@{cells}}
+\index{cells@{cells}!OpenXLSX::XLRow@{OpenXLSX::XLRow}}
+\doxysubsubsection{\texorpdfstring{cells()}{cells()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_range}{XLRow\+Data\+Range}} Open\+XLSX\+::\+XLRow\+::cells (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_row_ac86cbd1dd66b68541f558d3de48ad03d}\label{class_open_x_l_s_x_1_1_x_l_row_ac86cbd1dd66b68541f558d3de48ad03d}} 
+\index{OpenXLSX::XLRow@{OpenXLSX::XLRow}!cells@{cells}}
+\index{cells@{cells}!OpenXLSX::XLRow@{OpenXLSX::XLRow}}
+\doxysubsubsection{\texorpdfstring{cells()}{cells()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_range}{XLRow\+Data\+Range}} Open\+XLSX\+::\+XLRow\+::cells (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{cell\+Count }\end{DoxyParamCaption}) const}
+
+
+\begin{DoxyParams}{Parameters}
+{\em cell\+Count} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_row_af3bab41d61a32d11ed31fb9517031560}\label{class_open_x_l_s_x_1_1_x_l_row_af3bab41d61a32d11ed31fb9517031560}} 
+\index{OpenXLSX::XLRow@{OpenXLSX::XLRow}!cells@{cells}}
+\index{cells@{cells}!OpenXLSX::XLRow@{OpenXLSX::XLRow}}
+\doxysubsubsection{\texorpdfstring{cells()}{cells()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_range}{XLRow\+Data\+Range}} Open\+XLSX\+::\+XLRow\+::cells (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{first\+Cell,  }\item[{uint16\+\_\+t}]{last\+Cell }\end{DoxyParamCaption}) const}
+
+
+\begin{DoxyParams}{Parameters}
+{\em first\+Cell} & \\
+\hline
+{\em last\+Cell} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_row_a114d437369f9171d6f82d44fa8d1b49f}\label{class_open_x_l_s_x_1_1_x_l_row_a114d437369f9171d6f82d44fa8d1b49f}} 
+\index{OpenXLSX::XLRow@{OpenXLSX::XLRow}!descent@{descent}}
+\index{descent@{descent}!OpenXLSX::XLRow@{OpenXLSX::XLRow}}
+\doxysubsubsection{\texorpdfstring{descent()}{descent()}}
+{\footnotesize\ttfamily float Open\+XLSX\+::\+XLRow\+::descent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the descent of the row, which is the vertical distance in pixels from the bottom of the cells in the current row to the typographical baseline of the cell content. 
+
+\begin{DoxyReturn}{Returns}
+The row descent. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_row_a2c55740b10b95c63220c4d433ef65254}\label{class_open_x_l_s_x_1_1_x_l_row_a2c55740b10b95c63220c4d433ef65254}} 
+\index{OpenXLSX::XLRow@{OpenXLSX::XLRow}!height@{height}}
+\index{height@{height}!OpenXLSX::XLRow@{OpenXLSX::XLRow}}
+\doxysubsubsection{\texorpdfstring{height()}{height()}}
+{\footnotesize\ttfamily double Open\+XLSX\+::\+XLRow\+::height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the height of the row. 
+
+\begin{DoxyReturn}{Returns}
+the row height. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_row_af5fa82fc2cfc3b3e3d7a14e82ff3c14e}\label{class_open_x_l_s_x_1_1_x_l_row_af5fa82fc2cfc3b3e3d7a14e82ff3c14e}} 
+\index{OpenXLSX::XLRow@{OpenXLSX::XLRow}!isHidden@{isHidden}}
+\index{isHidden@{isHidden}!OpenXLSX::XLRow@{OpenXLSX::XLRow}}
+\doxysubsubsection{\texorpdfstring{isHidden()}{isHidden()}}
+{\footnotesize\ttfamily bool Open\+XLSX\+::\+XLRow\+::is\+Hidden (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Is the row hidden? 
+
+\begin{DoxyReturn}{Returns}
+The state of the row. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_row_a10e72a10226fd0667bc59c526ab20a15}\label{class_open_x_l_s_x_1_1_x_l_row_a10e72a10226fd0667bc59c526ab20a15}} 
+\index{OpenXLSX::XLRow@{OpenXLSX::XLRow}!operator=@{operator=}}
+\index{operator=@{operator=}!OpenXLSX::XLRow@{OpenXLSX::XLRow}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row}{XLRow}} \& Open\+XLSX\+::\+XLRow\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row}{XLRow}} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Copy assignment operator. 
+
+\begin{DoxyNote}{Note}
+The copy assignment operator is explicitly deleted. 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_row_a44e1c4421557bc5144111b394fc0f9d3}\label{class_open_x_l_s_x_1_1_x_l_row_a44e1c4421557bc5144111b394fc0f9d3}} 
+\index{OpenXLSX::XLRow@{OpenXLSX::XLRow}!operator=@{operator=}}
+\index{operator=@{operator=}!OpenXLSX::XLRow@{OpenXLSX::XLRow}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row}{XLRow}} \& Open\+XLSX\+::\+XLRow\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row}{XLRow}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Move assignment operator. 
+
+\begin{DoxyNote}{Note}
+The move assignment operator has been explicitly deleted. 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_row_a5c401b7e349ee7087549063b4126a30e}\label{class_open_x_l_s_x_1_1_x_l_row_a5c401b7e349ee7087549063b4126a30e}} 
+\index{OpenXLSX::XLRow@{OpenXLSX::XLRow}!rowNumber@{rowNumber}}
+\index{rowNumber@{rowNumber}!OpenXLSX::XLRow@{OpenXLSX::XLRow}}
+\doxysubsubsection{\texorpdfstring{rowNumber()}{rowNumber()}}
+{\footnotesize\ttfamily uint64\+\_\+t Open\+XLSX\+::\+XLRow\+::row\+Number (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_row_aacf8e9a0d3d264311fc4e4695c636a0e}\label{class_open_x_l_s_x_1_1_x_l_row_aacf8e9a0d3d264311fc4e4695c636a0e}} 
+\index{OpenXLSX::XLRow@{OpenXLSX::XLRow}!setDescent@{setDescent}}
+\index{setDescent@{setDescent}!OpenXLSX::XLRow@{OpenXLSX::XLRow}}
+\doxysubsubsection{\texorpdfstring{setDescent()}{setDescent()}}
+{\footnotesize\ttfamily void Open\+XLSX\+::\+XLRow\+::set\+Descent (\begin{DoxyParamCaption}\item[{float}]{descent }\end{DoxyParamCaption})}
+
+
+
+Set the descent of the row, which is he vertical distance in pixels from the bottom of the cells in the current row to the typographical baseline of the cell content. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em descent} & The row descent. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_row_a0c6fed8566be867acddf88a818ac4706}\label{class_open_x_l_s_x_1_1_x_l_row_a0c6fed8566be867acddf88a818ac4706}} 
+\index{OpenXLSX::XLRow@{OpenXLSX::XLRow}!setHeight@{setHeight}}
+\index{setHeight@{setHeight}!OpenXLSX::XLRow@{OpenXLSX::XLRow}}
+\doxysubsubsection{\texorpdfstring{setHeight()}{setHeight()}}
+{\footnotesize\ttfamily void Open\+XLSX\+::\+XLRow\+::set\+Height (\begin{DoxyParamCaption}\item[{float}]{height }\end{DoxyParamCaption})}
+
+
+
+Set the height of the row. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em height} & The height of the row. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_row_ac5522e4f83fb10c8839ec1b58c513ac6}\label{class_open_x_l_s_x_1_1_x_l_row_ac5522e4f83fb10c8839ec1b58c513ac6}} 
+\index{OpenXLSX::XLRow@{OpenXLSX::XLRow}!setHidden@{setHidden}}
+\index{setHidden@{setHidden}!OpenXLSX::XLRow@{OpenXLSX::XLRow}}
+\doxysubsubsection{\texorpdfstring{setHidden()}{setHidden()}}
+{\footnotesize\ttfamily void Open\+XLSX\+::\+XLRow\+::set\+Hidden (\begin{DoxyParamCaption}\item[{bool}]{state }\end{DoxyParamCaption})}
+
+
+
+Set the row to be hidden or visible. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & The state of the row. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_row_a608b68dd8c8178e62ff7f483fc5fe547}\label{class_open_x_l_s_x_1_1_x_l_row_a608b68dd8c8178e62ff7f483fc5fe547}} 
+\index{OpenXLSX::XLRow@{OpenXLSX::XLRow}!values@{values}}
+\index{values@{values}!OpenXLSX::XLRow@{OpenXLSX::XLRow}}
+\doxysubsubsection{\texorpdfstring{values()}{values()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_proxy}{XLRow\+Data\+Proxy}} \& Open\+XLSX\+::\+XLRow\+::values (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_row_a787aa766accc641b881aa5ed4306324b}\label{class_open_x_l_s_x_1_1_x_l_row_a787aa766accc641b881aa5ed4306324b}} 
+\index{OpenXLSX::XLRow@{OpenXLSX::XLRow}!values@{values}}
+\index{values@{values}!OpenXLSX::XLRow@{OpenXLSX::XLRow}}
+\doxysubsubsection{\texorpdfstring{values()}{values()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_proxy}{XLRow\+Data\+Proxy}} \& Open\+XLSX\+::\+XLRow\+::values (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_row_a63f4992ece23d42e75cb692b341b47f0}\label{class_open_x_l_s_x_1_1_x_l_row_a63f4992ece23d42e75cb692b341b47f0}} 
+\index{OpenXLSX::XLRow@{OpenXLSX::XLRow}!values@{values}}
+\index{values@{values}!OpenXLSX::XLRow@{OpenXLSX::XLRow}}
+\doxysubsubsection{\texorpdfstring{values()}{values()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T Open\+XLSX\+::\+XLRow\+::values (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_row_ac28a312996fae18732e47e3e143e23ff}\label{class_open_x_l_s_x_1_1_x_l_row_ac28a312996fae18732e47e3e143e23ff}} 
+\index{OpenXLSX::XLRow@{OpenXLSX::XLRow}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!OpenXLSX::XLRow@{OpenXLSX::XLRow}}
+\doxysubsubsection{\texorpdfstring{operator"!=}{operator!=}}
+{\footnotesize\ttfamily bool operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row}{XLRow}} \&}]{lhs,  }\item[{const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row}{XLRow}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em lhs} & \\
+\hline
+{\em rhs} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_row_a634c461be345637e17362113a83b40da}\label{class_open_x_l_s_x_1_1_x_l_row_a634c461be345637e17362113a83b40da}} 
+\index{OpenXLSX::XLRow@{OpenXLSX::XLRow}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!OpenXLSX::XLRow@{OpenXLSX::XLRow}}
+\doxysubsubsection{\texorpdfstring{operator$<$}{operator<}}
+{\footnotesize\ttfamily bool operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row}{XLRow}} \&}]{lhs,  }\item[{const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row}{XLRow}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em lhs} & \\
+\hline
+{\em rhs} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_row_a7e29861c95b0cf87c99e6855bb03cd14}\label{class_open_x_l_s_x_1_1_x_l_row_a7e29861c95b0cf87c99e6855bb03cd14}} 
+\index{OpenXLSX::XLRow@{OpenXLSX::XLRow}!operator$<$=@{operator$<$=}}
+\index{operator$<$=@{operator$<$=}!OpenXLSX::XLRow@{OpenXLSX::XLRow}}
+\doxysubsubsection{\texorpdfstring{operator$<$=}{operator<=}}
+{\footnotesize\ttfamily bool operator$<$= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row}{XLRow}} \&}]{lhs,  }\item[{const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row}{XLRow}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em lhs} & \\
+\hline
+{\em rhs} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_row_ad1ce2aeeada035d805d3e1c965626e1a}\label{class_open_x_l_s_x_1_1_x_l_row_ad1ce2aeeada035d805d3e1c965626e1a}} 
+\index{OpenXLSX::XLRow@{OpenXLSX::XLRow}!operator==@{operator==}}
+\index{operator==@{operator==}!OpenXLSX::XLRow@{OpenXLSX::XLRow}}
+\doxysubsubsection{\texorpdfstring{operator==}{operator==}}
+{\footnotesize\ttfamily bool operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row}{XLRow}} \&}]{lhs,  }\item[{const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row}{XLRow}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em lhs} & \\
+\hline
+{\em rhs} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_row_ac870355bc3fef09a270943c38ad5b71b}\label{class_open_x_l_s_x_1_1_x_l_row_ac870355bc3fef09a270943c38ad5b71b}} 
+\index{OpenXLSX::XLRow@{OpenXLSX::XLRow}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!OpenXLSX::XLRow@{OpenXLSX::XLRow}}
+\doxysubsubsection{\texorpdfstring{operator$>$}{operator>}}
+{\footnotesize\ttfamily bool operator$>$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row}{XLRow}} \&}]{lhs,  }\item[{const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row}{XLRow}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em lhs} & \\
+\hline
+{\em rhs} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_row_a295e0c836e17b82c94d4a95b64aed3df}\label{class_open_x_l_s_x_1_1_x_l_row_a295e0c836e17b82c94d4a95b64aed3df}} 
+\index{OpenXLSX::XLRow@{OpenXLSX::XLRow}!operator$>$=@{operator$>$=}}
+\index{operator$>$=@{operator$>$=}!OpenXLSX::XLRow@{OpenXLSX::XLRow}}
+\doxysubsubsection{\texorpdfstring{operator$>$=}{operator>=}}
+{\footnotesize\ttfamily bool operator$>$= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row}{XLRow}} \&}]{lhs,  }\item[{const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row}{XLRow}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em lhs} & \\
+\hline
+{\em rhs} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Youth\+\_\+learning\+\_\+autoload/vendors/\+Open\+XLSX/\+Open\+XLSX/headers/XLRow.\+hpp\end{DoxyCompactItemize}

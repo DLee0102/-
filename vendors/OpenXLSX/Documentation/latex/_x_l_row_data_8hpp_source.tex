@@ -1,0 +1,235 @@
+\hypertarget{_x_l_row_data_8hpp_source}{}\doxysection{XLRow\+Data.\+hpp}
+\label{_x_l_row_data_8hpp_source}\index{D:/Youth\_learning\_autoload/vendors/OpenXLSX/OpenXLSX/headers/XLRowData.hpp@{D:/Youth\_learning\_autoload/vendors/OpenXLSX/OpenXLSX/headers/XLRowData.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ Created\ by\ Kenneth\ Balslev\ on\ 24/08/2020.}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ OPENXLSX\_XLROWDATA\_HPP}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ OPENXLSX\_XLROWDATA\_HPP}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#pragma\ warning(push)}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#pragma\ warning(disable\ :\ 4251)}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#pragma\ warning(disable\ :\ 4275)}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ =====\ External\ Includes\ =====\ //}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <deque>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <iterator>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <list>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ =====\ OpenXLSX\ Includes\ =====\ //}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ "{}OpenXLSX-\/Exports.hpp"{}}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ "{}XLCell.hpp"{}}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ "{}XLConstants.hpp"{}}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ "{}XLException.hpp"{}}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#include\ "{}XLIterator.hpp"{}}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ "{}XLXmlParser.hpp"{}}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{comment}{//\ ==========\ CLASS\ AND\ ENUM\ TYPE\ DEFINITIONS\ ==========\ //}}
+\DoxyCodeLine{00028\ \textcolor{keyword}{namespace\ }OpenXLSX}
+\DoxyCodeLine{00029\ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{class\ }XLRow;}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{class\ }XLRowDataRange;}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keyword}{class\ }OPENXLSX\_EXPORT\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_iterator}{XLRowDataIterator}}}
+\DoxyCodeLine{00038\ \ \ \ \ \{}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_range}{XLRowDataRange}};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ }iterator\_category\ =\ std::forward\_iterator\_tag;}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell}{value\_type}}\ \ \ \ \ \ \ \ =\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell}{XLCell}};}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ }difference\_type\ \ \ =\ int64\_t;}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell}{pointer}}\ \ \ \ \ \ \ \ \ \ \ =\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell}{XLCell}}*;}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell}{reference}}\ \ \ \ \ \ \ \ \ =\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell}{XLCell}}\&;}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_iterator_a109dcc6984c78db6f66ecb7271a7a5b8}{\string~XLRowDataIterator}}();}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_iterator_a38b34984dcd46274e1b716913732f591}{XLRowDataIterator}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_iterator}{XLRowDataIterator}}\&\ other);}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_iterator_aec7636cf6faddd918208a169db6f2e10}{XLRowDataIterator}}(\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_iterator}{XLRowDataIterator}}\&\&\ other)\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_iterator}{XLRowDataIterator}}\&\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_iterator_a4dac78c0e7547d51d13a7dbdfe18b8ab}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_iterator}{XLRowDataIterator}}\&\ other);}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_iterator}{XLRowDataIterator}}\&\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_iterator_af3f338496152e21b8eb73268770bef2c}{operator=}}(\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_iterator}{XLRowDataIterator}}\&\&\ other)\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_iterator}{XLRowDataIterator}}\&\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_iterator_a5d30ae555f7934a03783d8c8f83dc47e}{operator++}}();}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_iterator}{XLRowDataIterator}}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_iterator_aa23be98dc9a7f545791c07a3b7aa83c4}{operator++}}(\textcolor{keywordtype}{int});\ \ \ \ \textcolor{comment}{//\ NOLINT}}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell}{reference}}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_iterator_a7a233bb13b3e8bdfc74f48129aec849e}{operator*}}();}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell}{pointer}}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_iterator_a741beb55c5f8f49647fd2aaab2d5e5a0}{operator-\/>}}();}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_iterator_a95ee1381e8501d4b8fac5dd50ac2d0d4}{operator==}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_iterator}{XLRowDataIterator}}\&\ rhs)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_iterator_a0397c8e1f7ba989b58c1247e6dacb907}{operator!=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_iterator}{XLRowDataIterator}}\&\ rhs)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_iterator}{XLRowDataIterator}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_range}{XLRowDataRange}}\&\ rowDataRange,\ XLIteratorLocation\ loc);}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ std::unique\_ptr<XLRowDataRange>\ m\_dataRange;\ \ \ }
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ std::unique\_ptr<XMLNode>\ \ \ \ \ \ \ \ m\_cellNode;\ \ \ \ }
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell}{XLCell}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_currentCell;\ }
+\DoxyCodeLine{00128\ \ \ \ \ \};}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{keyword}{class\ }OPENXLSX\_EXPORT\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_range}{XLRowDataRange}}}
+\DoxyCodeLine{00134\ \ \ \ \ \{}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_iterator}{XLRowDataIterator}};}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_proxy}{XLRowDataProxy}};}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row}{XLRow}};}
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_range_a119838c04e966cb0542e43b53573e5e6}{XLRowDataRange}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_range}{XLRowDataRange}}\&\ other);}
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_range_a32e5c1d111efc1a63e9583f935b7e3e4}{XLRowDataRange}}(\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_range}{XLRowDataRange}}\&\&\ other)\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00151\ }
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_range_a3892c5c30359435551b40bc7c3bda70a}{\string~XLRowDataRange}}();}
+\DoxyCodeLine{00156\ }
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_range}{XLRowDataRange}}\&\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_range_aa3dc48e05087087d9377d91670fb401b}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_range}{XLRowDataRange}}\&\ other);}
+\DoxyCodeLine{00163\ }
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_range}{XLRowDataRange}}\&\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_range_a72eb4a92df27135af43069365ce26433}{operator=}}(\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_range}{XLRowDataRange}}\&\&\ other)\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00170\ }
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ uint16\_t\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_range_a48ba6bdaf8f339946c0acd002f0268b4}{size}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00176\ }
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_iterator}{XLRowDataIterator}}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_range_a41827b009f81f5253bbf45e9ddb71a17}{begin}}();}
+\DoxyCodeLine{00182\ }
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_iterator}{XLRowDataIterator}}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_range_aab8d95d4b218be0c62680e6bcc404546}{end}}();}
+\DoxyCodeLine{00188\ }
+\DoxyCodeLine{00189\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_range}{XLRowDataRange}}(\textcolor{keyword}{const}\ XMLNode\&\ rowNode,\ uint16\_t\ firstColumn,\ uint16\_t\ lastColumn,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_shared_strings}{XLSharedStrings}}\&\ sharedStrings);}
+\DoxyCodeLine{00198\ }
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ std::unique\_ptr<XMLNode>\ m\_rowNode;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ uint16\_t\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_firstCol\ \{\ 1\ \};\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ uint16\_t\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_lastCol\ \{\ 1\ \};\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ XLSharedStrings\ \ \ \ \ \ \ \ \ \ m\_sharedStrings;\ }
+\DoxyCodeLine{00203\ \ \ \ \ \};}
+\DoxyCodeLine{00204\ }
+\DoxyCodeLine{00209\ \ \ \ \ \textcolor{keyword}{class\ }OPENXLSX\_EXPORT\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_proxy}{XLRowDataProxy}}}
+\DoxyCodeLine{00210\ \ \ \ \ \{}
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row}{XLRow}};}
+\DoxyCodeLine{00212\ }
+\DoxyCodeLine{00213\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_proxy_a6da7c6c9537dec853ede6ca452b4df0d}{\string~XLRowDataProxy}}();}
+\DoxyCodeLine{00218\ }
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_proxy}{XLRowDataProxy}}\&\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_proxy_adfb8a69e24b51b08002d27bac9a2947f}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_proxy}{XLRowDataProxy}}\&\ other);}
+\DoxyCodeLine{00225\ }
+\DoxyCodeLine{00231\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_proxy}{XLRowDataProxy}}\&\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_proxy_a3482f5fef82a3ebf70922ab18013ccdf}{operator=}}(\textcolor{keyword}{const}\ std::vector<XLCellValue>\&\ values);}
+\DoxyCodeLine{00232\ }
+\DoxyCodeLine{00238\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_proxy}{XLRowDataProxy}}\&\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_proxy_a68c4628a0d7a6ca8c4410e41559a4bdf}{operator=}}(\textcolor{keyword}{const}\ std::vector<bool>\&\ values);}
+\DoxyCodeLine{00239\ }
+\DoxyCodeLine{00247\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T,}
+\DoxyCodeLine{00248\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{typename}\ std::enable\_if<!std::is\_same\_v<T,\ XLRowDataProxy>\ \&\&}
+\DoxyCodeLine{00249\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::is\_base\_of\_v<\textcolor{keyword}{typename}\ std::bidirectional\_iterator\_tag,}
+\DoxyCodeLine{00250\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{typename}\ std::iterator\_traits<typename\ T::iterator>::iterator\_category>,}
+\DoxyCodeLine{00251\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ T>::type*\ =\ \textcolor{keyword}{nullptr}>}
+\DoxyCodeLine{00252\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_proxy}{XLRowDataProxy}}\&\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_proxy_af57dc74a92e0d1fa29d2ab9db291b4b7}{operator=}}(\textcolor{keyword}{const}\ T\&\ values)}
+\DoxyCodeLine{00253\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00254\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (values.size()\ >\ MAX\_COLS)\ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_overflow_error}{XLOverflowError}}(\textcolor{stringliteral}{"{}Container\ size\ exceeds\ maximum\ number\ of\ columns."{}});}
+\DoxyCodeLine{00255\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (values.size()\ ==\ 0)\ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{00256\ }
+\DoxyCodeLine{00257\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ =====\ If\ the\ container\ value\_type\ is\ XLCellValue,\ the\ values\ can\ be\ copied\ directly.}}
+\DoxyCodeLine{00258\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ \textcolor{keyword}{constexpr}\ (std::is\_same\_v<typename\ T::value\_type,\ XLCellValue>)\ \{}
+\DoxyCodeLine{00259\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ =====\ First,\ delete\ the\ values\ in\ the\ first\ N\ columns.}}
+\DoxyCodeLine{00260\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ deleteCellValues(values.size());}
+\DoxyCodeLine{00261\ }
+\DoxyCodeLine{00262\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ =====\ Then,\ prepend\ new\ cell\ nodes\ to\ current\ row\ node}}
+\DoxyCodeLine{00263\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ colNo\ =\ values.size();}
+\DoxyCodeLine{00264\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ value\ =\ values.rbegin();\ value\ !=\ values.rend();\ ++value)\ \{\ \ \ \ \textcolor{comment}{//\ NOLINT}}
+\DoxyCodeLine{00265\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ prependCellValue(*value,\ colNo);}
+\DoxyCodeLine{00266\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ -\/-\/colNo;}
+\DoxyCodeLine{00267\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00268\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00269\ }
+\DoxyCodeLine{00270\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ =====\ If\ the\ container\ value\_type\ is\ a\ POD\ type,\ use\ the\ overloaded\ operator=\ on\ each\ cell.}}
+\DoxyCodeLine{00271\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00272\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ range\ =\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_range}{XLRowDataRange}}(*m\_rowNode,\ 1,\ values.size(),\ getSharedStrings());}
+\DoxyCodeLine{00273\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ dst\ \ \ =\ range.begin();}
+\DoxyCodeLine{00274\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ src\ \ \ =\ values.begin();}
+\DoxyCodeLine{00275\ }
+\DoxyCodeLine{00276\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (\textcolor{keyword}{true})\ \{}
+\DoxyCodeLine{00277\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ dst-\/>value()\ =\ *src;}
+\DoxyCodeLine{00278\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ++src;}
+\DoxyCodeLine{00279\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (src\ ==\ values.end())\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00280\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ++dst;}
+\DoxyCodeLine{00281\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00282\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00283\ }
+\DoxyCodeLine{00284\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{00285\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00286\ }
+\DoxyCodeLine{00291\ \ \ \ \ \ \ \ \ \textcolor{keyword}{operator}\ std::vector<XLCellValue>()\ \textcolor{keyword}{const};\ \ \ \ \textcolor{comment}{//\ NOLINT}}
+\DoxyCodeLine{00292\ }
+\DoxyCodeLine{00297\ \ \ \ \ \ \ \ \ \textcolor{keyword}{operator}\ std::deque<XLCellValue>()\ \textcolor{keyword}{const};\ \ \ \ \textcolor{comment}{//\ NOLINT}}
+\DoxyCodeLine{00298\ }
+\DoxyCodeLine{00303\ \ \ \ \ \ \ \ \ \textcolor{keyword}{operator}\ std::list<XLCellValue>()\ \textcolor{keyword}{const};\ \ \ \ \textcolor{comment}{//\ NOLINT}}
+\DoxyCodeLine{00304\ }
+\DoxyCodeLine{00313\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<}
+\DoxyCodeLine{00314\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{typename}\ Container,}
+\DoxyCodeLine{00315\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{typename}\ std::enable\_if<!std::is\_same\_v<Container,\ XLRowDataProxy>\ \&\&}
+\DoxyCodeLine{00316\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::is\_base\_of\_v<\textcolor{keyword}{typename}\ std::bidirectional\_iterator\_tag,}
+\DoxyCodeLine{00317\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{typename}\ std::iterator\_traits<typename\ Container::iterator>::iterator\_category>,}
+\DoxyCodeLine{00318\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Container>::type*\ =\ \textcolor{keyword}{nullptr}>}
+\DoxyCodeLine{00319\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \textcolor{keyword}{operator}\ Container()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00320\ \textcolor{keyword}{\ \ \ \ \ \ \ \ }\{}
+\DoxyCodeLine{00321\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ convertContainer<Container>();}
+\DoxyCodeLine{00322\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00323\ }
+\DoxyCodeLine{00327\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_proxy_a7d3434c781f297125a30f9e2e8f7f315}{clear}}();}
+\DoxyCodeLine{00328\ }
+\DoxyCodeLine{00329\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00330\ \ \ \ \ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Private\ Member\ Functions\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ //}}
+\DoxyCodeLine{00331\ }
+\DoxyCodeLine{00337\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_proxy}{XLRowDataProxy}}(\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row}{XLRow}}*\ row,\ XMLNode*\ rowNode);}
+\DoxyCodeLine{00338\ }
+\DoxyCodeLine{00344\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_proxy}{XLRowDataProxy}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_proxy}{XLRowDataProxy}}\&\ other);}
+\DoxyCodeLine{00345\ }
+\DoxyCodeLine{00351\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_proxy}{XLRowDataProxy}}(\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_proxy}{XLRowDataProxy}}\&\&\ other)\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00352\ }
+\DoxyCodeLine{00359\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_proxy}{XLRowDataProxy}}\&\ operator=(\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_proxy}{XLRowDataProxy}}\&\&\ other)\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00360\ }
+\DoxyCodeLine{00365\ \ \ \ \ \ \ \ \ std::vector<XLCellValue>\ getValues()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00366\ }
+\DoxyCodeLine{00371\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_shared_strings}{XLSharedStrings}}\ getSharedStrings()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00372\ }
+\DoxyCodeLine{00377\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ deleteCellValues(uint16\_t\ count);}
+\DoxyCodeLine{00378\ }
+\DoxyCodeLine{00384\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ prependCellValue(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{XLCellValue}}\&\ value,\ uint16\_t\ col);}
+\DoxyCodeLine{00385\ }
+\DoxyCodeLine{00395\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<}
+\DoxyCodeLine{00396\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{typename}\ Container,}
+\DoxyCodeLine{00397\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{typename}\ std::enable\_if<!std::is\_same\_v<Container,\ XLRowDataProxy>\ \&\&}
+\DoxyCodeLine{00398\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::is\_base\_of\_v<\textcolor{keyword}{typename}\ std::bidirectional\_iterator\_tag,}
+\DoxyCodeLine{00399\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{typename}\ std::iterator\_traits<typename\ Container::iterator>::iterator\_category>,}
+\DoxyCodeLine{00400\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Container>::type*\ =\ \textcolor{keyword}{nullptr}>}
+\DoxyCodeLine{00401\ \ \ \ \ \ \ \ \ Container\ convertContainer()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00402\ \textcolor{keyword}{\ \ \ \ \ \ \ \ }\{}
+\DoxyCodeLine{00403\ \ \ \ \ \ \ \ \ \ \ \ \ Container\ c;}
+\DoxyCodeLine{00404\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ \ \ \ \ \ it\ =\ std::inserter(c,\ c.end());}
+\DoxyCodeLine{00405\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ v\ :\ getValues())\ \{}
+\DoxyCodeLine{00406\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ =====\ If\ the\ value\_type\ of\ the\ container\ is\ XLCellValue,\ the\ value\ can\ be\ assigned\ directly.}}
+\DoxyCodeLine{00407\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ \textcolor{keyword}{constexpr}\ (std::is\_same\_v<typename\ Container::value\_type,\ XLCellValue>)\ *it++\ =\ v;}
+\DoxyCodeLine{00408\ }
+\DoxyCodeLine{00409\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ =====\ If\ the\ value\_type\ is\ something\ else,\ the\ underlying\ value\ has\ to\ be\ extracted\ from\ the\ XLCellValue\ object.}}
+\DoxyCodeLine{00410\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ =====\ Note\ that\ if\ the\ type\ contained\ in\ the\ XLCellValue\ object\ does\ not\ match\ the\ value\_type,\ a\ bad\_variant\_access}}
+\DoxyCodeLine{00411\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ =====\ exception\ will\ be\ thrown.}}
+\DoxyCodeLine{00412\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00413\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *it++\ =\ v.get<\textcolor{keyword}{typename}\ Container::value\_type>();}
+\DoxyCodeLine{00414\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00415\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ c;}
+\DoxyCodeLine{00416\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00417\ }
+\DoxyCodeLine{00418\ \ \ \ \ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Private\ Member\ Variables\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ //}}
+\DoxyCodeLine{00419\ }
+\DoxyCodeLine{00420\ \ \ \ \ \ \ \ \ XLRow*\ \ \ m\_row\ \{\ \textcolor{keyword}{nullptr}\ \};\ \ \ \ \ }
+\DoxyCodeLine{00421\ \ \ \ \ \ \ \ \ XMLNode*\ m\_rowNode\ \{\ \textcolor{keyword}{nullptr}\ \};\ }
+\DoxyCodeLine{00422\ \ \ \ \ \};}
+\DoxyCodeLine{00423\ }
+\DoxyCodeLine{00424\ \}\ \ \ \ \textcolor{comment}{//\ namespace\ OpenXLSX}}
+\DoxyCodeLine{00425\ }
+\DoxyCodeLine{00426\ \textcolor{preprocessor}{\#pragma\ warning(pop)}}
+\DoxyCodeLine{00427\ \textcolor{preprocessor}{\#endif\ \ \ \ }\textcolor{comment}{//\ OPENXLSX\_XLROWDATA\_HPP}}
+
+\end{DoxyCode}

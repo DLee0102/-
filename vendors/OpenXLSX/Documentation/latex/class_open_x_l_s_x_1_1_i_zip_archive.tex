@@ -1,0 +1,188 @@
+\hypertarget{class_open_x_l_s_x_1_1_i_zip_archive}{}\doxysection{Open\+XLSX\+::IZip\+Archive Class Reference}
+\label{class_open_x_l_s_x_1_1_i_zip_archive}\index{OpenXLSX::IZipArchive@{OpenXLSX::IZipArchive}}
+
+
+This class functions as a wrapper around any class that provides the necessary functionality for a zip archive.  
+
+
+
+
+{\ttfamily \#include $<$IZip\+Archive.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_i_zip_archive_a05932069f0108c8f3bac65da6aba2b79}\label{class_open_x_l_s_x_1_1_i_zip_archive_a05932069f0108c8f3bac65da6aba2b79}} 
+{\bfseries IZip\+Archive} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{class_open_x_l_s_x_1_1_i_zip_archive_a606f225c9e9c49f07d1a51fbf4a43351}{IZip\+Archive}} (const T \&zip\+Archive)
+\begin{DoxyCompactList}\small\item\em Constructor, taking the target object as an argument. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_i_zip_archive_a3277532239c7267d8f15b1bb3504491c}{IZip\+Archive}} (const \mbox{\hyperlink{class_open_x_l_s_x_1_1_i_zip_archive}{IZip\+Archive}} \&other)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_i_zip_archive_a72dd6deb79c8fa6f3b57d0b88a225075}{IZip\+Archive}} (\mbox{\hyperlink{class_open_x_l_s_x_1_1_i_zip_archive}{IZip\+Archive}} \&\&other) noexcept=default
+\begin{DoxyCompactList}\small\item\em Move constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_i_zip_archive_a73663991d6921013dfa0784b05b40445}\label{class_open_x_l_s_x_1_1_i_zip_archive_a73663991d6921013dfa0784b05b40445}} 
+{\bfseries $\sim$\+IZip\+Archive} ()=default
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{class_open_x_l_s_x_1_1_i_zip_archive}{IZip\+Archive}} \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_i_zip_archive_a1b6abc123cb0bf552d6df600491dc991}{operator=}} (const T \&zip\+Archive)
+\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_i_zip_archive}{IZip\+Archive}} \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_i_zip_archive_a3a670f016c30ae90c48c225f1bb2abc8}{operator=}} (const \mbox{\hyperlink{class_open_x_l_s_x_1_1_i_zip_archive}{IZip\+Archive}} \&other)
+\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_i_zip_archive}{IZip\+Archive}} \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_i_zip_archive_abc9ef7d1f58e2499e742b901ef0a244b}{operator=}} (\mbox{\hyperlink{class_open_x_l_s_x_1_1_i_zip_archive}{IZip\+Archive}} \&\&other) noexcept=default
+\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_i_zip_archive_aa081754ec16b795d4e3a99211ceabb7d}{operator bool}} () const
+\item 
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_i_zip_archive_a85d5c306f5194fc3de1ba1b422410701}\label{class_open_x_l_s_x_1_1_i_zip_archive_a85d5c306f5194fc3de1ba1b422410701}} 
+bool {\bfseries is\+Valid} () const
+\item 
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_i_zip_archive_a3951f028642bcb8844dbb0f52ae30399}\label{class_open_x_l_s_x_1_1_i_zip_archive_a3951f028642bcb8844dbb0f52ae30399}} 
+bool {\bfseries is\+Open} () const
+\item 
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_i_zip_archive_a9b664d81e4b27df77036edfc98bada12}\label{class_open_x_l_s_x_1_1_i_zip_archive_a9b664d81e4b27df77036edfc98bada12}} 
+void {\bfseries open} (const std\+::string \&file\+Name)
+\item 
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_i_zip_archive_ad8ca2b9fb9d3c08f6f654f9401dee175}\label{class_open_x_l_s_x_1_1_i_zip_archive_ad8ca2b9fb9d3c08f6f654f9401dee175}} 
+void {\bfseries close} () const
+\item 
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_i_zip_archive_a13f0bd0aa2216995471e1b2a117cdd7e}\label{class_open_x_l_s_x_1_1_i_zip_archive_a13f0bd0aa2216995471e1b2a117cdd7e}} 
+void {\bfseries save} (const std\+::string \&path)
+\item 
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_i_zip_archive_aac6851dc33a595cb32bb19bca4697405}\label{class_open_x_l_s_x_1_1_i_zip_archive_aac6851dc33a595cb32bb19bca4697405}} 
+void {\bfseries add\+Entry} (const std\+::string \&name, const std\+::string \&data)
+\item 
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_i_zip_archive_aaff75a29f6a5f7fd27afef4548721e45}\label{class_open_x_l_s_x_1_1_i_zip_archive_aaff75a29f6a5f7fd27afef4548721e45}} 
+void {\bfseries delete\+Entry} (const std\+::string \&entry\+Name)
+\item 
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_i_zip_archive_ac747f3c965058e424ff98597c0bf91d1}\label{class_open_x_l_s_x_1_1_i_zip_archive_ac747f3c965058e424ff98597c0bf91d1}} 
+std\+::string {\bfseries get\+Entry} (const std\+::string \&name)
+\item 
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_i_zip_archive_ad71363834f83bc57de45c308e74d7cba}\label{class_open_x_l_s_x_1_1_i_zip_archive_ad71363834f83bc57de45c308e74d7cba}} 
+bool {\bfseries has\+Entry} (const std\+::string \&entry\+Name)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class functions as a wrapper around any class that provides the necessary functionality for a zip archive. 
+
+This class works by applying \textquotesingle{}type erasure\textquotesingle{}. This enables the use of objects of any class, the only requirement being that it provides the right interface. No inheritance from a base class is needed. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_i_zip_archive_a606f225c9e9c49f07d1a51fbf4a43351}\label{class_open_x_l_s_x_1_1_i_zip_archive_a606f225c9e9c49f07d1a51fbf4a43351}} 
+\index{OpenXLSX::IZipArchive@{OpenXLSX::IZipArchive}!IZipArchive@{IZipArchive}}
+\index{IZipArchive@{IZipArchive}!OpenXLSX::IZipArchive@{OpenXLSX::IZipArchive}}
+\doxysubsubsection{\texorpdfstring{IZipArchive()}{IZipArchive()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+Open\+XLSX\+::\+IZip\+Archive\+::\+IZip\+Archive (\begin{DoxyParamCaption}\item[{const T \&}]{zip\+Archive }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor, taking the target object as an argument. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of the target object (will be auto deducted) \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The target object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+This method is deliberately not marked \textquotesingle{}explicit\textquotesingle{}, because as a templated constructor, it should be able to take any type as an argument. However, only objects that satisfy the required interface can be used. 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_i_zip_archive_a3277532239c7267d8f15b1bb3504491c}\label{class_open_x_l_s_x_1_1_i_zip_archive_a3277532239c7267d8f15b1bb3504491c}} 
+\index{OpenXLSX::IZipArchive@{OpenXLSX::IZipArchive}!IZipArchive@{IZipArchive}}
+\index{IZipArchive@{IZipArchive}!OpenXLSX::IZipArchive@{OpenXLSX::IZipArchive}}
+\doxysubsubsection{\texorpdfstring{IZipArchive()}{IZipArchive()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Open\+XLSX\+::\+IZip\+Archive\+::\+IZip\+Archive (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_open_x_l_s_x_1_1_i_zip_archive}{IZip\+Archive}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Copy constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_i_zip_archive_a72dd6deb79c8fa6f3b57d0b88a225075}\label{class_open_x_l_s_x_1_1_i_zip_archive_a72dd6deb79c8fa6f3b57d0b88a225075}} 
+\index{OpenXLSX::IZipArchive@{OpenXLSX::IZipArchive}!IZipArchive@{IZipArchive}}
+\index{IZipArchive@{IZipArchive}!OpenXLSX::IZipArchive@{OpenXLSX::IZipArchive}}
+\doxysubsubsection{\texorpdfstring{IZipArchive()}{IZipArchive()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Open\+XLSX\+::\+IZip\+Archive\+::\+IZip\+Archive (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_open_x_l_s_x_1_1_i_zip_archive}{IZip\+Archive}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Move constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_i_zip_archive_aa081754ec16b795d4e3a99211ceabb7d}\label{class_open_x_l_s_x_1_1_i_zip_archive_aa081754ec16b795d4e3a99211ceabb7d}} 
+\index{OpenXLSX::IZipArchive@{OpenXLSX::IZipArchive}!operator bool@{operator bool}}
+\index{operator bool@{operator bool}!OpenXLSX::IZipArchive@{OpenXLSX::IZipArchive}}
+\doxysubsubsection{\texorpdfstring{operator bool()}{operator bool()}}
+{\footnotesize\ttfamily Open\+XLSX\+::\+IZip\+Archive\+::operator bool (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_i_zip_archive_a3a670f016c30ae90c48c225f1bb2abc8}\label{class_open_x_l_s_x_1_1_i_zip_archive_a3a670f016c30ae90c48c225f1bb2abc8}} 
+\index{OpenXLSX::IZipArchive@{OpenXLSX::IZipArchive}!operator=@{operator=}}
+\index{operator=@{operator=}!OpenXLSX::IZipArchive@{OpenXLSX::IZipArchive}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_open_x_l_s_x_1_1_i_zip_archive}{IZip\+Archive}} \& Open\+XLSX\+::\+IZip\+Archive\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_open_x_l_s_x_1_1_i_zip_archive}{IZip\+Archive}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_i_zip_archive_a1b6abc123cb0bf552d6df600491dc991}\label{class_open_x_l_s_x_1_1_i_zip_archive_a1b6abc123cb0bf552d6df600491dc991}} 
+\index{OpenXLSX::IZipArchive@{OpenXLSX::IZipArchive}!operator=@{operator=}}
+\index{operator=@{operator=}!OpenXLSX::IZipArchive@{OpenXLSX::IZipArchive}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_i_zip_archive}{IZip\+Archive}} \& Open\+XLSX\+::\+IZip\+Archive\+::operator= (\begin{DoxyParamCaption}\item[{const T \&}]{zip\+Archive }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em x} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_i_zip_archive_abc9ef7d1f58e2499e742b901ef0a244b}\label{class_open_x_l_s_x_1_1_i_zip_archive_abc9ef7d1f58e2499e742b901ef0a244b}} 
+\index{OpenXLSX::IZipArchive@{OpenXLSX::IZipArchive}!operator=@{operator=}}
+\index{operator=@{operator=}!OpenXLSX::IZipArchive@{OpenXLSX::IZipArchive}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_open_x_l_s_x_1_1_i_zip_archive}{IZip\+Archive}} \& Open\+XLSX\+::\+IZip\+Archive\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_open_x_l_s_x_1_1_i_zip_archive}{IZip\+Archive}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Youth\+\_\+learning\+\_\+autoload/vendors/\+Open\+XLSX/\+Open\+XLSX/headers/IZip\+Archive.\+hpp\end{DoxyCompactItemize}

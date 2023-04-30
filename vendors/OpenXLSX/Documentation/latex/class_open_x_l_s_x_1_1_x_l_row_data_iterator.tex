@@ -1,0 +1,233 @@
+\hypertarget{class_open_x_l_s_x_1_1_x_l_row_data_iterator}{}\doxysection{Open\+XLSX\+::XLRow\+Data\+Iterator Class Reference}
+\label{class_open_x_l_s_x_1_1_x_l_row_data_iterator}\index{OpenXLSX::XLRowDataIterator@{OpenXLSX::XLRowDataIterator}}
+
+
+This class encapsulates a (non-\/const) iterator, for iterating over the cells in a row.  
+
+
+
+
+{\ttfamily \#include $<$XLRow\+Data.\+hpp$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_row_data_iterator_a038a158fd8094b9e35463c0b3cd9cf9a}\label{class_open_x_l_s_x_1_1_x_l_row_data_iterator_a038a158fd8094b9e35463c0b3cd9cf9a}} 
+using {\bfseries iterator\+\_\+category} = std\+::forward\+\_\+iterator\+\_\+tag
+\item 
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_row_data_iterator_a065329fe919bab1fd4b1e610119e1779}\label{class_open_x_l_s_x_1_1_x_l_row_data_iterator_a065329fe919bab1fd4b1e610119e1779}} 
+using {\bfseries value\+\_\+type} = \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell}{XLCell}}
+\item 
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_row_data_iterator_a8e935f73db00ef94dab5cca99bb31792}\label{class_open_x_l_s_x_1_1_x_l_row_data_iterator_a8e935f73db00ef94dab5cca99bb31792}} 
+using {\bfseries difference\+\_\+type} = int64\+\_\+t
+\item 
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_row_data_iterator_afc8732da60746767afba91118c7a9111}\label{class_open_x_l_s_x_1_1_x_l_row_data_iterator_afc8732da60746767afba91118c7a9111}} 
+using {\bfseries pointer} = \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell}{XLCell}} $\ast$
+\item 
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_row_data_iterator_a64b887f3684ae00c348494cf77bd45f5}\label{class_open_x_l_s_x_1_1_x_l_row_data_iterator_a64b887f3684ae00c348494cf77bd45f5}} 
+using {\bfseries reference} = \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell}{XLCell}} \&
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_row_data_iterator_a109dcc6984c78db6f66ecb7271a7a5b8}\label{class_open_x_l_s_x_1_1_x_l_row_data_iterator_a109dcc6984c78db6f66ecb7271a7a5b8}} 
+{\bfseries $\sim$\+XLRow\+Data\+Iterator} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_iterator_a38b34984dcd46274e1b716913732f591}{XLRow\+Data\+Iterator}} (const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_iterator}{XLRow\+Data\+Iterator}} \&other)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_iterator_aec7636cf6faddd918208a169db6f2e10}{XLRow\+Data\+Iterator}} (\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_iterator}{XLRow\+Data\+Iterator}} \&\&other) noexcept
+\begin{DoxyCompactList}\small\item\em Move constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_iterator}{XLRow\+Data\+Iterator}} \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_iterator_a4dac78c0e7547d51d13a7dbdfe18b8ab}{operator=}} (const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_iterator}{XLRow\+Data\+Iterator}} \&other)
+\begin{DoxyCompactList}\small\item\em Copy assignment operator. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_iterator}{XLRow\+Data\+Iterator}} \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_iterator_af3f338496152e21b8eb73268770bef2c}{operator=}} (\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_iterator}{XLRow\+Data\+Iterator}} \&\&other) noexcept
+\begin{DoxyCompactList}\small\item\em Move assignment operator. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_iterator}{XLRow\+Data\+Iterator}} \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_iterator_a5d30ae555f7934a03783d8c8f83dc47e}{operator++}} ()
+\begin{DoxyCompactList}\small\item\em Pre-\/increment of the iterator. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_iterator}{XLRow\+Data\+Iterator}} \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_iterator_aa23be98dc9a7f545791c07a3b7aa83c4}{operator++}} (int)
+\begin{DoxyCompactList}\small\item\em Post-\/increment of the iterator. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell}{reference}} \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_iterator_a7a233bb13b3e8bdfc74f48129aec849e}{operator$\ast$}} ()
+\begin{DoxyCompactList}\small\item\em Dereferencing operator. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell}{pointer}} \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_iterator_a741beb55c5f8f49647fd2aaab2d5e5a0}{operator-\/$>$}} ()
+\begin{DoxyCompactList}\small\item\em Arrow operator. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_iterator_a95ee1381e8501d4b8fac5dd50ac2d0d4}{operator==}} (const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_iterator}{XLRow\+Data\+Iterator}} \&rhs) const
+\begin{DoxyCompactList}\small\item\em Equality operator. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_iterator_a0397c8e1f7ba989b58c1247e6dacb907}{operator!=}} (const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_iterator}{XLRow\+Data\+Iterator}} \&rhs) const
+\begin{DoxyCompactList}\small\item\em Non-\/equality operator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_row_data_iterator_a4da8bbd7196f0cc40ab3373c33e4b796}\label{class_open_x_l_s_x_1_1_x_l_row_data_iterator_a4da8bbd7196f0cc40ab3373c33e4b796}} 
+class {\bfseries XLRow\+Data\+Range}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class encapsulates a (non-\/const) iterator, for iterating over the cells in a row. 
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000004}{Todo}}]Consider implementing a const iterator also \end{DoxyRefDesc}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_row_data_iterator_a38b34984dcd46274e1b716913732f591}\label{class_open_x_l_s_x_1_1_x_l_row_data_iterator_a38b34984dcd46274e1b716913732f591}} 
+\index{OpenXLSX::XLRowDataIterator@{OpenXLSX::XLRowDataIterator}!XLRowDataIterator@{XLRowDataIterator}}
+\index{XLRowDataIterator@{XLRowDataIterator}!OpenXLSX::XLRowDataIterator@{OpenXLSX::XLRowDataIterator}}
+\doxysubsubsection{\texorpdfstring{XLRowDataIterator()}{XLRowDataIterator()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Open\+XLSX\+::\+XLRow\+Data\+Iterator\+::\+XLRow\+Data\+Iterator (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_iterator}{XLRow\+Data\+Iterator}} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Copy constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Object to be copied. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_row_data_iterator_aec7636cf6faddd918208a169db6f2e10}\label{class_open_x_l_s_x_1_1_x_l_row_data_iterator_aec7636cf6faddd918208a169db6f2e10}} 
+\index{OpenXLSX::XLRowDataIterator@{OpenXLSX::XLRowDataIterator}!XLRowDataIterator@{XLRowDataIterator}}
+\index{XLRowDataIterator@{XLRowDataIterator}!OpenXLSX::XLRowDataIterator@{OpenXLSX::XLRowDataIterator}}
+\doxysubsubsection{\texorpdfstring{XLRowDataIterator()}{XLRowDataIterator()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Open\+XLSX\+::\+XLRow\+Data\+Iterator\+::\+XLRow\+Data\+Iterator (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_iterator}{XLRow\+Data\+Iterator}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Move constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Object to be moved. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_row_data_iterator_a0397c8e1f7ba989b58c1247e6dacb907}\label{class_open_x_l_s_x_1_1_x_l_row_data_iterator_a0397c8e1f7ba989b58c1247e6dacb907}} 
+\index{OpenXLSX::XLRowDataIterator@{OpenXLSX::XLRowDataIterator}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!OpenXLSX::XLRowDataIterator@{OpenXLSX::XLRowDataIterator}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool Open\+XLSX\+::\+XLRow\+Data\+Iterator\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_iterator}{XLRow\+Data\+Iterator}} \&}]{rhs }\end{DoxyParamCaption}) const}
+
+
+
+Non-\/equality operator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_iterator}{XLRow\+Data\+Iterator}} to compare to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if equal, otherwise true. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_row_data_iterator_a7a233bb13b3e8bdfc74f48129aec849e}\label{class_open_x_l_s_x_1_1_x_l_row_data_iterator_a7a233bb13b3e8bdfc74f48129aec849e}} 
+\index{OpenXLSX::XLRowDataIterator@{OpenXLSX::XLRowDataIterator}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!OpenXLSX::XLRowDataIterator@{OpenXLSX::XLRowDataIterator}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell}{reference}} Open\+XLSX\+::\+XLRow\+Data\+Iterator\+::operator$\ast$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Dereferencing operator. 
+
+\begin{DoxyReturn}{Returns}
+Reference to the object pointed to by the iterator. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_row_data_iterator_a5d30ae555f7934a03783d8c8f83dc47e}\label{class_open_x_l_s_x_1_1_x_l_row_data_iterator_a5d30ae555f7934a03783d8c8f83dc47e}} 
+\index{OpenXLSX::XLRowDataIterator@{OpenXLSX::XLRowDataIterator}!operator++@{operator++}}
+\index{operator++@{operator++}!OpenXLSX::XLRowDataIterator@{OpenXLSX::XLRowDataIterator}}
+\doxysubsubsection{\texorpdfstring{operator++()}{operator++()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_iterator}{XLRow\+Data\+Iterator}} \& Open\+XLSX\+::\+XLRow\+Data\+Iterator\+::operator++ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Pre-\/increment of the iterator. 
+
+\begin{DoxyReturn}{Returns}
+Reference to the iterator object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_row_data_iterator_aa23be98dc9a7f545791c07a3b7aa83c4}\label{class_open_x_l_s_x_1_1_x_l_row_data_iterator_aa23be98dc9a7f545791c07a3b7aa83c4}} 
+\index{OpenXLSX::XLRowDataIterator@{OpenXLSX::XLRowDataIterator}!operator++@{operator++}}
+\index{operator++@{operator++}!OpenXLSX::XLRowDataIterator@{OpenXLSX::XLRowDataIterator}}
+\doxysubsubsection{\texorpdfstring{operator++()}{operator++()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_iterator}{XLRow\+Data\+Iterator}} Open\+XLSX\+::\+XLRow\+Data\+Iterator\+::operator++ (\begin{DoxyParamCaption}\item[{int}]{ }\end{DoxyParamCaption})}
+
+
+
+Post-\/increment of the iterator. 
+
+\begin{DoxyReturn}{Returns}
+Reference to the iterator object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_row_data_iterator_a741beb55c5f8f49647fd2aaab2d5e5a0}\label{class_open_x_l_s_x_1_1_x_l_row_data_iterator_a741beb55c5f8f49647fd2aaab2d5e5a0}} 
+\index{OpenXLSX::XLRowDataIterator@{OpenXLSX::XLRowDataIterator}!operator-\/$>$@{operator-\/$>$}}
+\index{operator-\/$>$@{operator-\/$>$}!OpenXLSX::XLRowDataIterator@{OpenXLSX::XLRowDataIterator}}
+\doxysubsubsection{\texorpdfstring{operator-\/$>$()}{operator->()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell}{pointer}} Open\+XLSX\+::\+XLRow\+Data\+Iterator\+::operator-\/$>$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Arrow operator. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the object pointed to by the iterator. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_row_data_iterator_a4dac78c0e7547d51d13a7dbdfe18b8ab}\label{class_open_x_l_s_x_1_1_x_l_row_data_iterator_a4dac78c0e7547d51d13a7dbdfe18b8ab}} 
+\index{OpenXLSX::XLRowDataIterator@{OpenXLSX::XLRowDataIterator}!operator=@{operator=}}
+\index{operator=@{operator=}!OpenXLSX::XLRowDataIterator@{OpenXLSX::XLRowDataIterator}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_iterator}{XLRow\+Data\+Iterator}} \& Open\+XLSX\+::\+XLRow\+Data\+Iterator\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_iterator}{XLRow\+Data\+Iterator}} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Copy assignment operator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Object to be copied. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to the copied-\/to object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_row_data_iterator_af3f338496152e21b8eb73268770bef2c}\label{class_open_x_l_s_x_1_1_x_l_row_data_iterator_af3f338496152e21b8eb73268770bef2c}} 
+\index{OpenXLSX::XLRowDataIterator@{OpenXLSX::XLRowDataIterator}!operator=@{operator=}}
+\index{operator=@{operator=}!OpenXLSX::XLRowDataIterator@{OpenXLSX::XLRowDataIterator}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_iterator}{XLRow\+Data\+Iterator}} \& Open\+XLSX\+::\+XLRow\+Data\+Iterator\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_iterator}{XLRow\+Data\+Iterator}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Move assignment operator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Object to be moved. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to the moved-\/to object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_row_data_iterator_a95ee1381e8501d4b8fac5dd50ac2d0d4}\label{class_open_x_l_s_x_1_1_x_l_row_data_iterator_a95ee1381e8501d4b8fac5dd50ac2d0d4}} 
+\index{OpenXLSX::XLRowDataIterator@{OpenXLSX::XLRowDataIterator}!operator==@{operator==}}
+\index{operator==@{operator==}!OpenXLSX::XLRowDataIterator@{OpenXLSX::XLRowDataIterator}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Open\+XLSX\+::\+XLRow\+Data\+Iterator\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_iterator}{XLRow\+Data\+Iterator}} \&}]{rhs }\end{DoxyParamCaption}) const}
+
+
+
+Equality operator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_iterator}{XLRow\+Data\+Iterator}} to compare to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if equal, otherwise false. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Youth\+\_\+learning\+\_\+autoload/vendors/\+Open\+XLSX/\+Open\+XLSX/headers/XLRow\+Data.\+hpp\end{DoxyCompactItemize}

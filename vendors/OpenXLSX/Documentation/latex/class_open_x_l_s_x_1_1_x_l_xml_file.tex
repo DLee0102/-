@@ -1,0 +1,260 @@
+\hypertarget{class_open_x_l_s_x_1_1_x_l_xml_file}{}\doxysection{Open\+XLSX\+::XLXml\+File Class Reference}
+\label{class_open_x_l_s_x_1_1_x_l_xml_file}\index{OpenXLSX::XLXmlFile@{OpenXLSX::XLXmlFile}}
+
+
+The \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file}{XLXml\+File}} class provides an interface for derived classes to use. It functions as an ancestor to all classes which are represented by an .xml file in an .xlsx package.  
+
+
+
+
+{\ttfamily \#include $<$XLXml\+File.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_xml_file_afcc880bcb4e01b9435eae827a9836ec0}\label{class_open_x_l_s_x_1_1_x_l_xml_file_afcc880bcb4e01b9435eae827a9836ec0}} 
+{\bfseries XLXml\+File} ()=default
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_a91ac3132eed637a60ca7ccd8d61d107a}{XLXml\+File}} (\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_data}{XLXml\+Data}} $\ast$\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_af4cf6f8310a055a6f18e99669f52d798}{xml\+Data}})
+\begin{DoxyCompactList}\small\item\em Constructor. Creates an object based on the xml\+Data input. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_ab412e98acd8baa5d99cc97e68365a192}{XLXml\+File}} (const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file}{XLXml\+File}} \&other)=default
+\begin{DoxyCompactList}\small\item\em Copy constructor. Default implementation used. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_a874e9e87bed7e6f4e4cd3696e28b7cff}{XLXml\+File}} (\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file}{XLXml\+File}} \&\&other) noexcept=default
+\begin{DoxyCompactList}\small\item\em Move constructor. Default implementation used. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_xml_file_aa92e245526f036fd154efc659e2f9006}\label{class_open_x_l_s_x_1_1_x_l_xml_file_aa92e245526f036fd154efc659e2f9006}} 
+{\bfseries $\sim$\+XLXml\+File} ()
+\begin{DoxyCompactList}\small\item\em Destructor. Default implementation used. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file}{XLXml\+File}} \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_a7ffb6dec2d9596b0982a6c41b2dbd66c}{operator=}} (const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file}{XLXml\+File}} \&other)=default
+\begin{DoxyCompactList}\small\item\em The copy assignment operator. The default implementation has been used. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file}{XLXml\+File}} \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_af53403da14a8b258a823a28fa20f24a0}{operator=}} (\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file}{XLXml\+File}} \&\&other) noexcept=default
+\begin{DoxyCompactList}\small\item\em The move assignment operator. The default implementation has been used. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_af4cf6f8310a055a6f18e99669f52d798}{xml\+Data}} () const
+\begin{DoxyCompactList}\small\item\em Method for getting the XML data represented by the object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_a669ce7b567aca54bbad3e50d611f9a05}{set\+Xml\+Data}} (const std\+::string \&\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_af4cf6f8310a055a6f18e99669f52d798}{xml\+Data}})
+\begin{DoxyCompactList}\small\item\em Provide the XML data represented by the object. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_a6738ed4c3a1c1add67c9295c236d80ef}{relationship\+ID}} () const
+\begin{DoxyCompactList}\small\item\em This function returns the relationship ID (the ID used in the \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_relationships}{XLRelationships}} objects) for the object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_document}{XLDocument}} \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_a60e6b90e550f43dac2743fdc90db152c}{parent\+Doc}} ()
+\begin{DoxyCompactList}\small\item\em This function provides access to the parent \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_document}{XLDocument}} object. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_document}{XLDocument}} \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_ab030effdc244fb88de1f2d69b64045cb}{parent\+Doc}} () const
+\begin{DoxyCompactList}\small\item\em This function provides access to the parent \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_document}{XLDocument}} object. \end{DoxyCompactList}\item 
+XMLDocument \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_a433ae1bd65af9262c7120f3774ecb8c3}{xml\+Document}} ()
+\begin{DoxyCompactList}\small\item\em This function provides access to the underlying XMLDocument object. \end{DoxyCompactList}\item 
+const XMLDocument \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_ae6450091d5ff53b5b2f35940af98a92f}{xml\+Document}} () const
+\begin{DoxyCompactList}\small\item\em This function provides access to the underlying XMLDocument object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_data}{XLXml\+Data}} $\ast$ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_a56206b4f2903a83047d4c04cd683bfa4}{m\+\_\+xml\+Data}} \{ nullptr \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file}{XLXml\+File}} class provides an interface for derived classes to use. It functions as an ancestor to all classes which are represented by an .xml file in an .xlsx package. 
+
+\begin{DoxyWarning}{Warning}
+The \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file}{XLXml\+File}} class is not intended to be instantiated on it\textquotesingle{}s own, but to provide an interface for derived classes. Also, it should not be used polymorphically. For that reason, the destructor is not declared virtual. 
+\end{DoxyWarning}
+Inheritance diagram for Open\+XLSX\+::XLXml\+File\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=11.000000cm]{class_open_x_l_s_x_1_1_x_l_xml_file}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_xml_file_a91ac3132eed637a60ca7ccd8d61d107a}\label{class_open_x_l_s_x_1_1_x_l_xml_file_a91ac3132eed637a60ca7ccd8d61d107a}} 
+\index{OpenXLSX::XLXmlFile@{OpenXLSX::XLXmlFile}!XLXmlFile@{XLXmlFile}}
+\index{XLXmlFile@{XLXmlFile}!OpenXLSX::XLXmlFile@{OpenXLSX::XLXmlFile}}
+\doxysubsubsection{\texorpdfstring{XLXmlFile()}{XLXmlFile()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Open\+XLSX\+::\+XLXml\+File\+::\+XLXml\+File (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_data}{XLXml\+Data}} $\ast$}]{xml\+Data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructor. Creates an object based on the xml\+Data input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xml\+Data} & An \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_data}{XLXml\+Data}} object with the XML data to be represented by the object. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_xml_file_ab412e98acd8baa5d99cc97e68365a192}\label{class_open_x_l_s_x_1_1_x_l_xml_file_ab412e98acd8baa5d99cc97e68365a192}} 
+\index{OpenXLSX::XLXmlFile@{OpenXLSX::XLXmlFile}!XLXmlFile@{XLXmlFile}}
+\index{XLXmlFile@{XLXmlFile}!OpenXLSX::XLXmlFile@{OpenXLSX::XLXmlFile}}
+\doxysubsubsection{\texorpdfstring{XLXmlFile()}{XLXmlFile()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Open\+XLSX\+::\+XLXml\+File\+::\+XLXml\+File (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file}{XLXml\+File}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Copy constructor. Default implementation used. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The object to copy. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_xml_file_a874e9e87bed7e6f4e4cd3696e28b7cff}\label{class_open_x_l_s_x_1_1_x_l_xml_file_a874e9e87bed7e6f4e4cd3696e28b7cff}} 
+\index{OpenXLSX::XLXmlFile@{OpenXLSX::XLXmlFile}!XLXmlFile@{XLXmlFile}}
+\index{XLXmlFile@{XLXmlFile}!OpenXLSX::XLXmlFile@{OpenXLSX::XLXmlFile}}
+\doxysubsubsection{\texorpdfstring{XLXmlFile()}{XLXmlFile()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Open\+XLSX\+::\+XLXml\+File\+::\+XLXml\+File (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file}{XLXml\+File}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+Move constructor. Default implementation used. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The object to move. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_xml_file_a7ffb6dec2d9596b0982a6c41b2dbd66c}\label{class_open_x_l_s_x_1_1_x_l_xml_file_a7ffb6dec2d9596b0982a6c41b2dbd66c}} 
+\index{OpenXLSX::XLXmlFile@{OpenXLSX::XLXmlFile}!operator=@{operator=}}
+\index{operator=@{operator=}!OpenXLSX::XLXmlFile@{OpenXLSX::XLXmlFile}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file}{XLXml\+File}} \& Open\+XLSX\+::\+XLXml\+File\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file}{XLXml\+File}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+The copy assignment operator. The default implementation has been used. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The object to copy. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reference to the new object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_xml_file_af53403da14a8b258a823a28fa20f24a0}\label{class_open_x_l_s_x_1_1_x_l_xml_file_af53403da14a8b258a823a28fa20f24a0}} 
+\index{OpenXLSX::XLXmlFile@{OpenXLSX::XLXmlFile}!operator=@{operator=}}
+\index{operator=@{operator=}!OpenXLSX::XLXmlFile@{OpenXLSX::XLXmlFile}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file}{XLXml\+File}} \& Open\+XLSX\+::\+XLXml\+File\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file}{XLXml\+File}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+The move assignment operator. The default implementation has been used. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The object to move. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reference to the new object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_xml_file_a60e6b90e550f43dac2743fdc90db152c}\label{class_open_x_l_s_x_1_1_x_l_xml_file_a60e6b90e550f43dac2743fdc90db152c}} 
+\index{OpenXLSX::XLXmlFile@{OpenXLSX::XLXmlFile}!parentDoc@{parentDoc}}
+\index{parentDoc@{parentDoc}!OpenXLSX::XLXmlFile@{OpenXLSX::XLXmlFile}}
+\doxysubsubsection{\texorpdfstring{parentDoc()}{parentDoc()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_document}{XLDocument}} \& Open\+XLSX\+::\+XLXml\+File\+::parent\+Doc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+This function provides access to the parent \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_document}{XLDocument}} object. 
+
+\begin{DoxyReturn}{Returns}
+A reference to the parent \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_document}{XLDocument}} object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_xml_file_ab030effdc244fb88de1f2d69b64045cb}\label{class_open_x_l_s_x_1_1_x_l_xml_file_ab030effdc244fb88de1f2d69b64045cb}} 
+\index{OpenXLSX::XLXmlFile@{OpenXLSX::XLXmlFile}!parentDoc@{parentDoc}}
+\index{parentDoc@{parentDoc}!OpenXLSX::XLXmlFile@{OpenXLSX::XLXmlFile}}
+\doxysubsubsection{\texorpdfstring{parentDoc()}{parentDoc()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_document}{XLDocument}} \& Open\+XLSX\+::\+XLXml\+File\+::parent\+Doc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+This function provides access to the parent \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_document}{XLDocument}} object. 
+
+\begin{DoxyReturn}{Returns}
+A const reference to the parent \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_document}{XLDocument}} object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_xml_file_a6738ed4c3a1c1add67c9295c236d80ef}\label{class_open_x_l_s_x_1_1_x_l_xml_file_a6738ed4c3a1c1add67c9295c236d80ef}} 
+\index{OpenXLSX::XLXmlFile@{OpenXLSX::XLXmlFile}!relationshipID@{relationshipID}}
+\index{relationshipID@{relationshipID}!OpenXLSX::XLXmlFile@{OpenXLSX::XLXmlFile}}
+\doxysubsubsection{\texorpdfstring{relationshipID()}{relationshipID()}}
+{\footnotesize\ttfamily std\+::string Open\+XLSX\+::\+XLXml\+File\+::relationship\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+This function returns the relationship ID (the ID used in the \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_relationships}{XLRelationships}} objects) for the object. 
+
+\begin{DoxyReturn}{Returns}
+A std\+::string with the ID. Not all spreadsheet objects may have a relationship ID. In those cases an empty string is returned. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_xml_file_a669ce7b567aca54bbad3e50d611f9a05}\label{class_open_x_l_s_x_1_1_x_l_xml_file_a669ce7b567aca54bbad3e50d611f9a05}} 
+\index{OpenXLSX::XLXmlFile@{OpenXLSX::XLXmlFile}!setXmlData@{setXmlData}}
+\index{setXmlData@{setXmlData}!OpenXLSX::XLXmlFile@{OpenXLSX::XLXmlFile}}
+\doxysubsubsection{\texorpdfstring{setXmlData()}{setXmlData()}}
+{\footnotesize\ttfamily void Open\+XLSX\+::\+XLXml\+File\+::set\+Xml\+Data (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{xml\+Data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Provide the XML data represented by the object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xml\+Data} & A std\+::string with the XML data. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_xml_file_af4cf6f8310a055a6f18e99669f52d798}\label{class_open_x_l_s_x_1_1_x_l_xml_file_af4cf6f8310a055a6f18e99669f52d798}} 
+\index{OpenXLSX::XLXmlFile@{OpenXLSX::XLXmlFile}!xmlData@{xmlData}}
+\index{xmlData@{xmlData}!OpenXLSX::XLXmlFile@{OpenXLSX::XLXmlFile}}
+\doxysubsubsection{\texorpdfstring{xmlData()}{xmlData()}}
+{\footnotesize\ttfamily std\+::string Open\+XLSX\+::\+XLXml\+File\+::xml\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Method for getting the XML data represented by the object. 
+
+\begin{DoxyReturn}{Returns}
+A std\+::string with the XML data. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_xml_file_a433ae1bd65af9262c7120f3774ecb8c3}\label{class_open_x_l_s_x_1_1_x_l_xml_file_a433ae1bd65af9262c7120f3774ecb8c3}} 
+\index{OpenXLSX::XLXmlFile@{OpenXLSX::XLXmlFile}!xmlDocument@{xmlDocument}}
+\index{xmlDocument@{xmlDocument}!OpenXLSX::XLXmlFile@{OpenXLSX::XLXmlFile}}
+\doxysubsubsection{\texorpdfstring{xmlDocument()}{xmlDocument()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily XMLDocument \& Open\+XLSX\+::\+XLXml\+File\+::xml\+Document (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+This function provides access to the underlying XMLDocument object. 
+
+\begin{DoxyReturn}{Returns}
+A reference to the XMLDocument object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_xml_file_ae6450091d5ff53b5b2f35940af98a92f}\label{class_open_x_l_s_x_1_1_x_l_xml_file_ae6450091d5ff53b5b2f35940af98a92f}} 
+\index{OpenXLSX::XLXmlFile@{OpenXLSX::XLXmlFile}!xmlDocument@{xmlDocument}}
+\index{xmlDocument@{xmlDocument}!OpenXLSX::XLXmlFile@{OpenXLSX::XLXmlFile}}
+\doxysubsubsection{\texorpdfstring{xmlDocument()}{xmlDocument()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const XMLDocument \& Open\+XLSX\+::\+XLXml\+File\+::xml\+Document (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+This function provides access to the underlying XMLDocument object. 
+
+\begin{DoxyReturn}{Returns}
+A const reference to the XMLDocument object. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_xml_file_a56206b4f2903a83047d4c04cd683bfa4}\label{class_open_x_l_s_x_1_1_x_l_xml_file_a56206b4f2903a83047d4c04cd683bfa4}} 
+\index{OpenXLSX::XLXmlFile@{OpenXLSX::XLXmlFile}!m\_xmlData@{m\_xmlData}}
+\index{m\_xmlData@{m\_xmlData}!OpenXLSX::XLXmlFile@{OpenXLSX::XLXmlFile}}
+\doxysubsubsection{\texorpdfstring{m\_xmlData}{m\_xmlData}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_data}{XLXml\+Data}}$\ast$ Open\+XLSX\+::\+XLXml\+File\+::m\+\_\+xml\+Data \{ nullptr \}\hspace{0.3cm}{\ttfamily [protected]}}
+
+The underlying XML data object. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Youth\+\_\+learning\+\_\+autoload/vendors/\+Open\+XLSX/\+Open\+XLSX/headers/XLXml\+File.\+hpp\end{DoxyCompactItemize}

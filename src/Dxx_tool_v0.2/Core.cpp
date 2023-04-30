@@ -23,19 +23,20 @@ namespace DXXTL {
      * @param start_row 
      * @return int 
      */
-    int Excelops::getRowlength(OpenXLSX::XLWorksheet wks, int start_row)
+    int Excelops::getrowCount(OpenXLSX::XLWorksheet wks)
     {
-        start_row--;
-        std::vector<OpenXLSX::XLCellValue> readValues;
-        for (auto& row : wks.rows()) {
-            readValues = row.values();
-            if (readValues[0] == "") {
-                break;
-            }
-            start_row++;
-        }
+        // start_row--;
+        // std::vector<OpenXLSX::XLCellValue> readValues;
+        
+        // for (auto itr = wks.rows().begin(); itr != wks.rows().end(); itr ++)
+        // {
+        //     std::cout << itr->cells().size() << std::endl;
+        //     start_row++;
+        // }
 
-        return start_row;
+        // std::cout << wks.rowCount() << std::endl;
+
+        return wks.rowCount();
     }
 
     /**
@@ -44,20 +45,20 @@ namespace DXXTL {
      * @param wks 
      * @return int 
      */
-    int Excelops::getCollength(OpenXLSX::XLWorksheet wks, int start_row)
+    int Excelops::getcolumnCount(OpenXLSX::XLWorksheet wks)
     {
-        int col_length = 0;
-        std::vector<OpenXLSX::XLCellValue> readValues;
-        for (auto& row : wks.rows(start_row, total_length)) {
-            readValues = row.values();
-            for (int i = 0; i < readValues.size(); i++) {
-                if (readValues[i] == "") {break;}
-                col_length++;
-            }
-            break;
-        }
+        // int col_length = 0;
+        // std::vector<OpenXLSX::XLCellValue> readValues;
+        // for (auto& row : wks.rows(start_row, total_length)) {
+        //     readValues = row.values();
+        //     for (int i = 0; i < readValues.size(); i++) {
+        //         if (readValues[i] == "") {break;}
+        //         col_length++;
+        //     }
+        //     break;
+        // }
 
-        return col_length;
+        return wks.columnCount();
     }
 
     /**
@@ -116,6 +117,32 @@ namespace DXXTL {
         filename_ = getNameproperty(file_);
         assignFilenamepro(filename_);
 
+        doc_temp.open(file_);
+        wks_temp = doc_temp.workbook().sheet(1).get<OpenXLSX::XLWorksheet>();
+
+        wks_total = doc_total.workbook().sheet(temp_fns->fgrade + "_" + temp_fns->fclass).get<OpenXLSX::XLWorksheet>();
+
+        std::cout << temp_fns->fclass << "班总表行数: "<< getrowCount(wks_total) << std::endl;
+        std::cout << temp_fns->fclass << "班第" << temp_fns->fterms << "期待检索表行数: "<< getrowCount(wks_temp) << std::endl;
+        /**
+         * @brief 此处添加exception：若待检索表行数大于对应的总表行数则抛出一个错误
+         * 
+         */
+
+        writeValues_total.resize(getrowCount(wks_total) - STARTROW_TOTAL + 1);
+        if (initWritevector(writeValues_total, getrowCount(wks_total) - STARTROW_TOTAL + 1))
+            std::cout << "初始化写入向量成功！向量长度为：" << getrowCount(wks_total) - STARTROW_TOTAL + 1 << std::endl;
+
+        fillWriteValues(CHECKEDNAMECOL, LOADEDNAMECOL);
+
+        int termnumber = 0;
+        std::istringstream ss(temp_fns->fterms);
+        ss >> termnumber;
+        std::cout << "期数：" << termnumber << std::endl;
+
+        loadData(termnumber);
+
+        doc_temp.close();
     }
 
     /**
@@ -139,38 +166,24 @@ namespace DXXTL {
         // 一定要初始化
         temp_fns = new FileNamesplit;
 
-        traverseFiles();
-
-        // doc_total.open(total_path);
-        // wks_total = doc_total.workbook().worksheet("21级2班团支部");
-
-        // doc_temp.open(temp_path);
-        // wks_temp = doc_temp.workbook().sheet(1).get<OpenXLSX::XLWorksheet>();
-
-        // temp_length = getRowlength(wks_temp, 1);
-        // total_length = getRowlength(wks_total, 1);
-        // col_length = getCollength(wks_total, total_start_row);
-        // std::cout << "                    OpenXLSX框架初始化完成..." << std::endl;
-
-        // writeValues_total.resize(total_length - 2);
-        // if (initWritevector(writeValues_total, total_length - 2)) {std::cout << "                    写入程序初始化完成..." << std::endl;}
+        doc_total.open(total_path);
 
         return true;
     }
 
     void Excelops::fillWriteValues(int checkedNamecol, int loadedNamecol)
     {
-        for (auto& row : wks_temp.rows(2, temp_length)) {
+        // c++11新特性：foreach
+        for (auto& row : wks_temp.rows(STARTROW_TEMP, getrowCount(wks_temp))) {
             readValues_temp = row.values();
             if (readValues_temp.size() != 0) {
                 int index = 0;
-                for (auto &row_m : wks_total.rows(3, total_length)) {
+                for (auto& row_m : wks_total.rows(STARTROW_TOTAL, getrowCount(wks_total))) {
                     readValues_total = row_m.values();
-                    // std::cout << col_length << std::endl;
                     
                     if (readValues_total.size() != 0) {
-                        // std::cout << readValues_temp[checkedNamecol] << " " << readValues_total[loadedNamecol] << std::endl;
-                        if (readValues_temp[checkedNamecol].get<std::string>().compare(readValues_total[loadedNamecol].get<std::string>()) == 0) {
+                        // std::cout << readValues_temp[checkedNamecol- 1] << " " << readValues_total[loadedNamecol- 1] << std::endl;
+                        if (readValues_temp[checkedNamecol - 1].get<std::string>().compare(readValues_total[loadedNamecol - 1].get<std::string>()) == 0) {
                             writeValues_total[index] = 1; 
                         }
                     }
@@ -180,24 +193,22 @@ namespace DXXTL {
         }
     }
 
-    // void Excelops::loadData()
-    // {
-    //     std::cout << "                    正在填入数据，请稍等..." << std::endl;
-    //     std::cout << "                    填入数据量为：" << " ";
-    //     std::cout << writeValues_total.size() << std::endl;
-    //     for (int i = 0; i < writeValues_total.size(); i++) {
-    //         wks_total.cell(total_start_row + i, col_length + 1).value() = writeValues_total[i];
-    //         // std::cout << writeValues_total[i] << std::endl;
-    //     }
+    void Excelops::loadData(int termnumber)
+    {
+        std::cout << "                    正在填入数据，请稍等..." << std::endl;
+        std::cout << "                    填入数据量为：" << " ";
+        std::cout << writeValues_total.size() << std::endl;
+        wks_total.cell("H3").value() = 1;
+        for (int i = 0; i < writeValues_total.size(); i++) {
+            wks_total.cell(STARTROW_TOTAL + i, STARTCOL_TOTAL + termnumber - 1).value() = writeValues_total[i];
+            // std::cout << writeValues_total[i] << std::endl;
+        }
 
-    //     std::cout << "                    完成!" << std::endl;
-    // }
+        std::cout << "                    完成!" << std::endl;
+    }
 
     Excelops::~Excelops()
     {
-        doc_temp.save();
-        doc_temp.close();
-
         doc_total.save();
         doc_total.close();
 

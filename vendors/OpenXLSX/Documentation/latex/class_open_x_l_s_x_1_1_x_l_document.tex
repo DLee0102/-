@@ -1,0 +1,444 @@
+\hypertarget{class_open_x_l_s_x_1_1_x_l_document}{}\doxysection{Open\+XLSX\+::XLDocument Class Reference}
+\label{class_open_x_l_s_x_1_1_x_l_document}\index{OpenXLSX::XLDocument@{OpenXLSX::XLDocument}}
+
+
+This class encapsulates the concept of an excel file. It is different from the \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_workbook}{XLWorkbook}}, in that an \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_document}{XLDocument}} holds an \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_workbook}{XLWorkbook}} together with its metadata, as well as methods for opening, closing and saving the document.~\newline
+{\bfseries{{\itshape The \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_document}{XLDocument}} is the entrypoint for clients using the Rapid\+XLSX library.}}}  
+
+
+
+
+{\ttfamily \#include $<$XLDocument.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_document_a1a61b359534b79081d2f0ccf4c580da6}\label{class_open_x_l_s_x_1_1_x_l_document_a1a61b359534b79081d2f0ccf4c580da6}} 
+{\bfseries XLDocument} (const \mbox{\hyperlink{class_open_x_l_s_x_1_1_i_zip_archive}{IZip\+Archive}} \&zip\+Archive=\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_zip_archive}{XLZip\+Archive}}())
+\begin{DoxyCompactList}\small\item\em Constructor. The default constructor with no arguments. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_document_a8f1c2f3a2487bc33926dcfc30802e158}{XLDocument}} (const std\+::string \&doc\+Path, const \mbox{\hyperlink{class_open_x_l_s_x_1_1_i_zip_archive}{IZip\+Archive}} \&zip\+Archive=\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_zip_archive}{XLZip\+Archive}}())
+\begin{DoxyCompactList}\small\item\em Constructor. An alternative constructor, taking the path to the .xlsx file as an argument. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_document_ab77528b69b45114c72d6026ac93545f7}{XLDocument}} (const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_document}{XLDocument}} \&other)=delete
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_document_af26cd7033a3b4164862426f02f447a05}{XLDocument}} (\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_document}{XLDocument}} \&\&other) noexcept=default
+\item 
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_document_a4bb399156ae8e5897bc0e1d630cfa208}\label{class_open_x_l_s_x_1_1_x_l_document_a4bb399156ae8e5897bc0e1d630cfa208}} 
+{\bfseries $\sim$\+XLDocument} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_document}{XLDocument}} \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_document_abc4bea533c73015075a823cac30b1fa7}{operator=}} (const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_document}{XLDocument}} \&other)=delete
+\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_document}{XLDocument}} \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_document_a4ece9e7e55f6da2f0f0e4739293135db}{operator=}} (\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_document}{XLDocument}} \&\&other) noexcept=default
+\item 
+void \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_document_affbf7f7082b8ba84a78f88c8a8df768a}{open}} (const std\+::string \&file\+Name)
+\begin{DoxyCompactList}\small\item\em Open the .xlsx file with the given path. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_document_a6a096c3e5f75cdb0547147b3adc2e449}{create}} (const std\+::string \&file\+Name)
+\begin{DoxyCompactList}\small\item\em Create a new .xlsx file with the given name. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_document_a85b4ec0f2f78887e7befd883aa333afe}\label{class_open_x_l_s_x_1_1_x_l_document_a85b4ec0f2f78887e7befd883aa333afe}} 
+void {\bfseries close} ()
+\begin{DoxyCompactList}\small\item\em Close the current document. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_document_a4b7c370f017a400d2a3233ffe353ff21}{save}} ()
+\begin{DoxyCompactList}\small\item\em Save the current document using the current filename, overwriting the existing file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_document_a9f65e10476a8a3a14f2d7daf245ecf87}{save\+As}} (const std\+::string \&file\+Name)
+\begin{DoxyCompactList}\small\item\em Save the document with a new name. If a file exists with that name, it will be overwritten. \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_document_af416ce70fd022004ee56a40d7bec9683}{name}} () const
+\begin{DoxyCompactList}\small\item\em Get the filename of the current document, e.\+g. \char`\"{}spreadsheet.\+xlsx\char`\"{}. \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_document_adb6f4161597e86604734ff27bac3a9f3}{path}} () const
+\begin{DoxyCompactList}\small\item\em Get the full path of the current document, e.\+g. \char`\"{}drive/blah/spreadsheet.\+xlsx\char`\"{}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_workbook}{XLWorkbook}} \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_document_aee820a3d4a6168b532a851d7d5a85931}{workbook}} () const
+\begin{DoxyCompactList}\small\item\em Get the underlying workbook object, as a const object. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_document_a87ce74d79eef2d472b0177bbdcb99106}{property}} (XLProperty prop) const
+\begin{DoxyCompactList}\small\item\em Get the requested document property. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_document_a66684abaffc5b3e0261301712de49908}{set\+Property}} (XLProperty prop, const std\+::string \&value)
+\begin{DoxyCompactList}\small\item\em Set a property. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_document_a7ff7e77f7620cca8136b5f6b1f65a309}{operator bool}} () const
+\item 
+bool \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_document_aca4fbb4a01b34f762f89e26c76ca46bf}{is\+Open}} () const
+\item 
+void \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_document_ae0352aea97032c4783386f20dedc60ad}{delete\+Property}} (XLProperty the\+Property)
+\begin{DoxyCompactList}\small\item\em Delete the property from the document. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_document_a7a018914933b1c5ee86b9d948572ba37}{exec\+Command}} (const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_command}{XLCommand}} \&command)
+\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_query}{XLQuery}} \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_document_a5302f4f68f9d8f37cd7601c394265751}{exec\+Query}} (const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_query}{XLQuery}} \&query) const
+\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_query}{XLQuery}} \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_document_a08605c487c08f4cf1c00cad3d9e1a030}{exec\+Query}} (const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_query}{XLQuery}} \&query)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_document_a6aae782e72cba73a2be9d2cac5ba74cb}{extract\+Xml\+From\+Archive}} (const std\+::string \&\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_document_adb6f4161597e86604734ff27bac3a9f3}{path}})
+\begin{DoxyCompactList}\small\item\em Get an XML file from the .xlsx archive. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_data}{XLXml\+Data}} $\ast$ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_document_ab457fc564bba1c4b1c2601b8a26aee28}{get\+Xml\+Data}} (const std\+::string \&\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_document_adb6f4161597e86604734ff27bac3a9f3}{path}})
+\item 
+const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_data}{XLXml\+Data}} $\ast$ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_document_a8387fb9805ebc05a00891dc2ee29d3f5}{get\+Xml\+Data}} (const std\+::string \&\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_document_adb6f4161597e86604734ff27bac3a9f3}{path}}) const
+\item 
+bool \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_document_a930b63723e5805c004acea3994a6be3f}{has\+Xml\+Data}} (const std\+::string \&\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_document_adb6f4161597e86604734ff27bac3a9f3}{path}}) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_document_a544d3c56a118400e4617eb27046cbaf9}\label{class_open_x_l_s_x_1_1_x_l_document_a544d3c56a118400e4617eb27046cbaf9}} 
+class {\bfseries XLXml\+File}
+\item 
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_document_a876f419815954b4c6f2e841a87a597cc}\label{class_open_x_l_s_x_1_1_x_l_document_a876f419815954b4c6f2e841a87a597cc}} 
+class {\bfseries XLWorkbook}
+\item 
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_document_a364036fa61b81b130214512ed89ea9d3}\label{class_open_x_l_s_x_1_1_x_l_document_a364036fa61b81b130214512ed89ea9d3}} 
+class {\bfseries XLSheet}
+\item 
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_document_a978504910352d5f14548d6ab26709b71}\label{class_open_x_l_s_x_1_1_x_l_document_a978504910352d5f14548d6ab26709b71}} 
+class {\bfseries XLXml\+Data}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class encapsulates the concept of an excel file. It is different from the \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_workbook}{XLWorkbook}}, in that an \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_document}{XLDocument}} holds an \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_workbook}{XLWorkbook}} together with its metadata, as well as methods for opening, closing and saving the document.~\newline
+{\bfseries{{\itshape The \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_document}{XLDocument}} is the entrypoint for clients using the Rapid\+XLSX library.}}} 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_document_a8f1c2f3a2487bc33926dcfc30802e158}\label{class_open_x_l_s_x_1_1_x_l_document_a8f1c2f3a2487bc33926dcfc30802e158}} 
+\index{OpenXLSX::XLDocument@{OpenXLSX::XLDocument}!XLDocument@{XLDocument}}
+\index{XLDocument@{XLDocument}!OpenXLSX::XLDocument@{OpenXLSX::XLDocument}}
+\doxysubsubsection{\texorpdfstring{XLDocument()}{XLDocument()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Open\+XLSX\+::\+XLDocument\+::\+XLDocument (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{doc\+Path,  }\item[{const \mbox{\hyperlink{class_open_x_l_s_x_1_1_i_zip_archive}{IZip\+Archive}} \&}]{zip\+Archive = {\ttfamily \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_zip_archive}{XLZip\+Archive}}()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructor. An alternative constructor, taking the path to the .xlsx file as an argument. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em doc\+Path} & A std\+::string with the path to the .xlsx file. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_document_ab77528b69b45114c72d6026ac93545f7}\label{class_open_x_l_s_x_1_1_x_l_document_ab77528b69b45114c72d6026ac93545f7}} 
+\index{OpenXLSX::XLDocument@{OpenXLSX::XLDocument}!XLDocument@{XLDocument}}
+\index{XLDocument@{XLDocument}!OpenXLSX::XLDocument@{OpenXLSX::XLDocument}}
+\doxysubsubsection{\texorpdfstring{XLDocument()}{XLDocument()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Open\+XLSX\+::\+XLDocument\+::\+XLDocument (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_document}{XLDocument}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+Copy constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The object to copy \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Copy constructor explicitly deleted. 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_document_af26cd7033a3b4164862426f02f447a05}\label{class_open_x_l_s_x_1_1_x_l_document_af26cd7033a3b4164862426f02f447a05}} 
+\index{OpenXLSX::XLDocument@{OpenXLSX::XLDocument}!XLDocument@{XLDocument}}
+\index{XLDocument@{XLDocument}!OpenXLSX::XLDocument@{OpenXLSX::XLDocument}}
+\doxysubsubsection{\texorpdfstring{XLDocument()}{XLDocument()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Open\+XLSX\+::\+XLDocument\+::\+XLDocument (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_document}{XLDocument}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_document_a6a096c3e5f75cdb0547147b3adc2e449}\label{class_open_x_l_s_x_1_1_x_l_document_a6a096c3e5f75cdb0547147b3adc2e449}} 
+\index{OpenXLSX::XLDocument@{OpenXLSX::XLDocument}!create@{create}}
+\index{create@{create}!OpenXLSX::XLDocument@{OpenXLSX::XLDocument}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily void Open\+XLSX\+::\+XLDocument\+::create (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file\+Name }\end{DoxyParamCaption})}
+
+
+
+Create a new .xlsx file with the given name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & The path of the new .xlsx file. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_document_ae0352aea97032c4783386f20dedc60ad}\label{class_open_x_l_s_x_1_1_x_l_document_ae0352aea97032c4783386f20dedc60ad}} 
+\index{OpenXLSX::XLDocument@{OpenXLSX::XLDocument}!deleteProperty@{deleteProperty}}
+\index{deleteProperty@{deleteProperty}!OpenXLSX::XLDocument@{OpenXLSX::XLDocument}}
+\doxysubsubsection{\texorpdfstring{deleteProperty()}{deleteProperty()}}
+{\footnotesize\ttfamily void Open\+XLSX\+::\+XLDocument\+::delete\+Property (\begin{DoxyParamCaption}\item[{XLProperty}]{the\+Property }\end{DoxyParamCaption})}
+
+
+
+Delete the property from the document. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em the\+Property} & The property to delete from the document \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_document_a7a018914933b1c5ee86b9d948572ba37}\label{class_open_x_l_s_x_1_1_x_l_document_a7a018914933b1c5ee86b9d948572ba37}} 
+\index{OpenXLSX::XLDocument@{OpenXLSX::XLDocument}!execCommand@{execCommand}}
+\index{execCommand@{execCommand}!OpenXLSX::XLDocument@{OpenXLSX::XLDocument}}
+\doxysubsubsection{\texorpdfstring{execCommand()}{execCommand()}}
+{\footnotesize\ttfamily void Open\+XLSX\+::\+XLDocument\+::exec\+Command (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_command}{XLCommand}} \&}]{command }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em command} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_document_a08605c487c08f4cf1c00cad3d9e1a030}\label{class_open_x_l_s_x_1_1_x_l_document_a08605c487c08f4cf1c00cad3d9e1a030}} 
+\index{OpenXLSX::XLDocument@{OpenXLSX::XLDocument}!execQuery@{execQuery}}
+\index{execQuery@{execQuery}!OpenXLSX::XLDocument@{OpenXLSX::XLDocument}}
+\doxysubsubsection{\texorpdfstring{execQuery()}{execQuery()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_query}{XLQuery}} Open\+XLSX\+::\+XLDocument\+::exec\+Query (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_query}{XLQuery}} \&}]{query }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em query} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_document_a5302f4f68f9d8f37cd7601c394265751}\label{class_open_x_l_s_x_1_1_x_l_document_a5302f4f68f9d8f37cd7601c394265751}} 
+\index{OpenXLSX::XLDocument@{OpenXLSX::XLDocument}!execQuery@{execQuery}}
+\index{execQuery@{execQuery}!OpenXLSX::XLDocument@{OpenXLSX::XLDocument}}
+\doxysubsubsection{\texorpdfstring{execQuery()}{execQuery()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_query}{XLQuery}} Open\+XLSX\+::\+XLDocument\+::exec\+Query (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_query}{XLQuery}} \&}]{query }\end{DoxyParamCaption}) const}
+
+
+\begin{DoxyParams}{Parameters}
+{\em query} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_document_a6aae782e72cba73a2be9d2cac5ba74cb}\label{class_open_x_l_s_x_1_1_x_l_document_a6aae782e72cba73a2be9d2cac5ba74cb}} 
+\index{OpenXLSX::XLDocument@{OpenXLSX::XLDocument}!extractXmlFromArchive@{extractXmlFromArchive}}
+\index{extractXmlFromArchive@{extractXmlFromArchive}!OpenXLSX::XLDocument@{OpenXLSX::XLDocument}}
+\doxysubsubsection{\texorpdfstring{extractXmlFromArchive()}{extractXmlFromArchive()}}
+{\footnotesize\ttfamily std\+::string Open\+XLSX\+::\+XLDocument\+::extract\+Xml\+From\+Archive (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Get an XML file from the .xlsx archive. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & The relative path of the file. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A std\+::string with the content of the file 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_document_ab457fc564bba1c4b1c2601b8a26aee28}\label{class_open_x_l_s_x_1_1_x_l_document_ab457fc564bba1c4b1c2601b8a26aee28}} 
+\index{OpenXLSX::XLDocument@{OpenXLSX::XLDocument}!getXmlData@{getXmlData}}
+\index{getXmlData@{getXmlData}!OpenXLSX::XLDocument@{OpenXLSX::XLDocument}}
+\doxysubsubsection{\texorpdfstring{getXmlData()}{getXmlData()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_data}{XLXml\+Data}} $\ast$ Open\+XLSX\+::\+XLDocument\+::get\+Xml\+Data (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_document_a8387fb9805ebc05a00891dc2ee29d3f5}\label{class_open_x_l_s_x_1_1_x_l_document_a8387fb9805ebc05a00891dc2ee29d3f5}} 
+\index{OpenXLSX::XLDocument@{OpenXLSX::XLDocument}!getXmlData@{getXmlData}}
+\index{getXmlData@{getXmlData}!OpenXLSX::XLDocument@{OpenXLSX::XLDocument}}
+\doxysubsubsection{\texorpdfstring{getXmlData()}{getXmlData()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_data}{XLXml\+Data}} $\ast$ Open\+XLSX\+::\+XLDocument\+::get\+Xml\+Data (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_document_a930b63723e5805c004acea3994a6be3f}\label{class_open_x_l_s_x_1_1_x_l_document_a930b63723e5805c004acea3994a6be3f}} 
+\index{OpenXLSX::XLDocument@{OpenXLSX::XLDocument}!hasXmlData@{hasXmlData}}
+\index{hasXmlData@{hasXmlData}!OpenXLSX::XLDocument@{OpenXLSX::XLDocument}}
+\doxysubsubsection{\texorpdfstring{hasXmlData()}{hasXmlData()}}
+{\footnotesize\ttfamily bool Open\+XLSX\+::\+XLDocument\+::has\+Xml\+Data (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_document_aca4fbb4a01b34f762f89e26c76ca46bf}\label{class_open_x_l_s_x_1_1_x_l_document_aca4fbb4a01b34f762f89e26c76ca46bf}} 
+\index{OpenXLSX::XLDocument@{OpenXLSX::XLDocument}!isOpen@{isOpen}}
+\index{isOpen@{isOpen}!OpenXLSX::XLDocument@{OpenXLSX::XLDocument}}
+\doxysubsubsection{\texorpdfstring{isOpen()}{isOpen()}}
+{\footnotesize\ttfamily bool Open\+XLSX\+::\+XLDocument\+::is\+Open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_document_af416ce70fd022004ee56a40d7bec9683}\label{class_open_x_l_s_x_1_1_x_l_document_af416ce70fd022004ee56a40d7bec9683}} 
+\index{OpenXLSX::XLDocument@{OpenXLSX::XLDocument}!name@{name}}
+\index{name@{name}!OpenXLSX::XLDocument@{OpenXLSX::XLDocument}}
+\doxysubsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily const std\+::string \& Open\+XLSX\+::\+XLDocument\+::name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the filename of the current document, e.\+g. \char`\"{}spreadsheet.\+xlsx\char`\"{}. 
+
+\begin{DoxyReturn}{Returns}
+A std\+::string with the filename. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_document_affbf7f7082b8ba84a78f88c8a8df768a}\label{class_open_x_l_s_x_1_1_x_l_document_affbf7f7082b8ba84a78f88c8a8df768a}} 
+\index{OpenXLSX::XLDocument@{OpenXLSX::XLDocument}!open@{open}}
+\index{open@{open}!OpenXLSX::XLDocument@{OpenXLSX::XLDocument}}
+\doxysubsubsection{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily void Open\+XLSX\+::\+XLDocument\+::open (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file\+Name }\end{DoxyParamCaption})}
+
+
+
+Open the .xlsx file with the given path. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & The path of the .xlsx file to open \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_document_a7ff7e77f7620cca8136b5f6b1f65a309}\label{class_open_x_l_s_x_1_1_x_l_document_a7ff7e77f7620cca8136b5f6b1f65a309}} 
+\index{OpenXLSX::XLDocument@{OpenXLSX::XLDocument}!operator bool@{operator bool}}
+\index{operator bool@{operator bool}!OpenXLSX::XLDocument@{OpenXLSX::XLDocument}}
+\doxysubsubsection{\texorpdfstring{operator bool()}{operator bool()}}
+{\footnotesize\ttfamily Open\+XLSX\+::\+XLDocument\+::operator bool (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_document_abc4bea533c73015075a823cac30b1fa7}\label{class_open_x_l_s_x_1_1_x_l_document_abc4bea533c73015075a823cac30b1fa7}} 
+\index{OpenXLSX::XLDocument@{OpenXLSX::XLDocument}!operator=@{operator=}}
+\index{operator=@{operator=}!OpenXLSX::XLDocument@{OpenXLSX::XLDocument}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_document}{XLDocument}} \& Open\+XLSX\+::\+XLDocument\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_document}{XLDocument}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_document_a4ece9e7e55f6da2f0f0e4739293135db}\label{class_open_x_l_s_x_1_1_x_l_document_a4ece9e7e55f6da2f0f0e4739293135db}} 
+\index{OpenXLSX::XLDocument@{OpenXLSX::XLDocument}!operator=@{operator=}}
+\index{operator=@{operator=}!OpenXLSX::XLDocument@{OpenXLSX::XLDocument}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_document}{XLDocument}} \& Open\+XLSX\+::\+XLDocument\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_document}{XLDocument}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_document_adb6f4161597e86604734ff27bac3a9f3}\label{class_open_x_l_s_x_1_1_x_l_document_adb6f4161597e86604734ff27bac3a9f3}} 
+\index{OpenXLSX::XLDocument@{OpenXLSX::XLDocument}!path@{path}}
+\index{path@{path}!OpenXLSX::XLDocument@{OpenXLSX::XLDocument}}
+\doxysubsubsection{\texorpdfstring{path()}{path()}}
+{\footnotesize\ttfamily const std\+::string \& Open\+XLSX\+::\+XLDocument\+::path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the full path of the current document, e.\+g. \char`\"{}drive/blah/spreadsheet.\+xlsx\char`\"{}. 
+
+\begin{DoxyReturn}{Returns}
+A std\+::string with the path. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_document_a87ce74d79eef2d472b0177bbdcb99106}\label{class_open_x_l_s_x_1_1_x_l_document_a87ce74d79eef2d472b0177bbdcb99106}} 
+\index{OpenXLSX::XLDocument@{OpenXLSX::XLDocument}!property@{property}}
+\index{property@{property}!OpenXLSX::XLDocument@{OpenXLSX::XLDocument}}
+\doxysubsubsection{\texorpdfstring{property()}{property()}}
+{\footnotesize\ttfamily std\+::string Open\+XLSX\+::\+XLDocument\+::property (\begin{DoxyParamCaption}\item[{XLProperty}]{prop }\end{DoxyParamCaption}) const}
+
+
+
+Get the requested document property. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prop} & The name of the property to get. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The property as a string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_document_a4b7c370f017a400d2a3233ffe353ff21}\label{class_open_x_l_s_x_1_1_x_l_document_a4b7c370f017a400d2a3233ffe353ff21}} 
+\index{OpenXLSX::XLDocument@{OpenXLSX::XLDocument}!save@{save}}
+\index{save@{save}!OpenXLSX::XLDocument@{OpenXLSX::XLDocument}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily void Open\+XLSX\+::\+XLDocument\+::save (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Save the current document using the current filename, overwriting the existing file. 
+
+\begin{DoxyReturn}{Returns}
+true if successful; otherwise false. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_document_a9f65e10476a8a3a14f2d7daf245ecf87}\label{class_open_x_l_s_x_1_1_x_l_document_a9f65e10476a8a3a14f2d7daf245ecf87}} 
+\index{OpenXLSX::XLDocument@{OpenXLSX::XLDocument}!saveAs@{saveAs}}
+\index{saveAs@{saveAs}!OpenXLSX::XLDocument@{OpenXLSX::XLDocument}}
+\doxysubsubsection{\texorpdfstring{saveAs()}{saveAs()}}
+{\footnotesize\ttfamily void Open\+XLSX\+::\+XLDocument\+::save\+As (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file\+Name }\end{DoxyParamCaption})}
+
+
+
+Save the document with a new name. If a file exists with that name, it will be overwritten. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & The path of the file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if successful; otherwise false. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_document_a66684abaffc5b3e0261301712de49908}\label{class_open_x_l_s_x_1_1_x_l_document_a66684abaffc5b3e0261301712de49908}} 
+\index{OpenXLSX::XLDocument@{OpenXLSX::XLDocument}!setProperty@{setProperty}}
+\index{setProperty@{setProperty}!OpenXLSX::XLDocument@{OpenXLSX::XLDocument}}
+\doxysubsubsection{\texorpdfstring{setProperty()}{setProperty()}}
+{\footnotesize\ttfamily void Open\+XLSX\+::\+XLDocument\+::set\+Property (\begin{DoxyParamCaption}\item[{XLProperty}]{prop,  }\item[{const std\+::string \&}]{value }\end{DoxyParamCaption})}
+
+
+
+Set a property. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prop} & The property to set. \\
+\hline
+{\em value} & The get\+Value of the property, as a string \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_document_aee820a3d4a6168b532a851d7d5a85931}\label{class_open_x_l_s_x_1_1_x_l_document_aee820a3d4a6168b532a851d7d5a85931}} 
+\index{OpenXLSX::XLDocument@{OpenXLSX::XLDocument}!workbook@{workbook}}
+\index{workbook@{workbook}!OpenXLSX::XLDocument@{OpenXLSX::XLDocument}}
+\doxysubsubsection{\texorpdfstring{workbook()}{workbook()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_workbook}{XLWorkbook}} Open\+XLSX\+::\+XLDocument\+::workbook (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the underlying workbook object, as a const object. 
+
+\begin{DoxyReturn}{Returns}
+A const pointer to the \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_workbook}{XLWorkbook}} object. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Youth\+\_\+learning\+\_\+autoload/vendors/\+Open\+XLSX/\+Open\+XLSX/headers/XLDocument.\+hpp\end{DoxyCompactItemize}

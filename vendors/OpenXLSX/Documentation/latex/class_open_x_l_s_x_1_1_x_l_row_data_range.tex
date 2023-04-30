@@ -1,0 +1,162 @@
+\hypertarget{class_open_x_l_s_x_1_1_x_l_row_data_range}{}\doxysection{Open\+XLSX\+::XLRow\+Data\+Range Class Reference}
+\label{class_open_x_l_s_x_1_1_x_l_row_data_range}\index{OpenXLSX::XLRowDataRange@{OpenXLSX::XLRowDataRange}}
+
+
+This class encapsulates the concept of a contiguous range of cells in a row.  
+
+
+
+
+{\ttfamily \#include $<$XLRow\+Data.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_range_a119838c04e966cb0542e43b53573e5e6}{XLRow\+Data\+Range}} (const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_range}{XLRow\+Data\+Range}} \&other)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_range_a32e5c1d111efc1a63e9583f935b7e3e4}{XLRow\+Data\+Range}} (\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_range}{XLRow\+Data\+Range}} \&\&other) noexcept
+\begin{DoxyCompactList}\small\item\em Move constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_row_data_range_a3892c5c30359435551b40bc7c3bda70a}\label{class_open_x_l_s_x_1_1_x_l_row_data_range_a3892c5c30359435551b40bc7c3bda70a}} 
+{\bfseries $\sim$\+XLRow\+Data\+Range} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_range}{XLRow\+Data\+Range}} \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_range_aa3dc48e05087087d9377d91670fb401b}{operator=}} (const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_range}{XLRow\+Data\+Range}} \&other)
+\begin{DoxyCompactList}\small\item\em Copy assignment operator. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_range}{XLRow\+Data\+Range}} \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_range_a72eb4a92df27135af43069365ce26433}{operator=}} (\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_range}{XLRow\+Data\+Range}} \&\&other) noexcept
+\begin{DoxyCompactList}\small\item\em Move assignment operator. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_range_a48ba6bdaf8f339946c0acd002f0268b4}{size}} () const
+\begin{DoxyCompactList}\small\item\em Get the size (length) of the range. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_iterator}{XLRow\+Data\+Iterator}} \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_range_a41827b009f81f5253bbf45e9ddb71a17}{begin}} ()
+\begin{DoxyCompactList}\small\item\em Get an iterator to the first element. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_iterator}{XLRow\+Data\+Iterator}} \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_range_aab8d95d4b218be0c62680e6bcc404546}{end}} ()
+\begin{DoxyCompactList}\small\item\em Get an iterator to (one-\/past) the last element. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_row_data_range_ae772eb42084f0784445b55af578efc64}\label{class_open_x_l_s_x_1_1_x_l_row_data_range_ae772eb42084f0784445b55af578efc64}} 
+class {\bfseries XLRow\+Data\+Iterator}
+\item 
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_row_data_range_af2bb74ae142ebbf9803133e610399375}\label{class_open_x_l_s_x_1_1_x_l_row_data_range_af2bb74ae142ebbf9803133e610399375}} 
+class {\bfseries XLRow\+Data\+Proxy}
+\item 
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_row_data_range_aec6b49fdf8efc40f364c2eab4a3d9148}\label{class_open_x_l_s_x_1_1_x_l_row_data_range_aec6b49fdf8efc40f364c2eab4a3d9148}} 
+class {\bfseries XLRow}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class encapsulates the concept of a contiguous range of cells in a row. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_row_data_range_a119838c04e966cb0542e43b53573e5e6}\label{class_open_x_l_s_x_1_1_x_l_row_data_range_a119838c04e966cb0542e43b53573e5e6}} 
+\index{OpenXLSX::XLRowDataRange@{OpenXLSX::XLRowDataRange}!XLRowDataRange@{XLRowDataRange}}
+\index{XLRowDataRange@{XLRowDataRange}!OpenXLSX::XLRowDataRange@{OpenXLSX::XLRowDataRange}}
+\doxysubsubsection{\texorpdfstring{XLRowDataRange()}{XLRowDataRange()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Open\+XLSX\+::\+XLRow\+Data\+Range\+::\+XLRow\+Data\+Range (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_range}{XLRow\+Data\+Range}} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Copy constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Object to be copied. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_row_data_range_a32e5c1d111efc1a63e9583f935b7e3e4}\label{class_open_x_l_s_x_1_1_x_l_row_data_range_a32e5c1d111efc1a63e9583f935b7e3e4}} 
+\index{OpenXLSX::XLRowDataRange@{OpenXLSX::XLRowDataRange}!XLRowDataRange@{XLRowDataRange}}
+\index{XLRowDataRange@{XLRowDataRange}!OpenXLSX::XLRowDataRange@{OpenXLSX::XLRowDataRange}}
+\doxysubsubsection{\texorpdfstring{XLRowDataRange()}{XLRowDataRange()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Open\+XLSX\+::\+XLRow\+Data\+Range\+::\+XLRow\+Data\+Range (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_range}{XLRow\+Data\+Range}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Move constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Object to be moved. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_row_data_range_a41827b009f81f5253bbf45e9ddb71a17}\label{class_open_x_l_s_x_1_1_x_l_row_data_range_a41827b009f81f5253bbf45e9ddb71a17}} 
+\index{OpenXLSX::XLRowDataRange@{OpenXLSX::XLRowDataRange}!begin@{begin}}
+\index{begin@{begin}!OpenXLSX::XLRowDataRange@{OpenXLSX::XLRowDataRange}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_iterator}{XLRow\+Data\+Iterator}} Open\+XLSX\+::\+XLRow\+Data\+Range\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get an iterator to the first element. 
+
+\begin{DoxyReturn}{Returns}
+An \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_iterator}{XLRow\+Data\+Iterator}} pointing to the first element. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_row_data_range_aab8d95d4b218be0c62680e6bcc404546}\label{class_open_x_l_s_x_1_1_x_l_row_data_range_aab8d95d4b218be0c62680e6bcc404546}} 
+\index{OpenXLSX::XLRowDataRange@{OpenXLSX::XLRowDataRange}!end@{end}}
+\index{end@{end}!OpenXLSX::XLRowDataRange@{OpenXLSX::XLRowDataRange}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_iterator}{XLRow\+Data\+Iterator}} Open\+XLSX\+::\+XLRow\+Data\+Range\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get an iterator to (one-\/past) the last element. 
+
+\begin{DoxyReturn}{Returns}
+An \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_iterator}{XLRow\+Data\+Iterator}} pointing to (one past) the last element. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_row_data_range_aa3dc48e05087087d9377d91670fb401b}\label{class_open_x_l_s_x_1_1_x_l_row_data_range_aa3dc48e05087087d9377d91670fb401b}} 
+\index{OpenXLSX::XLRowDataRange@{OpenXLSX::XLRowDataRange}!operator=@{operator=}}
+\index{operator=@{operator=}!OpenXLSX::XLRowDataRange@{OpenXLSX::XLRowDataRange}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_range}{XLRow\+Data\+Range}} \& Open\+XLSX\+::\+XLRow\+Data\+Range\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_range}{XLRow\+Data\+Range}} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Copy assignment operator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Object to be copied. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reference to the copied-\/to object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_row_data_range_a72eb4a92df27135af43069365ce26433}\label{class_open_x_l_s_x_1_1_x_l_row_data_range_a72eb4a92df27135af43069365ce26433}} 
+\index{OpenXLSX::XLRowDataRange@{OpenXLSX::XLRowDataRange}!operator=@{operator=}}
+\index{operator=@{operator=}!OpenXLSX::XLRowDataRange@{OpenXLSX::XLRowDataRange}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_range}{XLRow\+Data\+Range}} \& Open\+XLSX\+::\+XLRow\+Data\+Range\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_range}{XLRow\+Data\+Range}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Move assignment operator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Object to be moved. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reference to the moved-\/to object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_row_data_range_a48ba6bdaf8f339946c0acd002f0268b4}\label{class_open_x_l_s_x_1_1_x_l_row_data_range_a48ba6bdaf8f339946c0acd002f0268b4}} 
+\index{OpenXLSX::XLRowDataRange@{OpenXLSX::XLRowDataRange}!size@{size}}
+\index{size@{size}!OpenXLSX::XLRowDataRange@{OpenXLSX::XLRowDataRange}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily uint16\+\_\+t Open\+XLSX\+::\+XLRow\+Data\+Range\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the size (length) of the range. 
+
+\begin{DoxyReturn}{Returns}
+The size of the range. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Youth\+\_\+learning\+\_\+autoload/vendors/\+Open\+XLSX/\+Open\+XLSX/headers/XLRow\+Data.\+hpp\end{DoxyCompactItemize}

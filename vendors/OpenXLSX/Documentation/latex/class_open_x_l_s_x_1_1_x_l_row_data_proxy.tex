@@ -1,0 +1,194 @@
+\hypertarget{class_open_x_l_s_x_1_1_x_l_row_data_proxy}{}\doxysection{Open\+XLSX\+::XLRow\+Data\+Proxy Class Reference}
+\label{class_open_x_l_s_x_1_1_x_l_row_data_proxy}\index{OpenXLSX::XLRowDataProxy@{OpenXLSX::XLRowDataProxy}}
+
+
+The \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_proxy}{XLRow\+Data\+Proxy}} is used as a proxy object when getting or setting row data. The class facilitates easy conversion to/from containers.  
+
+
+
+
+{\ttfamily \#include $<$XLRow\+Data.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_row_data_proxy_a6da7c6c9537dec853ede6ca452b4df0d}\label{class_open_x_l_s_x_1_1_x_l_row_data_proxy_a6da7c6c9537dec853ede6ca452b4df0d}} 
+{\bfseries $\sim$\+XLRow\+Data\+Proxy} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_proxy}{XLRow\+Data\+Proxy}} \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_proxy_adfb8a69e24b51b08002d27bac9a2947f}{operator=}} (const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_proxy}{XLRow\+Data\+Proxy}} \&other)
+\begin{DoxyCompactList}\small\item\em Copy assignment operator. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_proxy}{XLRow\+Data\+Proxy}} \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_proxy_a3482f5fef82a3ebf70922ab18013ccdf}{operator=}} (const std\+::vector$<$ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{XLCell\+Value}} $>$ \&values)
+\begin{DoxyCompactList}\small\item\em Assignment operator taking a std\+::vector of XLCell\+Values as an argument. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_proxy}{XLRow\+Data\+Proxy}} \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_proxy_a68c4628a0d7a6ca8c4410e41559a4bdf}{operator=}} (const std\+::vector$<$ bool $>$ \&values)
+\begin{DoxyCompactList}\small\item\em Assignment operator taking a std\+::vector of bool values as an argument. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T , typename std\+::enable\+\_\+if$<$!std\+::is\+\_\+same\+\_\+v$<$ T, \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_proxy}{XLRow\+Data\+Proxy}} $>$ \&\&std\+::is\+\_\+base\+\_\+of\+\_\+v$<$ typename std\+::bidirectional\+\_\+iterator\+\_\+tag, typename std\+::iterator\+\_\+traits$<$ typename T\+::iterator $>$\+::iterator\+\_\+category $>$, T $>$\+::type $\ast$  = nullptr$>$ }\\\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_proxy}{XLRow\+Data\+Proxy}} \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_proxy_af57dc74a92e0d1fa29d2ab9db291b4b7}{operator=}} (const T \&values)
+\begin{DoxyCompactList}\small\item\em Templated assignment operator taking any container supporting bidirectional iterators. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_proxy_abbdf5bbb70993d32dc800d84c826c8e0}{operator std\+::vector$<$ XLCell\+Value $>$}} () const
+\begin{DoxyCompactList}\small\item\em Implicit conversion to std\+::vector of XLCell\+Values. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_proxy_a93bc7327de195815198d887d7361b326}{operator std\+::deque$<$ XLCell\+Value $>$}} () const
+\begin{DoxyCompactList}\small\item\em Implicit conversion to std\+::deque of XLCell\+Values. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_proxy_af1f02ad28d199ee686691835c2c00b88}{operator std\+::list$<$ XLCell\+Value $>$}} () const
+\begin{DoxyCompactList}\small\item\em Implicit conversion to std\+::list of XLCell\+Values. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Container , typename std\+::enable\+\_\+if$<$!std\+::is\+\_\+same\+\_\+v$<$ Container, \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_proxy}{XLRow\+Data\+Proxy}} $>$ \&\&std\+::is\+\_\+base\+\_\+of\+\_\+v$<$ typename std\+::bidirectional\+\_\+iterator\+\_\+tag, typename std\+::iterator\+\_\+traits$<$ typename Container\+::iterator $>$\+::iterator\+\_\+category $>$, Container $>$\+::type $\ast$  = nullptr$>$ }\\\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_proxy_abf500a0400450c87714e780b457706f5}{operator Container}} () const
+\begin{DoxyCompactList}\small\item\em Explicit conversion operator. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_row_data_proxy_a7d3434c781f297125a30f9e2e8f7f315}\label{class_open_x_l_s_x_1_1_x_l_row_data_proxy_a7d3434c781f297125a30f9e2e8f7f315}} 
+void {\bfseries clear} ()
+\begin{DoxyCompactList}\small\item\em Clears all values for the current row. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_row_data_proxy_aec6b49fdf8efc40f364c2eab4a3d9148}\label{class_open_x_l_s_x_1_1_x_l_row_data_proxy_aec6b49fdf8efc40f364c2eab4a3d9148}} 
+class {\bfseries XLRow}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_proxy}{XLRow\+Data\+Proxy}} is used as a proxy object when getting or setting row data. The class facilitates easy conversion to/from containers. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_row_data_proxy_abf500a0400450c87714e780b457706f5}\label{class_open_x_l_s_x_1_1_x_l_row_data_proxy_abf500a0400450c87714e780b457706f5}} 
+\index{OpenXLSX::XLRowDataProxy@{OpenXLSX::XLRowDataProxy}!operator Container@{operator Container}}
+\index{operator Container@{operator Container}!OpenXLSX::XLRowDataProxy@{OpenXLSX::XLRowDataProxy}}
+\doxysubsubsection{\texorpdfstring{operator Container()}{operator Container()}}
+{\footnotesize\ttfamily template$<$typename Container , typename std\+::enable\+\_\+if$<$!std\+::is\+\_\+same\+\_\+v$<$ Container, \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_proxy}{XLRow\+Data\+Proxy}} $>$ \&\&std\+::is\+\_\+base\+\_\+of\+\_\+v$<$ typename std\+::bidirectional\+\_\+iterator\+\_\+tag, typename std\+::iterator\+\_\+traits$<$ typename Container\+::iterator $>$\+::iterator\+\_\+category $>$, Container $>$\+::type $\ast$  = nullptr$>$ \\
+Open\+XLSX\+::\+XLRow\+Data\+Proxy\+::operator Container (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Explicit conversion operator. 
+
+This function calls the convert\+Container template function to convert the row data to the container stipulated by the client. The reason that this function is marked explicit is that the implicit conversion operators above will be ambiguous. 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Container} & The container (and value) type to convert the row data to. \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+The required container with the row data. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_row_data_proxy_a93bc7327de195815198d887d7361b326}\label{class_open_x_l_s_x_1_1_x_l_row_data_proxy_a93bc7327de195815198d887d7361b326}} 
+\index{OpenXLSX::XLRowDataProxy@{OpenXLSX::XLRowDataProxy}!operator std::deque$<$ XLCellValue $>$@{operator std::deque$<$ XLCellValue $>$}}
+\index{operator std::deque$<$ XLCellValue $>$@{operator std::deque$<$ XLCellValue $>$}!OpenXLSX::XLRowDataProxy@{OpenXLSX::XLRowDataProxy}}
+\doxysubsubsection{\texorpdfstring{operator std::deque$<$ XLCellValue $>$()}{operator std::deque< XLCellValue >()}}
+{\footnotesize\ttfamily Open\+XLSX\+::\+XLRow\+Data\+Proxy\+::operator std\+::deque$<$ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{XLCell\+Value}} $>$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Implicit conversion to std\+::deque of XLCell\+Values. 
+
+\begin{DoxyReturn}{Returns}
+A std\+::deque of XLCell\+Values. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_row_data_proxy_af1f02ad28d199ee686691835c2c00b88}\label{class_open_x_l_s_x_1_1_x_l_row_data_proxy_af1f02ad28d199ee686691835c2c00b88}} 
+\index{OpenXLSX::XLRowDataProxy@{OpenXLSX::XLRowDataProxy}!operator std::list$<$ XLCellValue $>$@{operator std::list$<$ XLCellValue $>$}}
+\index{operator std::list$<$ XLCellValue $>$@{operator std::list$<$ XLCellValue $>$}!OpenXLSX::XLRowDataProxy@{OpenXLSX::XLRowDataProxy}}
+\doxysubsubsection{\texorpdfstring{operator std::list$<$ XLCellValue $>$()}{operator std::list< XLCellValue >()}}
+{\footnotesize\ttfamily Open\+XLSX\+::\+XLRow\+Data\+Proxy\+::operator std\+::list$<$ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{XLCell\+Value}} $>$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Implicit conversion to std\+::list of XLCell\+Values. 
+
+\begin{DoxyReturn}{Returns}
+A std\+::list of XLCell\+Values. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_row_data_proxy_abbdf5bbb70993d32dc800d84c826c8e0}\label{class_open_x_l_s_x_1_1_x_l_row_data_proxy_abbdf5bbb70993d32dc800d84c826c8e0}} 
+\index{OpenXLSX::XLRowDataProxy@{OpenXLSX::XLRowDataProxy}!operator std::vector$<$ XLCellValue $>$@{operator std::vector$<$ XLCellValue $>$}}
+\index{operator std::vector$<$ XLCellValue $>$@{operator std::vector$<$ XLCellValue $>$}!OpenXLSX::XLRowDataProxy@{OpenXLSX::XLRowDataProxy}}
+\doxysubsubsection{\texorpdfstring{operator std::vector$<$ XLCellValue $>$()}{operator std::vector< XLCellValue >()}}
+{\footnotesize\ttfamily Open\+XLSX\+::\+XLRow\+Data\+Proxy\+::operator std\+::vector$<$ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{XLCell\+Value}} $>$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Implicit conversion to std\+::vector of XLCell\+Values. 
+
+\begin{DoxyReturn}{Returns}
+A std\+::vector of XLCell\+Values. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_row_data_proxy_a68c4628a0d7a6ca8c4410e41559a4bdf}\label{class_open_x_l_s_x_1_1_x_l_row_data_proxy_a68c4628a0d7a6ca8c4410e41559a4bdf}} 
+\index{OpenXLSX::XLRowDataProxy@{OpenXLSX::XLRowDataProxy}!operator=@{operator=}}
+\index{operator=@{operator=}!OpenXLSX::XLRowDataProxy@{OpenXLSX::XLRowDataProxy}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_proxy}{XLRow\+Data\+Proxy}} \& Open\+XLSX\+::\+XLRow\+Data\+Proxy\+::operator= (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ bool $>$ \&}]{values }\end{DoxyParamCaption})}
+
+
+
+Assignment operator taking a std\+::vector of bool values as an argument. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em values} & A std\+::vector of bool values representing the values to be assigned. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reference to the copied-\/to object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_row_data_proxy_a3482f5fef82a3ebf70922ab18013ccdf}\label{class_open_x_l_s_x_1_1_x_l_row_data_proxy_a3482f5fef82a3ebf70922ab18013ccdf}} 
+\index{OpenXLSX::XLRowDataProxy@{OpenXLSX::XLRowDataProxy}!operator=@{operator=}}
+\index{operator=@{operator=}!OpenXLSX::XLRowDataProxy@{OpenXLSX::XLRowDataProxy}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_proxy}{XLRow\+Data\+Proxy}} \& Open\+XLSX\+::\+XLRow\+Data\+Proxy\+::operator= (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{XLCell\+Value}} $>$ \&}]{values }\end{DoxyParamCaption})}
+
+
+
+Assignment operator taking a std\+::vector of XLCell\+Values as an argument. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em values} & A std\+::vector of XLCell\+Values representing the values to be assigned. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reference to the copied-\/to object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_row_data_proxy_af57dc74a92e0d1fa29d2ab9db291b4b7}\label{class_open_x_l_s_x_1_1_x_l_row_data_proxy_af57dc74a92e0d1fa29d2ab9db291b4b7}} 
+\index{OpenXLSX::XLRowDataProxy@{OpenXLSX::XLRowDataProxy}!operator=@{operator=}}
+\index{operator=@{operator=}!OpenXLSX::XLRowDataProxy@{OpenXLSX::XLRowDataProxy}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$typename T , typename std\+::enable\+\_\+if$<$!std\+::is\+\_\+same\+\_\+v$<$ T, \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_proxy}{XLRow\+Data\+Proxy}} $>$ \&\&std\+::is\+\_\+base\+\_\+of\+\_\+v$<$ typename std\+::bidirectional\+\_\+iterator\+\_\+tag, typename std\+::iterator\+\_\+traits$<$ typename T\+::iterator $>$\+::iterator\+\_\+category $>$, T $>$\+::type $\ast$  = nullptr$>$ \\
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_proxy}{XLRow\+Data\+Proxy}} \& Open\+XLSX\+::\+XLRow\+Data\+Proxy\+::operator= (\begin{DoxyParamCaption}\item[{const T \&}]{values }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Templated assignment operator taking any container supporting bidirectional iterators. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The container and value type (will be auto deducted by the compiler). \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em values} & The container of the values to be assigned. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reference to the copied-\/to object. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_overflow_error}{XLOverflow\+Error}}} & if size of container exceeds maximum number of columns. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_row_data_proxy_adfb8a69e24b51b08002d27bac9a2947f}\label{class_open_x_l_s_x_1_1_x_l_row_data_proxy_adfb8a69e24b51b08002d27bac9a2947f}} 
+\index{OpenXLSX::XLRowDataProxy@{OpenXLSX::XLRowDataProxy}!operator=@{operator=}}
+\index{operator=@{operator=}!OpenXLSX::XLRowDataProxy@{OpenXLSX::XLRowDataProxy}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_proxy}{XLRow\+Data\+Proxy}} \& Open\+XLSX\+::\+XLRow\+Data\+Proxy\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_data_proxy}{XLRow\+Data\+Proxy}} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Copy assignment operator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Object to be copied. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reference to the copied-\/to object. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Youth\+\_\+learning\+\_\+autoload/vendors/\+Open\+XLSX/\+Open\+XLSX/headers/XLRow\+Data.\+hpp\end{DoxyCompactItemize}

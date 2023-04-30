@@ -1,0 +1,238 @@
+\hypertarget{class_open_x_l_s_x_1_1_x_l_shared_strings}{}\doxysection{Open\+XLSX\+::XLShared\+Strings Class Reference}
+\label{class_open_x_l_s_x_1_1_x_l_shared_strings}\index{OpenXLSX::XLSharedStrings@{OpenXLSX::XLSharedStrings}}
+
+
+This class encapsulate the Excel concept of Shared Strings. In Excel, instead of havig individual strings in each cell, cells have a reference to an entry in the Shared\+Strings register. This results in smalle file sizes, as repeated strings are referenced easily.  
+
+
+
+
+{\ttfamily \#include $<$XLShared\+Strings.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_shared_strings_ac82bdb4e1bed7b4e9f350ea2ee98b95f}{XLShared\+Strings}} (\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_data}{XLXml\+Data}} $\ast$\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_af4cf6f8310a055a6f18e99669f52d798}{xml\+Data}}, std\+::deque$<$ std\+::string $>$ $\ast$string\+Cache)
+\item 
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_shared_strings_ab6d620d4eac5744deb3949166d22d5e7}\label{class_open_x_l_s_x_1_1_x_l_shared_strings_ab6d620d4eac5744deb3949166d22d5e7}} 
+{\bfseries $\sim$\+XLShared\+Strings} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_shared_strings_a393d2a901a34195193a89821d3597f22}{XLShared\+Strings}} (const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_shared_strings}{XLShared\+Strings}} \&other)=default
+\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_shared_strings_ab502a986379ca601aa6706131076a7df}{XLShared\+Strings}} (\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_shared_strings}{XLShared\+Strings}} \&\&other) noexcept=default
+\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_shared_strings}{XLShared\+Strings}} \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_shared_strings_afeb9c67341ead6d5c6c0ac0f5683da55}{operator=}} (const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_shared_strings}{XLShared\+Strings}} \&other)=default
+\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_shared_strings}{XLShared\+Strings}} \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_shared_strings_a099f6fd89735364697903ccd7fb52172}{operator=}} (\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_shared_strings}{XLShared\+Strings}} \&\&other) noexcept=default
+\item 
+int32\+\_\+t \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_shared_strings_a93a8f0a614b74823216033ca7c490672}{get\+String\+Index}} (const std\+::string \&str) const
+\item 
+bool \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_shared_strings_a723007f4d66ef02ce8adb9e3a1a115a3}{string\+Exists}} (const std\+::string \&str) const
+\item 
+const char $\ast$ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_shared_strings_ad6ccf5b918fea52075acb23a084806a4}{get\+String}} (uint32\+\_\+t index) const
+\item 
+int32\+\_\+t \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_shared_strings_abc5a30edd70a172d934880c961d2ed04}{append\+String}} (const std\+::string \&str)
+\begin{DoxyCompactList}\small\item\em Append a new string to the list of shared strings. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_shared_strings_aaea0667d2e60254a765956b27e826c49}{clear\+String}} (uint64\+\_\+t index)
+\begin{DoxyCompactList}\small\item\em Clear the string at the given index. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file}{Open\+XLSX\+::\+XLXml\+File}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_xml_file_afcc880bcb4e01b9435eae827a9836ec0}\label{class_open_x_l_s_x_1_1_x_l_xml_file_afcc880bcb4e01b9435eae827a9836ec0}} 
+{\bfseries XLXml\+File} ()=default
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_a91ac3132eed637a60ca7ccd8d61d107a}{XLXml\+File}} (\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_data}{XLXml\+Data}} $\ast$\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_af4cf6f8310a055a6f18e99669f52d798}{xml\+Data}})
+\begin{DoxyCompactList}\small\item\em Constructor. Creates an object based on the xml\+Data input. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_ab412e98acd8baa5d99cc97e68365a192}{XLXml\+File}} (const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file}{XLXml\+File}} \&other)=default
+\begin{DoxyCompactList}\small\item\em Copy constructor. Default implementation used. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_a874e9e87bed7e6f4e4cd3696e28b7cff}{XLXml\+File}} (\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file}{XLXml\+File}} \&\&other) noexcept=default
+\begin{DoxyCompactList}\small\item\em Move constructor. Default implementation used. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_xml_file_aa92e245526f036fd154efc659e2f9006}\label{class_open_x_l_s_x_1_1_x_l_xml_file_aa92e245526f036fd154efc659e2f9006}} 
+{\bfseries $\sim$\+XLXml\+File} ()
+\begin{DoxyCompactList}\small\item\em Destructor. Default implementation used. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file}{XLXml\+File}} \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_a7ffb6dec2d9596b0982a6c41b2dbd66c}{operator=}} (const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file}{XLXml\+File}} \&other)=default
+\begin{DoxyCompactList}\small\item\em The copy assignment operator. The default implementation has been used. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file}{XLXml\+File}} \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_af53403da14a8b258a823a28fa20f24a0}{operator=}} (\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file}{XLXml\+File}} \&\&other) noexcept=default
+\begin{DoxyCompactList}\small\item\em The move assignment operator. The default implementation has been used. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+\doxysubsubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file}{Open\+XLSX\+::\+XLXml\+File}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_af4cf6f8310a055a6f18e99669f52d798}{xml\+Data}} () const
+\begin{DoxyCompactList}\small\item\em Method for getting the XML data represented by the object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_a669ce7b567aca54bbad3e50d611f9a05}{set\+Xml\+Data}} (const std\+::string \&\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_af4cf6f8310a055a6f18e99669f52d798}{xml\+Data}})
+\begin{DoxyCompactList}\small\item\em Provide the XML data represented by the object. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_a6738ed4c3a1c1add67c9295c236d80ef}{relationship\+ID}} () const
+\begin{DoxyCompactList}\small\item\em This function returns the relationship ID (the ID used in the \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_relationships}{XLRelationships}} objects) for the object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_document}{XLDocument}} \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_a60e6b90e550f43dac2743fdc90db152c}{parent\+Doc}} ()
+\begin{DoxyCompactList}\small\item\em This function provides access to the parent \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_document}{XLDocument}} object. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_document}{XLDocument}} \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_ab030effdc244fb88de1f2d69b64045cb}{parent\+Doc}} () const
+\begin{DoxyCompactList}\small\item\em This function provides access to the parent \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_document}{XLDocument}} object. \end{DoxyCompactList}\item 
+XMLDocument \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_a433ae1bd65af9262c7120f3774ecb8c3}{xml\+Document}} ()
+\begin{DoxyCompactList}\small\item\em This function provides access to the underlying XMLDocument object. \end{DoxyCompactList}\item 
+const XMLDocument \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_ae6450091d5ff53b5b2f35940af98a92f}{xml\+Document}} () const
+\begin{DoxyCompactList}\small\item\em This function provides access to the underlying XMLDocument object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file}{Open\+XLSX\+::\+XLXml\+File}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_data}{XLXml\+Data}} $\ast$ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_a56206b4f2903a83047d4c04cd683bfa4}{m\+\_\+xml\+Data}} \{ nullptr \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class encapsulate the Excel concept of Shared Strings. In Excel, instead of havig individual strings in each cell, cells have a reference to an entry in the Shared\+Strings register. This results in smalle file sizes, as repeated strings are referenced easily. Inheritance diagram for Open\+XLSX\+::XLShared\+Strings\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_open_x_l_s_x_1_1_x_l_shared_strings}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_shared_strings_ac82bdb4e1bed7b4e9f350ea2ee98b95f}\label{class_open_x_l_s_x_1_1_x_l_shared_strings_ac82bdb4e1bed7b4e9f350ea2ee98b95f}} 
+\index{OpenXLSX::XLSharedStrings@{OpenXLSX::XLSharedStrings}!XLSharedStrings@{XLSharedStrings}}
+\index{XLSharedStrings@{XLSharedStrings}!OpenXLSX::XLSharedStrings@{OpenXLSX::XLSharedStrings}}
+\doxysubsubsection{\texorpdfstring{XLSharedStrings()}{XLSharedStrings()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Open\+XLSX\+::\+XLShared\+Strings\+::\+XLShared\+Strings (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_data}{XLXml\+Data}} $\ast$}]{xml\+Data,  }\item[{std\+::deque$<$ std\+::string $>$ $\ast$}]{string\+Cache }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em xml\+Data} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_shared_strings_a393d2a901a34195193a89821d3597f22}\label{class_open_x_l_s_x_1_1_x_l_shared_strings_a393d2a901a34195193a89821d3597f22}} 
+\index{OpenXLSX::XLSharedStrings@{OpenXLSX::XLSharedStrings}!XLSharedStrings@{XLSharedStrings}}
+\index{XLSharedStrings@{XLSharedStrings}!OpenXLSX::XLSharedStrings@{OpenXLSX::XLSharedStrings}}
+\doxysubsubsection{\texorpdfstring{XLSharedStrings()}{XLSharedStrings()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Open\+XLSX\+::\+XLShared\+Strings\+::\+XLShared\+Strings (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_shared_strings}{XLShared\+Strings}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_shared_strings_ab502a986379ca601aa6706131076a7df}\label{class_open_x_l_s_x_1_1_x_l_shared_strings_ab502a986379ca601aa6706131076a7df}} 
+\index{OpenXLSX::XLSharedStrings@{OpenXLSX::XLSharedStrings}!XLSharedStrings@{XLSharedStrings}}
+\index{XLSharedStrings@{XLSharedStrings}!OpenXLSX::XLSharedStrings@{OpenXLSX::XLSharedStrings}}
+\doxysubsubsection{\texorpdfstring{XLSharedStrings()}{XLSharedStrings()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Open\+XLSX\+::\+XLShared\+Strings\+::\+XLShared\+Strings (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_shared_strings}{XLShared\+Strings}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_shared_strings_abc5a30edd70a172d934880c961d2ed04}\label{class_open_x_l_s_x_1_1_x_l_shared_strings_abc5a30edd70a172d934880c961d2ed04}} 
+\index{OpenXLSX::XLSharedStrings@{OpenXLSX::XLSharedStrings}!appendString@{appendString}}
+\index{appendString@{appendString}!OpenXLSX::XLSharedStrings@{OpenXLSX::XLSharedStrings}}
+\doxysubsubsection{\texorpdfstring{appendString()}{appendString()}}
+{\footnotesize\ttfamily int32\+\_\+t Open\+XLSX\+::\+XLShared\+Strings\+::append\+String (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{str }\end{DoxyParamCaption})}
+
+
+
+Append a new string to the list of shared strings. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & The string to append. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A long int with the index of the appended string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_shared_strings_aaea0667d2e60254a765956b27e826c49}\label{class_open_x_l_s_x_1_1_x_l_shared_strings_aaea0667d2e60254a765956b27e826c49}} 
+\index{OpenXLSX::XLSharedStrings@{OpenXLSX::XLSharedStrings}!clearString@{clearString}}
+\index{clearString@{clearString}!OpenXLSX::XLSharedStrings@{OpenXLSX::XLSharedStrings}}
+\doxysubsubsection{\texorpdfstring{clearString()}{clearString()}}
+{\footnotesize\ttfamily void Open\+XLSX\+::\+XLShared\+Strings\+::clear\+String (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{index }\end{DoxyParamCaption})}
+
+
+
+Clear the string at the given index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & The index to clear. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+There is no \textquotesingle{}delete\+String\textquotesingle{} member function, as deleting a shared string node will invalidate the shared string indices for the cells in the spreadsheet. Instead use this member functions, which clears the contents of the string, but keeps the XMLNode holding the string. 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_shared_strings_ad6ccf5b918fea52075acb23a084806a4}\label{class_open_x_l_s_x_1_1_x_l_shared_strings_ad6ccf5b918fea52075acb23a084806a4}} 
+\index{OpenXLSX::XLSharedStrings@{OpenXLSX::XLSharedStrings}!getString@{getString}}
+\index{getString@{getString}!OpenXLSX::XLSharedStrings@{OpenXLSX::XLSharedStrings}}
+\doxysubsubsection{\texorpdfstring{getString()}{getString()}}
+{\footnotesize\ttfamily const char $\ast$ Open\+XLSX\+::\+XLShared\+Strings\+::get\+String (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{index }\end{DoxyParamCaption}) const}
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_shared_strings_a93a8f0a614b74823216033ca7c490672}\label{class_open_x_l_s_x_1_1_x_l_shared_strings_a93a8f0a614b74823216033ca7c490672}} 
+\index{OpenXLSX::XLSharedStrings@{OpenXLSX::XLSharedStrings}!getStringIndex@{getStringIndex}}
+\index{getStringIndex@{getStringIndex}!OpenXLSX::XLSharedStrings@{OpenXLSX::XLSharedStrings}}
+\doxysubsubsection{\texorpdfstring{getStringIndex()}{getStringIndex()}}
+{\footnotesize\ttfamily int32\+\_\+t Open\+XLSX\+::\+XLShared\+Strings\+::get\+String\+Index (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{str }\end{DoxyParamCaption}) const}
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_shared_strings_afeb9c67341ead6d5c6c0ac0f5683da55}\label{class_open_x_l_s_x_1_1_x_l_shared_strings_afeb9c67341ead6d5c6c0ac0f5683da55}} 
+\index{OpenXLSX::XLSharedStrings@{OpenXLSX::XLSharedStrings}!operator=@{operator=}}
+\index{operator=@{operator=}!OpenXLSX::XLSharedStrings@{OpenXLSX::XLSharedStrings}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_shared_strings}{XLShared\+Strings}} \& Open\+XLSX\+::\+XLShared\+Strings\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_shared_strings}{XLShared\+Strings}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_shared_strings_a099f6fd89735364697903ccd7fb52172}\label{class_open_x_l_s_x_1_1_x_l_shared_strings_a099f6fd89735364697903ccd7fb52172}} 
+\index{OpenXLSX::XLSharedStrings@{OpenXLSX::XLSharedStrings}!operator=@{operator=}}
+\index{operator=@{operator=}!OpenXLSX::XLSharedStrings@{OpenXLSX::XLSharedStrings}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_shared_strings}{XLShared\+Strings}} \& Open\+XLSX\+::\+XLShared\+Strings\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_shared_strings}{XLShared\+Strings}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_shared_strings_a723007f4d66ef02ce8adb9e3a1a115a3}\label{class_open_x_l_s_x_1_1_x_l_shared_strings_a723007f4d66ef02ce8adb9e3a1a115a3}} 
+\index{OpenXLSX::XLSharedStrings@{OpenXLSX::XLSharedStrings}!stringExists@{stringExists}}
+\index{stringExists@{stringExists}!OpenXLSX::XLSharedStrings@{OpenXLSX::XLSharedStrings}}
+\doxysubsubsection{\texorpdfstring{stringExists()}{stringExists()}}
+{\footnotesize\ttfamily bool Open\+XLSX\+::\+XLShared\+Strings\+::string\+Exists (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{str }\end{DoxyParamCaption}) const}
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Youth\+\_\+learning\+\_\+autoload/vendors/\+Open\+XLSX/\+Open\+XLSX/headers/XLShared\+Strings.\+hpp\end{DoxyCompactItemize}

@@ -1,0 +1,170 @@
+\hypertarget{_x_l_relationships_8hpp_source}{}\doxysection{XLRelationships.\+hpp}
+\label{_x_l_relationships_8hpp_source}\index{D:/Youth\_learning\_autoload/vendors/OpenXLSX/OpenXLSX/headers/XLRelationships.hpp@{D:/Youth\_learning\_autoload/vendors/OpenXLSX/OpenXLSX/headers/XLRelationships.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ \ \ \_\_\_\_\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_\_\_\ \ \ \ \ \ \_\_\_\ \_\_\_\_\ \ \ \ \ \ \ \_\_\_\_\ \ \_\_\_\_\ \ \ \ \ \ \_\_\_}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ \ 6MMMMb\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ `MM(\ \ \ \ \ \ )M'\ `MM'\ \ \ \ \ \ 6MMMMb\(\backslash\)`MM(\ \ \ \ \ \ )M'}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ 8P\ \ \ \ Y8\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ `MM.\ \ \ \ \ d'\ \ \ MM\ \ \ \ \ \ 6M'\ \ \ \ `\ `MM.\ \ \ \ \ d'}}
+\DoxyCodeLine{00006\ \textcolor{comment}{6M\ \ \ \ \ \ Mb\ \_\_\ \_\_\_\_\ \ \ \ \ \_\_\_\_\ \ \_\_\_\ \ \_\_\ \ \ \ `MM.\ \ \ d'\ \ \ \ MM\ \ \ \ \ \ MM\ \ \ \ \ \ \ \ `MM.\ \ \ d'}}
+\DoxyCodeLine{00007\ \textcolor{comment}{MM\ \ \ \ \ \ MM\ `M6MMMMb\ \ \ 6MMMMb\ `MM\ 6MMb\ \ \ \ `MM.\ d'\ \ \ \ \ MM\ \ \ \ \ \ YM.\ \ \ \ \ \ \ \ `MM.\ d'}}
+\DoxyCodeLine{00008\ \textcolor{comment}{MM\ \ \ \ \ \ MM\ \ MM'\ \ `Mb\ 6M'\ \ `Mb\ MMM9\ `Mb\ \ \ \ `MMd\ \ \ \ \ \ \ MM\ \ \ \ \ \ \ YMMMMb\ \ \ \ \ `MMd}}
+\DoxyCodeLine{00009\ \textcolor{comment}{MM\ \ \ \ \ \ MM\ \ MM\ \ \ \ MM\ MM\ \ \ \ MM\ MM'\ \ \ MM\ \ \ \ \ dMM.\ \ \ \ \ \ MM\ \ \ \ \ \ \ \ \ \ \ `Mb\ \ \ \ \ dMM.}}
+\DoxyCodeLine{00010\ \textcolor{comment}{MM\ \ \ \ \ \ MM\ \ MM\ \ \ \ MM\ MMMMMMMM\ MM\ \ \ \ MM\ \ \ \ d'`MM.\ \ \ \ \ MM\ \ \ \ \ \ \ \ \ \ \ \ MM\ \ \ \ d'`MM.}}
+\DoxyCodeLine{00011\ \textcolor{comment}{YM\ \ \ \ \ \ M9\ \ MM\ \ \ \ MM\ MM\ \ \ \ \ \ \ MM\ \ \ \ MM\ \ \ d'\ \ `MM.\ \ \ \ MM\ \ \ \ \ \ \ \ \ \ \ \ MM\ \ \ d'\ \ `MM.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{\ 8b\ \ \ \ d8\ \ \ MM.\ \ ,M9\ YM\ \ \ \ d9\ MM\ \ \ \ MM\ \ d'\ \ \ \ `MM.\ \ \ MM\ \ \ \ /\ L\ \ \ \ ,M9\ \ d'\ \ \ \ `MM.}}
+\DoxyCodeLine{00013\ \textcolor{comment}{\ \ YMMMM9\ \ \ \ MMYMMM9\ \ \ YMMMM9\ \_MM\_\ \ \_MM\_M(\_\ \ \ \ \_)MM\_\ \_MMMMMMM\ MYMMMM9\ \_M(\_\ \ \ \ \_)MM\_}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ MM}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ MM}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \_MM\_}}
+\DoxyCodeLine{00017\ \textcolor{comment}{}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\ \ Copyright\ (c)\ 2018,\ Kenneth\ Troldal\ Balslev}}
+\DoxyCodeLine{00019\ \textcolor{comment}{}}
+\DoxyCodeLine{00020\ \textcolor{comment}{\ \ All\ rights\ reserved.}}
+\DoxyCodeLine{00021\ \textcolor{comment}{}}
+\DoxyCodeLine{00022\ \textcolor{comment}{\ \ Redistribution\ and\ use\ in\ source\ and\ binary\ forms,\ with\ or\ without}}
+\DoxyCodeLine{00023\ \textcolor{comment}{\ \ modification,\ are\ permitted\ provided\ that\ the\ following\ conditions\ are\ met:}}
+\DoxyCodeLine{00024\ \textcolor{comment}{\ \ -\/\ Redistributions\ of\ source\ code\ must\ retain\ the\ above\ copyright}}
+\DoxyCodeLine{00025\ \textcolor{comment}{\ \ \ \ notice,\ this\ list\ of\ conditions\ and\ the\ following\ disclaimer.}}
+\DoxyCodeLine{00026\ \textcolor{comment}{\ \ -\/\ Redistributions\ in\ binary\ form\ must\ reproduce\ the\ above\ copyright}}
+\DoxyCodeLine{00027\ \textcolor{comment}{\ \ \ \ notice,\ this\ list\ of\ conditions\ and\ the\ following\ disclaimer\ in\ the}}
+\DoxyCodeLine{00028\ \textcolor{comment}{\ \ \ \ documentation\ and/or\ other\ materials\ provided\ with\ the\ distribution.}}
+\DoxyCodeLine{00029\ \textcolor{comment}{\ \ -\/\ Neither\ the\ name\ of\ the\ author\ nor\ the}}
+\DoxyCodeLine{00030\ \textcolor{comment}{\ \ \ \ names\ of\ any\ contributors\ may\ be\ used\ to\ endorse\ or\ promote\ products}}
+\DoxyCodeLine{00031\ \textcolor{comment}{\ \ \ \ derived\ from\ this\ software\ without\ specific\ prior\ written\ permission.}}
+\DoxyCodeLine{00032\ \textcolor{comment}{}}
+\DoxyCodeLine{00033\ \textcolor{comment}{\ \ THIS\ SOFTWARE\ IS\ PROVIDED\ BY\ THE\ COPYRIGHT\ HOLDERS\ AND\ CONTRIBUTORS\ "{}AS\ IS"{}\ AND}}
+\DoxyCodeLine{00034\ \textcolor{comment}{\ \ ANY\ EXPRESS\ OR\ IMPLIED\ WARRANTIES,\ INCLUDING,\ BUT\ NOT\ LIMITED\ TO,\ THE\ IMPLIED}}
+\DoxyCodeLine{00035\ \textcolor{comment}{\ \ WARRANTIES\ OF\ MERCHANTABILITY\ AND\ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE\ ARE}}
+\DoxyCodeLine{00036\ \textcolor{comment}{\ \ DISCLAIMED.\ IN\ NO\ EVENT\ SHALL\ THE\ AUTHOR\ BE\ LIABLE\ FOR\ ANY}}
+\DoxyCodeLine{00037\ \textcolor{comment}{\ \ DIRECT,\ INDIRECT,\ INCIDENTAL,\ SPECIAL,\ EXEMPLARY,\ OR\ CONSEQUENTIAL\ DAMAGES}}
+\DoxyCodeLine{00038\ \textcolor{comment}{\ \ (INCLUDING,\ BUT\ NOT\ LIMITED\ TO,\ PROCUREMENT\ OF\ SUBSTITUTE\ GOODS\ OR\ SERVICES;}}
+\DoxyCodeLine{00039\ \textcolor{comment}{\ \ LOSS\ OF\ USE,\ DATA,\ OR\ PROFITS;\ OR\ BUSINESS\ INTERRUPTION)\ HOWEVER\ CAUSED\ AND}}
+\DoxyCodeLine{00040\ \textcolor{comment}{\ \ ON\ ANY\ THEORY\ OF\ LIABILITY,\ WHETHER\ IN\ CONTRACT,\ STRICT\ LIABILITY,\ OR\ TORT}}
+\DoxyCodeLine{00041\ \textcolor{comment}{\ \ (INCLUDING\ NEGLIGENCE\ OR\ OTHERWISE)\ ARISING\ IN\ ANY\ WAY\ OUT\ OF\ THE\ USE\ OF\ THIS}}
+\DoxyCodeLine{00042\ \textcolor{comment}{\ \ SOFTWARE,\ EVEN\ IF\ ADVISED\ OF\ THE\ POSSIBILITY\ OF\ SUCH\ DAMAGE.}}
+\DoxyCodeLine{00043\ \textcolor{comment}{}}
+\DoxyCodeLine{00044\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \textcolor{preprocessor}{\#ifndef\ OPENXLSX\_XLRELATIONSHIPS\_HPP}}
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\#define\ OPENXLSX\_XLRELATIONSHIPS\_HPP}}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#pragma\ warning(push)}}
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#pragma\ warning(disable\ :\ 4251)}}
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\#pragma\ warning(disable\ :\ 4275)}}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \textcolor{comment}{//\ =====\ External\ Includes\ =====\ //}}
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00055\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \textcolor{comment}{//\ =====\ OpenXLSX\ Includes\ =====\ //}}
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#include\ "{}OpenXLSX-\/Exports.hpp"{}}}
+\DoxyCodeLine{00059\ \textcolor{preprocessor}{\#include\ "{}XLXmlFile.hpp"{}}}
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\#include\ "{}XLXmlParser.hpp"{}}}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \textcolor{keyword}{namespace\ }OpenXLSX}
+\DoxyCodeLine{00063\ \{}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keyword}{class\ }XLRelationships;}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keyword}{class\ }XLRelationshipItem;}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keyword}{enum\ class}\ XLRelationshipType\ \{}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ CoreProperties,}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ ExtendedProperties,}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ CustomProperties,}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ Workbook,}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ Worksheet,}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ Chartsheet,}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ Dialogsheet,}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ Macrosheet,}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ CalculationChain,}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ ExternalLink,}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ ExternalLinkPath,}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ Theme,}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ Styles,}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ Chart,}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ ChartStyle,}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ ChartColorStyle,}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ Image,}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ Drawing,}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ VMLDrawing,}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ SharedStrings,}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ PrinterSettings,}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ VBAProject,}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ ControlProperties,}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ Unknown}
+\DoxyCodeLine{00096\ \ \ \ \ \};}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keyword}{class\ }OPENXLSX\_EXPORT\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_relationship_item}{XLRelationshipItem}}}
+\DoxyCodeLine{00102\ \ \ \ \ \{}
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keyword}{public}:\ \ \ \ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Public\ Member\ Functions\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ //}}
+\DoxyCodeLine{00107\ \textcolor{comment}{}\ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_relationship_item}{XLRelationshipItem}}();}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_relationship_item_a0c9b3bf5622a0b6aba7485e5fef23dab}{XLRelationshipItem}}(\textcolor{keyword}{const}\ XMLNode\&\ node);}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_relationship_item_ad53edeacb9effd39fc4279c5a967e6d6}{XLRelationshipItem}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_relationship_item}{XLRelationshipItem}}\&\ other);}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_relationship_item_a9cd5ca711a2229dae86bf8ba25ec07a4}{XLRelationshipItem}}(\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_relationship_item}{XLRelationshipItem}}\&\&\ other)\ \textcolor{keyword}{noexcept}\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_relationship_item}{\string~XLRelationshipItem}}();}
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_relationship_item}{XLRelationshipItem}}\&\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_relationship_item_a3ee7910dc56caa1f40c2c782f77a7698}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_relationship_item}{XLRelationshipItem}}\&\ other);}
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_relationship_item}{XLRelationshipItem}}\&\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_relationship_item_af3a4a360ef16b354e1bb831c61d8d652}{operator=}}(\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_relationship_item}{XLRelationshipItem}}\&\&\ other)\ \textcolor{keyword}{noexcept}\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ XLRelationshipType\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_relationship_item_a810363ef9088e6169b55a6fc4dac19a2}{type}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00151\ }
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_relationship_item_ab90b40e880455a7e9d1d608511fe0c66}{target}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00157\ }
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_relationship_item_a3ce4907f18d6dc04409dd085f56507c9}{id}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00163\ }
+\DoxyCodeLine{00164\ \ \ \ \ \textcolor{keyword}{private}:\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Private\ Member\ Variables\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ //}}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ std::unique\_ptr<XMLNode>\ m\_relationshipNode;\ }
+\DoxyCodeLine{00166\ \ \ \ \ \};}
+\DoxyCodeLine{00167\ }
+\DoxyCodeLine{00168\ \ \ \ \ \textcolor{comment}{//\ ================================================================================}}
+\DoxyCodeLine{00169\ \ \ \ \ \textcolor{comment}{//\ XLRelationships\ Class}}
+\DoxyCodeLine{00170\ \ \ \ \ \textcolor{comment}{//\ ================================================================================}}
+\DoxyCodeLine{00171\ }
+\DoxyCodeLine{00175\ \ \ \ \ \textcolor{keyword}{class\ }OPENXLSX\_EXPORT\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_relationships}{XLRelationships}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file}{XLXmlFile}}}
+\DoxyCodeLine{00176\ \ \ \ \ \{}
+\DoxyCodeLine{00177\ \ \ \ \ \textcolor{keyword}{public}:\ \ \ \ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Public\ Member\ Functions\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ //}}
+\DoxyCodeLine{00181\ \textcolor{comment}{}\ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_relationships}{XLRelationships}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00182\ }
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_relationships_a0c8445315f931eb533e09aa572c9b6c4}{XLRelationships}}(\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_data}{XLXmlData}}*\ xmlData);}
+\DoxyCodeLine{00188\ }
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_relationships_accbf2c17310e93aa88e15eb78c9a6d05}{\string~XLRelationships}}();}
+\DoxyCodeLine{00193\ }
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_relationships_aabd57230a9737ef07421d749fd8a4632}{XLRelationships}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_relationships}{XLRelationships}}\&\ other)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00199\ }
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_relationships_a4a3e8598f3b53529a22fcb83f9f7b164}{XLRelationships}}(\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_relationships}{XLRelationships}}\&\&\ other)\ \textcolor{keyword}{noexcept}\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00205\ }
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_relationships}{XLRelationships}}\&\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_relationships_a8c6ae180a3eda3347666ce0b4893013c}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_relationships}{XLRelationships}}\&\ other)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00212\ }
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_relationships}{XLRelationships}}\&\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_relationships_afee05eeb2e7050535b497352f770611e}{operator=}}(\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_relationships}{XLRelationships}}\&\&\ other)\ \textcolor{keyword}{noexcept}\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00219\ }
+\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_relationship_item}{XLRelationshipItem}}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_relationships_a2205d216f336d19b3fdbd604759dbaff}{relationshipById}}(\textcolor{keyword}{const}\ std::string\&\ \textcolor{keywordtype}{id})\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00226\ }
+\DoxyCodeLine{00232\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_relationship_item}{XLRelationshipItem}}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_relationships_a40403e6ec846fe875f709de7ef92d7d6}{relationshipByTarget}}(\textcolor{keyword}{const}\ std::string\&\ target)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00233\ }
+\DoxyCodeLine{00238\ \ \ \ \ \ \ \ \ std::vector<XLRelationshipItem>\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_relationships_a63e4e0fb9101ee7819b8dbff1ad51800}{relationships}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00239\ }
+\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_relationships_a48685b43bde00431b32f377b62bd172c}{deleteRelationship}}(\textcolor{keyword}{const}\ std::string\&\ relID);}
+\DoxyCodeLine{00245\ }
+\DoxyCodeLine{00250\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_relationships_adb2b40f9a7a83b773a2443dc65eb64a0}{deleteRelationship}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_relationship_item}{XLRelationshipItem}}\&\ item);}
+\DoxyCodeLine{00251\ }
+\DoxyCodeLine{00257\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_relationship_item}{XLRelationshipItem}}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_relationships_a121ca79e54b305225f16e6611c7562cf}{addRelationship}}(XLRelationshipType\ type,\ \textcolor{keyword}{const}\ std::string\&\ target);}
+\DoxyCodeLine{00258\ }
+\DoxyCodeLine{00264\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_relationships_a9774dc18af8aed3f774ce655759ccb03}{targetExists}}(\textcolor{keyword}{const}\ std::string\&\ target)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00265\ }
+\DoxyCodeLine{00271\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_relationships_a04e91f1ea69d4f52a3d050957e9b4dc7}{idExists}}(\textcolor{keyword}{const}\ std::string\&\ \textcolor{keywordtype}{id})\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00272\ }
+\DoxyCodeLine{00273\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Protected\ Member\ Functions\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ //}}
+\DoxyCodeLine{00274\ \ \ \ \ \};}
+\DoxyCodeLine{00275\ \}\ \ \ \ \textcolor{comment}{//\ namespace\ OpenXLSX}}
+\DoxyCodeLine{00276\ }
+\DoxyCodeLine{00277\ \textcolor{preprocessor}{\#pragma\ warning(pop)}}
+\DoxyCodeLine{00278\ \textcolor{preprocessor}{\#endif\ \ \ \ }\textcolor{comment}{//\ OPENXLSX\_XLRELATIONSHIPS\_HPP}}
+
+\end{DoxyCode}

@@ -1,0 +1,535 @@
+\hypertarget{class_open_x_l_s_x_1_1_x_l_cell_reference}{}\doxysection{Open\+XLSX\+::XLCell\+Reference Class Reference}
+\label{class_open_x_l_s_x_1_1_x_l_cell_reference}\index{OpenXLSX::XLCellReference@{OpenXLSX::XLCellReference}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference_aad8588ba825ec02c3179564cfdb09dc5}{XLCell\+Reference}} (const std\+::string \&cell\+Address=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em Constructor taking a cell address as argument. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference_a7172092de7b1d46bcc37ab6f34981fe8}{XLCell\+Reference}} (uint32\+\_\+t \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference_a9d6bf9fc97c3559d89b323f008c9022e}{row}}, uint16\+\_\+t \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference_a49c28c7d35ac3456130dcbf797fb1822}{column}})
+\begin{DoxyCompactList}\small\item\em Constructor taking the cell coordinates as arguments. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference_af93e234921ec7617da47a79b34128961}{XLCell\+Reference}} (uint32\+\_\+t \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference_a9d6bf9fc97c3559d89b323f008c9022e}{row}}, const std\+::string \&\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference_a49c28c7d35ac3456130dcbf797fb1822}{column}})
+\begin{DoxyCompactList}\small\item\em Constructor taking the row number and the column letter as arguments. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference_ad6063badcfc9f90802de6b585004431c}{XLCell\+Reference}} (const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}} \&other)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference_a09fef7852033f20485718ecb971a0c5f}{XLCell\+Reference}} (\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}} \&\&other) noexcept
+\item 
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_cell_reference_a58678576afbe21c1bb438ab4cf6eff87}\label{class_open_x_l_s_x_1_1_x_l_cell_reference_a58678576afbe21c1bb438ab4cf6eff87}} 
+{\bfseries $\sim$\+XLCell\+Reference} ()
+\begin{DoxyCompactList}\small\item\em Destructor. Default implementation used. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}} \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference_aed5fc8e0929ca0774ff090772ea9074c}{operator=}} (const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}} \&other)
+\begin{DoxyCompactList}\small\item\em Assignment operator. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}} \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference_a74917b0089fec267988db3c28c7ebb02}{operator=}} (\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}} \&\&other) noexcept
+\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}} \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference_a813b8740b95facc5a29c7cd3d890c4ae}{operator++}} ()
+\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}} \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference_a9fc24688e01807a42759f9cf07546d6e}{operator++}} (int)
+\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}} \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference_a8b5c9e53308fd42d2c94d5f23ba7681b}{operator-\/-\/}} ()
+\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}} \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference_aee695517a43736fec98402bfca3d8adc}{operator-\/-\/}} (int)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference_a9d6bf9fc97c3559d89b323f008c9022e}{row}} () const
+\begin{DoxyCompactList}\small\item\em Get the row number of the \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference_ae70cac2fd73bbadae6486fed50a6d7e4}{set\+Row}} (uint32\+\_\+t \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference_a9d6bf9fc97c3559d89b323f008c9022e}{row}})
+\begin{DoxyCompactList}\small\item\em Set the row number for the \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}}. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference_a49c28c7d35ac3456130dcbf797fb1822}{column}} () const
+\begin{DoxyCompactList}\small\item\em Get the column number of the \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference_afb449fb49ce8aaff0dedef6bc4c637f0}{set\+Column}} (uint16\+\_\+t \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference_a49c28c7d35ac3456130dcbf797fb1822}{column}})
+\begin{DoxyCompactList}\small\item\em Set the column number of the \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference_a02e8d616a78ef102c582c6d680bcf141}{set\+Row\+And\+Column}} (uint32\+\_\+t \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference_a9d6bf9fc97c3559d89b323f008c9022e}{row}}, uint16\+\_\+t \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference_a49c28c7d35ac3456130dcbf797fb1822}{column}})
+\begin{DoxyCompactList}\small\item\em Set both row and column number of the \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}}. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference_a2830574c79b2d6ed3c645a91023aface}{address}} () const
+\begin{DoxyCompactList}\small\item\em Get the address of the \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference_a8311436b1c1c75dd6cc079a99eeb6894}{set\+Address}} (const std\+::string \&\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference_a2830574c79b2d6ed3c645a91023aface}{address}})
+\begin{DoxyCompactList}\small\item\em Set the address of the \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::string \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference_ae2a9ac7f3899822497ec85c145f48fb7}{row\+As\+String}} (uint32\+\_\+t \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference_a9d6bf9fc97c3559d89b323f008c9022e}{row}})
+\item 
+static uint32\+\_\+t \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference_a2a5f8e2637496ae6f84b2e4d90c585b5}{row\+As\+Number}} (const std\+::string \&\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference_a9d6bf9fc97c3559d89b323f008c9022e}{row}})
+\item 
+static std\+::string \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference_a256fdecedd29c473c4afd554cdd4437a}{column\+As\+String}} (uint16\+\_\+t \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference_a49c28c7d35ac3456130dcbf797fb1822}{column}})
+\begin{DoxyCompactList}\small\item\em Static helper function to convert column number to column letter (e.\+g. column 1 becomes \textquotesingle{}A\textquotesingle{}) \end{DoxyCompactList}\item 
+static uint16\+\_\+t \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference_a73996fc805b70b6ee93bf5685bcecb1b}{column\+As\+Number}} (const std\+::string \&\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference_a49c28c7d35ac3456130dcbf797fb1822}{column}})
+\begin{DoxyCompactList}\small\item\em Static helper function to convert column letter to column number (e.\+g. column \textquotesingle{}A\textquotesingle{} becomes 1) \end{DoxyCompactList}\item 
+static XLCoordinates \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference_a96ced910ee2b89fcca9af134b0a6116a}{coordinates\+From\+Address}} (const std\+::string \&\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference_a2830574c79b2d6ed3c645a91023aface}{address}})
+\begin{DoxyCompactList}\small\item\em Static helper function to convert cell address to coordinates. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference_a85006dab5d137d7a7b020bb1400902ca}{operator==}} (const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}} \&lhs, const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}} \&rhs)
+\begin{DoxyCompactList}\small\item\em Helper function to check equality between two XLCell\+References. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference_a9a083ef79ce74eee1575f5ff9cc61e2d}{operator!=}} (const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}} \&lhs, const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}} \&rhs)
+\begin{DoxyCompactList}\small\item\em Helper function to check for in-\/equality between two XLCell\+References. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference_a088d2e9df7b2c33f50e9ef9de87dd758}{operator$<$}} (const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}} \&lhs, const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}} \&rhs)
+\begin{DoxyCompactList}\small\item\em Helper function to check if one \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}} is smaller than another. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference_a2581d9aecf090caadca96e47166967c4}{operator$>$}} (const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}} \&lhs, const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}} \&rhs)
+\begin{DoxyCompactList}\small\item\em Helper function to check if one \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}} is larger than another. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference_a7a979d4348ae2f32f53e8f298ab7e6ea}{operator$<$=}} (const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}} \&lhs, const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}} \&rhs)
+\begin{DoxyCompactList}\small\item\em Helper function to check if one \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}} is smaller than or equal to another. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference_a321de87ae874c8757bf239f6c398d2f1}{operator$>$=}} (const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}} \&lhs, const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}} \&rhs)
+\begin{DoxyCompactList}\small\item\em Helper function to check if one \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}} is larger than or equal to another. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_cell_reference_aad8588ba825ec02c3179564cfdb09dc5}\label{class_open_x_l_s_x_1_1_x_l_cell_reference_aad8588ba825ec02c3179564cfdb09dc5}} 
+\index{OpenXLSX::XLCellReference@{OpenXLSX::XLCellReference}!XLCellReference@{XLCellReference}}
+\index{XLCellReference@{XLCellReference}!OpenXLSX::XLCellReference@{OpenXLSX::XLCellReference}}
+\doxysubsubsection{\texorpdfstring{XLCellReference()}{XLCellReference()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily Open\+XLSX\+::\+XLCell\+Reference\+::\+XLCell\+Reference (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{cell\+Address = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+Constructor taking a cell address as argument. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cell\+Address} & The address of the cell, e.\+g. \textquotesingle{}A1\textquotesingle{}.\\
+\hline
+\end{DoxyParams}
+The constructor creates a new \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}} from a string, e.\+g. \textquotesingle{}A1\textquotesingle{}. If there\textquotesingle{}s no input, the default reference will be cell A1. \mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_cell_reference_a7172092de7b1d46bcc37ab6f34981fe8}\label{class_open_x_l_s_x_1_1_x_l_cell_reference_a7172092de7b1d46bcc37ab6f34981fe8}} 
+\index{OpenXLSX::XLCellReference@{OpenXLSX::XLCellReference}!XLCellReference@{XLCellReference}}
+\index{XLCellReference@{XLCellReference}!OpenXLSX::XLCellReference@{OpenXLSX::XLCellReference}}
+\doxysubsubsection{\texorpdfstring{XLCellReference()}{XLCellReference()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily Open\+XLSX\+::\+XLCell\+Reference\+::\+XLCell\+Reference (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{row,  }\item[{uint16\+\_\+t}]{column }\end{DoxyParamCaption})}
+
+
+
+Constructor taking the cell coordinates as arguments. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em row} & The row number of the cell. \\
+\hline
+{\em column} & The column number of the cell. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_cell_reference_af93e234921ec7617da47a79b34128961}\label{class_open_x_l_s_x_1_1_x_l_cell_reference_af93e234921ec7617da47a79b34128961}} 
+\index{OpenXLSX::XLCellReference@{OpenXLSX::XLCellReference}!XLCellReference@{XLCellReference}}
+\index{XLCellReference@{XLCellReference}!OpenXLSX::XLCellReference@{OpenXLSX::XLCellReference}}
+\doxysubsubsection{\texorpdfstring{XLCellReference()}{XLCellReference()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily Open\+XLSX\+::\+XLCell\+Reference\+::\+XLCell\+Reference (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{row,  }\item[{const std\+::string \&}]{column }\end{DoxyParamCaption})}
+
+
+
+Constructor taking the row number and the column letter as arguments. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em row} & The row number of the cell. \\
+\hline
+{\em column} & The column letter of the cell. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_cell_reference_ad6063badcfc9f90802de6b585004431c}\label{class_open_x_l_s_x_1_1_x_l_cell_reference_ad6063badcfc9f90802de6b585004431c}} 
+\index{OpenXLSX::XLCellReference@{OpenXLSX::XLCellReference}!XLCellReference@{XLCellReference}}
+\index{XLCellReference@{XLCellReference}!OpenXLSX::XLCellReference@{OpenXLSX::XLCellReference}}
+\doxysubsubsection{\texorpdfstring{XLCellReference()}{XLCellReference()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily Open\+XLSX\+::\+XLCell\+Reference\+::\+XLCell\+Reference (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Copy constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The object to be copied. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_cell_reference_a09fef7852033f20485718ecb971a0c5f}\label{class_open_x_l_s_x_1_1_x_l_cell_reference_a09fef7852033f20485718ecb971a0c5f}} 
+\index{OpenXLSX::XLCellReference@{OpenXLSX::XLCellReference}!XLCellReference@{XLCellReference}}
+\index{XLCellReference@{XLCellReference}!OpenXLSX::XLCellReference@{OpenXLSX::XLCellReference}}
+\doxysubsubsection{\texorpdfstring{XLCellReference()}{XLCellReference()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily Open\+XLSX\+::\+XLCell\+Reference\+::\+XLCell\+Reference (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_cell_reference_a2830574c79b2d6ed3c645a91023aface}\label{class_open_x_l_s_x_1_1_x_l_cell_reference_a2830574c79b2d6ed3c645a91023aface}} 
+\index{OpenXLSX::XLCellReference@{OpenXLSX::XLCellReference}!address@{address}}
+\index{address@{address}!OpenXLSX::XLCellReference@{OpenXLSX::XLCellReference}}
+\doxysubsubsection{\texorpdfstring{address()}{address()}}
+{\footnotesize\ttfamily std\+::string Open\+XLSX\+::\+XLCell\+Reference\+::address (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the address of the \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}}. 
+
+\begin{DoxyReturn}{Returns}
+The address, e.\+g. \textquotesingle{}A1\textquotesingle{} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_cell_reference_a49c28c7d35ac3456130dcbf797fb1822}\label{class_open_x_l_s_x_1_1_x_l_cell_reference_a49c28c7d35ac3456130dcbf797fb1822}} 
+\index{OpenXLSX::XLCellReference@{OpenXLSX::XLCellReference}!column@{column}}
+\index{column@{column}!OpenXLSX::XLCellReference@{OpenXLSX::XLCellReference}}
+\doxysubsubsection{\texorpdfstring{column()}{column()}}
+{\footnotesize\ttfamily uint16\+\_\+t Open\+XLSX\+::\+XLCell\+Reference\+::column (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the column number of the \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}}. 
+
+\begin{DoxyReturn}{Returns}
+The column number. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_cell_reference_a73996fc805b70b6ee93bf5685bcecb1b}\label{class_open_x_l_s_x_1_1_x_l_cell_reference_a73996fc805b70b6ee93bf5685bcecb1b}} 
+\index{OpenXLSX::XLCellReference@{OpenXLSX::XLCellReference}!columnAsNumber@{columnAsNumber}}
+\index{columnAsNumber@{columnAsNumber}!OpenXLSX::XLCellReference@{OpenXLSX::XLCellReference}}
+\doxysubsubsection{\texorpdfstring{columnAsNumber()}{columnAsNumber()}}
+{\footnotesize\ttfamily static uint16\+\_\+t Open\+XLSX\+::\+XLCell\+Reference\+::column\+As\+Number (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{column }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Static helper function to convert column letter to column number (e.\+g. column \textquotesingle{}A\textquotesingle{} becomes 1) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em column} & The column letter, e.\+g. \textquotesingle{}A\textquotesingle{} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The column number. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_cell_reference_a256fdecedd29c473c4afd554cdd4437a}\label{class_open_x_l_s_x_1_1_x_l_cell_reference_a256fdecedd29c473c4afd554cdd4437a}} 
+\index{OpenXLSX::XLCellReference@{OpenXLSX::XLCellReference}!columnAsString@{columnAsString}}
+\index{columnAsString@{columnAsString}!OpenXLSX::XLCellReference@{OpenXLSX::XLCellReference}}
+\doxysubsubsection{\texorpdfstring{columnAsString()}{columnAsString()}}
+{\footnotesize\ttfamily static std\+::string Open\+XLSX\+::\+XLCell\+Reference\+::column\+As\+String (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{column }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Static helper function to convert column number to column letter (e.\+g. column 1 becomes \textquotesingle{}A\textquotesingle{}) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em column} & The column number. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The column letter 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_cell_reference_a96ced910ee2b89fcca9af134b0a6116a}\label{class_open_x_l_s_x_1_1_x_l_cell_reference_a96ced910ee2b89fcca9af134b0a6116a}} 
+\index{OpenXLSX::XLCellReference@{OpenXLSX::XLCellReference}!coordinatesFromAddress@{coordinatesFromAddress}}
+\index{coordinatesFromAddress@{coordinatesFromAddress}!OpenXLSX::XLCellReference@{OpenXLSX::XLCellReference}}
+\doxysubsubsection{\texorpdfstring{coordinatesFromAddress()}{coordinatesFromAddress()}}
+{\footnotesize\ttfamily static XLCoordinates Open\+XLSX\+::\+XLCell\+Reference\+::coordinates\+From\+Address (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{address }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Static helper function to convert cell address to coordinates. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em address} & The address to be converted, e.\+g. \textquotesingle{}A1\textquotesingle{} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A std\+::pair$<$row, column$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_cell_reference_a813b8740b95facc5a29c7cd3d890c4ae}\label{class_open_x_l_s_x_1_1_x_l_cell_reference_a813b8740b95facc5a29c7cd3d890c4ae}} 
+\index{OpenXLSX::XLCellReference@{OpenXLSX::XLCellReference}!operator++@{operator++}}
+\index{operator++@{operator++}!OpenXLSX::XLCellReference@{OpenXLSX::XLCellReference}}
+\doxysubsubsection{\texorpdfstring{operator++()}{operator++()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}} \& Open\+XLSX\+::\+XLCell\+Reference\+::operator++ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_cell_reference_a9fc24688e01807a42759f9cf07546d6e}\label{class_open_x_l_s_x_1_1_x_l_cell_reference_a9fc24688e01807a42759f9cf07546d6e}} 
+\index{OpenXLSX::XLCellReference@{OpenXLSX::XLCellReference}!operator++@{operator++}}
+\index{operator++@{operator++}!OpenXLSX::XLCellReference@{OpenXLSX::XLCellReference}}
+\doxysubsubsection{\texorpdfstring{operator++()}{operator++()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}} Open\+XLSX\+::\+XLCell\+Reference\+::operator++ (\begin{DoxyParamCaption}\item[{int}]{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_cell_reference_a8b5c9e53308fd42d2c94d5f23ba7681b}\label{class_open_x_l_s_x_1_1_x_l_cell_reference_a8b5c9e53308fd42d2c94d5f23ba7681b}} 
+\index{OpenXLSX::XLCellReference@{OpenXLSX::XLCellReference}!operator-\/-\/@{operator-\/-\/}}
+\index{operator-\/-\/@{operator-\/-\/}!OpenXLSX::XLCellReference@{OpenXLSX::XLCellReference}}
+\doxysubsubsection{\texorpdfstring{operator-\/-\/()}{operator--()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}} \& Open\+XLSX\+::\+XLCell\+Reference\+::operator-\/-\/ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_cell_reference_aee695517a43736fec98402bfca3d8adc}\label{class_open_x_l_s_x_1_1_x_l_cell_reference_aee695517a43736fec98402bfca3d8adc}} 
+\index{OpenXLSX::XLCellReference@{OpenXLSX::XLCellReference}!operator-\/-\/@{operator-\/-\/}}
+\index{operator-\/-\/@{operator-\/-\/}!OpenXLSX::XLCellReference@{OpenXLSX::XLCellReference}}
+\doxysubsubsection{\texorpdfstring{operator-\/-\/()}{operator--()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}} Open\+XLSX\+::\+XLCell\+Reference\+::operator-\/-\/ (\begin{DoxyParamCaption}\item[{int}]{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_cell_reference_aed5fc8e0929ca0774ff090772ea9074c}\label{class_open_x_l_s_x_1_1_x_l_cell_reference_aed5fc8e0929ca0774ff090772ea9074c}} 
+\index{OpenXLSX::XLCellReference@{OpenXLSX::XLCellReference}!operator=@{operator=}}
+\index{operator=@{operator=}!OpenXLSX::XLCellReference@{OpenXLSX::XLCellReference}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}} \& Open\+XLSX\+::\+XLCell\+Reference\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Assignment operator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The object to be copied/assigned. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reference to the new object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_cell_reference_a74917b0089fec267988db3c28c7ebb02}\label{class_open_x_l_s_x_1_1_x_l_cell_reference_a74917b0089fec267988db3c28c7ebb02}} 
+\index{OpenXLSX::XLCellReference@{OpenXLSX::XLCellReference}!operator=@{operator=}}
+\index{operator=@{operator=}!OpenXLSX::XLCellReference@{OpenXLSX::XLCellReference}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}} \& Open\+XLSX\+::\+XLCell\+Reference\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_cell_reference_a9d6bf9fc97c3559d89b323f008c9022e}\label{class_open_x_l_s_x_1_1_x_l_cell_reference_a9d6bf9fc97c3559d89b323f008c9022e}} 
+\index{OpenXLSX::XLCellReference@{OpenXLSX::XLCellReference}!row@{row}}
+\index{row@{row}!OpenXLSX::XLCellReference@{OpenXLSX::XLCellReference}}
+\doxysubsubsection{\texorpdfstring{row()}{row()}}
+{\footnotesize\ttfamily uint32\+\_\+t Open\+XLSX\+::\+XLCell\+Reference\+::row (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the row number of the \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}}. 
+
+\begin{DoxyReturn}{Returns}
+The row. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_cell_reference_a2a5f8e2637496ae6f84b2e4d90c585b5}\label{class_open_x_l_s_x_1_1_x_l_cell_reference_a2a5f8e2637496ae6f84b2e4d90c585b5}} 
+\index{OpenXLSX::XLCellReference@{OpenXLSX::XLCellReference}!rowAsNumber@{rowAsNumber}}
+\index{rowAsNumber@{rowAsNumber}!OpenXLSX::XLCellReference@{OpenXLSX::XLCellReference}}
+\doxysubsubsection{\texorpdfstring{rowAsNumber()}{rowAsNumber()}}
+{\footnotesize\ttfamily static uint32\+\_\+t Open\+XLSX\+::\+XLCell\+Reference\+::row\+As\+Number (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{row }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em row} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_cell_reference_ae2a9ac7f3899822497ec85c145f48fb7}\label{class_open_x_l_s_x_1_1_x_l_cell_reference_ae2a9ac7f3899822497ec85c145f48fb7}} 
+\index{OpenXLSX::XLCellReference@{OpenXLSX::XLCellReference}!rowAsString@{rowAsString}}
+\index{rowAsString@{rowAsString}!OpenXLSX::XLCellReference@{OpenXLSX::XLCellReference}}
+\doxysubsubsection{\texorpdfstring{rowAsString()}{rowAsString()}}
+{\footnotesize\ttfamily static std\+::string Open\+XLSX\+::\+XLCell\+Reference\+::row\+As\+String (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{row }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em row} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_cell_reference_a8311436b1c1c75dd6cc079a99eeb6894}\label{class_open_x_l_s_x_1_1_x_l_cell_reference_a8311436b1c1c75dd6cc079a99eeb6894}} 
+\index{OpenXLSX::XLCellReference@{OpenXLSX::XLCellReference}!setAddress@{setAddress}}
+\index{setAddress@{setAddress}!OpenXLSX::XLCellReference@{OpenXLSX::XLCellReference}}
+\doxysubsubsection{\texorpdfstring{setAddress()}{setAddress()}}
+{\footnotesize\ttfamily void Open\+XLSX\+::\+XLCell\+Reference\+::set\+Address (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{address }\end{DoxyParamCaption})}
+
+
+
+Set the address of the \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em address} & The address, e.\+g. \textquotesingle{}A1\textquotesingle{} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+The address input string must be a valid Excel cell reference. Otherwise the behaviour is undefined. 
+\end{DoxyPrecond}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_cell_reference_afb449fb49ce8aaff0dedef6bc4c637f0}\label{class_open_x_l_s_x_1_1_x_l_cell_reference_afb449fb49ce8aaff0dedef6bc4c637f0}} 
+\index{OpenXLSX::XLCellReference@{OpenXLSX::XLCellReference}!setColumn@{setColumn}}
+\index{setColumn@{setColumn}!OpenXLSX::XLCellReference@{OpenXLSX::XLCellReference}}
+\doxysubsubsection{\texorpdfstring{setColumn()}{setColumn()}}
+{\footnotesize\ttfamily void Open\+XLSX\+::\+XLCell\+Reference\+::set\+Column (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{column }\end{DoxyParamCaption})}
+
+
+
+Set the column number of the \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em column} & The column number. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_cell_reference_ae70cac2fd73bbadae6486fed50a6d7e4}\label{class_open_x_l_s_x_1_1_x_l_cell_reference_ae70cac2fd73bbadae6486fed50a6d7e4}} 
+\index{OpenXLSX::XLCellReference@{OpenXLSX::XLCellReference}!setRow@{setRow}}
+\index{setRow@{setRow}!OpenXLSX::XLCellReference@{OpenXLSX::XLCellReference}}
+\doxysubsubsection{\texorpdfstring{setRow()}{setRow()}}
+{\footnotesize\ttfamily void Open\+XLSX\+::\+XLCell\+Reference\+::set\+Row (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{row }\end{DoxyParamCaption})}
+
+
+
+Set the row number for the \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em row} & The row number. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_cell_reference_a02e8d616a78ef102c582c6d680bcf141}\label{class_open_x_l_s_x_1_1_x_l_cell_reference_a02e8d616a78ef102c582c6d680bcf141}} 
+\index{OpenXLSX::XLCellReference@{OpenXLSX::XLCellReference}!setRowAndColumn@{setRowAndColumn}}
+\index{setRowAndColumn@{setRowAndColumn}!OpenXLSX::XLCellReference@{OpenXLSX::XLCellReference}}
+\doxysubsubsection{\texorpdfstring{setRowAndColumn()}{setRowAndColumn()}}
+{\footnotesize\ttfamily void Open\+XLSX\+::\+XLCell\+Reference\+::set\+Row\+And\+Column (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{row,  }\item[{uint16\+\_\+t}]{column }\end{DoxyParamCaption})}
+
+
+
+Set both row and column number of the \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em row} & The row number. \\
+\hline
+{\em column} & The column number. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_cell_reference_a9a083ef79ce74eee1575f5ff9cc61e2d}\label{class_open_x_l_s_x_1_1_x_l_cell_reference_a9a083ef79ce74eee1575f5ff9cc61e2d}} 
+\index{OpenXLSX::XLCellReference@{OpenXLSX::XLCellReference}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!OpenXLSX::XLCellReference@{OpenXLSX::XLCellReference}}
+\doxysubsubsection{\texorpdfstring{operator"!=}{operator!=}}
+{\footnotesize\ttfamily bool operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}} \&}]{lhs,  }\item[{const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Helper function to check for in-\/equality between two XLCell\+References. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lhs} & The first \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}} \\
+\hline
+{\em rhs} & The second \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if equal; otherwise true. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_cell_reference_a088d2e9df7b2c33f50e9ef9de87dd758}\label{class_open_x_l_s_x_1_1_x_l_cell_reference_a088d2e9df7b2c33f50e9ef9de87dd758}} 
+\index{OpenXLSX::XLCellReference@{OpenXLSX::XLCellReference}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!OpenXLSX::XLCellReference@{OpenXLSX::XLCellReference}}
+\doxysubsubsection{\texorpdfstring{operator$<$}{operator<}}
+{\footnotesize\ttfamily bool operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}} \&}]{lhs,  }\item[{const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Helper function to check if one \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}} is smaller than another. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lhs} & The first \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}} \\
+\hline
+{\em rhs} & The second \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if lhs \texorpdfstring{$<$}{<} rhs; otherwise false. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_cell_reference_a7a979d4348ae2f32f53e8f298ab7e6ea}\label{class_open_x_l_s_x_1_1_x_l_cell_reference_a7a979d4348ae2f32f53e8f298ab7e6ea}} 
+\index{OpenXLSX::XLCellReference@{OpenXLSX::XLCellReference}!operator$<$=@{operator$<$=}}
+\index{operator$<$=@{operator$<$=}!OpenXLSX::XLCellReference@{OpenXLSX::XLCellReference}}
+\doxysubsubsection{\texorpdfstring{operator$<$=}{operator<=}}
+{\footnotesize\ttfamily bool operator$<$= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}} \&}]{lhs,  }\item[{const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Helper function to check if one \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}} is smaller than or equal to another. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lhs} & The first \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}} \\
+\hline
+{\em rhs} & The second \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if lhs \texorpdfstring{$<$}{<}= rhs; otherwise false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_cell_reference_a85006dab5d137d7a7b020bb1400902ca}\label{class_open_x_l_s_x_1_1_x_l_cell_reference_a85006dab5d137d7a7b020bb1400902ca}} 
+\index{OpenXLSX::XLCellReference@{OpenXLSX::XLCellReference}!operator==@{operator==}}
+\index{operator==@{operator==}!OpenXLSX::XLCellReference@{OpenXLSX::XLCellReference}}
+\doxysubsubsection{\texorpdfstring{operator==}{operator==}}
+{\footnotesize\ttfamily bool operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}} \&}]{lhs,  }\item[{const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Helper function to check equality between two XLCell\+References. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lhs} & The first \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}} \\
+\hline
+{\em rhs} & The second \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if equal; otherwise false. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_cell_reference_a2581d9aecf090caadca96e47166967c4}\label{class_open_x_l_s_x_1_1_x_l_cell_reference_a2581d9aecf090caadca96e47166967c4}} 
+\index{OpenXLSX::XLCellReference@{OpenXLSX::XLCellReference}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!OpenXLSX::XLCellReference@{OpenXLSX::XLCellReference}}
+\doxysubsubsection{\texorpdfstring{operator$>$}{operator>}}
+{\footnotesize\ttfamily bool operator$>$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}} \&}]{lhs,  }\item[{const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Helper function to check if one \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}} is larger than another. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lhs} & The first \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}} \\
+\hline
+{\em rhs} & The second \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if lhs \texorpdfstring{$>$}{>} rhs; otherwise false. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_cell_reference_a321de87ae874c8757bf239f6c398d2f1}\label{class_open_x_l_s_x_1_1_x_l_cell_reference_a321de87ae874c8757bf239f6c398d2f1}} 
+\index{OpenXLSX::XLCellReference@{OpenXLSX::XLCellReference}!operator$>$=@{operator$>$=}}
+\index{operator$>$=@{operator$>$=}!OpenXLSX::XLCellReference@{OpenXLSX::XLCellReference}}
+\doxysubsubsection{\texorpdfstring{operator$>$=}{operator>=}}
+{\footnotesize\ttfamily bool operator$>$= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}} \&}]{lhs,  }\item[{const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Helper function to check if one \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}} is larger than or equal to another. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lhs} & The first \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}} \\
+\hline
+{\em rhs} & The second \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if lhs \texorpdfstring{$>$}{>}= rhs; otherwise false. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Youth\+\_\+learning\+\_\+autoload/vendors/\+Open\+XLSX/\+Open\+XLSX/headers/XLCell\+Reference.\+hpp\end{DoxyCompactItemize}

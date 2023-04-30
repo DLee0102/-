@@ -1,0 +1,222 @@
+\hypertarget{class_open_x_l_s_x_1_1_x_l_content_types}{}\doxysection{Open\+XLSX\+::XLContent\+Types Class Reference}
+\label{class_open_x_l_s_x_1_1_x_l_content_types}\index{OpenXLSX::XLContentTypes@{OpenXLSX::XLContentTypes}}
+
+
+The purpose of this class is to load, store add and save item in the \mbox{[}Content\+\_\+\+Types\mbox{]}.xml file.  
+
+
+
+
+{\ttfamily \#include $<$XLContent\+Types.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_content_types_a82526311f95eb8b398a9bb2600f21456}{XLContent\+Types}} (\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_data}{XLXml\+Data}} $\ast$\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_af4cf6f8310a055a6f18e99669f52d798}{xml\+Data}})
+\item 
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_content_types_a8e0322589c9df38f694233b9306e163f}\label{class_open_x_l_s_x_1_1_x_l_content_types_a8e0322589c9df38f694233b9306e163f}} 
+{\bfseries $\sim$\+XLContent\+Types} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_content_types_a205fedd5bbd1967312931253807d08d7}{XLContent\+Types}} (const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_content_types}{XLContent\+Types}} \&other)
+\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_content_types_aa519111366701a35dab34726f5592deb}{XLContent\+Types}} (\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_content_types}{XLContent\+Types}} \&\&other) noexcept
+\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_content_types}{XLContent\+Types}} \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_content_types_af84fa1c71a25edad3a08d82d2bd67abe}{operator=}} (const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_content_types}{XLContent\+Types}} \&other)
+\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_content_types}{XLContent\+Types}} \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_content_types_a6c2449aed2e39f36291dbeebe70b56a6}{operator=}} (\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_content_types}{XLContent\+Types}} \&\&other) noexcept
+\item 
+void \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_content_types_af126788c50f02f7bbf1a192a4cef1e8d}{add\+Override}} (const std\+::string \&path, XLContent\+Type type)
+\begin{DoxyCompactList}\small\item\em Add a new override key/get\+Value pair to the data store. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_content_types_a6a10a421d688c725213a52f53750f18a}{delete\+Override}} (const std\+::string \&path)
+\item 
+void \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_content_types_a093c6f78af1ac4f884896491b35825a9}{delete\+Override}} (\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_content_item}{XLContent\+Item}} \&item)
+\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_content_item}{XLContent\+Item}} \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_content_types_ab8d7470eba5e24c0a5f1b88a86a0e7c0}{content\+Item}} (const std\+::string \&path)
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_content_item}{XLContent\+Item}} $>$ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_content_types_ae7cce9ef8b506cd79d59ea1dc26dd25f}{get\+Content\+Items}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file}{Open\+XLSX\+::\+XLXml\+File}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_xml_file_afcc880bcb4e01b9435eae827a9836ec0}\label{class_open_x_l_s_x_1_1_x_l_xml_file_afcc880bcb4e01b9435eae827a9836ec0}} 
+{\bfseries XLXml\+File} ()=default
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_a91ac3132eed637a60ca7ccd8d61d107a}{XLXml\+File}} (\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_data}{XLXml\+Data}} $\ast$\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_af4cf6f8310a055a6f18e99669f52d798}{xml\+Data}})
+\begin{DoxyCompactList}\small\item\em Constructor. Creates an object based on the xml\+Data input. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_ab412e98acd8baa5d99cc97e68365a192}{XLXml\+File}} (const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file}{XLXml\+File}} \&other)=default
+\begin{DoxyCompactList}\small\item\em Copy constructor. Default implementation used. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_a874e9e87bed7e6f4e4cd3696e28b7cff}{XLXml\+File}} (\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file}{XLXml\+File}} \&\&other) noexcept=default
+\begin{DoxyCompactList}\small\item\em Move constructor. Default implementation used. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_xml_file_aa92e245526f036fd154efc659e2f9006}\label{class_open_x_l_s_x_1_1_x_l_xml_file_aa92e245526f036fd154efc659e2f9006}} 
+{\bfseries $\sim$\+XLXml\+File} ()
+\begin{DoxyCompactList}\small\item\em Destructor. Default implementation used. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file}{XLXml\+File}} \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_a7ffb6dec2d9596b0982a6c41b2dbd66c}{operator=}} (const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file}{XLXml\+File}} \&other)=default
+\begin{DoxyCompactList}\small\item\em The copy assignment operator. The default implementation has been used. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file}{XLXml\+File}} \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_af53403da14a8b258a823a28fa20f24a0}{operator=}} (\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file}{XLXml\+File}} \&\&other) noexcept=default
+\begin{DoxyCompactList}\small\item\em The move assignment operator. The default implementation has been used. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+\doxysubsubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file}{Open\+XLSX\+::\+XLXml\+File}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_af4cf6f8310a055a6f18e99669f52d798}{xml\+Data}} () const
+\begin{DoxyCompactList}\small\item\em Method for getting the XML data represented by the object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_a669ce7b567aca54bbad3e50d611f9a05}{set\+Xml\+Data}} (const std\+::string \&\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_af4cf6f8310a055a6f18e99669f52d798}{xml\+Data}})
+\begin{DoxyCompactList}\small\item\em Provide the XML data represented by the object. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_a6738ed4c3a1c1add67c9295c236d80ef}{relationship\+ID}} () const
+\begin{DoxyCompactList}\small\item\em This function returns the relationship ID (the ID used in the \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_relationships}{XLRelationships}} objects) for the object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_document}{XLDocument}} \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_a60e6b90e550f43dac2743fdc90db152c}{parent\+Doc}} ()
+\begin{DoxyCompactList}\small\item\em This function provides access to the parent \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_document}{XLDocument}} object. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_document}{XLDocument}} \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_ab030effdc244fb88de1f2d69b64045cb}{parent\+Doc}} () const
+\begin{DoxyCompactList}\small\item\em This function provides access to the parent \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_document}{XLDocument}} object. \end{DoxyCompactList}\item 
+XMLDocument \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_a433ae1bd65af9262c7120f3774ecb8c3}{xml\+Document}} ()
+\begin{DoxyCompactList}\small\item\em This function provides access to the underlying XMLDocument object. \end{DoxyCompactList}\item 
+const XMLDocument \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_ae6450091d5ff53b5b2f35940af98a92f}{xml\+Document}} () const
+\begin{DoxyCompactList}\small\item\em This function provides access to the underlying XMLDocument object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file}{Open\+XLSX\+::\+XLXml\+File}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_data}{XLXml\+Data}} $\ast$ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_a56206b4f2903a83047d4c04cd683bfa4}{m\+\_\+xml\+Data}} \{ nullptr \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The purpose of this class is to load, store add and save item in the \mbox{[}Content\+\_\+\+Types\mbox{]}.xml file. Inheritance diagram for Open\+XLSX\+::XLContent\+Types\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_open_x_l_s_x_1_1_x_l_content_types}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_content_types_a82526311f95eb8b398a9bb2600f21456}\label{class_open_x_l_s_x_1_1_x_l_content_types_a82526311f95eb8b398a9bb2600f21456}} 
+\index{OpenXLSX::XLContentTypes@{OpenXLSX::XLContentTypes}!XLContentTypes@{XLContentTypes}}
+\index{XLContentTypes@{XLContentTypes}!OpenXLSX::XLContentTypes@{OpenXLSX::XLContentTypes}}
+\doxysubsubsection{\texorpdfstring{XLContentTypes()}{XLContentTypes()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Open\+XLSX\+::\+XLContent\+Types\+::\+XLContent\+Types (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_data}{XLXml\+Data}} $\ast$}]{xml\+Data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em xml\+Data} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_content_types_a205fedd5bbd1967312931253807d08d7}\label{class_open_x_l_s_x_1_1_x_l_content_types_a205fedd5bbd1967312931253807d08d7}} 
+\index{OpenXLSX::XLContentTypes@{OpenXLSX::XLContentTypes}!XLContentTypes@{XLContentTypes}}
+\index{XLContentTypes@{XLContentTypes}!OpenXLSX::XLContentTypes@{OpenXLSX::XLContentTypes}}
+\doxysubsubsection{\texorpdfstring{XLContentTypes()}{XLContentTypes()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Open\+XLSX\+::\+XLContent\+Types\+::\+XLContent\+Types (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_content_types}{XLContent\+Types}} \&}]{other }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_content_types_aa519111366701a35dab34726f5592deb}\label{class_open_x_l_s_x_1_1_x_l_content_types_aa519111366701a35dab34726f5592deb}} 
+\index{OpenXLSX::XLContentTypes@{OpenXLSX::XLContentTypes}!XLContentTypes@{XLContentTypes}}
+\index{XLContentTypes@{XLContentTypes}!OpenXLSX::XLContentTypes@{OpenXLSX::XLContentTypes}}
+\doxysubsubsection{\texorpdfstring{XLContentTypes()}{XLContentTypes()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Open\+XLSX\+::\+XLContent\+Types\+::\+XLContent\+Types (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_content_types}{XLContent\+Types}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_content_types_af126788c50f02f7bbf1a192a4cef1e8d}\label{class_open_x_l_s_x_1_1_x_l_content_types_af126788c50f02f7bbf1a192a4cef1e8d}} 
+\index{OpenXLSX::XLContentTypes@{OpenXLSX::XLContentTypes}!addOverride@{addOverride}}
+\index{addOverride@{addOverride}!OpenXLSX::XLContentTypes@{OpenXLSX::XLContentTypes}}
+\doxysubsubsection{\texorpdfstring{addOverride()}{addOverride()}}
+{\footnotesize\ttfamily void Open\+XLSX\+::\+XLContent\+Types\+::add\+Override (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path,  }\item[{XLContent\+Type}]{type }\end{DoxyParamCaption})}
+
+
+
+Add a new override key/get\+Value pair to the data store. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & The key \\
+\hline
+{\em type} & The get\+Value \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_content_types_ab8d7470eba5e24c0a5f1b88a86a0e7c0}\label{class_open_x_l_s_x_1_1_x_l_content_types_ab8d7470eba5e24c0a5f1b88a86a0e7c0}} 
+\index{OpenXLSX::XLContentTypes@{OpenXLSX::XLContentTypes}!contentItem@{contentItem}}
+\index{contentItem@{contentItem}!OpenXLSX::XLContentTypes@{OpenXLSX::XLContentTypes}}
+\doxysubsubsection{\texorpdfstring{contentItem()}{contentItem()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_content_item}{XLContent\+Item}} Open\+XLSX\+::\+XLContent\+Types\+::content\+Item (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_content_types_a6a10a421d688c725213a52f53750f18a}\label{class_open_x_l_s_x_1_1_x_l_content_types_a6a10a421d688c725213a52f53750f18a}} 
+\index{OpenXLSX::XLContentTypes@{OpenXLSX::XLContentTypes}!deleteOverride@{deleteOverride}}
+\index{deleteOverride@{deleteOverride}!OpenXLSX::XLContentTypes@{OpenXLSX::XLContentTypes}}
+\doxysubsubsection{\texorpdfstring{deleteOverride()}{deleteOverride()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Open\+XLSX\+::\+XLContent\+Types\+::delete\+Override (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_content_types_a093c6f78af1ac4f884896491b35825a9}\label{class_open_x_l_s_x_1_1_x_l_content_types_a093c6f78af1ac4f884896491b35825a9}} 
+\index{OpenXLSX::XLContentTypes@{OpenXLSX::XLContentTypes}!deleteOverride@{deleteOverride}}
+\index{deleteOverride@{deleteOverride}!OpenXLSX::XLContentTypes@{OpenXLSX::XLContentTypes}}
+\doxysubsubsection{\texorpdfstring{deleteOverride()}{deleteOverride()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Open\+XLSX\+::\+XLContent\+Types\+::delete\+Override (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_content_item}{XLContent\+Item}} \&}]{item }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em item} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_content_types_ae7cce9ef8b506cd79d59ea1dc26dd25f}\label{class_open_x_l_s_x_1_1_x_l_content_types_ae7cce9ef8b506cd79d59ea1dc26dd25f}} 
+\index{OpenXLSX::XLContentTypes@{OpenXLSX::XLContentTypes}!getContentItems@{getContentItems}}
+\index{getContentItems@{getContentItems}!OpenXLSX::XLContentTypes@{OpenXLSX::XLContentTypes}}
+\doxysubsubsection{\texorpdfstring{getContentItems()}{getContentItems()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_content_item}{XLContent\+Item}} $>$ Open\+XLSX\+::\+XLContent\+Types\+::get\+Content\+Items (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_content_types_af84fa1c71a25edad3a08d82d2bd67abe}\label{class_open_x_l_s_x_1_1_x_l_content_types_af84fa1c71a25edad3a08d82d2bd67abe}} 
+\index{OpenXLSX::XLContentTypes@{OpenXLSX::XLContentTypes}!operator=@{operator=}}
+\index{operator=@{operator=}!OpenXLSX::XLContentTypes@{OpenXLSX::XLContentTypes}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_content_types}{XLContent\+Types}} \& Open\+XLSX\+::\+XLContent\+Types\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_content_types}{XLContent\+Types}} \&}]{other }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_content_types_a6c2449aed2e39f36291dbeebe70b56a6}\label{class_open_x_l_s_x_1_1_x_l_content_types_a6c2449aed2e39f36291dbeebe70b56a6}} 
+\index{OpenXLSX::XLContentTypes@{OpenXLSX::XLContentTypes}!operator=@{operator=}}
+\index{operator=@{operator=}!OpenXLSX::XLContentTypes@{OpenXLSX::XLContentTypes}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_content_types}{XLContent\+Types}} \& Open\+XLSX\+::\+XLContent\+Types\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_content_types}{XLContent\+Types}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Youth\+\_\+learning\+\_\+autoload/vendors/\+Open\+XLSX/\+Open\+XLSX/headers/XLContent\+Types.\+hpp\end{DoxyCompactItemize}

@@ -1,0 +1,253 @@
+\hypertarget{class_open_x_l_s_x_1_1_x_l_date_time}{}\doxysection{Open\+XLSX\+::XLDate\+Time Class Reference}
+\label{class_open_x_l_s_x_1_1_x_l_date_time}\index{OpenXLSX::XLDateTime@{OpenXLSX::XLDateTime}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_date_time_a511dec1e9008bd74b2f866197a835ca8}\label{class_open_x_l_s_x_1_1_x_l_date_time_a511dec1e9008bd74b2f866197a835ca8}} 
+{\bfseries XLDate\+Time} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_date_time_a46278710e88884dd53498c9a0e1cdc78}{XLDate\+Time}} (double \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_date_time_ad24d9fff1462219a04e46f63c52cddb4}{serial}})
+\begin{DoxyCompactList}\small\item\em Constructor taking an Excel time point serial number as an argument. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_date_time_ac90ca881e6d49bca790340b145179cdd}{XLDate\+Time}} (const std\+::tm \&timepoint)
+\begin{DoxyCompactList}\small\item\em Constructor taking a std\+::tm struct as an argument. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_date_time_a2f745055f0a737816d37586c4cd64b30}{XLDate\+Time}} (time\+\_\+t unixtime)
+\begin{DoxyCompactList}\small\item\em Constructor taking a unixtime format (seconds since 1/1/1970) as an argument. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_date_time_a576764382a7c5d29d63cdcab2f70f258}{XLDate\+Time}} (const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_date_time}{XLDate\+Time}} \&other)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_date_time_a71d068dd29d32dd1e94b362a4777b108}{XLDate\+Time}} (\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_date_time}{XLDate\+Time}} \&\&other) noexcept
+\begin{DoxyCompactList}\small\item\em Move constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_date_time_aad61da4b9576bd16a402607998d171f8}\label{class_open_x_l_s_x_1_1_x_l_date_time_aad61da4b9576bd16a402607998d171f8}} 
+{\bfseries $\sim$\+XLDate\+Time} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_date_time}{XLDate\+Time}} \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_date_time_ab8f25d09bca1ac441a37b4acb6b5ea89}{operator=}} (const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_date_time}{XLDate\+Time}} \&other)
+\begin{DoxyCompactList}\small\item\em Copy assignment operator. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_date_time}{XLDate\+Time}} \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_date_time_a6f01530d2b3eb612ea9511ead00784f7}{operator=}} (\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_date_time}{XLDate\+Time}} \&\&other) noexcept
+\begin{DoxyCompactList}\small\item\em Move assignment operator. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_date_time}{XLDate\+Time}} \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_date_time_aabe3badf0ae97c3b474122011789e42f}{operator=}} (double \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_date_time_ad24d9fff1462219a04e46f63c52cddb4}{serial}})
+\begin{DoxyCompactList}\small\item\em Assignment operator taking an Excel date/time serial number as an argument. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_date_time}{XLDate\+Time}} \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_date_time_a41f2a8642c1a9fcb43c54d011871800d}{operator=}} (const std\+::tm \&timepoint)
+\begin{DoxyCompactList}\small\item\em Assignment operator taking a std\+::tm object as an argument. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T , typename std\+::enable\+\_\+if$<$ std\+::is\+\_\+floating\+\_\+point\+\_\+v$<$ T $>$ $>$\+::type $\ast$  = nullptr$>$ }\\\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_date_time_acc78197e22708c3656066be2e31872df}{operator T}} () const
+\begin{DoxyCompactList}\small\item\em Implicit conversion to Excel date/time serial number (any floating point type). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_date_time_adfe2b5452a224401382fcc622fd271b6}{operator std\+::tm}} () const
+\begin{DoxyCompactList}\small\item\em Implicit conversion to std\+::tm object. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_date_time_ad24d9fff1462219a04e46f63c52cddb4}{serial}} () const
+\begin{DoxyCompactList}\small\item\em Get the date/time in the form of an Excel date/time serial number. \end{DoxyCompactList}\item 
+std\+::tm \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_date_time_a012fa60f6b39ceb6f6fa38e59462fd76}{tm}} () const
+\begin{DoxyCompactList}\small\item\em Get the date/time in the form of a std\+::tm struct. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_date_time_a46278710e88884dd53498c9a0e1cdc78}\label{class_open_x_l_s_x_1_1_x_l_date_time_a46278710e88884dd53498c9a0e1cdc78}} 
+\index{OpenXLSX::XLDateTime@{OpenXLSX::XLDateTime}!XLDateTime@{XLDateTime}}
+\index{XLDateTime@{XLDateTime}!OpenXLSX::XLDateTime@{OpenXLSX::XLDateTime}}
+\doxysubsubsection{\texorpdfstring{XLDateTime()}{XLDateTime()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily Open\+XLSX\+::\+XLDate\+Time\+::\+XLDate\+Time (\begin{DoxyParamCaption}\item[{double}]{serial }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructor taking an Excel time point serial number as an argument. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em serial} & Excel time point serial number. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_date_time_ac90ca881e6d49bca790340b145179cdd}\label{class_open_x_l_s_x_1_1_x_l_date_time_ac90ca881e6d49bca790340b145179cdd}} 
+\index{OpenXLSX::XLDateTime@{OpenXLSX::XLDateTime}!XLDateTime@{XLDateTime}}
+\index{XLDateTime@{XLDateTime}!OpenXLSX::XLDateTime@{OpenXLSX::XLDateTime}}
+\doxysubsubsection{\texorpdfstring{XLDateTime()}{XLDateTime()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily Open\+XLSX\+::\+XLDate\+Time\+::\+XLDate\+Time (\begin{DoxyParamCaption}\item[{const std\+::tm \&}]{timepoint }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructor taking a std\+::tm struct as an argument. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em timepoint} & A std\+::tm struct. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_date_time_a2f745055f0a737816d37586c4cd64b30}\label{class_open_x_l_s_x_1_1_x_l_date_time_a2f745055f0a737816d37586c4cd64b30}} 
+\index{OpenXLSX::XLDateTime@{OpenXLSX::XLDateTime}!XLDateTime@{XLDateTime}}
+\index{XLDateTime@{XLDateTime}!OpenXLSX::XLDateTime@{OpenXLSX::XLDateTime}}
+\doxysubsubsection{\texorpdfstring{XLDateTime()}{XLDateTime()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily Open\+XLSX\+::\+XLDate\+Time\+::\+XLDate\+Time (\begin{DoxyParamCaption}\item[{time\+\_\+t}]{unixtime }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructor taking a unixtime format (seconds since 1/1/1970) as an argument. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em unixtime} & A time\+\_\+t number. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_date_time_a576764382a7c5d29d63cdcab2f70f258}\label{class_open_x_l_s_x_1_1_x_l_date_time_a576764382a7c5d29d63cdcab2f70f258}} 
+\index{OpenXLSX::XLDateTime@{OpenXLSX::XLDateTime}!XLDateTime@{XLDateTime}}
+\index{XLDateTime@{XLDateTime}!OpenXLSX::XLDateTime@{OpenXLSX::XLDateTime}}
+\doxysubsubsection{\texorpdfstring{XLDateTime()}{XLDateTime()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily Open\+XLSX\+::\+XLDate\+Time\+::\+XLDate\+Time (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_date_time}{XLDate\+Time}} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Copy constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Object to be copied. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_date_time_a71d068dd29d32dd1e94b362a4777b108}\label{class_open_x_l_s_x_1_1_x_l_date_time_a71d068dd29d32dd1e94b362a4777b108}} 
+\index{OpenXLSX::XLDateTime@{OpenXLSX::XLDateTime}!XLDateTime@{XLDateTime}}
+\index{XLDateTime@{XLDateTime}!OpenXLSX::XLDateTime@{OpenXLSX::XLDateTime}}
+\doxysubsubsection{\texorpdfstring{XLDateTime()}{XLDateTime()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily Open\+XLSX\+::\+XLDate\+Time\+::\+XLDate\+Time (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_date_time}{XLDate\+Time}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Move constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Object to be moved. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_date_time_adfe2b5452a224401382fcc622fd271b6}\label{class_open_x_l_s_x_1_1_x_l_date_time_adfe2b5452a224401382fcc622fd271b6}} 
+\index{OpenXLSX::XLDateTime@{OpenXLSX::XLDateTime}!operator std::tm@{operator std::tm}}
+\index{operator std::tm@{operator std::tm}!OpenXLSX::XLDateTime@{OpenXLSX::XLDateTime}}
+\doxysubsubsection{\texorpdfstring{operator std::tm()}{operator std::tm()}}
+{\footnotesize\ttfamily Open\+XLSX\+::\+XLDate\+Time\+::operator std\+::tm (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Implicit conversion to std\+::tm object. 
+
+\begin{DoxyReturn}{Returns}
+std\+::tm object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_date_time_acc78197e22708c3656066be2e31872df}\label{class_open_x_l_s_x_1_1_x_l_date_time_acc78197e22708c3656066be2e31872df}} 
+\index{OpenXLSX::XLDateTime@{OpenXLSX::XLDateTime}!operator T@{operator T}}
+\index{operator T@{operator T}!OpenXLSX::XLDateTime@{OpenXLSX::XLDateTime}}
+\doxysubsubsection{\texorpdfstring{operator T()}{operator T()}}
+{\footnotesize\ttfamily template$<$typename T , typename std\+::enable\+\_\+if$<$ std\+::is\+\_\+floating\+\_\+point\+\_\+v$<$ T $>$ $>$\+::type $\ast$  = nullptr$>$ \\
+Open\+XLSX\+::\+XLDate\+Time\+::operator T (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implicit conversion to Excel date/time serial number (any floating point type). 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Type to convert to (any floating point type). \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+Excel date/time serial number. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_date_time_a41f2a8642c1a9fcb43c54d011871800d}\label{class_open_x_l_s_x_1_1_x_l_date_time_a41f2a8642c1a9fcb43c54d011871800d}} 
+\index{OpenXLSX::XLDateTime@{OpenXLSX::XLDateTime}!operator=@{operator=}}
+\index{operator=@{operator=}!OpenXLSX::XLDateTime@{OpenXLSX::XLDateTime}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_date_time}{XLDate\+Time}} \& Open\+XLSX\+::\+XLDate\+Time\+::operator= (\begin{DoxyParamCaption}\item[{const std\+::tm \&}]{timepoint }\end{DoxyParamCaption})}
+
+
+
+Assignment operator taking a std\+::tm object as an argument. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em timepoint} & std\+::tm object with the time point \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to the copied-\/to object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_date_time_ab8f25d09bca1ac441a37b4acb6b5ea89}\label{class_open_x_l_s_x_1_1_x_l_date_time_ab8f25d09bca1ac441a37b4acb6b5ea89}} 
+\index{OpenXLSX::XLDateTime@{OpenXLSX::XLDateTime}!operator=@{operator=}}
+\index{operator=@{operator=}!OpenXLSX::XLDateTime@{OpenXLSX::XLDateTime}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_date_time}{XLDate\+Time}} \& Open\+XLSX\+::\+XLDate\+Time\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_date_time}{XLDate\+Time}} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Copy assignment operator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Object to be copied. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to the copied-\/to object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_date_time_aabe3badf0ae97c3b474122011789e42f}\label{class_open_x_l_s_x_1_1_x_l_date_time_aabe3badf0ae97c3b474122011789e42f}} 
+\index{OpenXLSX::XLDateTime@{OpenXLSX::XLDateTime}!operator=@{operator=}}
+\index{operator=@{operator=}!OpenXLSX::XLDateTime@{OpenXLSX::XLDateTime}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_date_time}{XLDate\+Time}} \& Open\+XLSX\+::\+XLDate\+Time\+::operator= (\begin{DoxyParamCaption}\item[{double}]{serial }\end{DoxyParamCaption})}
+
+
+
+Assignment operator taking an Excel date/time serial number as an argument. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em serial} & A floating point value with the serial number. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to the copied-\/to object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_date_time_a6f01530d2b3eb612ea9511ead00784f7}\label{class_open_x_l_s_x_1_1_x_l_date_time_a6f01530d2b3eb612ea9511ead00784f7}} 
+\index{OpenXLSX::XLDateTime@{OpenXLSX::XLDateTime}!operator=@{operator=}}
+\index{operator=@{operator=}!OpenXLSX::XLDateTime@{OpenXLSX::XLDateTime}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_date_time}{XLDate\+Time}} \& Open\+XLSX\+::\+XLDate\+Time\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_date_time}{XLDate\+Time}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Move assignment operator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Object to be moved. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to the moved-\/to object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_date_time_ad24d9fff1462219a04e46f63c52cddb4}\label{class_open_x_l_s_x_1_1_x_l_date_time_ad24d9fff1462219a04e46f63c52cddb4}} 
+\index{OpenXLSX::XLDateTime@{OpenXLSX::XLDateTime}!serial@{serial}}
+\index{serial@{serial}!OpenXLSX::XLDateTime@{OpenXLSX::XLDateTime}}
+\doxysubsubsection{\texorpdfstring{serial()}{serial()}}
+{\footnotesize\ttfamily double Open\+XLSX\+::\+XLDate\+Time\+::serial (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the date/time in the form of an Excel date/time serial number. 
+
+\begin{DoxyReturn}{Returns}
+A double with the serial number. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_date_time_a012fa60f6b39ceb6f6fa38e59462fd76}\label{class_open_x_l_s_x_1_1_x_l_date_time_a012fa60f6b39ceb6f6fa38e59462fd76}} 
+\index{OpenXLSX::XLDateTime@{OpenXLSX::XLDateTime}!tm@{tm}}
+\index{tm@{tm}!OpenXLSX::XLDateTime@{OpenXLSX::XLDateTime}}
+\doxysubsubsection{\texorpdfstring{tm()}{tm()}}
+{\footnotesize\ttfamily std\+::tm \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_date_time_adfe2b5452a224401382fcc622fd271b6}{Open\+XLSX\+::\+XLDate\+Time\+::tm}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the date/time in the form of a std\+::tm struct. 
+
+\begin{DoxyReturn}{Returns}
+A std\+::tm struct with the time point. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Youth\+\_\+learning\+\_\+autoload/vendors/\+Open\+XLSX/\+Open\+XLSX/headers/XLDate\+Time.\+hpp\end{DoxyCompactItemize}

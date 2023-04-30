@@ -1,0 +1,294 @@
+\hypertarget{class_open_x_l_s_x_1_1_x_l_cell}{}\doxysection{Open\+XLSX\+::XLCell Class Reference}
+\label{class_open_x_l_s_x_1_1_x_l_cell}\index{OpenXLSX::XLCell@{OpenXLSX::XLCell}}
+
+
+An implementation class encapsulating the properties and behaviours of a spreadsheet cell.  
+
+
+
+
+{\ttfamily \#include $<$XLCell.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_cell_aac2e9836180e4f62d83b9b4f3dd40e59}\label{class_open_x_l_s_x_1_1_x_l_cell_aac2e9836180e4f62d83b9b4f3dd40e59}} 
+{\bfseries XLCell} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. Constructs a null object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_a3e07ec85e3a65974ddefa9bde04e6982}{XLCell}} (const XMLNode \&cell\+Node, const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_shared_strings}{XLShared\+Strings}} \&shared\+Strings)
+\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_af6befa0c300f5475d1d7b282848ff36b}{XLCell}} (const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell}{XLCell}} \&other)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_a981c12c6ca02cf7815a224717a5079ca}{XLCell}} (\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell}{XLCell}} \&\&other) noexcept
+\begin{DoxyCompactList}\small\item\em Move constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_a7b6a824708196654077d00a649eae46f}{$\sim$\+XLCell}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell}{XLCell}} \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_a39402c1c63a44f57702e3becbdfd37d4}{operator=}} (const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell}{XLCell}} \&other)
+\begin{DoxyCompactList}\small\item\em Copy assignment operator. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell}{XLCell}} \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_abf3e38e400ccf7924c7636d7e1c3108b}{operator=}} (\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell}{XLCell}} \&\&other) noexcept
+\begin{DoxyCompactList}\small\item\em Move assignment operator \mbox{[}deleted\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_a553cd70486bd70e3fa509562a6f1de1e}{operator bool}} () const
+\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value_proxy}{XLCell\+Value\+Proxy}} \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_a1f56dcda3812ac1a232f190aa91b1c95}{value}} ()
+\item 
+const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value_proxy}{XLCell\+Value\+Proxy}} \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_ab1fdcab01a38a7ed27d971d2bc24cf6e}{value}} () const
+\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}} \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_a9a8e3944f838cc4f48e6af04549c09c7}{cell\+Reference}} () const
+\begin{DoxyCompactList}\small\item\em get the \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}} object for the cell. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell}{XLCell}} \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_a50fedbf0257a810de488f4ba2ca0ce8f}{offset}} (uint16\+\_\+t row\+Offset, uint16\+\_\+t col\+Offset) const
+\begin{DoxyCompactList}\small\item\em get the \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell}{XLCell}} object from the current cell offset \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_a1bea8d204743f7bb756fd6994656ced1}{has\+Formula}} () const
+\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_formula_proxy}{XLFormula\+Proxy}} \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_a0d8335f8aacbba461b100bb73b864fd3}{formula}} ()
+\item 
+const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_formula_proxy}{XLFormula\+Proxy}} \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_ad4cf90c5fc2dde75f10b4424e93e1612}{formula}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_cell_aeb4927f60c87be1316fcd0c9d1af2bb9}\label{class_open_x_l_s_x_1_1_x_l_cell_aeb4927f60c87be1316fcd0c9d1af2bb9}} 
+class {\bfseries XLCell\+Iterator}
+\item 
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_cell_a46b7bad943374588ad16c59f1c24f937}\label{class_open_x_l_s_x_1_1_x_l_cell_a46b7bad943374588ad16c59f1c24f937}} 
+class {\bfseries XLCell\+Value\+Proxy}
+\item 
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_cell_ae772eb42084f0784445b55af578efc64}\label{class_open_x_l_s_x_1_1_x_l_cell_ae772eb42084f0784445b55af578efc64}} 
+class {\bfseries XLRow\+Data\+Iterator}
+\item 
+bool \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_a870a5f011c8825c409be69c09048b6b5}{operator==}} (const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell}{XLCell}} \&lhs, const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell}{XLCell}} \&rhs)
+\item 
+bool \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_a813306a72213f3cc6764cb0212e8ac68}{operator!=}} (const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell}{XLCell}} \&lhs, const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell}{XLCell}} \&rhs)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An implementation class encapsulating the properties and behaviours of a spreadsheet cell. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_cell_a3e07ec85e3a65974ddefa9bde04e6982}\label{class_open_x_l_s_x_1_1_x_l_cell_a3e07ec85e3a65974ddefa9bde04e6982}} 
+\index{OpenXLSX::XLCell@{OpenXLSX::XLCell}!XLCell@{XLCell}}
+\index{XLCell@{XLCell}!OpenXLSX::XLCell@{OpenXLSX::XLCell}}
+\doxysubsubsection{\texorpdfstring{XLCell()}{XLCell()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Open\+XLSX\+::\+XLCell\+::\+XLCell (\begin{DoxyParamCaption}\item[{const XMLNode \&}]{cell\+Node,  }\item[{const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_shared_strings}{XLShared\+Strings}} \&}]{shared\+Strings }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em cell\+Node} & \\
+\hline
+{\em shared\+Strings} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_cell_af6befa0c300f5475d1d7b282848ff36b}\label{class_open_x_l_s_x_1_1_x_l_cell_af6befa0c300f5475d1d7b282848ff36b}} 
+\index{OpenXLSX::XLCell@{OpenXLSX::XLCell}!XLCell@{XLCell}}
+\index{XLCell@{XLCell}!OpenXLSX::XLCell@{OpenXLSX::XLCell}}
+\doxysubsubsection{\texorpdfstring{XLCell()}{XLCell()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Open\+XLSX\+::\+XLCell\+::\+XLCell (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell}{XLCell}} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Copy constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell}{XLCell}} object to be copied. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+The copy constructor has been deleted, as it makes no sense to copy a cell. If the objective is to copy the get\+Value, create the the target object and then use the copy assignment operator. 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_cell_a981c12c6ca02cf7815a224717a5079ca}\label{class_open_x_l_s_x_1_1_x_l_cell_a981c12c6ca02cf7815a224717a5079ca}} 
+\index{OpenXLSX::XLCell@{OpenXLSX::XLCell}!XLCell@{XLCell}}
+\index{XLCell@{XLCell}!OpenXLSX::XLCell@{OpenXLSX::XLCell}}
+\doxysubsubsection{\texorpdfstring{XLCell()}{XLCell()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Open\+XLSX\+::\+XLCell\+::\+XLCell (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell}{XLCell}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Move constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell}{XLCell}} object to be moved \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+The move constructor has been deleted, as it makes no sense to move a cell. 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_cell_a7b6a824708196654077d00a649eae46f}\label{class_open_x_l_s_x_1_1_x_l_cell_a7b6a824708196654077d00a649eae46f}} 
+\index{OpenXLSX::XLCell@{OpenXLSX::XLCell}!````~XLCell@{$\sim$XLCell}}
+\index{````~XLCell@{$\sim$XLCell}!OpenXLSX::XLCell@{OpenXLSX::XLCell}}
+\doxysubsubsection{\texorpdfstring{$\sim$XLCell()}{~XLCell()}}
+{\footnotesize\ttfamily Open\+XLSX\+::\+XLCell\+::$\sim$\+XLCell (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor. 
+
+\begin{DoxyNote}{Note}
+Using the default destructor 
+\end{DoxyNote}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_cell_a9a8e3944f838cc4f48e6af04549c09c7}\label{class_open_x_l_s_x_1_1_x_l_cell_a9a8e3944f838cc4f48e6af04549c09c7}} 
+\index{OpenXLSX::XLCell@{OpenXLSX::XLCell}!cellReference@{cellReference}}
+\index{cellReference@{cellReference}!OpenXLSX::XLCell@{OpenXLSX::XLCell}}
+\doxysubsubsection{\texorpdfstring{cellReference()}{cellReference()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}} Open\+XLSX\+::\+XLCell\+::cell\+Reference (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+get the \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}} object for the cell. 
+
+\begin{DoxyReturn}{Returns}
+A reference to the cells\textquotesingle{} \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}} object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_cell_a0d8335f8aacbba461b100bb73b864fd3}\label{class_open_x_l_s_x_1_1_x_l_cell_a0d8335f8aacbba461b100bb73b864fd3}} 
+\index{OpenXLSX::XLCell@{OpenXLSX::XLCell}!formula@{formula}}
+\index{formula@{formula}!OpenXLSX::XLCell@{OpenXLSX::XLCell}}
+\doxysubsubsection{\texorpdfstring{formula()}{formula()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_formula_proxy}{XLFormula\+Proxy}} \& Open\+XLSX\+::\+XLCell\+::formula (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_cell_ad4cf90c5fc2dde75f10b4424e93e1612}\label{class_open_x_l_s_x_1_1_x_l_cell_ad4cf90c5fc2dde75f10b4424e93e1612}} 
+\index{OpenXLSX::XLCell@{OpenXLSX::XLCell}!formula@{formula}}
+\index{formula@{formula}!OpenXLSX::XLCell@{OpenXLSX::XLCell}}
+\doxysubsubsection{\texorpdfstring{formula()}{formula()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_formula_proxy}{XLFormula\+Proxy}} \& Open\+XLSX\+::\+XLCell\+::formula (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_cell_a1bea8d204743f7bb756fd6994656ced1}\label{class_open_x_l_s_x_1_1_x_l_cell_a1bea8d204743f7bb756fd6994656ced1}} 
+\index{OpenXLSX::XLCell@{OpenXLSX::XLCell}!hasFormula@{hasFormula}}
+\index{hasFormula@{hasFormula}!OpenXLSX::XLCell@{OpenXLSX::XLCell}}
+\doxysubsubsection{\texorpdfstring{hasFormula()}{hasFormula()}}
+{\footnotesize\ttfamily bool Open\+XLSX\+::\+XLCell\+::has\+Formula (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_cell_a50fedbf0257a810de488f4ba2ca0ce8f}\label{class_open_x_l_s_x_1_1_x_l_cell_a50fedbf0257a810de488f4ba2ca0ce8f}} 
+\index{OpenXLSX::XLCell@{OpenXLSX::XLCell}!offset@{offset}}
+\index{offset@{offset}!OpenXLSX::XLCell@{OpenXLSX::XLCell}}
+\doxysubsubsection{\texorpdfstring{offset()}{offset()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell}{XLCell}} Open\+XLSX\+::\+XLCell\+::offset (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{row\+Offset,  }\item[{uint16\+\_\+t}]{col\+Offset }\end{DoxyParamCaption}) const}
+
+
+
+get the \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell}{XLCell}} object from the current cell offset 
+
+\begin{DoxyReturn}{Returns}
+A reference to the \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell}{XLCell}} object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_cell_a553cd70486bd70e3fa509562a6f1de1e}\label{class_open_x_l_s_x_1_1_x_l_cell_a553cd70486bd70e3fa509562a6f1de1e}} 
+\index{OpenXLSX::XLCell@{OpenXLSX::XLCell}!operator bool@{operator bool}}
+\index{operator bool@{operator bool}!OpenXLSX::XLCell@{OpenXLSX::XLCell}}
+\doxysubsubsection{\texorpdfstring{operator bool()}{operator bool()}}
+{\footnotesize\ttfamily Open\+XLSX\+::\+XLCell\+::operator bool (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_cell_a39402c1c63a44f57702e3becbdfd37d4}\label{class_open_x_l_s_x_1_1_x_l_cell_a39402c1c63a44f57702e3becbdfd37d4}} 
+\index{OpenXLSX::XLCell@{OpenXLSX::XLCell}!operator=@{operator=}}
+\index{operator=@{operator=}!OpenXLSX::XLCell@{OpenXLSX::XLCell}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell}{XLCell}} \& Open\+XLSX\+::\+XLCell\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell}{XLCell}} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Copy assignment operator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell}{XLCell}} object to be copy assigned \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reference to the new object 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Copies only the cell contents, not the pointer to parent worksheet etc. 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_cell_abf3e38e400ccf7924c7636d7e1c3108b}\label{class_open_x_l_s_x_1_1_x_l_cell_abf3e38e400ccf7924c7636d7e1c3108b}} 
+\index{OpenXLSX::XLCell@{OpenXLSX::XLCell}!operator=@{operator=}}
+\index{operator=@{operator=}!OpenXLSX::XLCell@{OpenXLSX::XLCell}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell}{XLCell}} \& Open\+XLSX\+::\+XLCell\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell}{XLCell}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Move assignment operator \mbox{[}deleted\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell}{XLCell}} object to be move assigned \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reference to the new object 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+The move assignment constructor has been deleted, as it makes no sense to move a cell. 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_cell_a1f56dcda3812ac1a232f190aa91b1c95}\label{class_open_x_l_s_x_1_1_x_l_cell_a1f56dcda3812ac1a232f190aa91b1c95}} 
+\index{OpenXLSX::XLCell@{OpenXLSX::XLCell}!value@{value}}
+\index{value@{value}!OpenXLSX::XLCell@{OpenXLSX::XLCell}}
+\doxysubsubsection{\texorpdfstring{value()}{value()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value_proxy}{XLCell\+Value\+Proxy}} \& Open\+XLSX\+::\+XLCell\+::value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_cell_ab1fdcab01a38a7ed27d971d2bc24cf6e}\label{class_open_x_l_s_x_1_1_x_l_cell_ab1fdcab01a38a7ed27d971d2bc24cf6e}} 
+\index{OpenXLSX::XLCell@{OpenXLSX::XLCell}!value@{value}}
+\index{value@{value}!OpenXLSX::XLCell@{OpenXLSX::XLCell}}
+\doxysubsubsection{\texorpdfstring{value()}{value()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value_proxy}{XLCell\+Value\+Proxy}} \& Open\+XLSX\+::\+XLCell\+::value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_cell_a813306a72213f3cc6764cb0212e8ac68}\label{class_open_x_l_s_x_1_1_x_l_cell_a813306a72213f3cc6764cb0212e8ac68}} 
+\index{OpenXLSX::XLCell@{OpenXLSX::XLCell}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!OpenXLSX::XLCell@{OpenXLSX::XLCell}}
+\doxysubsubsection{\texorpdfstring{operator"!=}{operator!=}}
+{\footnotesize\ttfamily bool operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell}{XLCell}} \&}]{lhs,  }\item[{const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell}{XLCell}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em lhs} & \\
+\hline
+{\em rhs} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_cell_a870a5f011c8825c409be69c09048b6b5}\label{class_open_x_l_s_x_1_1_x_l_cell_a870a5f011c8825c409be69c09048b6b5}} 
+\index{OpenXLSX::XLCell@{OpenXLSX::XLCell}!operator==@{operator==}}
+\index{operator==@{operator==}!OpenXLSX::XLCell@{OpenXLSX::XLCell}}
+\doxysubsubsection{\texorpdfstring{operator==}{operator==}}
+{\footnotesize\ttfamily bool operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell}{XLCell}} \&}]{lhs,  }\item[{const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell}{XLCell}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em lhs} & \\
+\hline
+{\em rhs} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Youth\+\_\+learning\+\_\+autoload/vendors/\+Open\+XLSX/\+Open\+XLSX/headers/XLCell.\+hpp\end{DoxyCompactItemize}

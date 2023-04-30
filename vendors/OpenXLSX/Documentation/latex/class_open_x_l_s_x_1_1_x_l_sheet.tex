@@ -1,0 +1,374 @@
+\hypertarget{class_open_x_l_s_x_1_1_x_l_sheet}{}\doxysection{Open\+XLSX\+::XLSheet Class Reference}
+\label{class_open_x_l_s_x_1_1_x_l_sheet}\index{OpenXLSX::XLSheet@{OpenXLSX::XLSheet}}
+
+
+The XLAbstract\+Sheet is a generalized sheet class, which functions as superclass for specialized classes, such as \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_worksheet}{XLWorksheet}}. It implements functionality common to all sheet types. This is a pure abstract class, so it cannot be instantiated.  
+
+
+
+
+{\ttfamily \#include $<$XLSheet.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_a89a94245a6176a42f6fde9ec43dda9c0}{XLSheet}} (\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_data}{XLXml\+Data}} $\ast$\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_af4cf6f8310a055a6f18e99669f52d798}{xml\+Data}})
+\begin{DoxyCompactList}\small\item\em The constructor. There are no default constructor, so all parameters must be provided for constructing an XLAbstract\+Sheet object. Since this is a pure abstract class, instantiation is only possible via one of the derived classes. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_a131eee8e768cf9974dbe8d6e752aa974}{XLSheet}} (const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet}{XLSheet}} \&other)=default
+\begin{DoxyCompactList}\small\item\em The copy constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_aa24c7c7185fccf713fdce66ba8e44a5c}{XLSheet}} (\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet}{XLSheet}} \&\&other) noexcept=default
+\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_aa27a67bd1a856415dfc6233388c12217}{$\sim$\+XLSheet}} ()=default
+\begin{DoxyCompactList}\small\item\em The destructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet}{XLSheet}} \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_a51385ca65c78e67dc23bde5f140915b2}{operator=}} (const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet}{XLSheet}} \&other)=default
+\begin{DoxyCompactList}\small\item\em Assignment operator. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet}{XLSheet}} \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_a5f47dfa907d0ea56c688bf5d5adebaca}{operator=}} (\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet}{XLSheet}} \&\&other) noexcept=default
+\item 
+XLSheet\+State \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_ad6044cb5bd5bf38923cec8ba96ba8e58}{visibility}} () const
+\begin{DoxyCompactList}\small\item\em Method for getting the current visibility state of the sheet. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_a839cb51e0f01900e7533f8b873487dee}{set\+Visibility}} (XLSheet\+State state)
+\begin{DoxyCompactList}\small\item\em Method for setting the state of the sheet. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_color}{XLColor}} \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_a6b72510a8e81bc27773d01676648b0c4}{color}} () const
+\item 
+void \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_a69d462475e6996c250336b08ddc6af26}{set\+Color}} (const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_color}{XLColor}} \&\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_a6b72510a8e81bc27773d01676648b0c4}{color}})
+\item 
+uint16\+\_\+t \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_a41188f8d15e483af78e6b8d170d57564}{index}} () const
+\begin{DoxyCompactList}\small\item\em Method for getting the index of the sheet. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_sheet_ad64a6e4ecd6a8c54c5a19d0c0abfd7a2}\label{class_open_x_l_s_x_1_1_x_l_sheet_ad64a6e4ecd6a8c54c5a19d0c0abfd7a2}} 
+void {\bfseries set\+Index} (uint16\+\_\+t \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_a41188f8d15e483af78e6b8d170d57564}{index}})
+\begin{DoxyCompactList}\small\item\em Method for setting the index of the sheet. This effectively moves the sheet to a different position. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_adbf4f0eac3b2e6e4a27aab5c075b5635}{name}} () const
+\begin{DoxyCompactList}\small\item\em Method to retrieve the name of the sheet. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_a625f83afa31da0d18c5403b22b4c8903}{set\+Name}} (const std\+::string \&\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_adbf4f0eac3b2e6e4a27aab5c075b5635}{name}})
+\begin{DoxyCompactList}\small\item\em Method for renaming the sheet. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_a17347ef96b1386c0f497732ea5653ee0}{set\+Selected}} (bool selected)
+\item 
+{\footnotesize template$<$typename Sheet\+Type , typename std\+::enable\+\_\+if$<$ std\+::is\+\_\+same\+\_\+v$<$ Sheet\+Type, \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_worksheet}{XLWorksheet}} $>$$\vert$$\vert$std\+::is\+\_\+same\+\_\+v$<$ Sheet\+Type, \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_chartsheet}{XLChartsheet}} $>$ $>$\+::type $\ast$  = nullptr$>$ }\\bool \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_a183c5f2e3599f4b79e822db95c5944b5}{is\+Type}} () const
+\begin{DoxyCompactList}\small\item\em Method to get the type of the sheet. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_a58df6c2c2c537a1f3a8a2d9bd4fb6829}{clone}} (const std\+::string \&new\+Name)
+\begin{DoxyCompactList}\small\item\em Method for cloning the sheet. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T , typename std\+::enable\+\_\+if$<$ std\+::is\+\_\+same\+\_\+v$<$ T, \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_worksheet}{XLWorksheet}} $>$$\vert$$\vert$std\+::is\+\_\+same\+\_\+v$<$ T, \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_chartsheet}{XLChartsheet}} $>$ $>$\+::type $\ast$  = nullptr$>$ }\\T \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_a1b82054313e6aaba99d921bc38b1e4da}{get}} () const
+\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_a207b3f8ece24b0bb5e5f88a579b61854}{operator XLWorksheet}} () const
+\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_af1120c78a80b877f6bc8590c1d94b84e}{operator XLChartsheet}} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file}{Open\+XLSX\+::\+XLXml\+File}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_xml_file_afcc880bcb4e01b9435eae827a9836ec0}\label{class_open_x_l_s_x_1_1_x_l_xml_file_afcc880bcb4e01b9435eae827a9836ec0}} 
+{\bfseries XLXml\+File} ()=default
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_a91ac3132eed637a60ca7ccd8d61d107a}{XLXml\+File}} (\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_data}{XLXml\+Data}} $\ast$\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_af4cf6f8310a055a6f18e99669f52d798}{xml\+Data}})
+\begin{DoxyCompactList}\small\item\em Constructor. Creates an object based on the xml\+Data input. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_ab412e98acd8baa5d99cc97e68365a192}{XLXml\+File}} (const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file}{XLXml\+File}} \&other)=default
+\begin{DoxyCompactList}\small\item\em Copy constructor. Default implementation used. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_a874e9e87bed7e6f4e4cd3696e28b7cff}{XLXml\+File}} (\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file}{XLXml\+File}} \&\&other) noexcept=default
+\begin{DoxyCompactList}\small\item\em Move constructor. Default implementation used. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_xml_file_aa92e245526f036fd154efc659e2f9006}\label{class_open_x_l_s_x_1_1_x_l_xml_file_aa92e245526f036fd154efc659e2f9006}} 
+{\bfseries $\sim$\+XLXml\+File} ()
+\begin{DoxyCompactList}\small\item\em Destructor. Default implementation used. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file}{XLXml\+File}} \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_a7ffb6dec2d9596b0982a6c41b2dbd66c}{operator=}} (const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file}{XLXml\+File}} \&other)=default
+\begin{DoxyCompactList}\small\item\em The copy assignment operator. The default implementation has been used. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file}{XLXml\+File}} \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_af53403da14a8b258a823a28fa20f24a0}{operator=}} (\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file}{XLXml\+File}} \&\&other) noexcept=default
+\begin{DoxyCompactList}\small\item\em The move assignment operator. The default implementation has been used. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+\doxysubsubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file}{Open\+XLSX\+::\+XLXml\+File}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_af4cf6f8310a055a6f18e99669f52d798}{xml\+Data}} () const
+\begin{DoxyCompactList}\small\item\em Method for getting the XML data represented by the object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_a669ce7b567aca54bbad3e50d611f9a05}{set\+Xml\+Data}} (const std\+::string \&\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_af4cf6f8310a055a6f18e99669f52d798}{xml\+Data}})
+\begin{DoxyCompactList}\small\item\em Provide the XML data represented by the object. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_a6738ed4c3a1c1add67c9295c236d80ef}{relationship\+ID}} () const
+\begin{DoxyCompactList}\small\item\em This function returns the relationship ID (the ID used in the \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_relationships}{XLRelationships}} objects) for the object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_document}{XLDocument}} \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_a60e6b90e550f43dac2743fdc90db152c}{parent\+Doc}} ()
+\begin{DoxyCompactList}\small\item\em This function provides access to the parent \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_document}{XLDocument}} object. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_document}{XLDocument}} \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_ab030effdc244fb88de1f2d69b64045cb}{parent\+Doc}} () const
+\begin{DoxyCompactList}\small\item\em This function provides access to the parent \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_document}{XLDocument}} object. \end{DoxyCompactList}\item 
+XMLDocument \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_a433ae1bd65af9262c7120f3774ecb8c3}{xml\+Document}} ()
+\begin{DoxyCompactList}\small\item\em This function provides access to the underlying XMLDocument object. \end{DoxyCompactList}\item 
+const XMLDocument \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_ae6450091d5ff53b5b2f35940af98a92f}{xml\+Document}} () const
+\begin{DoxyCompactList}\small\item\em This function provides access to the underlying XMLDocument object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file}{Open\+XLSX\+::\+XLXml\+File}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_data}{XLXml\+Data}} $\ast$ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_a56206b4f2903a83047d4c04cd683bfa4}{m\+\_\+xml\+Data}} \{ nullptr \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The XLAbstract\+Sheet is a generalized sheet class, which functions as superclass for specialized classes, such as \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_worksheet}{XLWorksheet}}. It implements functionality common to all sheet types. This is a pure abstract class, so it cannot be instantiated. Inheritance diagram for Open\+XLSX\+::XLSheet\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_open_x_l_s_x_1_1_x_l_sheet}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_sheet_a89a94245a6176a42f6fde9ec43dda9c0}\label{class_open_x_l_s_x_1_1_x_l_sheet_a89a94245a6176a42f6fde9ec43dda9c0}} 
+\index{OpenXLSX::XLSheet@{OpenXLSX::XLSheet}!XLSheet@{XLSheet}}
+\index{XLSheet@{XLSheet}!OpenXLSX::XLSheet@{OpenXLSX::XLSheet}}
+\doxysubsubsection{\texorpdfstring{XLSheet()}{XLSheet()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Open\+XLSX\+::\+XLSheet\+::\+XLSheet (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_data}{XLXml\+Data}} $\ast$}]{xml\+Data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+The constructor. There are no default constructor, so all parameters must be provided for constructing an XLAbstract\+Sheet object. Since this is a pure abstract class, instantiation is only possible via one of the derived classes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xml\+Data} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_sheet_a131eee8e768cf9974dbe8d6e752aa974}\label{class_open_x_l_s_x_1_1_x_l_sheet_a131eee8e768cf9974dbe8d6e752aa974}} 
+\index{OpenXLSX::XLSheet@{OpenXLSX::XLSheet}!XLSheet@{XLSheet}}
+\index{XLSheet@{XLSheet}!OpenXLSX::XLSheet@{OpenXLSX::XLSheet}}
+\doxysubsubsection{\texorpdfstring{XLSheet()}{XLSheet()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Open\+XLSX\+::\+XLSheet\+::\+XLSheet (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet}{XLSheet}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+The copy constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The object to be copied. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+The default copy constructor is used, i.\+e. only shallow copying of pointer data members. 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_sheet_aa24c7c7185fccf713fdce66ba8e44a5c}\label{class_open_x_l_s_x_1_1_x_l_sheet_aa24c7c7185fccf713fdce66ba8e44a5c}} 
+\index{OpenXLSX::XLSheet@{OpenXLSX::XLSheet}!XLSheet@{XLSheet}}
+\index{XLSheet@{XLSheet}!OpenXLSX::XLSheet@{OpenXLSX::XLSheet}}
+\doxysubsubsection{\texorpdfstring{XLSheet()}{XLSheet()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Open\+XLSX\+::\+XLSheet\+::\+XLSheet (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet}{XLSheet}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_sheet_aa27a67bd1a856415dfc6233388c12217}\label{class_open_x_l_s_x_1_1_x_l_sheet_aa27a67bd1a856415dfc6233388c12217}} 
+\index{OpenXLSX::XLSheet@{OpenXLSX::XLSheet}!````~XLSheet@{$\sim$XLSheet}}
+\index{````~XLSheet@{$\sim$XLSheet}!OpenXLSX::XLSheet@{OpenXLSX::XLSheet}}
+\doxysubsubsection{\texorpdfstring{$\sim$XLSheet()}{~XLSheet()}}
+{\footnotesize\ttfamily Open\+XLSX\+::\+XLSheet\+::$\sim$\+XLSheet (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+The destructor. 
+
+\begin{DoxyNote}{Note}
+The default destructor is used, since cleanup of pointer data members is not required. 
+\end{DoxyNote}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_sheet_a58df6c2c2c537a1f3a8a2d9bd4fb6829}\label{class_open_x_l_s_x_1_1_x_l_sheet_a58df6c2c2c537a1f3a8a2d9bd4fb6829}} 
+\index{OpenXLSX::XLSheet@{OpenXLSX::XLSheet}!clone@{clone}}
+\index{clone@{clone}!OpenXLSX::XLSheet@{OpenXLSX::XLSheet}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily void Open\+XLSX\+::\+XLSheet\+::clone (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{new\+Name }\end{DoxyParamCaption})}
+
+
+
+Method for cloning the sheet. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Name} & A std\+::string with the name of the clone \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the cloned object. 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+This is a pure abstract method. I.\+e. it is implemented in subclasses. 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_sheet_a6b72510a8e81bc27773d01676648b0c4}\label{class_open_x_l_s_x_1_1_x_l_sheet_a6b72510a8e81bc27773d01676648b0c4}} 
+\index{OpenXLSX::XLSheet@{OpenXLSX::XLSheet}!color@{color}}
+\index{color@{color}!OpenXLSX::XLSheet@{OpenXLSX::XLSheet}}
+\doxysubsubsection{\texorpdfstring{color()}{color()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_color}{XLColor}} Open\+XLSX\+::\+XLSheet\+::color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_sheet_a1b82054313e6aaba99d921bc38b1e4da}\label{class_open_x_l_s_x_1_1_x_l_sheet_a1b82054313e6aaba99d921bc38b1e4da}} 
+\index{OpenXLSX::XLSheet@{OpenXLSX::XLSheet}!get@{get}}
+\index{get@{get}!OpenXLSX::XLSheet@{OpenXLSX::XLSheet}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily template$<$typename T , typename std\+::enable\+\_\+if$<$ std\+::is\+\_\+same\+\_\+v$<$ T, \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_worksheet}{XLWorksheet}} $>$$\vert$$\vert$std\+::is\+\_\+same\+\_\+v$<$ T, \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_chartsheet}{XLChartsheet}} $>$ $>$\+::type $\ast$  = nullptr$>$ \\
+T Open\+XLSX\+::\+XLSheet\+::get (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_sheet_a41188f8d15e483af78e6b8d170d57564}\label{class_open_x_l_s_x_1_1_x_l_sheet_a41188f8d15e483af78e6b8d170d57564}} 
+\index{OpenXLSX::XLSheet@{OpenXLSX::XLSheet}!index@{index}}
+\index{index@{index}!OpenXLSX::XLSheet@{OpenXLSX::XLSheet}}
+\doxysubsubsection{\texorpdfstring{index()}{index()}}
+{\footnotesize\ttfamily uint16\+\_\+t Open\+XLSX\+::\+XLSheet\+::index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Method for getting the index of the sheet. 
+
+\begin{DoxyReturn}{Returns}
+An int with the index of the sheet. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_sheet_a183c5f2e3599f4b79e822db95c5944b5}\label{class_open_x_l_s_x_1_1_x_l_sheet_a183c5f2e3599f4b79e822db95c5944b5}} 
+\index{OpenXLSX::XLSheet@{OpenXLSX::XLSheet}!isType@{isType}}
+\index{isType@{isType}!OpenXLSX::XLSheet@{OpenXLSX::XLSheet}}
+\doxysubsubsection{\texorpdfstring{isType()}{isType()}}
+{\footnotesize\ttfamily template$<$typename Sheet\+Type , typename std\+::enable\+\_\+if$<$ std\+::is\+\_\+same\+\_\+v$<$ Sheet\+Type, \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_worksheet}{XLWorksheet}} $>$$\vert$$\vert$std\+::is\+\_\+same\+\_\+v$<$ Sheet\+Type, \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_chartsheet}{XLChartsheet}} $>$ $>$\+::type $\ast$  = nullptr$>$ \\
+bool Open\+XLSX\+::\+XLSheet\+::is\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Method to get the type of the sheet. 
+
+\begin{DoxyReturn}{Returns}
+An XLSheet\+Type enum object with the sheet type. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_sheet_adbf4f0eac3b2e6e4a27aab5c075b5635}\label{class_open_x_l_s_x_1_1_x_l_sheet_adbf4f0eac3b2e6e4a27aab5c075b5635}} 
+\index{OpenXLSX::XLSheet@{OpenXLSX::XLSheet}!name@{name}}
+\index{name@{name}!OpenXLSX::XLSheet@{OpenXLSX::XLSheet}}
+\doxysubsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily std\+::string Open\+XLSX\+::\+XLSheet\+::name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Method to retrieve the name of the sheet. 
+
+\begin{DoxyReturn}{Returns}
+A std\+::string with the sheet name. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_sheet_af1120c78a80b877f6bc8590c1d94b84e}\label{class_open_x_l_s_x_1_1_x_l_sheet_af1120c78a80b877f6bc8590c1d94b84e}} 
+\index{OpenXLSX::XLSheet@{OpenXLSX::XLSheet}!operator XLChartsheet@{operator XLChartsheet}}
+\index{operator XLChartsheet@{operator XLChartsheet}!OpenXLSX::XLSheet@{OpenXLSX::XLSheet}}
+\doxysubsubsection{\texorpdfstring{operator XLChartsheet()}{operator XLChartsheet()}}
+{\footnotesize\ttfamily Open\+XLSX\+::\+XLSheet\+::operator \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_chartsheet}{XLChartsheet}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_sheet_a207b3f8ece24b0bb5e5f88a579b61854}\label{class_open_x_l_s_x_1_1_x_l_sheet_a207b3f8ece24b0bb5e5f88a579b61854}} 
+\index{OpenXLSX::XLSheet@{OpenXLSX::XLSheet}!operator XLWorksheet@{operator XLWorksheet}}
+\index{operator XLWorksheet@{operator XLWorksheet}!OpenXLSX::XLSheet@{OpenXLSX::XLSheet}}
+\doxysubsubsection{\texorpdfstring{operator XLWorksheet()}{operator XLWorksheet()}}
+{\footnotesize\ttfamily Open\+XLSX\+::\+XLSheet\+::operator \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_worksheet}{XLWorksheet}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_sheet_a51385ca65c78e67dc23bde5f140915b2}\label{class_open_x_l_s_x_1_1_x_l_sheet_a51385ca65c78e67dc23bde5f140915b2}} 
+\index{OpenXLSX::XLSheet@{OpenXLSX::XLSheet}!operator=@{operator=}}
+\index{operator=@{operator=}!OpenXLSX::XLSheet@{OpenXLSX::XLSheet}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet}{XLSheet}} \& Open\+XLSX\+::\+XLSheet\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet}{XLSheet}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Assignment operator. 
+
+\begin{DoxyReturn}{Returns}
+A reference to the new object. 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+The default assignment operator is used, i.\+e. only shallow copying of pointer data members. 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_sheet_a5f47dfa907d0ea56c688bf5d5adebaca}\label{class_open_x_l_s_x_1_1_x_l_sheet_a5f47dfa907d0ea56c688bf5d5adebaca}} 
+\index{OpenXLSX::XLSheet@{OpenXLSX::XLSheet}!operator=@{operator=}}
+\index{operator=@{operator=}!OpenXLSX::XLSheet@{OpenXLSX::XLSheet}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet}{XLSheet}} \& Open\+XLSX\+::\+XLSheet\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet}{XLSheet}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_sheet_a69d462475e6996c250336b08ddc6af26}\label{class_open_x_l_s_x_1_1_x_l_sheet_a69d462475e6996c250336b08ddc6af26}} 
+\index{OpenXLSX::XLSheet@{OpenXLSX::XLSheet}!setColor@{setColor}}
+\index{setColor@{setColor}!OpenXLSX::XLSheet@{OpenXLSX::XLSheet}}
+\doxysubsubsection{\texorpdfstring{setColor()}{setColor()}}
+{\footnotesize\ttfamily void Open\+XLSX\+::\+XLSheet\+::set\+Color (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_color}{XLColor}} \&}]{color }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em color} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_sheet_a625f83afa31da0d18c5403b22b4c8903}\label{class_open_x_l_s_x_1_1_x_l_sheet_a625f83afa31da0d18c5403b22b4c8903}} 
+\index{OpenXLSX::XLSheet@{OpenXLSX::XLSheet}!setName@{setName}}
+\index{setName@{setName}!OpenXLSX::XLSheet@{OpenXLSX::XLSheet}}
+\doxysubsubsection{\texorpdfstring{setName()}{setName()}}
+{\footnotesize\ttfamily void Open\+XLSX\+::\+XLSheet\+::set\+Name (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})}
+
+
+
+Method for renaming the sheet. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & A std\+::string with the new name. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_sheet_a17347ef96b1386c0f497732ea5653ee0}\label{class_open_x_l_s_x_1_1_x_l_sheet_a17347ef96b1386c0f497732ea5653ee0}} 
+\index{OpenXLSX::XLSheet@{OpenXLSX::XLSheet}!setSelected@{setSelected}}
+\index{setSelected@{setSelected}!OpenXLSX::XLSheet@{OpenXLSX::XLSheet}}
+\doxysubsubsection{\texorpdfstring{setSelected()}{setSelected()}}
+{\footnotesize\ttfamily void Open\+XLSX\+::\+XLSheet\+::set\+Selected (\begin{DoxyParamCaption}\item[{bool}]{selected }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em selected} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_sheet_a839cb51e0f01900e7533f8b873487dee}\label{class_open_x_l_s_x_1_1_x_l_sheet_a839cb51e0f01900e7533f8b873487dee}} 
+\index{OpenXLSX::XLSheet@{OpenXLSX::XLSheet}!setVisibility@{setVisibility}}
+\index{setVisibility@{setVisibility}!OpenXLSX::XLSheet@{OpenXLSX::XLSheet}}
+\doxysubsubsection{\texorpdfstring{setVisibility()}{setVisibility()}}
+{\footnotesize\ttfamily void Open\+XLSX\+::\+XLSheet\+::set\+Visibility (\begin{DoxyParamCaption}\item[{XLSheet\+State}]{state }\end{DoxyParamCaption})}
+
+
+
+Method for setting the state of the sheet. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & An XLSheet\+State enum object with the new state. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000001}{Bug}}]For some reason, this method doesn\textquotesingle{}t work. The data is written correctly to the xml file, but the sheet is not hidden when opening the file in Excel. \end{DoxyRefDesc}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_sheet_ad6044cb5bd5bf38923cec8ba96ba8e58}\label{class_open_x_l_s_x_1_1_x_l_sheet_ad6044cb5bd5bf38923cec8ba96ba8e58}} 
+\index{OpenXLSX::XLSheet@{OpenXLSX::XLSheet}!visibility@{visibility}}
+\index{visibility@{visibility}!OpenXLSX::XLSheet@{OpenXLSX::XLSheet}}
+\doxysubsubsection{\texorpdfstring{visibility()}{visibility()}}
+{\footnotesize\ttfamily XLSheet\+State Open\+XLSX\+::\+XLSheet\+::visibility (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Method for getting the current visibility state of the sheet. 
+
+\begin{DoxyReturn}{Returns}
+An XLSheet\+State enum object, with the current sheet state. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Youth\+\_\+learning\+\_\+autoload/vendors/\+Open\+XLSX/\+Open\+XLSX/headers/XLSheet.\+hpp\end{DoxyCompactItemize}

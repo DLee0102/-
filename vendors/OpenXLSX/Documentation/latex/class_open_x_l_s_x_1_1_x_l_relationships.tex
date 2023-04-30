@@ -1,0 +1,294 @@
+\hypertarget{class_open_x_l_s_x_1_1_x_l_relationships}{}\doxysection{Open\+XLSX\+::XLRelationships Class Reference}
+\label{class_open_x_l_s_x_1_1_x_l_relationships}\index{OpenXLSX::XLRelationships@{OpenXLSX::XLRelationships}}
+
+
+An encapsulation of relationship files (.rels files) in an Excel document package.  
+
+
+
+
+{\ttfamily \#include $<$XLRelationships.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_relationships_a0c8445315f931eb533e09aa572c9b6c4}{XLRelationships}} (\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_data}{XLXml\+Data}} $\ast$\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_af4cf6f8310a055a6f18e99669f52d798}{xml\+Data}})
+\item 
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_relationships_accbf2c17310e93aa88e15eb78c9a6d05}\label{class_open_x_l_s_x_1_1_x_l_relationships_accbf2c17310e93aa88e15eb78c9a6d05}} 
+{\bfseries $\sim$\+XLRelationships} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_relationships_aabd57230a9737ef07421d749fd8a4632}{XLRelationships}} (const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_relationships}{XLRelationships}} \&other)=default
+\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_relationships_a4a3e8598f3b53529a22fcb83f9f7b164}{XLRelationships}} (\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_relationships}{XLRelationships}} \&\&other) noexcept=default
+\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_relationships}{XLRelationships}} \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_relationships_a8c6ae180a3eda3347666ce0b4893013c}{operator=}} (const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_relationships}{XLRelationships}} \&other)=default
+\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_relationships}{XLRelationships}} \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_relationships_afee05eeb2e7050535b497352f770611e}{operator=}} (\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_relationships}{XLRelationships}} \&\&other) noexcept=default
+\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_relationship_item}{XLRelationship\+Item}} \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_relationships_a2205d216f336d19b3fdbd604759dbaff}{relationship\+By\+Id}} (const std\+::string \&id) const
+\begin{DoxyCompactList}\small\item\em Look up a relationship item by ID. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_relationship_item}{XLRelationship\+Item}} \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_relationships_a40403e6ec846fe875f709de7ef92d7d6}{relationship\+By\+Target}} (const std\+::string \&target) const
+\begin{DoxyCompactList}\small\item\em Look up a relationship item by Target. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_relationship_item}{XLRelationship\+Item}} $>$ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_relationships_a63e4e0fb9101ee7819b8dbff1ad51800}{relationships}} () const
+\begin{DoxyCompactList}\small\item\em Get the std\+::map with the relationship items, ordered by ID. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_relationships_a48685b43bde00431b32f377b62bd172c}{delete\+Relationship}} (const std\+::string \&rel\+ID)
+\item 
+void \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_relationships_adb2b40f9a7a83b773a2443dc65eb64a0}{delete\+Relationship}} (const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_relationship_item}{XLRelationship\+Item}} \&item)
+\begin{DoxyCompactList}\small\item\em Delete an item from the Relationships register. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_relationship_item}{XLRelationship\+Item}} \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_relationships_a121ca79e54b305225f16e6611c7562cf}{add\+Relationship}} (XLRelationship\+Type type, const std\+::string \&target)
+\begin{DoxyCompactList}\small\item\em Add a new relationship item to the \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_relationships}{XLRelationships}} object. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_relationships_a9774dc18af8aed3f774ce655759ccb03}{target\+Exists}} (const std\+::string \&target) const
+\begin{DoxyCompactList}\small\item\em Check if a \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_relationship_item}{XLRelationship\+Item}} with the given Target string exists. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_relationships_a04e91f1ea69d4f52a3d050957e9b4dc7}{id\+Exists}} (const std\+::string \&id) const
+\begin{DoxyCompactList}\small\item\em Check if a \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_relationship_item}{XLRelationship\+Item}} with the given Id string exists. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file}{Open\+XLSX\+::\+XLXml\+File}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_xml_file_afcc880bcb4e01b9435eae827a9836ec0}\label{class_open_x_l_s_x_1_1_x_l_xml_file_afcc880bcb4e01b9435eae827a9836ec0}} 
+{\bfseries XLXml\+File} ()=default
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_a91ac3132eed637a60ca7ccd8d61d107a}{XLXml\+File}} (\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_data}{XLXml\+Data}} $\ast$\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_af4cf6f8310a055a6f18e99669f52d798}{xml\+Data}})
+\begin{DoxyCompactList}\small\item\em Constructor. Creates an object based on the xml\+Data input. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_ab412e98acd8baa5d99cc97e68365a192}{XLXml\+File}} (const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file}{XLXml\+File}} \&other)=default
+\begin{DoxyCompactList}\small\item\em Copy constructor. Default implementation used. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_a874e9e87bed7e6f4e4cd3696e28b7cff}{XLXml\+File}} (\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file}{XLXml\+File}} \&\&other) noexcept=default
+\begin{DoxyCompactList}\small\item\em Move constructor. Default implementation used. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_xml_file_aa92e245526f036fd154efc659e2f9006}\label{class_open_x_l_s_x_1_1_x_l_xml_file_aa92e245526f036fd154efc659e2f9006}} 
+{\bfseries $\sim$\+XLXml\+File} ()
+\begin{DoxyCompactList}\small\item\em Destructor. Default implementation used. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file}{XLXml\+File}} \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_a7ffb6dec2d9596b0982a6c41b2dbd66c}{operator=}} (const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file}{XLXml\+File}} \&other)=default
+\begin{DoxyCompactList}\small\item\em The copy assignment operator. The default implementation has been used. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file}{XLXml\+File}} \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_af53403da14a8b258a823a28fa20f24a0}{operator=}} (\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file}{XLXml\+File}} \&\&other) noexcept=default
+\begin{DoxyCompactList}\small\item\em The move assignment operator. The default implementation has been used. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+\doxysubsubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file}{Open\+XLSX\+::\+XLXml\+File}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_af4cf6f8310a055a6f18e99669f52d798}{xml\+Data}} () const
+\begin{DoxyCompactList}\small\item\em Method for getting the XML data represented by the object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_a669ce7b567aca54bbad3e50d611f9a05}{set\+Xml\+Data}} (const std\+::string \&\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_af4cf6f8310a055a6f18e99669f52d798}{xml\+Data}})
+\begin{DoxyCompactList}\small\item\em Provide the XML data represented by the object. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_a6738ed4c3a1c1add67c9295c236d80ef}{relationship\+ID}} () const
+\begin{DoxyCompactList}\small\item\em This function returns the relationship ID (the ID used in the \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_relationships}{XLRelationships}} objects) for the object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_document}{XLDocument}} \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_a60e6b90e550f43dac2743fdc90db152c}{parent\+Doc}} ()
+\begin{DoxyCompactList}\small\item\em This function provides access to the parent \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_document}{XLDocument}} object. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_document}{XLDocument}} \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_ab030effdc244fb88de1f2d69b64045cb}{parent\+Doc}} () const
+\begin{DoxyCompactList}\small\item\em This function provides access to the parent \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_document}{XLDocument}} object. \end{DoxyCompactList}\item 
+XMLDocument \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_a433ae1bd65af9262c7120f3774ecb8c3}{xml\+Document}} ()
+\begin{DoxyCompactList}\small\item\em This function provides access to the underlying XMLDocument object. \end{DoxyCompactList}\item 
+const XMLDocument \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_ae6450091d5ff53b5b2f35940af98a92f}{xml\+Document}} () const
+\begin{DoxyCompactList}\small\item\em This function provides access to the underlying XMLDocument object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file}{Open\+XLSX\+::\+XLXml\+File}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_data}{XLXml\+Data}} $\ast$ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_a56206b4f2903a83047d4c04cd683bfa4}{m\+\_\+xml\+Data}} \{ nullptr \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An encapsulation of relationship files (.rels files) in an Excel document package. Inheritance diagram for Open\+XLSX\+::XLRelationships\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_open_x_l_s_x_1_1_x_l_relationships}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_relationships_a0c8445315f931eb533e09aa572c9b6c4}\label{class_open_x_l_s_x_1_1_x_l_relationships_a0c8445315f931eb533e09aa572c9b6c4}} 
+\index{OpenXLSX::XLRelationships@{OpenXLSX::XLRelationships}!XLRelationships@{XLRelationships}}
+\index{XLRelationships@{XLRelationships}!OpenXLSX::XLRelationships@{OpenXLSX::XLRelationships}}
+\doxysubsubsection{\texorpdfstring{XLRelationships()}{XLRelationships()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Open\+XLSX\+::\+XLRelationships\+::\+XLRelationships (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_data}{XLXml\+Data}} $\ast$}]{xml\+Data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em xml\+Data} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_relationships_aabd57230a9737ef07421d749fd8a4632}\label{class_open_x_l_s_x_1_1_x_l_relationships_aabd57230a9737ef07421d749fd8a4632}} 
+\index{OpenXLSX::XLRelationships@{OpenXLSX::XLRelationships}!XLRelationships@{XLRelationships}}
+\index{XLRelationships@{XLRelationships}!OpenXLSX::XLRelationships@{OpenXLSX::XLRelationships}}
+\doxysubsubsection{\texorpdfstring{XLRelationships()}{XLRelationships()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Open\+XLSX\+::\+XLRelationships\+::\+XLRelationships (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_relationships}{XLRelationships}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_relationships_a4a3e8598f3b53529a22fcb83f9f7b164}\label{class_open_x_l_s_x_1_1_x_l_relationships_a4a3e8598f3b53529a22fcb83f9f7b164}} 
+\index{OpenXLSX::XLRelationships@{OpenXLSX::XLRelationships}!XLRelationships@{XLRelationships}}
+\index{XLRelationships@{XLRelationships}!OpenXLSX::XLRelationships@{OpenXLSX::XLRelationships}}
+\doxysubsubsection{\texorpdfstring{XLRelationships()}{XLRelationships()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Open\+XLSX\+::\+XLRelationships\+::\+XLRelationships (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_relationships}{XLRelationships}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_relationships_a121ca79e54b305225f16e6611c7562cf}\label{class_open_x_l_s_x_1_1_x_l_relationships_a121ca79e54b305225f16e6611c7562cf}} 
+\index{OpenXLSX::XLRelationships@{OpenXLSX::XLRelationships}!addRelationship@{addRelationship}}
+\index{addRelationship@{addRelationship}!OpenXLSX::XLRelationships@{OpenXLSX::XLRelationships}}
+\doxysubsubsection{\texorpdfstring{addRelationship()}{addRelationship()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_relationship_item}{XLRelationship\+Item}} Open\+XLSX\+::\+XLRelationships\+::add\+Relationship (\begin{DoxyParamCaption}\item[{XLRelationship\+Type}]{type,  }\item[{const std\+::string \&}]{target }\end{DoxyParamCaption})}
+
+
+
+Add a new relationship item to the \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_relationships}{XLRelationships}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & The type of the new relationship item. \\
+\hline
+{\em target} & The target (or path) of the XML file for the relationship item. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_relationships_a48685b43bde00431b32f377b62bd172c}\label{class_open_x_l_s_x_1_1_x_l_relationships_a48685b43bde00431b32f377b62bd172c}} 
+\index{OpenXLSX::XLRelationships@{OpenXLSX::XLRelationships}!deleteRelationship@{deleteRelationship}}
+\index{deleteRelationship@{deleteRelationship}!OpenXLSX::XLRelationships@{OpenXLSX::XLRelationships}}
+\doxysubsubsection{\texorpdfstring{deleteRelationship()}{deleteRelationship()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Open\+XLSX\+::\+XLRelationships\+::delete\+Relationship (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{rel\+ID }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em rel\+ID} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_relationships_adb2b40f9a7a83b773a2443dc65eb64a0}\label{class_open_x_l_s_x_1_1_x_l_relationships_adb2b40f9a7a83b773a2443dc65eb64a0}} 
+\index{OpenXLSX::XLRelationships@{OpenXLSX::XLRelationships}!deleteRelationship@{deleteRelationship}}
+\index{deleteRelationship@{deleteRelationship}!OpenXLSX::XLRelationships@{OpenXLSX::XLRelationships}}
+\doxysubsubsection{\texorpdfstring{deleteRelationship()}{deleteRelationship()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Open\+XLSX\+::\+XLRelationships\+::delete\+Relationship (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_relationship_item}{XLRelationship\+Item}} \&}]{item }\end{DoxyParamCaption})}
+
+
+
+Delete an item from the Relationships register. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em item} & The \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_relationship_item}{XLRelationship\+Item}} object to delete. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_relationships_a04e91f1ea69d4f52a3d050957e9b4dc7}\label{class_open_x_l_s_x_1_1_x_l_relationships_a04e91f1ea69d4f52a3d050957e9b4dc7}} 
+\index{OpenXLSX::XLRelationships@{OpenXLSX::XLRelationships}!idExists@{idExists}}
+\index{idExists@{idExists}!OpenXLSX::XLRelationships@{OpenXLSX::XLRelationships}}
+\doxysubsubsection{\texorpdfstring{idExists()}{idExists()}}
+{\footnotesize\ttfamily bool Open\+XLSX\+::\+XLRelationships\+::id\+Exists (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{id }\end{DoxyParamCaption}) const}
+
+
+
+Check if a \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_relationship_item}{XLRelationship\+Item}} with the given Id string exists. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The Id string to look up. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_relationship_item}{XLRelationship\+Item}} exists; otherwise false. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_relationships_a8c6ae180a3eda3347666ce0b4893013c}\label{class_open_x_l_s_x_1_1_x_l_relationships_a8c6ae180a3eda3347666ce0b4893013c}} 
+\index{OpenXLSX::XLRelationships@{OpenXLSX::XLRelationships}!operator=@{operator=}}
+\index{operator=@{operator=}!OpenXLSX::XLRelationships@{OpenXLSX::XLRelationships}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_relationships}{XLRelationships}} \& Open\+XLSX\+::\+XLRelationships\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_relationships}{XLRelationships}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_relationships_afee05eeb2e7050535b497352f770611e}\label{class_open_x_l_s_x_1_1_x_l_relationships_afee05eeb2e7050535b497352f770611e}} 
+\index{OpenXLSX::XLRelationships@{OpenXLSX::XLRelationships}!operator=@{operator=}}
+\index{operator=@{operator=}!OpenXLSX::XLRelationships@{OpenXLSX::XLRelationships}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_relationships}{XLRelationships}} \& Open\+XLSX\+::\+XLRelationships\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_relationships}{XLRelationships}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_relationships_a2205d216f336d19b3fdbd604759dbaff}\label{class_open_x_l_s_x_1_1_x_l_relationships_a2205d216f336d19b3fdbd604759dbaff}} 
+\index{OpenXLSX::XLRelationships@{OpenXLSX::XLRelationships}!relationshipById@{relationshipById}}
+\index{relationshipById@{relationshipById}!OpenXLSX::XLRelationships@{OpenXLSX::XLRelationships}}
+\doxysubsubsection{\texorpdfstring{relationshipById()}{relationshipById()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_relationship_item}{XLRelationship\+Item}} Open\+XLSX\+::\+XLRelationships\+::relationship\+By\+Id (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{id }\end{DoxyParamCaption}) const}
+
+
+
+Look up a relationship item by ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The ID string of the relationship item to retrieve. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_relationship_item}{XLRelationship\+Item}} object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_relationships_a40403e6ec846fe875f709de7ef92d7d6}\label{class_open_x_l_s_x_1_1_x_l_relationships_a40403e6ec846fe875f709de7ef92d7d6}} 
+\index{OpenXLSX::XLRelationships@{OpenXLSX::XLRelationships}!relationshipByTarget@{relationshipByTarget}}
+\index{relationshipByTarget@{relationshipByTarget}!OpenXLSX::XLRelationships@{OpenXLSX::XLRelationships}}
+\doxysubsubsection{\texorpdfstring{relationshipByTarget()}{relationshipByTarget()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_relationship_item}{XLRelationship\+Item}} Open\+XLSX\+::\+XLRelationships\+::relationship\+By\+Target (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{target }\end{DoxyParamCaption}) const}
+
+
+
+Look up a relationship item by Target. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & The Target string of the relationship item to retrieve. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_relationship_item}{XLRelationship\+Item}} object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_relationships_a63e4e0fb9101ee7819b8dbff1ad51800}\label{class_open_x_l_s_x_1_1_x_l_relationships_a63e4e0fb9101ee7819b8dbff1ad51800}} 
+\index{OpenXLSX::XLRelationships@{OpenXLSX::XLRelationships}!relationships@{relationships}}
+\index{relationships@{relationships}!OpenXLSX::XLRelationships@{OpenXLSX::XLRelationships}}
+\doxysubsubsection{\texorpdfstring{relationships()}{relationships()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_relationship_item}{XLRelationship\+Item}} $>$ Open\+XLSX\+::\+XLRelationships\+::relationships (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the std\+::map with the relationship items, ordered by ID. 
+
+\begin{DoxyReturn}{Returns}
+A const reference to the std\+::map with relationship items. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_relationships_a9774dc18af8aed3f774ce655759ccb03}\label{class_open_x_l_s_x_1_1_x_l_relationships_a9774dc18af8aed3f774ce655759ccb03}} 
+\index{OpenXLSX::XLRelationships@{OpenXLSX::XLRelationships}!targetExists@{targetExists}}
+\index{targetExists@{targetExists}!OpenXLSX::XLRelationships@{OpenXLSX::XLRelationships}}
+\doxysubsubsection{\texorpdfstring{targetExists()}{targetExists()}}
+{\footnotesize\ttfamily bool Open\+XLSX\+::\+XLRelationships\+::target\+Exists (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{target }\end{DoxyParamCaption}) const}
+
+
+
+Check if a \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_relationship_item}{XLRelationship\+Item}} with the given Target string exists. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & The Target string to look up. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_relationship_item}{XLRelationship\+Item}} exists; otherwise false. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Youth\+\_\+learning\+\_\+autoload/vendors/\+Open\+XLSX/\+Open\+XLSX/headers/XLRelationships.\+hpp\end{DoxyCompactItemize}

@@ -1,0 +1,331 @@
+\hypertarget{class_open_x_l_s_x_1_1_x_l_app_properties}{}\doxysection{Open\+XLSX\+::XLApp\+Properties Class Reference}
+\label{class_open_x_l_s_x_1_1_x_l_app_properties}\index{OpenXLSX::XLAppProperties@{OpenXLSX::XLAppProperties}}
+
+
+This class is a specialization of the XLAbstract\+XMLFile, with the purpose of the representing the document app properties in the app.\+xml file (doc\+Props folder) in the .xlsx package.  
+
+
+
+
+{\ttfamily \#include $<$XLProperties.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_app_properties_aaaa75db59c2f6322e064e9baad4966ba}{XLApp\+Properties}} (\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_data}{XLXml\+Data}} $\ast$\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_af4cf6f8310a055a6f18e99669f52d798}{xml\+Data}})
+\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_app_properties_a169c5100fa78abbcc2cd4cdad769924f}{XLApp\+Properties}} (const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_app_properties}{XLApp\+Properties}} \&other)=default
+\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_app_properties_af05110234fac763b8c648abb3821e178}{XLApp\+Properties}} (\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_app_properties}{XLApp\+Properties}} \&\&other) noexcept=default
+\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_app_properties}{XLApp\+Properties}} \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_app_properties_a4633b07a1be5bd2bd09fcf61cadde6d8}{operator=}} (const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_app_properties}{XLApp\+Properties}} \&other)=default
+\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_app_properties}{XLApp\+Properties}} \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_app_properties_a03688d4a16bc299882850b71d63b6f64}{operator=}} (\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_app_properties}{XLApp\+Properties}} \&\&other) noexcept=default
+\item 
+void \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_app_properties_af25462c9d8542a13d1cc1d295aacadc3}{add\+Sheet\+Name}} (const std\+::string \&title)
+\item 
+void \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_app_properties_aeb5e602816242c2f01bf4cdacf28bbea}{delete\+Sheet\+Name}} (const std\+::string \&title)
+\item 
+void \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_app_properties_a15fa62b6c181903d52fb354787caf413}{set\+Sheet\+Name}} (const std\+::string \&old\+Title, const std\+::string \&new\+Title)
+\item 
+void \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_app_properties_a94da7d2842cd8856dc26e850bfe0d188}{add\+Heading\+Pair}} (const std\+::string \&name, int value)
+\item 
+void \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_app_properties_a23021c8d5e8e76d35304a0751c4dde36}{delete\+Heading\+Pair}} (const std\+::string \&name)
+\item 
+void \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_app_properties_a02f1aac3baacbfae201bce9f6b616c7c}{set\+Heading\+Pair}} (const std\+::string \&name, int new\+Value)
+\item 
+void \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_app_properties_a8efb0c0f9a9e4d4abfd7bd8fb120d896}{set\+Property}} (const std\+::string \&name, const std\+::string \&value)
+\item 
+std\+::string \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_app_properties_a40058808e491e927de0e4ccf2606f5e2}{property}} (const std\+::string \&name) const
+\item 
+void \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_app_properties_ad16da99cbeea379e1ad09f4ee28cb180}{delete\+Property}} (const std\+::string \&name)
+\item 
+void \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_app_properties_af44e47a67a01c834a5f4459fe39cbef8}{append\+Sheet\+Name}} (const std\+::string \&sheet\+Name)
+\item 
+void \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_app_properties_a23d9aa22dddc39f4fa581e113324155c}{prepend\+Sheet\+Name}} (const std\+::string \&sheet\+Name)
+\item 
+void \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_app_properties_ad110874a9cdb49cdf2359677221e06c1}{insert\+Sheet\+Name}} (const std\+::string \&sheet\+Name, unsigned int index)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file}{Open\+XLSX\+::\+XLXml\+File}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_xml_file_afcc880bcb4e01b9435eae827a9836ec0}\label{class_open_x_l_s_x_1_1_x_l_xml_file_afcc880bcb4e01b9435eae827a9836ec0}} 
+{\bfseries XLXml\+File} ()=default
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_a91ac3132eed637a60ca7ccd8d61d107a}{XLXml\+File}} (\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_data}{XLXml\+Data}} $\ast$\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_af4cf6f8310a055a6f18e99669f52d798}{xml\+Data}})
+\begin{DoxyCompactList}\small\item\em Constructor. Creates an object based on the xml\+Data input. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_ab412e98acd8baa5d99cc97e68365a192}{XLXml\+File}} (const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file}{XLXml\+File}} \&other)=default
+\begin{DoxyCompactList}\small\item\em Copy constructor. Default implementation used. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_a874e9e87bed7e6f4e4cd3696e28b7cff}{XLXml\+File}} (\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file}{XLXml\+File}} \&\&other) noexcept=default
+\begin{DoxyCompactList}\small\item\em Move constructor. Default implementation used. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_xml_file_aa92e245526f036fd154efc659e2f9006}\label{class_open_x_l_s_x_1_1_x_l_xml_file_aa92e245526f036fd154efc659e2f9006}} 
+{\bfseries $\sim$\+XLXml\+File} ()
+\begin{DoxyCompactList}\small\item\em Destructor. Default implementation used. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file}{XLXml\+File}} \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_a7ffb6dec2d9596b0982a6c41b2dbd66c}{operator=}} (const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file}{XLXml\+File}} \&other)=default
+\begin{DoxyCompactList}\small\item\em The copy assignment operator. The default implementation has been used. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file}{XLXml\+File}} \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_af53403da14a8b258a823a28fa20f24a0}{operator=}} (\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file}{XLXml\+File}} \&\&other) noexcept=default
+\begin{DoxyCompactList}\small\item\em The move assignment operator. The default implementation has been used. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+\doxysubsubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file}{Open\+XLSX\+::\+XLXml\+File}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_af4cf6f8310a055a6f18e99669f52d798}{xml\+Data}} () const
+\begin{DoxyCompactList}\small\item\em Method for getting the XML data represented by the object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_a669ce7b567aca54bbad3e50d611f9a05}{set\+Xml\+Data}} (const std\+::string \&\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_af4cf6f8310a055a6f18e99669f52d798}{xml\+Data}})
+\begin{DoxyCompactList}\small\item\em Provide the XML data represented by the object. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_a6738ed4c3a1c1add67c9295c236d80ef}{relationship\+ID}} () const
+\begin{DoxyCompactList}\small\item\em This function returns the relationship ID (the ID used in the \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_relationships}{XLRelationships}} objects) for the object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_document}{XLDocument}} \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_a60e6b90e550f43dac2743fdc90db152c}{parent\+Doc}} ()
+\begin{DoxyCompactList}\small\item\em This function provides access to the parent \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_document}{XLDocument}} object. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_document}{XLDocument}} \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_ab030effdc244fb88de1f2d69b64045cb}{parent\+Doc}} () const
+\begin{DoxyCompactList}\small\item\em This function provides access to the parent \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_document}{XLDocument}} object. \end{DoxyCompactList}\item 
+XMLDocument \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_a433ae1bd65af9262c7120f3774ecb8c3}{xml\+Document}} ()
+\begin{DoxyCompactList}\small\item\em This function provides access to the underlying XMLDocument object. \end{DoxyCompactList}\item 
+const XMLDocument \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_ae6450091d5ff53b5b2f35940af98a92f}{xml\+Document}} () const
+\begin{DoxyCompactList}\small\item\em This function provides access to the underlying XMLDocument object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file}{Open\+XLSX\+::\+XLXml\+File}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_data}{XLXml\+Data}} $\ast$ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_a56206b4f2903a83047d4c04cd683bfa4}{m\+\_\+xml\+Data}} \{ nullptr \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class is a specialization of the XLAbstract\+XMLFile, with the purpose of the representing the document app properties in the app.\+xml file (doc\+Props folder) in the .xlsx package. Inheritance diagram for Open\+XLSX\+::XLApp\+Properties\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_open_x_l_s_x_1_1_x_l_app_properties}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_app_properties_aaaa75db59c2f6322e064e9baad4966ba}\label{class_open_x_l_s_x_1_1_x_l_app_properties_aaaa75db59c2f6322e064e9baad4966ba}} 
+\index{OpenXLSX::XLAppProperties@{OpenXLSX::XLAppProperties}!XLAppProperties@{XLAppProperties}}
+\index{XLAppProperties@{XLAppProperties}!OpenXLSX::XLAppProperties@{OpenXLSX::XLAppProperties}}
+\doxysubsubsection{\texorpdfstring{XLAppProperties()}{XLAppProperties()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Open\+XLSX\+::\+XLApp\+Properties\+::\+XLApp\+Properties (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_data}{XLXml\+Data}} $\ast$}]{xml\+Data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em xml\+Data} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_app_properties_a169c5100fa78abbcc2cd4cdad769924f}\label{class_open_x_l_s_x_1_1_x_l_app_properties_a169c5100fa78abbcc2cd4cdad769924f}} 
+\index{OpenXLSX::XLAppProperties@{OpenXLSX::XLAppProperties}!XLAppProperties@{XLAppProperties}}
+\index{XLAppProperties@{XLAppProperties}!OpenXLSX::XLAppProperties@{OpenXLSX::XLAppProperties}}
+\doxysubsubsection{\texorpdfstring{XLAppProperties()}{XLAppProperties()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Open\+XLSX\+::\+XLApp\+Properties\+::\+XLApp\+Properties (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_app_properties}{XLApp\+Properties}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_app_properties_af05110234fac763b8c648abb3821e178}\label{class_open_x_l_s_x_1_1_x_l_app_properties_af05110234fac763b8c648abb3821e178}} 
+\index{OpenXLSX::XLAppProperties@{OpenXLSX::XLAppProperties}!XLAppProperties@{XLAppProperties}}
+\index{XLAppProperties@{XLAppProperties}!OpenXLSX::XLAppProperties@{OpenXLSX::XLAppProperties}}
+\doxysubsubsection{\texorpdfstring{XLAppProperties()}{XLAppProperties()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Open\+XLSX\+::\+XLApp\+Properties\+::\+XLApp\+Properties (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_app_properties}{XLApp\+Properties}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_app_properties_a94da7d2842cd8856dc26e850bfe0d188}\label{class_open_x_l_s_x_1_1_x_l_app_properties_a94da7d2842cd8856dc26e850bfe0d188}} 
+\index{OpenXLSX::XLAppProperties@{OpenXLSX::XLAppProperties}!addHeadingPair@{addHeadingPair}}
+\index{addHeadingPair@{addHeadingPair}!OpenXLSX::XLAppProperties@{OpenXLSX::XLAppProperties}}
+\doxysubsubsection{\texorpdfstring{addHeadingPair()}{addHeadingPair()}}
+{\footnotesize\ttfamily void Open\+XLSX\+::\+XLApp\+Properties\+::add\+Heading\+Pair (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{int}]{value }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \\
+\hline
+{\em value} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_app_properties_af25462c9d8542a13d1cc1d295aacadc3}\label{class_open_x_l_s_x_1_1_x_l_app_properties_af25462c9d8542a13d1cc1d295aacadc3}} 
+\index{OpenXLSX::XLAppProperties@{OpenXLSX::XLAppProperties}!addSheetName@{addSheetName}}
+\index{addSheetName@{addSheetName}!OpenXLSX::XLAppProperties@{OpenXLSX::XLAppProperties}}
+\doxysubsubsection{\texorpdfstring{addSheetName()}{addSheetName()}}
+{\footnotesize\ttfamily void Open\+XLSX\+::\+XLApp\+Properties\+::add\+Sheet\+Name (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{title }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em title} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_app_properties_af44e47a67a01c834a5f4459fe39cbef8}\label{class_open_x_l_s_x_1_1_x_l_app_properties_af44e47a67a01c834a5f4459fe39cbef8}} 
+\index{OpenXLSX::XLAppProperties@{OpenXLSX::XLAppProperties}!appendSheetName@{appendSheetName}}
+\index{appendSheetName@{appendSheetName}!OpenXLSX::XLAppProperties@{OpenXLSX::XLAppProperties}}
+\doxysubsubsection{\texorpdfstring{appendSheetName()}{appendSheetName()}}
+{\footnotesize\ttfamily void Open\+XLSX\+::\+XLApp\+Properties\+::append\+Sheet\+Name (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{sheet\+Name }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em sheet\+Name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_app_properties_a23021c8d5e8e76d35304a0751c4dde36}\label{class_open_x_l_s_x_1_1_x_l_app_properties_a23021c8d5e8e76d35304a0751c4dde36}} 
+\index{OpenXLSX::XLAppProperties@{OpenXLSX::XLAppProperties}!deleteHeadingPair@{deleteHeadingPair}}
+\index{deleteHeadingPair@{deleteHeadingPair}!OpenXLSX::XLAppProperties@{OpenXLSX::XLAppProperties}}
+\doxysubsubsection{\texorpdfstring{deleteHeadingPair()}{deleteHeadingPair()}}
+{\footnotesize\ttfamily void Open\+XLSX\+::\+XLApp\+Properties\+::delete\+Heading\+Pair (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_app_properties_ad16da99cbeea379e1ad09f4ee28cb180}\label{class_open_x_l_s_x_1_1_x_l_app_properties_ad16da99cbeea379e1ad09f4ee28cb180}} 
+\index{OpenXLSX::XLAppProperties@{OpenXLSX::XLAppProperties}!deleteProperty@{deleteProperty}}
+\index{deleteProperty@{deleteProperty}!OpenXLSX::XLAppProperties@{OpenXLSX::XLAppProperties}}
+\doxysubsubsection{\texorpdfstring{deleteProperty()}{deleteProperty()}}
+{\footnotesize\ttfamily void Open\+XLSX\+::\+XLApp\+Properties\+::delete\+Property (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_app_properties_aeb5e602816242c2f01bf4cdacf28bbea}\label{class_open_x_l_s_x_1_1_x_l_app_properties_aeb5e602816242c2f01bf4cdacf28bbea}} 
+\index{OpenXLSX::XLAppProperties@{OpenXLSX::XLAppProperties}!deleteSheetName@{deleteSheetName}}
+\index{deleteSheetName@{deleteSheetName}!OpenXLSX::XLAppProperties@{OpenXLSX::XLAppProperties}}
+\doxysubsubsection{\texorpdfstring{deleteSheetName()}{deleteSheetName()}}
+{\footnotesize\ttfamily void Open\+XLSX\+::\+XLApp\+Properties\+::delete\+Sheet\+Name (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{title }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em title} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_app_properties_ad110874a9cdb49cdf2359677221e06c1}\label{class_open_x_l_s_x_1_1_x_l_app_properties_ad110874a9cdb49cdf2359677221e06c1}} 
+\index{OpenXLSX::XLAppProperties@{OpenXLSX::XLAppProperties}!insertSheetName@{insertSheetName}}
+\index{insertSheetName@{insertSheetName}!OpenXLSX::XLAppProperties@{OpenXLSX::XLAppProperties}}
+\doxysubsubsection{\texorpdfstring{insertSheetName()}{insertSheetName()}}
+{\footnotesize\ttfamily void Open\+XLSX\+::\+XLApp\+Properties\+::insert\+Sheet\+Name (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{sheet\+Name,  }\item[{unsigned int}]{index }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em sheet\+Name} & \\
+\hline
+{\em index} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_app_properties_a4633b07a1be5bd2bd09fcf61cadde6d8}\label{class_open_x_l_s_x_1_1_x_l_app_properties_a4633b07a1be5bd2bd09fcf61cadde6d8}} 
+\index{OpenXLSX::XLAppProperties@{OpenXLSX::XLAppProperties}!operator=@{operator=}}
+\index{operator=@{operator=}!OpenXLSX::XLAppProperties@{OpenXLSX::XLAppProperties}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_app_properties}{XLApp\+Properties}} \& Open\+XLSX\+::\+XLApp\+Properties\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_app_properties}{XLApp\+Properties}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_app_properties_a03688d4a16bc299882850b71d63b6f64}\label{class_open_x_l_s_x_1_1_x_l_app_properties_a03688d4a16bc299882850b71d63b6f64}} 
+\index{OpenXLSX::XLAppProperties@{OpenXLSX::XLAppProperties}!operator=@{operator=}}
+\index{operator=@{operator=}!OpenXLSX::XLAppProperties@{OpenXLSX::XLAppProperties}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_app_properties}{XLApp\+Properties}} \& Open\+XLSX\+::\+XLApp\+Properties\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_app_properties}{XLApp\+Properties}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_app_properties_a23d9aa22dddc39f4fa581e113324155c}\label{class_open_x_l_s_x_1_1_x_l_app_properties_a23d9aa22dddc39f4fa581e113324155c}} 
+\index{OpenXLSX::XLAppProperties@{OpenXLSX::XLAppProperties}!prependSheetName@{prependSheetName}}
+\index{prependSheetName@{prependSheetName}!OpenXLSX::XLAppProperties@{OpenXLSX::XLAppProperties}}
+\doxysubsubsection{\texorpdfstring{prependSheetName()}{prependSheetName()}}
+{\footnotesize\ttfamily void Open\+XLSX\+::\+XLApp\+Properties\+::prepend\+Sheet\+Name (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{sheet\+Name }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em sheet\+Name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_app_properties_a40058808e491e927de0e4ccf2606f5e2}\label{class_open_x_l_s_x_1_1_x_l_app_properties_a40058808e491e927de0e4ccf2606f5e2}} 
+\index{OpenXLSX::XLAppProperties@{OpenXLSX::XLAppProperties}!property@{property}}
+\index{property@{property}!OpenXLSX::XLAppProperties@{OpenXLSX::XLAppProperties}}
+\doxysubsubsection{\texorpdfstring{property()}{property()}}
+{\footnotesize\ttfamily std\+::string Open\+XLSX\+::\+XLApp\+Properties\+::property (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption}) const}
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_app_properties_a02f1aac3baacbfae201bce9f6b616c7c}\label{class_open_x_l_s_x_1_1_x_l_app_properties_a02f1aac3baacbfae201bce9f6b616c7c}} 
+\index{OpenXLSX::XLAppProperties@{OpenXLSX::XLAppProperties}!setHeadingPair@{setHeadingPair}}
+\index{setHeadingPair@{setHeadingPair}!OpenXLSX::XLAppProperties@{OpenXLSX::XLAppProperties}}
+\doxysubsubsection{\texorpdfstring{setHeadingPair()}{setHeadingPair()}}
+{\footnotesize\ttfamily void Open\+XLSX\+::\+XLApp\+Properties\+::set\+Heading\+Pair (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{int}]{new\+Value }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \\
+\hline
+{\em new\+Value} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_app_properties_a8efb0c0f9a9e4d4abfd7bd8fb120d896}\label{class_open_x_l_s_x_1_1_x_l_app_properties_a8efb0c0f9a9e4d4abfd7bd8fb120d896}} 
+\index{OpenXLSX::XLAppProperties@{OpenXLSX::XLAppProperties}!setProperty@{setProperty}}
+\index{setProperty@{setProperty}!OpenXLSX::XLAppProperties@{OpenXLSX::XLAppProperties}}
+\doxysubsubsection{\texorpdfstring{setProperty()}{setProperty()}}
+{\footnotesize\ttfamily void Open\+XLSX\+::\+XLApp\+Properties\+::set\+Property (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{const std\+::string \&}]{value }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \\
+\hline
+{\em value} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_app_properties_a15fa62b6c181903d52fb354787caf413}\label{class_open_x_l_s_x_1_1_x_l_app_properties_a15fa62b6c181903d52fb354787caf413}} 
+\index{OpenXLSX::XLAppProperties@{OpenXLSX::XLAppProperties}!setSheetName@{setSheetName}}
+\index{setSheetName@{setSheetName}!OpenXLSX::XLAppProperties@{OpenXLSX::XLAppProperties}}
+\doxysubsubsection{\texorpdfstring{setSheetName()}{setSheetName()}}
+{\footnotesize\ttfamily void Open\+XLSX\+::\+XLApp\+Properties\+::set\+Sheet\+Name (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{old\+Title,  }\item[{const std\+::string \&}]{new\+Title }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em old\+Title} & \\
+\hline
+{\em new\+Title} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Youth\+\_\+learning\+\_\+autoload/vendors/\+Open\+XLSX/\+Open\+XLSX/headers/XLProperties.\+hpp\end{DoxyCompactItemize}

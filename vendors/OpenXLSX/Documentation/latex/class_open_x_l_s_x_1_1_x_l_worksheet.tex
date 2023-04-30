@@ -1,0 +1,454 @@
+\hypertarget{class_open_x_l_s_x_1_1_x_l_worksheet}{}\doxysection{Open\+XLSX\+::XLWorksheet Class Reference}
+\label{class_open_x_l_s_x_1_1_x_l_worksheet}\index{OpenXLSX::XLWorksheet@{OpenXLSX::XLWorksheet}}
+
+
+A class encapsulating an Excel worksheet. Access to \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_worksheet}{XLWorksheet}} objects should be via the workbook object.  
+
+
+
+
+{\ttfamily \#include $<$XLSheet.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_worksheet_afffedfceca2a11bfb8c861bf4a8c5465}\label{class_open_x_l_s_x_1_1_x_l_worksheet_afffedfceca2a11bfb8c861bf4a8c5465}} 
+{\bfseries XLWorksheet} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_worksheet_ad7061f0e3d14b020b6e3a2f3dca44ce4}{XLWorksheet}} (\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_data}{XLXml\+Data}} $\ast$\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_af4cf6f8310a055a6f18e99669f52d798}{xml\+Data}})
+\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_worksheet_a28277dbd1b085a48eb8839047fe149e6}{XLWorksheet}} (const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_worksheet}{XLWorksheet}} \&other)=default
+\begin{DoxyCompactList}\small\item\em Copy Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_worksheet_a19aefdab88eb41b701ee24cf0b2e5f56}{XLWorksheet}} (\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_worksheet}{XLWorksheet}} \&\&other)=default
+\begin{DoxyCompactList}\small\item\em Move Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_worksheet_aec40985b7c280e5d41eb149c06364cec}\label{class_open_x_l_s_x_1_1_x_l_worksheet_aec40985b7c280e5d41eb149c06364cec}} 
+{\bfseries $\sim$\+XLWorksheet} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_worksheet}{XLWorksheet}} \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_worksheet_a4e3c0433981b275da663decd4d38020d}{operator=}} (const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_worksheet}{XLWorksheet}} \&other)=default
+\begin{DoxyCompactList}\small\item\em Copy assignment operator. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_worksheet}{XLWorksheet}} \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_worksheet_aebce630ef3c709e5bd53c068e59efbc9}{operator=}} (\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_worksheet}{XLWorksheet}} \&\&other)=default
+\begin{DoxyCompactList}\small\item\em Move assignment operator. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell}{XLCell}} \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_worksheet_ac0e7727e6ff715f7dd5859abf9c66ea5}{cell}} (const std\+::string \&ref) const
+\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell}{XLCell}} \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_worksheet_a07c69f38a8e3d1ea6c6b1b1ed0ba2b73}{cell}} (const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}} \&ref) const
+\begin{DoxyCompactList}\small\item\em Get a pointer to the \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell}{XLCell}} object for the given cell reference. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell}{XLCell}} \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_worksheet_af075b27b61125213675ac5ea3a37562b}{cell}} (uint32\+\_\+t row\+Number, uint16\+\_\+t column\+Number) const
+\begin{DoxyCompactList}\small\item\em Get the cell at the given coordinates. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_range}{XLCell\+Range}} \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_worksheet_a58bf1e48f0da6b3b13d169e237c0bfe1}{range}} () const
+\begin{DoxyCompactList}\small\item\em Get a range for the area currently in use (i.\+e. from cell A1 to the last cell being in use). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_range}{XLCell\+Range}} \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_worksheet_a0aa13199a20e405ccf7f199abf60ecf7}{range}} (const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}} \&top\+Left, const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}} \&bottom\+Right) const
+\begin{DoxyCompactList}\small\item\em Get a range with the given coordinates. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_range}{XLRow\+Range}} \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_worksheet_a601b444ea4d4e8151a0f79468d4a45fe}{rows}} () const
+\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_range}{XLRow\+Range}} \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_worksheet_ad32f36bb484b860e828d80d60d6dccdf}{rows}} (uint32\+\_\+t \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_worksheet_a51559b9ded3f6686bb82e42948543432}{row\+Count}}) const
+\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_range}{XLRow\+Range}} \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_worksheet_aa4e7327ac9b0e3752ca2557f0bf4bd0f}{rows}} (uint32\+\_\+t first\+Row, uint32\+\_\+t last\+Row) const
+\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row}{XLRow}} \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_worksheet_ad751b529b9c40c4fbc32343d806cfe19}{row}} (uint32\+\_\+t row\+Number) const
+\begin{DoxyCompactList}\small\item\em Get the row with the given row number. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_column}{XLColumn}} \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_worksheet_a24201cfb8d9992c8291805888ca07605}{column}} (uint16\+\_\+t column\+Number) const
+\begin{DoxyCompactList}\small\item\em Get the column with the given column number. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}} \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_worksheet_aab9e138441ed9d47b0fb3c602e17403b}{last\+Cell}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Get an \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}} to the last (bottom right) cell in the worksheet. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_worksheet_ada863f4a19bc2d53ca3ff6935c697948}{column\+Count}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Get the number of columns in the worksheet. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_worksheet_a51559b9ded3f6686bb82e42948543432}{row\+Count}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Get the number of rows in the worksheet. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_worksheet_af53dbc693c534f12bf3a8545a5261e3a}{update\+Sheet\+Name}} (const std\+::string \&old\+Name, const std\+::string \&new\+Name)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_base}{Open\+XLSX\+::\+XLSheet\+Base$<$ XLWorksheet $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_sheet_base_a7deb4458fff350479da804df7fa29c2f}\label{class_open_x_l_s_x_1_1_x_l_sheet_base_a7deb4458fff350479da804df7fa29c2f}} 
+{\bfseries XLSheet\+Base} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_base_a3acc5c179aee9d8179a3a45de8b8155f}{XLSheet\+Base}} (\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_data}{XLXml\+Data}} $\ast$xml\+Data)
+\begin{DoxyCompactList}\small\item\em The constructor. There are no default constructor, so all parameters must be provided for constructing an XLAbstract\+Sheet object. Since this is a pure abstract class, instantiation is only possible via one of the derived classes. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_base_ad489828f38de753c59939728c68ebb21}{XLSheet\+Base}} (const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_base}{XLSheet\+Base}} \&other)=default
+\begin{DoxyCompactList}\small\item\em The copy constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_base_a31bcb873533f97ad000f06d0c5133985}{XLSheet\+Base}} (\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_base}{XLSheet\+Base}} \&\&other) noexcept=default
+\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_base_ad53ea288984eb41411a7c88cf92c3e02}{$\sim$\+XLSheet\+Base}} ()=default
+\begin{DoxyCompactList}\small\item\em The destructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_base}{XLSheet\+Base}} \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_base_ae4c1b573bd1dc720a316d9a80edeec19}{operator=}} (const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_base}{XLSheet\+Base}} \&)=default
+\begin{DoxyCompactList}\small\item\em Assignment operator. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_base}{XLSheet\+Base}} \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_base_a89ca28f3dbd587f3642b79ed9173d93b}{operator=}} (\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_base}{XLSheet\+Base}} \&\&other) noexcept=default
+\item 
+XLSheet\+State \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_base_a5c3ec4e466a6678d4f4982145e664e07}{visibility}} () const
+\item 
+void \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_base_aba1a3b40465a5dce20e66d83aec70b6a}{set\+Visibility}} (XLSheet\+State state)
+\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_color}{XLColor}} \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_base_a1907f6dd2917ceb13525e05ebab0e0ad}{color}} () const
+\item 
+void \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_base_a5a2fbd3bcd56b727a7401c495ef2975a}{set\+Color}} (const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_color}{XLColor}} \&color)
+\item 
+uint16\+\_\+t \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_base_a43578973b5ca43264bde8f323dac3ce0}{index}} () const
+\item 
+void \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_base_afaff05b523d433b07ea5214523df50b1}{set\+Index}} (uint16\+\_\+t index)
+\item 
+std\+::string \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_base_ae0594428ffc9fec5ec84f9c5748a3aa8}{name}} () const
+\begin{DoxyCompactList}\small\item\em Method to retrieve the name of the sheet. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_base_a4b3ad16558bea3d278013653ffa4bff2}{set\+Name}} (const std\+::string \&sheet\+Name)
+\begin{DoxyCompactList}\small\item\em Method for renaming the sheet. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_base_a6374ff663fffd5dcbf8fa469c15a5327}{is\+Selected}} () const
+\item 
+void \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_base_a91b121a27bea18afd3aca5e1d86e530d}{set\+Selected}} (bool selected)
+\item 
+bool \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_base_a16bcf516d736ffe6f1eab2b3161de5b5}{is\+Active}} () const
+\item 
+void \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_base_a0322612c597cf20cce108507ae2dc88d}{set\+Active}} ()
+\item 
+void \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_base_a9337694b47659cf390a1a941ab63357e}{clone}} (const std\+::string \&new\+Name)
+\begin{DoxyCompactList}\small\item\em Method for cloning the sheet. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file}{Open\+XLSX\+::\+XLXml\+File}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_xml_file_afcc880bcb4e01b9435eae827a9836ec0}\label{class_open_x_l_s_x_1_1_x_l_xml_file_afcc880bcb4e01b9435eae827a9836ec0}} 
+{\bfseries XLXml\+File} ()=default
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_a91ac3132eed637a60ca7ccd8d61d107a}{XLXml\+File}} (\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_data}{XLXml\+Data}} $\ast$\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_af4cf6f8310a055a6f18e99669f52d798}{xml\+Data}})
+\begin{DoxyCompactList}\small\item\em Constructor. Creates an object based on the xml\+Data input. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_ab412e98acd8baa5d99cc97e68365a192}{XLXml\+File}} (const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file}{XLXml\+File}} \&other)=default
+\begin{DoxyCompactList}\small\item\em Copy constructor. Default implementation used. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_a874e9e87bed7e6f4e4cd3696e28b7cff}{XLXml\+File}} (\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file}{XLXml\+File}} \&\&other) noexcept=default
+\begin{DoxyCompactList}\small\item\em Move constructor. Default implementation used. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_xml_file_aa92e245526f036fd154efc659e2f9006}\label{class_open_x_l_s_x_1_1_x_l_xml_file_aa92e245526f036fd154efc659e2f9006}} 
+{\bfseries $\sim$\+XLXml\+File} ()
+\begin{DoxyCompactList}\small\item\em Destructor. Default implementation used. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file}{XLXml\+File}} \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_a7ffb6dec2d9596b0982a6c41b2dbd66c}{operator=}} (const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file}{XLXml\+File}} \&other)=default
+\begin{DoxyCompactList}\small\item\em The copy assignment operator. The default implementation has been used. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file}{XLXml\+File}} \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_af53403da14a8b258a823a28fa20f24a0}{operator=}} (\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file}{XLXml\+File}} \&\&other) noexcept=default
+\begin{DoxyCompactList}\small\item\em The move assignment operator. The default implementation has been used. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_worksheet_abf7a395af4a94b0e5bfb77d8ec4ea7d9}\label{class_open_x_l_s_x_1_1_x_l_worksheet_abf7a395af4a94b0e5bfb77d8ec4ea7d9}} 
+class {\bfseries XLCell}
+\item 
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_worksheet_aec6b49fdf8efc40f364c2eab4a3d9148}\label{class_open_x_l_s_x_1_1_x_l_worksheet_aec6b49fdf8efc40f364c2eab4a3d9148}} 
+class {\bfseries XLRow}
+\item 
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_worksheet_a876f419815954b4c6f2e841a87a597cc}\label{class_open_x_l_s_x_1_1_x_l_worksheet_a876f419815954b4c6f2e841a87a597cc}} 
+class {\bfseries XLWorkbook}
+\item 
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_worksheet_a0a3f48d14f6c783800e5a31f037e7f28}\label{class_open_x_l_s_x_1_1_x_l_worksheet_a0a3f48d14f6c783800e5a31f037e7f28}} 
+class {\bfseries XLSheet\+Base$<$ XLWorksheet $>$}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+\doxysubsubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file}{Open\+XLSX\+::\+XLXml\+File}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_af4cf6f8310a055a6f18e99669f52d798}{xml\+Data}} () const
+\begin{DoxyCompactList}\small\item\em Method for getting the XML data represented by the object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_a669ce7b567aca54bbad3e50d611f9a05}{set\+Xml\+Data}} (const std\+::string \&\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_af4cf6f8310a055a6f18e99669f52d798}{xml\+Data}})
+\begin{DoxyCompactList}\small\item\em Provide the XML data represented by the object. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_a6738ed4c3a1c1add67c9295c236d80ef}{relationship\+ID}} () const
+\begin{DoxyCompactList}\small\item\em This function returns the relationship ID (the ID used in the \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_relationships}{XLRelationships}} objects) for the object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_document}{XLDocument}} \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_a60e6b90e550f43dac2743fdc90db152c}{parent\+Doc}} ()
+\begin{DoxyCompactList}\small\item\em This function provides access to the parent \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_document}{XLDocument}} object. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_document}{XLDocument}} \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_ab030effdc244fb88de1f2d69b64045cb}{parent\+Doc}} () const
+\begin{DoxyCompactList}\small\item\em This function provides access to the parent \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_document}{XLDocument}} object. \end{DoxyCompactList}\item 
+XMLDocument \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_a433ae1bd65af9262c7120f3774ecb8c3}{xml\+Document}} ()
+\begin{DoxyCompactList}\small\item\em This function provides access to the underlying XMLDocument object. \end{DoxyCompactList}\item 
+const XMLDocument \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_ae6450091d5ff53b5b2f35940af98a92f}{xml\+Document}} () const
+\begin{DoxyCompactList}\small\item\em This function provides access to the underlying XMLDocument object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file}{Open\+XLSX\+::\+XLXml\+File}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_data}{XLXml\+Data}} $\ast$ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file_a56206b4f2903a83047d4c04cd683bfa4}{m\+\_\+xml\+Data}} \{ nullptr \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class encapsulating an Excel worksheet. Access to \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_worksheet}{XLWorksheet}} objects should be via the workbook object. Inheritance diagram for Open\+XLSX\+::XLWorksheet\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_open_x_l_s_x_1_1_x_l_worksheet}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_worksheet_ad7061f0e3d14b020b6e3a2f3dca44ce4}\label{class_open_x_l_s_x_1_1_x_l_worksheet_ad7061f0e3d14b020b6e3a2f3dca44ce4}} 
+\index{OpenXLSX::XLWorksheet@{OpenXLSX::XLWorksheet}!XLWorksheet@{XLWorksheet}}
+\index{XLWorksheet@{XLWorksheet}!OpenXLSX::XLWorksheet@{OpenXLSX::XLWorksheet}}
+\doxysubsubsection{\texorpdfstring{XLWorksheet()}{XLWorksheet()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Open\+XLSX\+::\+XLWorksheet\+::\+XLWorksheet (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_data}{XLXml\+Data}} $\ast$}]{xml\+Data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em xml\+Data} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_worksheet_a28277dbd1b085a48eb8839047fe149e6}\label{class_open_x_l_s_x_1_1_x_l_worksheet_a28277dbd1b085a48eb8839047fe149e6}} 
+\index{OpenXLSX::XLWorksheet@{OpenXLSX::XLWorksheet}!XLWorksheet@{XLWorksheet}}
+\index{XLWorksheet@{XLWorksheet}!OpenXLSX::XLWorksheet@{OpenXLSX::XLWorksheet}}
+\doxysubsubsection{\texorpdfstring{XLWorksheet()}{XLWorksheet()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Open\+XLSX\+::\+XLWorksheet\+::\+XLWorksheet (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_worksheet}{XLWorksheet}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Copy Constructor. 
+
+\begin{DoxyNote}{Note}
+The copy constructor has been explicitly deleted. 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_worksheet_a19aefdab88eb41b701ee24cf0b2e5f56}\label{class_open_x_l_s_x_1_1_x_l_worksheet_a19aefdab88eb41b701ee24cf0b2e5f56}} 
+\index{OpenXLSX::XLWorksheet@{OpenXLSX::XLWorksheet}!XLWorksheet@{XLWorksheet}}
+\index{XLWorksheet@{XLWorksheet}!OpenXLSX::XLWorksheet@{OpenXLSX::XLWorksheet}}
+\doxysubsubsection{\texorpdfstring{XLWorksheet()}{XLWorksheet()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Open\+XLSX\+::\+XLWorksheet\+::\+XLWorksheet (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_worksheet}{XLWorksheet}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Move Constructor. 
+
+\begin{DoxyNote}{Note}
+The move constructor has been explicitly deleted. 
+\end{DoxyNote}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_worksheet_ac0e7727e6ff715f7dd5859abf9c66ea5}\label{class_open_x_l_s_x_1_1_x_l_worksheet_ac0e7727e6ff715f7dd5859abf9c66ea5}} 
+\index{OpenXLSX::XLWorksheet@{OpenXLSX::XLWorksheet}!cell@{cell}}
+\index{cell@{cell}!OpenXLSX::XLWorksheet@{OpenXLSX::XLWorksheet}}
+\doxysubsubsection{\texorpdfstring{cell()}{cell()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell}{XLCell}} Open\+XLSX\+::\+XLWorksheet\+::cell (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{ref }\end{DoxyParamCaption}) const}
+
+
+\begin{DoxyParams}{Parameters}
+{\em ref} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_worksheet_a07c69f38a8e3d1ea6c6b1b1ed0ba2b73}\label{class_open_x_l_s_x_1_1_x_l_worksheet_a07c69f38a8e3d1ea6c6b1b1ed0ba2b73}} 
+\index{OpenXLSX::XLWorksheet@{OpenXLSX::XLWorksheet}!cell@{cell}}
+\index{cell@{cell}!OpenXLSX::XLWorksheet@{OpenXLSX::XLWorksheet}}
+\doxysubsubsection{\texorpdfstring{cell()}{cell()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell}{XLCell}} Open\+XLSX\+::\+XLWorksheet\+::cell (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}} \&}]{ref }\end{DoxyParamCaption}) const}
+
+
+
+Get a pointer to the \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell}{XLCell}} object for the given cell reference. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ref} & An \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}} object with the address of the cell to get. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A const reference to the requested \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell}{XLCell}} object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_worksheet_af075b27b61125213675ac5ea3a37562b}\label{class_open_x_l_s_x_1_1_x_l_worksheet_af075b27b61125213675ac5ea3a37562b}} 
+\index{OpenXLSX::XLWorksheet@{OpenXLSX::XLWorksheet}!cell@{cell}}
+\index{cell@{cell}!OpenXLSX::XLWorksheet@{OpenXLSX::XLWorksheet}}
+\doxysubsubsection{\texorpdfstring{cell()}{cell()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell}{XLCell}} Open\+XLSX\+::\+XLWorksheet\+::cell (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{row\+Number,  }\item[{uint16\+\_\+t}]{column\+Number }\end{DoxyParamCaption}) const}
+
+
+
+Get the cell at the given coordinates. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em row\+Number} & The row number (index base 1). \\
+\hline
+{\em column\+Number} & The column number (index base 1). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reference to the \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell}{XLCell}} object at the given coordinates. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_worksheet_a24201cfb8d9992c8291805888ca07605}\label{class_open_x_l_s_x_1_1_x_l_worksheet_a24201cfb8d9992c8291805888ca07605}} 
+\index{OpenXLSX::XLWorksheet@{OpenXLSX::XLWorksheet}!column@{column}}
+\index{column@{column}!OpenXLSX::XLWorksheet@{OpenXLSX::XLWorksheet}}
+\doxysubsubsection{\texorpdfstring{column()}{column()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_column}{XLColumn}} Open\+XLSX\+::\+XLWorksheet\+::column (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{column\+Number }\end{DoxyParamCaption}) const}
+
+
+
+Get the column with the given column number. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em column\+Number} & The number of the column to retrieve. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_column}{XLColumn}} object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_worksheet_ada863f4a19bc2d53ca3ff6935c697948}\label{class_open_x_l_s_x_1_1_x_l_worksheet_ada863f4a19bc2d53ca3ff6935c697948}} 
+\index{OpenXLSX::XLWorksheet@{OpenXLSX::XLWorksheet}!columnCount@{columnCount}}
+\index{columnCount@{columnCount}!OpenXLSX::XLWorksheet@{OpenXLSX::XLWorksheet}}
+\doxysubsubsection{\texorpdfstring{columnCount()}{columnCount()}}
+{\footnotesize\ttfamily uint16\+\_\+t Open\+XLSX\+::\+XLWorksheet\+::column\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Get the number of columns in the worksheet. 
+
+\begin{DoxyReturn}{Returns}
+The number of columns. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_worksheet_aab9e138441ed9d47b0fb3c602e17403b}\label{class_open_x_l_s_x_1_1_x_l_worksheet_aab9e138441ed9d47b0fb3c602e17403b}} 
+\index{OpenXLSX::XLWorksheet@{OpenXLSX::XLWorksheet}!lastCell@{lastCell}}
+\index{lastCell@{lastCell}!OpenXLSX::XLWorksheet@{OpenXLSX::XLWorksheet}}
+\doxysubsubsection{\texorpdfstring{lastCell()}{lastCell()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}} Open\+XLSX\+::\+XLWorksheet\+::last\+Cell (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Get an \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}} to the last (bottom right) cell in the worksheet. 
+
+\begin{DoxyReturn}{Returns}
+An \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}} for the last cell. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_worksheet_a4e3c0433981b275da663decd4d38020d}\label{class_open_x_l_s_x_1_1_x_l_worksheet_a4e3c0433981b275da663decd4d38020d}} 
+\index{OpenXLSX::XLWorksheet@{OpenXLSX::XLWorksheet}!operator=@{operator=}}
+\index{operator=@{operator=}!OpenXLSX::XLWorksheet@{OpenXLSX::XLWorksheet}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_worksheet}{XLWorksheet}} \& Open\+XLSX\+::\+XLWorksheet\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_worksheet}{XLWorksheet}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Copy assignment operator. 
+
+\begin{DoxyNote}{Note}
+The copy assignment operator has been explicitly deleted. 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_worksheet_aebce630ef3c709e5bd53c068e59efbc9}\label{class_open_x_l_s_x_1_1_x_l_worksheet_aebce630ef3c709e5bd53c068e59efbc9}} 
+\index{OpenXLSX::XLWorksheet@{OpenXLSX::XLWorksheet}!operator=@{operator=}}
+\index{operator=@{operator=}!OpenXLSX::XLWorksheet@{OpenXLSX::XLWorksheet}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_worksheet}{XLWorksheet}} \& Open\+XLSX\+::\+XLWorksheet\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_worksheet}{XLWorksheet}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Move assignment operator. 
+
+\begin{DoxyNote}{Note}
+The move assignment operator has been explicitly deleted. 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_worksheet_a58bf1e48f0da6b3b13d169e237c0bfe1}\label{class_open_x_l_s_x_1_1_x_l_worksheet_a58bf1e48f0da6b3b13d169e237c0bfe1}} 
+\index{OpenXLSX::XLWorksheet@{OpenXLSX::XLWorksheet}!range@{range}}
+\index{range@{range}!OpenXLSX::XLWorksheet@{OpenXLSX::XLWorksheet}}
+\doxysubsubsection{\texorpdfstring{range()}{range()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_range}{XLCell\+Range}} Open\+XLSX\+::\+XLWorksheet\+::range (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get a range for the area currently in use (i.\+e. from cell A1 to the last cell being in use). 
+
+\begin{DoxyReturn}{Returns}
+A const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_range}{XLCell\+Range}} object with the entire range. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_worksheet_a0aa13199a20e405ccf7f199abf60ecf7}\label{class_open_x_l_s_x_1_1_x_l_worksheet_a0aa13199a20e405ccf7f199abf60ecf7}} 
+\index{OpenXLSX::XLWorksheet@{OpenXLSX::XLWorksheet}!range@{range}}
+\index{range@{range}!OpenXLSX::XLWorksheet@{OpenXLSX::XLWorksheet}}
+\doxysubsubsection{\texorpdfstring{range()}{range()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_range}{XLCell\+Range}} Open\+XLSX\+::\+XLWorksheet\+::range (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}} \&}]{top\+Left,  }\item[{const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}} \&}]{bottom\+Right }\end{DoxyParamCaption}) const}
+
+
+
+Get a range with the given coordinates. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em top\+Left} & An \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}} object with the coordinates to the top left cell. \\
+\hline
+{\em bottom\+Right} & An \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}} object with the coordinates to the bottom right cell. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_range}{XLCell\+Range}} object with the requested range. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_worksheet_ad751b529b9c40c4fbc32343d806cfe19}\label{class_open_x_l_s_x_1_1_x_l_worksheet_ad751b529b9c40c4fbc32343d806cfe19}} 
+\index{OpenXLSX::XLWorksheet@{OpenXLSX::XLWorksheet}!row@{row}}
+\index{row@{row}!OpenXLSX::XLWorksheet@{OpenXLSX::XLWorksheet}}
+\doxysubsubsection{\texorpdfstring{row()}{row()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row}{XLRow}} Open\+XLSX\+::\+XLWorksheet\+::row (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{row\+Number }\end{DoxyParamCaption}) const}
+
+
+
+Get the row with the given row number. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em row\+Number} & The number of the row to retrieve. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row}{XLRow}} object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_worksheet_a51559b9ded3f6686bb82e42948543432}\label{class_open_x_l_s_x_1_1_x_l_worksheet_a51559b9ded3f6686bb82e42948543432}} 
+\index{OpenXLSX::XLWorksheet@{OpenXLSX::XLWorksheet}!rowCount@{rowCount}}
+\index{rowCount@{rowCount}!OpenXLSX::XLWorksheet@{OpenXLSX::XLWorksheet}}
+\doxysubsubsection{\texorpdfstring{rowCount()}{rowCount()}}
+{\footnotesize\ttfamily uint32\+\_\+t Open\+XLSX\+::\+XLWorksheet\+::row\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Get the number of rows in the worksheet. 
+
+\begin{DoxyReturn}{Returns}
+The number of rows. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_worksheet_a601b444ea4d4e8151a0f79468d4a45fe}\label{class_open_x_l_s_x_1_1_x_l_worksheet_a601b444ea4d4e8151a0f79468d4a45fe}} 
+\index{OpenXLSX::XLWorksheet@{OpenXLSX::XLWorksheet}!rows@{rows}}
+\index{rows@{rows}!OpenXLSX::XLWorksheet@{OpenXLSX::XLWorksheet}}
+\doxysubsubsection{\texorpdfstring{rows()}{rows()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_range}{XLRow\+Range}} Open\+XLSX\+::\+XLWorksheet\+::rows (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_worksheet_aa4e7327ac9b0e3752ca2557f0bf4bd0f}\label{class_open_x_l_s_x_1_1_x_l_worksheet_aa4e7327ac9b0e3752ca2557f0bf4bd0f}} 
+\index{OpenXLSX::XLWorksheet@{OpenXLSX::XLWorksheet}!rows@{rows}}
+\index{rows@{rows}!OpenXLSX::XLWorksheet@{OpenXLSX::XLWorksheet}}
+\doxysubsubsection{\texorpdfstring{rows()}{rows()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_range}{XLRow\+Range}} Open\+XLSX\+::\+XLWorksheet\+::rows (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{first\+Row,  }\item[{uint32\+\_\+t}]{last\+Row }\end{DoxyParamCaption}) const}
+
+
+\begin{DoxyParams}{Parameters}
+{\em first\+Row} & \\
+\hline
+{\em last\+Row} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_worksheet_ad32f36bb484b860e828d80d60d6dccdf}\label{class_open_x_l_s_x_1_1_x_l_worksheet_ad32f36bb484b860e828d80d60d6dccdf}} 
+\index{OpenXLSX::XLWorksheet@{OpenXLSX::XLWorksheet}!rows@{rows}}
+\index{rows@{rows}!OpenXLSX::XLWorksheet@{OpenXLSX::XLWorksheet}}
+\doxysubsubsection{\texorpdfstring{rows()}{rows()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_range}{XLRow\+Range}} Open\+XLSX\+::\+XLWorksheet\+::rows (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{row\+Count }\end{DoxyParamCaption}) const}
+
+
+\begin{DoxyParams}{Parameters}
+{\em row\+Count} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_worksheet_af53dbc693c534f12bf3a8545a5261e3a}\label{class_open_x_l_s_x_1_1_x_l_worksheet_af53dbc693c534f12bf3a8545a5261e3a}} 
+\index{OpenXLSX::XLWorksheet@{OpenXLSX::XLWorksheet}!updateSheetName@{updateSheetName}}
+\index{updateSheetName@{updateSheetName}!OpenXLSX::XLWorksheet@{OpenXLSX::XLWorksheet}}
+\doxysubsubsection{\texorpdfstring{updateSheetName()}{updateSheetName()}}
+{\footnotesize\ttfamily void Open\+XLSX\+::\+XLWorksheet\+::update\+Sheet\+Name (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{old\+Name,  }\item[{const std\+::string \&}]{new\+Name }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em old\+Name} & \\
+\hline
+{\em new\+Name} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Youth\+\_\+learning\+\_\+autoload/vendors/\+Open\+XLSX/\+Open\+XLSX/headers/XLSheet.\+hpp\end{DoxyCompactItemize}

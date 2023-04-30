@@ -1,0 +1,214 @@
+\hypertarget{class_open_x_l_s_x_1_1_x_l_cell_range}{}\doxysection{Open\+XLSX\+::XLCell\+Range Class Reference}
+\label{class_open_x_l_s_x_1_1_x_l_cell_range}\index{OpenXLSX::XLCellRange@{OpenXLSX::XLCellRange}}
+
+
+This class encapsulates the concept of a cell range, i.\+e. a square area (or subset) of cells in a spreadsheet.  
+
+
+
+
+{\ttfamily \#include $<$XLCell\+Range.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_range_a034959234c9efce3ac4fc27baafb1867}{XLCell\+Range}} (const XMLNode \&data\+Node, const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}} \&top\+Left, const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}} \&bottom\+Right, const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_shared_strings}{XLShared\+Strings}} \&shared\+Strings)
+\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_range_a04268b710385d18a4272c7e6890ea385}{XLCell\+Range}} (const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_range}{XLCell\+Range}} \&other)
+\begin{DoxyCompactList}\small\item\em Copy constructor \mbox{[}default\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_range_aacd78716f379b6a86d945b05ca8b04f9}{XLCell\+Range}} (\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_range}{XLCell\+Range}} \&\&other) noexcept
+\begin{DoxyCompactList}\small\item\em Move constructor \mbox{[}default\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_range_a5ede3ff7f051a36474e4e7ab1e1d4717}{$\sim$\+XLCell\+Range}} ()
+\begin{DoxyCompactList}\small\item\em Destructor \mbox{[}default\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_range}{XLCell\+Range}} \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_range_a4e07e9169baf23b099b5600089f7aa6f}{operator=}} (const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_range}{XLCell\+Range}} \&other)
+\begin{DoxyCompactList}\small\item\em The copy assignment operator \mbox{[}default\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_range}{XLCell\+Range}} \& \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_range_ae0bc4b721a0d083b146c84f34abe5c1f}{operator=}} (\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_range}{XLCell\+Range}} \&\&other) noexcept
+\begin{DoxyCompactList}\small\item\em The move assignment operator \mbox{[}default\mbox{]}. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_range_a5b30321eb41fb2b1ea28bf3f21355b28}{num\+Rows}} () const
+\begin{DoxyCompactList}\small\item\em Get the number of rows in the range. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_range_ae42ea402fad09dbe5c59bc0905056132}{num\+Columns}} () const
+\begin{DoxyCompactList}\small\item\em Get the number of columns in the range. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_iterator}{XLCell\+Iterator}} \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_range_af243d1a6779e79ee10372fc81da29933}{begin}} () const
+\item 
+\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_iterator}{XLCell\+Iterator}} \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_range_ad64c7a40612dd91c7120d04ac0a62c44}{end}} () const
+\item 
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_cell_range_a597895d3206a2078b0e0bfb6af041d7d}\label{class_open_x_l_s_x_1_1_x_l_cell_range_a597895d3206a2078b0e0bfb6af041d7d}} 
+void {\bfseries clear} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_cell_range_aeb4927f60c87be1316fcd0c9d1af2bb9}\label{class_open_x_l_s_x_1_1_x_l_cell_range_aeb4927f60c87be1316fcd0c9d1af2bb9}} 
+class {\bfseries XLCell\+Iterator}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class encapsulates the concept of a cell range, i.\+e. a square area (or subset) of cells in a spreadsheet. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_cell_range_a034959234c9efce3ac4fc27baafb1867}\label{class_open_x_l_s_x_1_1_x_l_cell_range_a034959234c9efce3ac4fc27baafb1867}} 
+\index{OpenXLSX::XLCellRange@{OpenXLSX::XLCellRange}!XLCellRange@{XLCellRange}}
+\index{XLCellRange@{XLCellRange}!OpenXLSX::XLCellRange@{OpenXLSX::XLCellRange}}
+\doxysubsubsection{\texorpdfstring{XLCellRange()}{XLCellRange()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Open\+XLSX\+::\+XLCell\+Range\+::\+XLCell\+Range (\begin{DoxyParamCaption}\item[{const XMLNode \&}]{data\+Node,  }\item[{const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}} \&}]{top\+Left,  }\item[{const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCell\+Reference}} \&}]{bottom\+Right,  }\item[{const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_shared_strings}{XLShared\+Strings}} \&}]{shared\+Strings }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em data\+Node} & \\
+\hline
+{\em top\+Left} & \\
+\hline
+{\em bottom\+Right} & \\
+\hline
+{\em shared\+Strings} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_cell_range_a04268b710385d18a4272c7e6890ea385}\label{class_open_x_l_s_x_1_1_x_l_cell_range_a04268b710385d18a4272c7e6890ea385}} 
+\index{OpenXLSX::XLCellRange@{OpenXLSX::XLCellRange}!XLCellRange@{XLCellRange}}
+\index{XLCellRange@{XLCellRange}!OpenXLSX::XLCellRange@{OpenXLSX::XLCellRange}}
+\doxysubsubsection{\texorpdfstring{XLCellRange()}{XLCellRange()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Open\+XLSX\+::\+XLCell\+Range\+::\+XLCell\+Range (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_range}{XLCell\+Range}} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Copy constructor \mbox{[}default\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The range object to be copied. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+This implements the default copy constructor, i.\+e. memberwise copying. 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_cell_range_aacd78716f379b6a86d945b05ca8b04f9}\label{class_open_x_l_s_x_1_1_x_l_cell_range_aacd78716f379b6a86d945b05ca8b04f9}} 
+\index{OpenXLSX::XLCellRange@{OpenXLSX::XLCellRange}!XLCellRange@{XLCellRange}}
+\index{XLCellRange@{XLCellRange}!OpenXLSX::XLCellRange@{OpenXLSX::XLCellRange}}
+\doxysubsubsection{\texorpdfstring{XLCellRange()}{XLCellRange()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Open\+XLSX\+::\+XLCell\+Range\+::\+XLCell\+Range (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_range}{XLCell\+Range}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Move constructor \mbox{[}default\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The range object to be moved. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+This implements the default move constructor, i.\+e. memberwise move. 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_cell_range_a5ede3ff7f051a36474e4e7ab1e1d4717}\label{class_open_x_l_s_x_1_1_x_l_cell_range_a5ede3ff7f051a36474e4e7ab1e1d4717}} 
+\index{OpenXLSX::XLCellRange@{OpenXLSX::XLCellRange}!````~XLCellRange@{$\sim$XLCellRange}}
+\index{````~XLCellRange@{$\sim$XLCellRange}!OpenXLSX::XLCellRange@{OpenXLSX::XLCellRange}}
+\doxysubsubsection{\texorpdfstring{$\sim$XLCellRange()}{~XLCellRange()}}
+{\footnotesize\ttfamily Open\+XLSX\+::\+XLCell\+Range\+::$\sim$\+XLCell\+Range (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor \mbox{[}default\mbox{]}. 
+
+\begin{DoxyNote}{Note}
+This implements the default destructor. 
+\end{DoxyNote}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_cell_range_af243d1a6779e79ee10372fc81da29933}\label{class_open_x_l_s_x_1_1_x_l_cell_range_af243d1a6779e79ee10372fc81da29933}} 
+\index{OpenXLSX::XLCellRange@{OpenXLSX::XLCellRange}!begin@{begin}}
+\index{begin@{begin}!OpenXLSX::XLCellRange@{OpenXLSX::XLCellRange}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_iterator}{XLCell\+Iterator}} Open\+XLSX\+::\+XLCell\+Range\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_cell_range_ad64c7a40612dd91c7120d04ac0a62c44}\label{class_open_x_l_s_x_1_1_x_l_cell_range_ad64c7a40612dd91c7120d04ac0a62c44}} 
+\index{OpenXLSX::XLCellRange@{OpenXLSX::XLCellRange}!end@{end}}
+\index{end@{end}!OpenXLSX::XLCellRange@{OpenXLSX::XLCellRange}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_iterator}{XLCell\+Iterator}} Open\+XLSX\+::\+XLCell\+Range\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_cell_range_ae42ea402fad09dbe5c59bc0905056132}\label{class_open_x_l_s_x_1_1_x_l_cell_range_ae42ea402fad09dbe5c59bc0905056132}} 
+\index{OpenXLSX::XLCellRange@{OpenXLSX::XLCellRange}!numColumns@{numColumns}}
+\index{numColumns@{numColumns}!OpenXLSX::XLCellRange@{OpenXLSX::XLCellRange}}
+\doxysubsubsection{\texorpdfstring{numColumns()}{numColumns()}}
+{\footnotesize\ttfamily uint16\+\_\+t Open\+XLSX\+::\+XLCell\+Range\+::num\+Columns (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the number of columns in the range. 
+
+\begin{DoxyReturn}{Returns}
+The number of columns. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_cell_range_a5b30321eb41fb2b1ea28bf3f21355b28}\label{class_open_x_l_s_x_1_1_x_l_cell_range_a5b30321eb41fb2b1ea28bf3f21355b28}} 
+\index{OpenXLSX::XLCellRange@{OpenXLSX::XLCellRange}!numRows@{numRows}}
+\index{numRows@{numRows}!OpenXLSX::XLCellRange@{OpenXLSX::XLCellRange}}
+\doxysubsubsection{\texorpdfstring{numRows()}{numRows()}}
+{\footnotesize\ttfamily uint32\+\_\+t Open\+XLSX\+::\+XLCell\+Range\+::num\+Rows (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the number of rows in the range. 
+
+\begin{DoxyReturn}{Returns}
+The number of rows. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_cell_range_a4e07e9169baf23b099b5600089f7aa6f}\label{class_open_x_l_s_x_1_1_x_l_cell_range_a4e07e9169baf23b099b5600089f7aa6f}} 
+\index{OpenXLSX::XLCellRange@{OpenXLSX::XLCellRange}!operator=@{operator=}}
+\index{operator=@{operator=}!OpenXLSX::XLCellRange@{OpenXLSX::XLCellRange}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_range}{XLCell\+Range}} \& Open\+XLSX\+::\+XLCell\+Range\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_range}{XLCell\+Range}} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+The copy assignment operator \mbox{[}default\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The range object to be copied and assigned. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reference to the new object. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em A} & std\+::range\+\_\+error if the source range and destination range are of different size and shape. \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyNote}{Note}
+This implements the default copy assignment operator. 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_open_x_l_s_x_1_1_x_l_cell_range_ae0bc4b721a0d083b146c84f34abe5c1f}\label{class_open_x_l_s_x_1_1_x_l_cell_range_ae0bc4b721a0d083b146c84f34abe5c1f}} 
+\index{OpenXLSX::XLCellRange@{OpenXLSX::XLCellRange}!operator=@{operator=}}
+\index{operator=@{operator=}!OpenXLSX::XLCellRange@{OpenXLSX::XLCellRange}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_range}{XLCell\+Range}} \& Open\+XLSX\+::\+XLCell\+Range\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_range}{XLCell\+Range}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+The move assignment operator \mbox{[}default\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The range object to be moved and assigned. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reference to the new object. 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+This implements the default move assignment operator. 
+\end{DoxyNote}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Youth\+\_\+learning\+\_\+autoload/vendors/\+Open\+XLSX/\+Open\+XLSX/headers/XLCell\+Range.\+hpp\end{DoxyCompactItemize}

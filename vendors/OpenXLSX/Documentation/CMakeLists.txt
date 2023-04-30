@@ -8,9 +8,10 @@ project(OpenXLSX.Documentation)
 # Set up Doxygen API documentation
 #=======================================================================================================================
 # check if Doxygen is installed
+
 find_package(Doxygen)
 if (DOXYGEN_FOUND)
-    # set input and output files
+    # set input and output filesd
     set(DOXYGEN_IN ${CMAKE_CURRENT_LIST_DIR}/Doxyfile.in)
     set(DOXYGEN_OUT ${CMAKE_CURRENT_BINARY_DIR}/Doxyfile)
     set(DOXYGEN_SOURCE ${CMAKE_CURRENT_LIST_DIR}/../OpenXLSX/headers)

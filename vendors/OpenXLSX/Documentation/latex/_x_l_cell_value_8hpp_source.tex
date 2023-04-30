@@ -1,0 +1,467 @@
+\hypertarget{_x_l_cell_value_8hpp_source}{}\doxysection{XLCell\+Value.\+hpp}
+\label{_x_l_cell_value_8hpp_source}\index{D:/Youth\_learning\_autoload/vendors/OpenXLSX/OpenXLSX/headers/XLCellValue.hpp@{D:/Youth\_learning\_autoload/vendors/OpenXLSX/OpenXLSX/headers/XLCellValue.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ \ \ \_\_\_\_\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_\_\_\ \ \ \ \ \ \_\_\_\ \_\_\_\_\ \ \ \ \ \ \ \_\_\_\_\ \ \_\_\_\_\ \ \ \ \ \ \_\_\_}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ \ 6MMMMb\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ `MM(\ \ \ \ \ \ )M'\ `MM'\ \ \ \ \ \ 6MMMMb\(\backslash\)`MM(\ \ \ \ \ \ )M'}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ 8P\ \ \ \ Y8\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ `MM.\ \ \ \ \ d'\ \ \ MM\ \ \ \ \ \ 6M'\ \ \ \ `\ `MM.\ \ \ \ \ d'}}
+\DoxyCodeLine{00006\ \textcolor{comment}{6M\ \ \ \ \ \ Mb\ \_\_\ \_\_\_\_\ \ \ \ \ \_\_\_\_\ \ \_\_\_\ \ \_\_\ \ \ \ `MM.\ \ \ d'\ \ \ \ MM\ \ \ \ \ \ MM\ \ \ \ \ \ \ \ `MM.\ \ \ d'}}
+\DoxyCodeLine{00007\ \textcolor{comment}{MM\ \ \ \ \ \ MM\ `M6MMMMb\ \ \ 6MMMMb\ `MM\ 6MMb\ \ \ \ `MM.\ d'\ \ \ \ \ MM\ \ \ \ \ \ YM.\ \ \ \ \ \ \ \ `MM.\ d'}}
+\DoxyCodeLine{00008\ \textcolor{comment}{MM\ \ \ \ \ \ MM\ \ MM'\ \ `Mb\ 6M'\ \ `Mb\ MMM9\ `Mb\ \ \ \ `MMd\ \ \ \ \ \ \ MM\ \ \ \ \ \ \ YMMMMb\ \ \ \ \ `MMd}}
+\DoxyCodeLine{00009\ \textcolor{comment}{MM\ \ \ \ \ \ MM\ \ MM\ \ \ \ MM\ MM\ \ \ \ MM\ MM'\ \ \ MM\ \ \ \ \ dMM.\ \ \ \ \ \ MM\ \ \ \ \ \ \ \ \ \ \ `Mb\ \ \ \ \ dMM.}}
+\DoxyCodeLine{00010\ \textcolor{comment}{MM\ \ \ \ \ \ MM\ \ MM\ \ \ \ MM\ MMMMMMMM\ MM\ \ \ \ MM\ \ \ \ d'`MM.\ \ \ \ \ MM\ \ \ \ \ \ \ \ \ \ \ \ MM\ \ \ \ d'`MM.}}
+\DoxyCodeLine{00011\ \textcolor{comment}{YM\ \ \ \ \ \ M9\ \ MM\ \ \ \ MM\ MM\ \ \ \ \ \ \ MM\ \ \ \ MM\ \ \ d'\ \ `MM.\ \ \ \ MM\ \ \ \ \ \ \ \ \ \ \ \ MM\ \ \ d'\ \ `MM.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{\ 8b\ \ \ \ d8\ \ \ MM.\ \ ,M9\ YM\ \ \ \ d9\ MM\ \ \ \ MM\ \ d'\ \ \ \ `MM.\ \ \ MM\ \ \ \ /\ L\ \ \ \ ,M9\ \ d'\ \ \ \ `MM.}}
+\DoxyCodeLine{00013\ \textcolor{comment}{\ \ YMMMM9\ \ \ \ MMYMMM9\ \ \ YMMMM9\ \_MM\_\ \ \_MM\_M(\_\ \ \ \ \_)MM\_\ \_MMMMMMM\ MYMMMM9\ \_M(\_\ \ \ \ \_)MM\_}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ MM}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ MM}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \_MM\_}}
+\DoxyCodeLine{00017\ \textcolor{comment}{}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\ \ Copyright\ (c)\ 2018,\ Kenneth\ Troldal\ Balslev}}
+\DoxyCodeLine{00019\ \textcolor{comment}{}}
+\DoxyCodeLine{00020\ \textcolor{comment}{\ \ All\ rights\ reserved.}}
+\DoxyCodeLine{00021\ \textcolor{comment}{}}
+\DoxyCodeLine{00022\ \textcolor{comment}{\ \ Redistribution\ and\ use\ in\ source\ and\ binary\ forms,\ with\ or\ without}}
+\DoxyCodeLine{00023\ \textcolor{comment}{\ \ modification,\ are\ permitted\ provided\ that\ the\ following\ conditions\ are\ met:}}
+\DoxyCodeLine{00024\ \textcolor{comment}{\ \ -\/\ Redistributions\ of\ source\ code\ must\ retain\ the\ above\ copyright}}
+\DoxyCodeLine{00025\ \textcolor{comment}{\ \ \ \ notice,\ this\ list\ of\ conditions\ and\ the\ following\ disclaimer.}}
+\DoxyCodeLine{00026\ \textcolor{comment}{\ \ -\/\ Redistributions\ in\ binary\ form\ must\ reproduce\ the\ above\ copyright}}
+\DoxyCodeLine{00027\ \textcolor{comment}{\ \ \ \ notice,\ this\ list\ of\ conditions\ and\ the\ following\ disclaimer\ in\ the}}
+\DoxyCodeLine{00028\ \textcolor{comment}{\ \ \ \ documentation\ and/or\ other\ materials\ provided\ with\ the\ distribution.}}
+\DoxyCodeLine{00029\ \textcolor{comment}{\ \ -\/\ Neither\ the\ name\ of\ the\ author\ nor\ the}}
+\DoxyCodeLine{00030\ \textcolor{comment}{\ \ \ \ names\ of\ any\ contributors\ may\ be\ used\ to\ endorse\ or\ promote\ products}}
+\DoxyCodeLine{00031\ \textcolor{comment}{\ \ \ \ derived\ from\ this\ software\ without\ specific\ prior\ written\ permission.}}
+\DoxyCodeLine{00032\ \textcolor{comment}{}}
+\DoxyCodeLine{00033\ \textcolor{comment}{\ \ THIS\ SOFTWARE\ IS\ PROVIDED\ BY\ THE\ COPYRIGHT\ HOLDERS\ AND\ CONTRIBUTORS\ "{}AS\ IS"{}\ AND}}
+\DoxyCodeLine{00034\ \textcolor{comment}{\ \ ANY\ EXPRESS\ OR\ IMPLIED\ WARRANTIES,\ INCLUDING,\ BUT\ NOT\ LIMITED\ TO,\ THE\ IMPLIED}}
+\DoxyCodeLine{00035\ \textcolor{comment}{\ \ WARRANTIES\ OF\ MERCHANTABILITY\ AND\ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE\ ARE}}
+\DoxyCodeLine{00036\ \textcolor{comment}{\ \ DISCLAIMED.\ IN\ NO\ EVENT\ SHALL\ THE\ AUTHOR\ BE\ LIABLE\ FOR\ ANY}}
+\DoxyCodeLine{00037\ \textcolor{comment}{\ \ DIRECT,\ INDIRECT,\ INCIDENTAL,\ SPECIAL,\ EXEMPLARY,\ OR\ CONSEQUENTIAL\ DAMAGES}}
+\DoxyCodeLine{00038\ \textcolor{comment}{\ \ (INCLUDING,\ BUT\ NOT\ LIMITED\ TO,\ PROCUREMENT\ OF\ SUBSTITUTE\ GOODS\ OR\ SERVICES;}}
+\DoxyCodeLine{00039\ \textcolor{comment}{\ \ LOSS\ OF\ USE,\ DATA,\ OR\ PROFITS;\ OR\ BUSINESS\ INTERRUPTION)\ HOWEVER\ CAUSED\ AND}}
+\DoxyCodeLine{00040\ \textcolor{comment}{\ \ ON\ ANY\ THEORY\ OF\ LIABILITY,\ WHETHER\ IN\ CONTRACT,\ STRICT\ LIABILITY,\ OR\ TORT}}
+\DoxyCodeLine{00041\ \textcolor{comment}{\ \ (INCLUDING\ NEGLIGENCE\ OR\ OTHERWISE)\ ARISING\ IN\ ANY\ WAY\ OUT\ OF\ THE\ USE\ OF\ THIS}}
+\DoxyCodeLine{00042\ \textcolor{comment}{\ \ SOFTWARE,\ EVEN\ IF\ ADVISED\ OF\ THE\ POSSIBILITY\ OF\ SUCH\ DAMAGE.}}
+\DoxyCodeLine{00043\ \textcolor{comment}{}}
+\DoxyCodeLine{00044\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \textcolor{preprocessor}{\#ifndef\ OPENXLSX\_XLCELLVALUE\_HPP}}
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\#define\ OPENXLSX\_XLCELLVALUE\_HPP}}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#pragma\ warning(push)}}
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#pragma\ warning(disable\ :\ 4251)}}
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\#pragma\ warning(disable\ :\ 4275)}}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \textcolor{comment}{//\ =====\ External\ Includes\ =====\ //}}
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#include\ <cmath>}}
+\DoxyCodeLine{00055\ \textcolor{preprocessor}{\#include\ <cstdint>}}
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00057\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#include\ <variant>}}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \textcolor{comment}{//\ =====\ OpenXLSX\ Includes\ =====\ //}}
+\DoxyCodeLine{00061\ \textcolor{preprocessor}{\#include\ "{}OpenXLSX-\/Exports.hpp"{}}}
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\#include\ "{}XLDateTime.hpp"{}}}
+\DoxyCodeLine{00063\ \textcolor{preprocessor}{\#include\ "{}XLException.hpp"{}}}
+\DoxyCodeLine{00064\ \textcolor{preprocessor}{\#include\ "{}XLXmlParser.hpp"{}}}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \textcolor{comment}{//\ ==========\ CLASS\ AND\ ENUM\ TYPE\ DEFINITIONS\ ==========\ //}}
+\DoxyCodeLine{00067\ \textcolor{keyword}{namespace\ }OpenXLSX}
+\DoxyCodeLine{00068\ \{}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Forward\ Declarations\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\///}}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keyword}{class\ }XLCellValueProxy;}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keyword}{class\ }XLCell;}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keyword}{enum\ class}\ XLValueType\ \{\ Empty,\ Boolean,\ Integer,\ Float,\ Error,\ String\ \};}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keyword}{class\ }OPENXLSX\_EXPORT\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{XLCellValue}}}
+\DoxyCodeLine{00082\ \ \ \ \ \{}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Friend\ Declarations\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\///}}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO:\ Consider\ template\ functions\ to\ compare\ to\ ints,\ floats\ etc.}}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keywordtype}{bool}\ \ \ \ \ \ \ \ \ \ operator==(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{XLCellValue}}\&\ lhs,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{XLCellValue}}\&\ rhs);}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keywordtype}{bool}\ \ \ \ \ \ \ \ \ \ operator!=(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{XLCellValue}}\&\ lhs,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{XLCellValue}}\&\ rhs);}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keywordtype}{bool}\ \ \ \ \ \ \ \ \ \ operator<(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{XLCellValue}}\&\ lhs,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{XLCellValue}}\&\ rhs);}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keywordtype}{bool}\ \ \ \ \ \ \ \ \ \ operator>(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{XLCellValue}}\&\ lhs,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{XLCellValue}}\&\ rhs);}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keywordtype}{bool}\ \ \ \ \ \ \ \ \ \ operator<=(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{XLCellValue}}\&\ lhs,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{XLCellValue}}\&\ rhs);}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keywordtype}{bool}\ \ \ \ \ \ \ \ \ \ operator>=(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{XLCellValue}}\&\ lhs,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{XLCellValue}}\&\ rhs);}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ std::ostream\&\ operator<<(std::ostream\&\ os,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{XLCellValue}}\&\ value);}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ std::hash<OpenXLSX::XLCellValue>;}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Public\ Member\ Functions\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\///}}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value_af76f3f7e02c4dddd0763ea49fac1ada6}{XLCellValue}}();}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{typename}\ T,}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{typename}\ std::enable\_if<std::is\_integral\_v<T>\ ||\ std::is\_floating\_point\_v<T>\ ||\ std::is\_same\_v<std::decay\_t<T>,\ std::string>\ ||}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::is\_same\_v<std::decay\_t<T>,\ std::string\_view>\ ||\ std::is\_same\_v<std::decay\_t<T>,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*>\ ||}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::is\_same\_v<std::decay\_t<T>,\ \textcolor{keywordtype}{char}*>\ ||\ std::is\_same\_v<T,\ XLDateTime>>::type*\ =\ \textcolor{keyword}{nullptr}>}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value_a63da90fb2a5972799ece07f7b71f6c3b}{XLCellValue}}(T\ value)\ \ \ \ \textcolor{comment}{//\ NOLINT}}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ =====\ If\ the\ argument\ is\ a\ bool,\ set\ the\ m\_type\ attribute\ to\ Boolean.}}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ \textcolor{keyword}{constexpr}\ (std::is\_integral\_v<T>\ \&\&\ std::is\_same\_v<T,\ bool>)\ \{}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_type\ \ =\ XLValueType::Boolean;}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_value\ =\ value;}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ =====\ If\ the\ argument\ is\ an\ integral\ type,\ set\ the\ m\_type\ attribute\ to\ Integer.}}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ \textcolor{keyword}{constexpr}\ (std::is\_integral\_v<T>\ \&\&\ !std::is\_same\_v<T,\ bool>)\ \{}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_type\ \ =\ XLValueType::Integer;}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_value\ =\ int64\_t(value);}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ =====\ If\ the\ argument\ is\ a\ string\ type\ (i.e.\ is\ constructable\ from\ *char),}}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ =====\ set\ the\ m\_type\ attribute\ to\ String.}}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ \textcolor{keyword}{constexpr}\ (std::is\_same\_v<std::decay\_t<T>,\ std::string>\ ||\ std::is\_same\_v<std::decay\_t<T>,\ std::string\_view>\ ||}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::is\_same\_v<std::decay\_t<T>,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*>\ ||}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (std::is\_same\_v<std::decay\_t<T>,\ \textcolor{keywordtype}{char}*>\ \&\&\ !std::is\_same\_v<T,\ bool>))}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_type\ =\ XLValueType::String;}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_value\ =\ std::string(value);}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ =====\ If\ the\ argument\ is\ an\ XLDateTime,\ set\ the\ value\ to\ the\ date/time\ serial\ number.}}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ \textcolor{keyword}{constexpr}\ (std::is\_same\_v<T,\ XLDateTime>)\ \{}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_type\ \ =\ XLValueType::Float;}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_value\ =\ value.serial();}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00143\ }
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ =====\ If\ the\ argument\ is\ a\ floating\ point\ type,\ set\ the\ m\_type\ attribute\ to\ Float.}}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ =====\ If\ not,\ a\ static\_assert\ will\ result\ in\ compilation\ error.}}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static\_assert}(std::is\_floating\_point\_v<T>,\ \textcolor{stringliteral}{"{}Invalid\ argument\ for\ constructing\ XLCellValue\ object"{}});}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (std::isfinite(value))\ \{}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_type\ \ =\ XLValueType::Float;}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_value\ =\ double(value);}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_type\ =\ XLValueType::Error;}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_value\ =\ std::string(\textcolor{stringliteral}{"{}\#NUM!"{}});}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00158\ }
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value_ac946fd4f28354e03f8da5aa269ee1145}{XLCellValue}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{XLCellValue}}\&\ other);}
+\DoxyCodeLine{00164\ }
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value_a968c791130e8009b63ce04690ef7e371}{XLCellValue}}(\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{XLCellValue}}\&\&\ other)\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00170\ }
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value_aaa25f49f989be216f6a13ee0b8ce6647}{\string~XLCellValue}}();}
+\DoxyCodeLine{00175\ }
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{XLCellValue}}\&\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value_ab6646dd28ebbd53c5c5da244dd5c96cc}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{XLCellValue}}\&\ other);}
+\DoxyCodeLine{00182\ }
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{XLCellValue}}\&\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value_ae84fa2c70e1cc7de2dc97586fe99743f}{operator=}}(\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{XLCellValue}}\&\&\ other)\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00189\ }
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{typename}\ T,}
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{typename}\ std::enable\_if<std::is\_integral\_v<T>\ ||\ std::is\_floating\_point\_v<T>\ ||\ std::is\_same\_v<std::decay\_t<T>,\ std::string>\ ||}
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::is\_same\_v<std::decay\_t<T>,\ std::string\_view>\ ||\ std::is\_same\_v<std::decay\_t<T>,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*>\ ||}
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::is\_same\_v<std::decay\_t<T>,\ \textcolor{keywordtype}{char}*>\ ||\ std::is\_same\_v<T,\ XLDateTime>>::type*\ =\ \textcolor{keyword}{nullptr}>}
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{XLCellValue}}\&\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value_a2d3e0849f48fc586ac04beef482201c2}{operator=}}(T\ value)}
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ =====\ Implemented\ using\ copy-\/and-\/swap.}}
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{XLCellValue}}\ temp(value);}
+\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ \ \ \ \ std::swap(*\textcolor{keyword}{this},\ temp);}
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00208\ }
+\DoxyCodeLine{00214\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<}
+\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{typename}\ T,}
+\DoxyCodeLine{00216\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{typename}\ std::enable\_if<std::is\_same\_v<T,\ XLCellValue>\ ||\ std::is\_integral\_v<T>\ ||\ std::is\_floating\_point\_v<T>\ ||}
+\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::is\_same\_v<std::decay\_t<T>,\ std::string>\ ||\ std::is\_same\_v<std::decay\_t<T>,\ std::string\_view>\ ||}
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::is\_same\_v<std::decay\_t<T>,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*>\ ||\ std::is\_same\_v<std::decay\_t<T>,\ \textcolor{keywordtype}{char}*>\ ||}
+\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::is\_same\_v<T,\ XLDateTime>>::type*\ =\ \textcolor{keyword}{nullptr}>}
+\DoxyCodeLine{00220\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value_a047fc2abc7ee7ad90dfbbcb6bd55c010}{set}}(T\ numberValue)}
+\DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ =====\ Implemented\ using\ the\ assignment\ operator.}}
+\DoxyCodeLine{00223\ \ \ \ \ \ \ \ \ \ \ \ \ *\textcolor{keyword}{this}\ =\ numberValue;}
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00225\ }
+\DoxyCodeLine{00232\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<}
+\DoxyCodeLine{00233\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{typename}\ T,}
+\DoxyCodeLine{00234\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{typename}\ std::enable\_if<std::is\_integral\_v<T>\ ||\ std::is\_floating\_point\_v<T>\ ||\ std::is\_same\_v<std::decay\_t<T>,\ std::string>\ ||}
+\DoxyCodeLine{00235\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::is\_same\_v<std::decay\_t<T>,\ std::string\_view>\ ||\ std::is\_same\_v<std::decay\_t<T>,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*>\ ||}
+\DoxyCodeLine{00236\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::is\_same\_v<std::decay\_t<T>,\ \textcolor{keywordtype}{char}*>\ ||\ std::is\_same\_v<T,\ XLDateTime>>::type*\ =\ \textcolor{keyword}{nullptr}>}
+\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ T\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value_ac04a773ad4b81245b94b650a055083f0}{get}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00238\ \textcolor{keyword}{\ \ \ \ \ \ \ \ }\{}
+\DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{00240\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ \textcolor{keyword}{constexpr}\ (std::is\_integral\_v<T>\ \&\&\ std::is\_same\_v<T,\ bool>)\ \textcolor{keywordflow}{return}\ std::get<bool>(m\_value);}
+\DoxyCodeLine{00241\ }
+\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ \textcolor{keyword}{constexpr}\ (std::is\_integral\_v<T>\ \&\&\ !std::is\_same\_v<T,\ bool>)\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}T\textcolor{keyword}{>}(std::get<int64\_t>(m\_value));}
+\DoxyCodeLine{00243\ }
+\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ \textcolor{keyword}{constexpr}\ (std::is\_floating\_point\_v<T>)\ \{}
+\DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (m\_type\ ==\ XLValueType::Error)\ \textcolor{keywordflow}{return}\ std::nan(\textcolor{stringliteral}{"{}1"{}});}
+\DoxyCodeLine{00246\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}T\textcolor{keyword}{>}(std::get<double>(m\_value));}
+\DoxyCodeLine{00247\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00248\ }
+\DoxyCodeLine{00249\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ \textcolor{keyword}{constexpr}\ (std::is\_same\_v<std::decay\_t<T>,\ std::string>\ ||\ std::is\_same\_v<std::decay\_t<T>,\ std::string\_view>\ ||}
+\DoxyCodeLine{00250\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::is\_same\_v<std::decay\_t<T>,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*>\ ||}
+\DoxyCodeLine{00251\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (std::is\_same\_v<std::decay\_t<T>,\ \textcolor{keywordtype}{char}*>\ \&\&\ !std::is\_same\_v<T,\ bool>))}
+\DoxyCodeLine{00252\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::get<std::string>(m\_value).c\_str();}
+\DoxyCodeLine{00253\ }
+\DoxyCodeLine{00254\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ \textcolor{keyword}{constexpr}\ (std::is\_same\_v<T,\ XLDateTime>)\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_date_time}{XLDateTime}}(std::get<double>(m\_value));}
+\DoxyCodeLine{00255\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00256\ }
+\DoxyCodeLine{00257\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}\ (\textcolor{keyword}{const}\ std::bad\_variant\_access\&\ )\ \{}
+\DoxyCodeLine{00258\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_value_type_error}{XLValueTypeError}}(\textcolor{stringliteral}{"{}XLCellValue\ object\ does\ not\ contain\ the\ requested\ type."{}});}
+\DoxyCodeLine{00259\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00260\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00261\ }
+\DoxyCodeLine{00268\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<}
+\DoxyCodeLine{00269\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{typename}\ T,}
+\DoxyCodeLine{00270\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{typename}\ std::enable\_if<std::is\_integral\_v<T>\ ||\ std::is\_floating\_point\_v<T>\ ||\ std::is\_same\_v<std::decay\_t<T>,\ std::string>\ ||}
+\DoxyCodeLine{00271\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::is\_same\_v<std::decay\_t<T>,\ std::string\_view>\ ||\ std::is\_same\_v<std::decay\_t<T>,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*>\ ||}
+\DoxyCodeLine{00272\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::is\_same\_v<std::decay\_t<T>,\ \textcolor{keywordtype}{char}*>\ ||\ std::is\_same\_v<T,\ XLDateTime>>::type*\ =\ \textcolor{keyword}{nullptr}>}
+\DoxyCodeLine{00273\ \ \ \ \ \ \ \ \ \textcolor{keyword}{operator}\ T()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00274\ \textcolor{keyword}{\ \ \ \ \ \ \ \ }\{}
+\DoxyCodeLine{00275\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>get<T>();}
+\DoxyCodeLine{00276\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00277\ }
+\DoxyCodeLine{00282\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{XLCellValue}}\&\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value_a11ca60dcfeb9e8683e210bd11d80963b}{clear}}();}
+\DoxyCodeLine{00283\ }
+\DoxyCodeLine{00288\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{XLCellValue}}\&\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value_a04e1bc5560043f01e2f342e0031881c9}{setError}}(\textcolor{keyword}{const}\ std::string\ \&error);}
+\DoxyCodeLine{00289\ }
+\DoxyCodeLine{00294\ \ \ \ \ \ \ \ \ XLValueType\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value_afe1fef5f4eb9128be5ea3422ced06150}{type}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00295\ }
+\DoxyCodeLine{00300\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value_a0e04adac468c036f23f42775c0419177}{typeAsString}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00301\ }
+\DoxyCodeLine{00302\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00303\ \ \ \ \ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Private\ Member\ Variables\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ //}}
+\DoxyCodeLine{00304\ }
+\DoxyCodeLine{00305\ \ \ \ \ \ \ \ \ std::variant<std::string,\ int64\_t,\ double,\ bool>\ m\_value\ \{\ std::string(\textcolor{stringliteral}{"{}"{}})\ \};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00306\ \ \ \ \ \ \ \ \ XLValueType\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_type\ \{\ XLValueType::Empty\ \};\ }
+\DoxyCodeLine{00307\ \ \ \ \ \};}
+\DoxyCodeLine{00308\ }
+\DoxyCodeLine{00315\ \ \ \ \ \textcolor{keyword}{class\ }OPENXLSX\_EXPORT\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value_proxy}{XLCellValueProxy}}}
+\DoxyCodeLine{00316\ \ \ \ \ \{}
+\DoxyCodeLine{00317\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell}{XLCell}};}
+\DoxyCodeLine{00318\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{XLCellValue}};}
+\DoxyCodeLine{00319\ }
+\DoxyCodeLine{00320\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00321\ \ \ \ \ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Public\ Member\ Functions\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\///}}
+\DoxyCodeLine{00322\ }
+\DoxyCodeLine{00326\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value_proxy_a57d6acb00d1dbd3f6209e866cd373afb}{\string~XLCellValueProxy}}();}
+\DoxyCodeLine{00327\ }
+\DoxyCodeLine{00333\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value_proxy}{XLCellValueProxy}}\&\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value_proxy_adaf8329317cd8a6b9d053611338db467}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value_proxy}{XLCellValueProxy}}\&\ other);}
+\DoxyCodeLine{00334\ }
+\DoxyCodeLine{00341\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<}
+\DoxyCodeLine{00342\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{typename}\ T,}
+\DoxyCodeLine{00343\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{typename}\ std::enable\_if<std::is\_integral\_v<T>\ ||\ std::is\_floating\_point\_v<T>\ ||\ std::is\_same\_v<std::decay\_t<T>,\ std::string>\ ||}
+\DoxyCodeLine{00344\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::is\_same\_v<std::decay\_t<T>,\ std::string\_view>\ ||\ std::is\_same\_v<std::decay\_t<T>,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*>\ ||}
+\DoxyCodeLine{00345\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::is\_same\_v<std::decay\_t<T>,\ \textcolor{keywordtype}{char}*>\ ||\ std::is\_same\_v<T,\ XLCellValue>\ ||}
+\DoxyCodeLine{00346\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::is\_same\_v<T,\ XLDateTime>>::type*\ =\ \textcolor{keyword}{nullptr}>}
+\DoxyCodeLine{00347\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value_proxy}{XLCellValueProxy}}\&\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value_proxy_a9edf374c3a6362dabae9b67d0a487d30}{operator=}}(T\ value)}
+\DoxyCodeLine{00348\ \ \ \ \ \ \ \ \ \{\ \ \ \ \textcolor{comment}{//\ NOLINT}}
+\DoxyCodeLine{00349\ }
+\DoxyCodeLine{00350\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ \textcolor{keyword}{constexpr}\ (std::is\_integral\_v<T>\ \&\&\ std::is\_same\_v<T,\ bool>)\ \ \ \ \textcolor{comment}{//\ if\ bool}}
+\DoxyCodeLine{00351\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ setBoolean(value);}
+\DoxyCodeLine{00352\ }
+\DoxyCodeLine{00353\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ \textcolor{keyword}{constexpr}\ (std::is\_integral\_v<T>\ \&\&\ !std::is\_same\_v<T,\ bool>)\ \ \ \ \textcolor{comment}{//\ if\ integer}}
+\DoxyCodeLine{00354\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ setInteger(value);}
+\DoxyCodeLine{00355\ }
+\DoxyCodeLine{00356\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ \textcolor{keyword}{constexpr}\ (std::is\_floating\_point\_v<T>)\ \ \ \ \textcolor{comment}{//\ if\ floating\ point}}
+\DoxyCodeLine{00357\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ setFloat(value);}
+\DoxyCodeLine{00358\ }
+\DoxyCodeLine{00359\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ \textcolor{keyword}{constexpr}\ (std::is\_same\_v<T,\ XLDateTime>)}
+\DoxyCodeLine{00360\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ setFloat(value.serial());}
+\DoxyCodeLine{00361\ }
+\DoxyCodeLine{00362\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ \textcolor{keyword}{constexpr}\ (std::is\_same\_v<std::decay\_t<T>,\ std::string>\ ||\ std::is\_same\_v<std::decay\_t<T>,\ std::string\_view>\ ||}
+\DoxyCodeLine{00363\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::is\_same\_v<std::decay\_t<T>,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*>\ ||}
+\DoxyCodeLine{00364\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (std::is\_same\_v<std::decay\_t<T>,\ \textcolor{keywordtype}{char}*>\ \&\&\ !std::is\_same\_v<T,\ bool>\ \&\&\ !std::is\_same\_v<T,\ XLCellValue>))}
+\DoxyCodeLine{00365\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00366\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ \textcolor{keyword}{constexpr}\ (std::is\_same\_v<std::decay\_t<T>,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*>\ ||\ std::is\_same\_v<std::decay\_t<T>,\ \textcolor{keywordtype}{char}*>)}
+\DoxyCodeLine{00367\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ setString(value);}
+\DoxyCodeLine{00368\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ \textcolor{keyword}{constexpr}\ (std::is\_same\_v<std::decay\_t<T>,\ std::string\_view>)}
+\DoxyCodeLine{00369\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ setString(std::string(value).c\_str());}
+\DoxyCodeLine{00370\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00371\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ setString(value.c\_str());}
+\DoxyCodeLine{00372\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00373\ }
+\DoxyCodeLine{00374\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ \textcolor{keyword}{constexpr}\ (std::is\_same\_v<T,\ XLCellValue>)\ \{}
+\DoxyCodeLine{00375\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (value.type())\ \{}
+\DoxyCodeLine{00376\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ XLValueType::Boolean:}
+\DoxyCodeLine{00377\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ setBoolean(value.template\ get<bool>());}
+\DoxyCodeLine{00378\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00379\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ XLValueType::Integer:}
+\DoxyCodeLine{00380\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ setInteger(value.template\ get<int64\_t>());}
+\DoxyCodeLine{00381\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00382\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ XLValueType::Float:}
+\DoxyCodeLine{00383\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ setFloat(value.template\ get<double>());}
+\DoxyCodeLine{00384\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00385\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ XLValueType::String:}
+\DoxyCodeLine{00386\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ setString(value.template\ get<const\ char*>());}
+\DoxyCodeLine{00387\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00388\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ XLValueType::Empty:}
+\DoxyCodeLine{00389\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ clear();}
+\DoxyCodeLine{00390\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00391\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{00392\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ setError(\textcolor{stringliteral}{"{}\#N/A"{}});}
+\DoxyCodeLine{00393\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00394\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00395\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00396\ }
+\DoxyCodeLine{00397\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{00398\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00399\ }
+\DoxyCodeLine{00405\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<}
+\DoxyCodeLine{00406\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{typename}\ T,}
+\DoxyCodeLine{00407\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{typename}\ std::enable\_if<std::is\_integral\_v<T>\ ||\ std::is\_floating\_point\_v<T>\ ||\ std::is\_same\_v<std::decay\_t<T>,\ std::string>\ ||}
+\DoxyCodeLine{00408\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::is\_same\_v<std::decay\_t<T>,\ std::string\_view>\ ||\ std::is\_same\_v<std::decay\_t<T>,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*>\ ||}
+\DoxyCodeLine{00409\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::is\_same\_v<std::decay\_t<T>,\ \textcolor{keywordtype}{char}*>\ ||\ std::is\_same\_v<T,\ XLCellValue>\ ||}
+\DoxyCodeLine{00410\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::is\_same\_v<T,\ XLDateTime>>::type*\ =\ \textcolor{keyword}{nullptr}>}
+\DoxyCodeLine{00411\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value_proxy_a4afcd93f976c521f08ddb6e42cc1cb0f}{set}}(T\ value)}
+\DoxyCodeLine{00412\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00413\ \ \ \ \ \ \ \ \ \ \ \ \ *\textcolor{keyword}{this}\ =\ value;}
+\DoxyCodeLine{00414\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00415\ }
+\DoxyCodeLine{00422\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<}
+\DoxyCodeLine{00423\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{typename}\ T,}
+\DoxyCodeLine{00424\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{typename}\ std::enable\_if<std::is\_integral\_v<T>\ ||\ std::is\_floating\_point\_v<T>\ ||\ std::is\_same\_v<std::decay\_t<T>,\ std::string>\ ||}
+\DoxyCodeLine{00425\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::is\_same\_v<std::decay\_t<T>,\ std::string\_view>\ ||\ std::is\_same\_v<std::decay\_t<T>,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*>\ ||}
+\DoxyCodeLine{00426\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::is\_same\_v<std::decay\_t<T>,\ \textcolor{keywordtype}{char}*>\ ||\ std::is\_same\_v<T,\ XLDateTime>>::type*\ =\ \textcolor{keyword}{nullptr}>}
+\DoxyCodeLine{00427\ \ \ \ \ \ \ \ \ T\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value_proxy_ae176c174cf8b38f7238cf3d99acb636b}{get}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00428\ \textcolor{keyword}{\ \ \ \ \ \ \ \ }\{}
+\DoxyCodeLine{00429\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ getValue().get<T>();}
+\DoxyCodeLine{00430\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00431\ }
+\DoxyCodeLine{00436\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value_proxy}{XLCellValueProxy}}\&\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value_proxy_ab8841e7de2ec195a01d6a2f01f12ca6e}{clear}}();}
+\DoxyCodeLine{00437\ }
+\DoxyCodeLine{00442\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value_proxy}{XLCellValueProxy}}\&\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value_proxy_ad1561927e2d144dc8b0442e8099d6608}{setError}}(\textcolor{keyword}{const}\ std::string\ \&\ error);}
+\DoxyCodeLine{00443\ }
+\DoxyCodeLine{00448\ \ \ \ \ \ \ \ \ XLValueType\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value_proxy_a7ad99dcad90fc015382a06b70ee22b2e}{type}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00449\ }
+\DoxyCodeLine{00454\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value_proxy_a796278888ccd759bb3453a0a2963ea6a}{typeAsString}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00455\ }
+\DoxyCodeLine{00460\ \ \ \ \ \ \ \ \ \textcolor{keyword}{operator}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{XLCellValue}}();\ \ \ \ \textcolor{comment}{//\ NOLINT}}
+\DoxyCodeLine{00461\ }
+\DoxyCodeLine{00467\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<}
+\DoxyCodeLine{00468\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{typename}\ T,}
+\DoxyCodeLine{00469\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{typename}\ std::enable\_if<std::is\_integral\_v<T>\ ||\ std::is\_floating\_point\_v<T>\ ||\ std::is\_same\_v<std::decay\_t<T>,\ std::string>\ ||}
+\DoxyCodeLine{00470\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::is\_same\_v<std::decay\_t<T>,\ std::string\_view>\ ||\ std::is\_same\_v<std::decay\_t<T>,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*>\ ||}
+\DoxyCodeLine{00471\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::is\_same\_v<std::decay\_t<T>,\ \textcolor{keywordtype}{char}*>\ ||\ std::is\_same\_v<T,\ XLDateTime>>::type*\ =\ \textcolor{keyword}{nullptr}>}
+\DoxyCodeLine{00472\ \ \ \ \ \ \ \ \ \textcolor{keyword}{operator}\ T()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00473\ \textcolor{keyword}{\ \ \ \ \ \ \ \ }\{}
+\DoxyCodeLine{00474\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ getValue().get<T>();}
+\DoxyCodeLine{00475\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00476\ }
+\DoxyCodeLine{00477\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00478\ \ \ \ \ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Private\ Member\ Functions\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ //}}
+\DoxyCodeLine{00479\ }
+\DoxyCodeLine{00485\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value_proxy}{XLCellValueProxy}}(\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell}{XLCell}}*\ cell,\ XMLNode*\ cellNode);}
+\DoxyCodeLine{00486\ }
+\DoxyCodeLine{00491\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value_proxy}{XLCellValueProxy}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value_proxy}{XLCellValueProxy}}\&\ other);}
+\DoxyCodeLine{00492\ }
+\DoxyCodeLine{00497\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value_proxy}{XLCellValueProxy}}(\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value_proxy}{XLCellValueProxy}}\&\&\ other)\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00498\ }
+\DoxyCodeLine{00504\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value_proxy}{XLCellValueProxy}}\&\ operator=(\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value_proxy}{XLCellValueProxy}}\&\&\ other)\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00505\ }
+\DoxyCodeLine{00510\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ setInteger(int64\_t\ numberValue);}
+\DoxyCodeLine{00511\ }
+\DoxyCodeLine{00516\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ setBoolean(\textcolor{keywordtype}{bool}\ numberValue);}
+\DoxyCodeLine{00517\ }
+\DoxyCodeLine{00522\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ setFloat(\textcolor{keywordtype}{double}\ numberValue);}
+\DoxyCodeLine{00523\ }
+\DoxyCodeLine{00528\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ setString(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ stringValue);}
+\DoxyCodeLine{00529\ }
+\DoxyCodeLine{00534\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{XLCellValue}}\ getValue()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00535\ }
+\DoxyCodeLine{00536\ \ \ \ \ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Private\ Member\ Variables\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ //}}
+\DoxyCodeLine{00537\ }
+\DoxyCodeLine{00538\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell}{XLCell}}*\ \ m\_cell;\ \ \ \ \ }
+\DoxyCodeLine{00539\ \ \ \ \ \ \ \ \ XMLNode*\ m\_cellNode;\ }
+\DoxyCodeLine{00540\ \ \ \ \ \};}
+\DoxyCodeLine{00541\ }
+\DoxyCodeLine{00542\ \}\ \ \ \ \textcolor{comment}{//\ namespace\ OpenXLSX}}
+\DoxyCodeLine{00543\ }
+\DoxyCodeLine{00544\ \textcolor{comment}{//\ TODO:\ Consider\ comparison\ operators\ on\ fundamental\ datatypes}}
+\DoxyCodeLine{00545\ \textcolor{comment}{//\ ==========\ FRIEND\ FUNCTION\ IMPLEMENTATIONS\ ==========\ //}}
+\DoxyCodeLine{00546\ \textcolor{keyword}{namespace\ }OpenXLSX}
+\DoxyCodeLine{00547\ \{}
+\DoxyCodeLine{00554\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{bool}\ operator==(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{XLCellValue}}\&\ lhs,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{XLCellValue}}\&\ rhs)}
+\DoxyCodeLine{00555\ \ \ \ \ \{}
+\DoxyCodeLine{00556\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ lhs.m\_value\ ==\ rhs.m\_value;}
+\DoxyCodeLine{00557\ \ \ \ \ \}}
+\DoxyCodeLine{00558\ }
+\DoxyCodeLine{00565\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{bool}\ operator!=(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{XLCellValue}}\&\ lhs,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{XLCellValue}}\&\ rhs)}
+\DoxyCodeLine{00566\ \ \ \ \ \{}
+\DoxyCodeLine{00567\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ lhs.m\_value\ !=\ rhs.m\_value;}
+\DoxyCodeLine{00568\ \ \ \ \ \}}
+\DoxyCodeLine{00569\ }
+\DoxyCodeLine{00576\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{bool}\ operator<(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{XLCellValue}}\&\ lhs,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{XLCellValue}}\&\ rhs)}
+\DoxyCodeLine{00577\ \ \ \ \ \{}
+\DoxyCodeLine{00578\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ lhs.m\_value\ <\ rhs.m\_value;}
+\DoxyCodeLine{00579\ \ \ \ \ \}}
+\DoxyCodeLine{00580\ }
+\DoxyCodeLine{00587\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{bool}\ operator>(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{XLCellValue}}\&\ lhs,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{XLCellValue}}\&\ rhs)}
+\DoxyCodeLine{00588\ \ \ \ \ \{}
+\DoxyCodeLine{00589\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ lhs.m\_value\ >\ rhs.m\_value;}
+\DoxyCodeLine{00590\ \ \ \ \ \}}
+\DoxyCodeLine{00591\ }
+\DoxyCodeLine{00598\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{bool}\ operator<=(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{XLCellValue}}\&\ lhs,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{XLCellValue}}\&\ rhs)}
+\DoxyCodeLine{00599\ \ \ \ \ \{}
+\DoxyCodeLine{00600\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ lhs.m\_value\ <=\ rhs.m\_value;}
+\DoxyCodeLine{00601\ \ \ \ \ \}}
+\DoxyCodeLine{00602\ }
+\DoxyCodeLine{00609\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{bool}\ operator>=(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{XLCellValue}}\&\ lhs,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{XLCellValue}}\&\ rhs)}
+\DoxyCodeLine{00610\ \ \ \ \ \{}
+\DoxyCodeLine{00611\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ lhs.m\_value\ >=\ rhs.m\_value;}
+\DoxyCodeLine{00612\ \ \ \ \ \}}
+\DoxyCodeLine{00613\ }
+\DoxyCodeLine{00620\ \ \ \ \ \textcolor{keyword}{inline}\ std::ostream\&\ operator<<(std::ostream\&\ os,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{XLCellValue}}\&\ value)}
+\DoxyCodeLine{00621\ \ \ \ \ \{}
+\DoxyCodeLine{00622\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (value.\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value_afe1fef5f4eb9128be5ea3422ced06150}{type}}())\ \{}
+\DoxyCodeLine{00623\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ XLValueType::Empty:}
+\DoxyCodeLine{00624\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ os\ <<\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{00625\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ XLValueType::Boolean:}
+\DoxyCodeLine{00626\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ os\ <<\ value.\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value_ac04a773ad4b81245b94b650a055083f0}{get}}<\textcolor{keywordtype}{bool}>();}
+\DoxyCodeLine{00627\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ XLValueType::Integer:}
+\DoxyCodeLine{00628\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ os\ <<\ value.\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value_ac04a773ad4b81245b94b650a055083f0}{get}}<int64\_t>();}
+\DoxyCodeLine{00629\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ XLValueType::Float:}
+\DoxyCodeLine{00630\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ os\ <<\ value.\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value_ac04a773ad4b81245b94b650a055083f0}{get}}<\textcolor{keywordtype}{double}>();}
+\DoxyCodeLine{00631\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ XLValueType::String:}
+\DoxyCodeLine{00632\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ os\ <<\ value.\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value_ac04a773ad4b81245b94b650a055083f0}{get}}<std::string\_view>();}
+\DoxyCodeLine{00633\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{00634\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ os\ <<\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{00635\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00636\ \ \ \ \ \}}
+\DoxyCodeLine{00637\ }
+\DoxyCodeLine{00638\ \ \ \ \ \textcolor{keyword}{inline}\ std::ostream\&\ operator<<(std::ostream\&\ os,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value_proxy}{XLCellValueProxy}}\&\ value)}
+\DoxyCodeLine{00639\ \ \ \ \ \{}
+\DoxyCodeLine{00640\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (value.\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value_proxy_a7ad99dcad90fc015382a06b70ee22b2e}{type}}())\ \{}
+\DoxyCodeLine{00641\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ XLValueType::Empty:}
+\DoxyCodeLine{00642\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ os\ <<\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{00643\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ XLValueType::Boolean:}
+\DoxyCodeLine{00644\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ os\ <<\ value.\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value_proxy_ae176c174cf8b38f7238cf3d99acb636b}{get}}<\textcolor{keywordtype}{bool}>();}
+\DoxyCodeLine{00645\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ XLValueType::Integer:}
+\DoxyCodeLine{00646\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ os\ <<\ value.\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value_proxy_ae176c174cf8b38f7238cf3d99acb636b}{get}}<int64\_t>();}
+\DoxyCodeLine{00647\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ XLValueType::Float:}
+\DoxyCodeLine{00648\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ os\ <<\ value.\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value_proxy_ae176c174cf8b38f7238cf3d99acb636b}{get}}<\textcolor{keywordtype}{double}>();}
+\DoxyCodeLine{00649\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ XLValueType::String:}
+\DoxyCodeLine{00650\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ os\ <<\ value.\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value_proxy_ae176c174cf8b38f7238cf3d99acb636b}{get}}<std::string\_view>();}
+\DoxyCodeLine{00651\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{00652\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ os\ <<\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{00653\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00654\ \ \ \ \ \}}
+\DoxyCodeLine{00655\ }
+\DoxyCodeLine{00656\ }
+\DoxyCodeLine{00657\ \}\ \ \ \ \textcolor{comment}{//\ namespace\ OpenXLSX}}
+\DoxyCodeLine{00658\ }
+\DoxyCodeLine{00659\ \textcolor{keyword}{namespace\ }std}
+\DoxyCodeLine{00660\ \{}
+\DoxyCodeLine{00661\ \ \ \ \ \textcolor{keyword}{template}<>}
+\DoxyCodeLine{00662\ \ \ \ \ \textcolor{keyword}{struct\ }hash<OpenXLSX::XLCellValue>\ \textcolor{comment}{//\ NOLINT}}
+\DoxyCodeLine{00663\ \ \ \ \ \{}
+\DoxyCodeLine{00664\ \ \ \ \ \ \ \ \ std::size\_t\ operator()(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_value}{OpenXLSX::XLCellValue}}\&\ value)\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept}}
+\DoxyCodeLine{00665\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00666\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::hash<std::variant<std::string,\ int64\_t,\ double,\ bool>>\ \{\}(value.m\_value);}
+\DoxyCodeLine{00667\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00668\ \ \ \ \ \};}
+\DoxyCodeLine{00669\ \}\ \ \ \ \textcolor{comment}{//\ namespace\ std}}
+\DoxyCodeLine{00670\ }
+\DoxyCodeLine{00671\ \textcolor{preprocessor}{\#pragma\ warning(pop)}}
+\DoxyCodeLine{00672\ \textcolor{preprocessor}{\#endif\ \ \ \ }\textcolor{comment}{//\ OPENXLSX\_XLCELLVALUE\_HPP}}
+
+\end{DoxyCode}

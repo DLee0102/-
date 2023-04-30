@@ -1,0 +1,385 @@
+\hypertarget{_x_l_sheet_8hpp_source}{}\doxysection{XLSheet.\+hpp}
+\label{_x_l_sheet_8hpp_source}\index{D:/Youth\_learning\_autoload/vendors/OpenXLSX/OpenXLSX/headers/XLSheet.hpp@{D:/Youth\_learning\_autoload/vendors/OpenXLSX/OpenXLSX/headers/XLSheet.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ \ \ \_\_\_\_\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_\_\_\ \ \ \ \ \ \_\_\_\ \_\_\_\_\ \ \ \ \ \ \ \_\_\_\_\ \ \_\_\_\_\ \ \ \ \ \ \_\_\_}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ \ 6MMMMb\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ `MM(\ \ \ \ \ \ )M'\ `MM'\ \ \ \ \ \ 6MMMMb\(\backslash\)`MM(\ \ \ \ \ \ )M'}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ 8P\ \ \ \ Y8\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ `MM.\ \ \ \ \ d'\ \ \ MM\ \ \ \ \ \ 6M'\ \ \ \ `\ `MM.\ \ \ \ \ d'}}
+\DoxyCodeLine{00006\ \textcolor{comment}{6M\ \ \ \ \ \ Mb\ \_\_\ \_\_\_\_\ \ \ \ \ \_\_\_\_\ \ \_\_\_\ \ \_\_\ \ \ \ `MM.\ \ \ d'\ \ \ \ MM\ \ \ \ \ \ MM\ \ \ \ \ \ \ \ `MM.\ \ \ d'}}
+\DoxyCodeLine{00007\ \textcolor{comment}{MM\ \ \ \ \ \ MM\ `M6MMMMb\ \ \ 6MMMMb\ `MM\ 6MMb\ \ \ \ `MM.\ d'\ \ \ \ \ MM\ \ \ \ \ \ YM.\ \ \ \ \ \ \ \ `MM.\ d'}}
+\DoxyCodeLine{00008\ \textcolor{comment}{MM\ \ \ \ \ \ MM\ \ MM'\ \ `Mb\ 6M'\ \ `Mb\ MMM9\ `Mb\ \ \ \ `MMd\ \ \ \ \ \ \ MM\ \ \ \ \ \ \ YMMMMb\ \ \ \ \ `MMd}}
+\DoxyCodeLine{00009\ \textcolor{comment}{MM\ \ \ \ \ \ MM\ \ MM\ \ \ \ MM\ MM\ \ \ \ MM\ MM'\ \ \ MM\ \ \ \ \ dMM.\ \ \ \ \ \ MM\ \ \ \ \ \ \ \ \ \ \ `Mb\ \ \ \ \ dMM.}}
+\DoxyCodeLine{00010\ \textcolor{comment}{MM\ \ \ \ \ \ MM\ \ MM\ \ \ \ MM\ MMMMMMMM\ MM\ \ \ \ MM\ \ \ \ d'`MM.\ \ \ \ \ MM\ \ \ \ \ \ \ \ \ \ \ \ MM\ \ \ \ d'`MM.}}
+\DoxyCodeLine{00011\ \textcolor{comment}{YM\ \ \ \ \ \ M9\ \ MM\ \ \ \ MM\ MM\ \ \ \ \ \ \ MM\ \ \ \ MM\ \ \ d'\ \ `MM.\ \ \ \ MM\ \ \ \ \ \ \ \ \ \ \ \ MM\ \ \ d'\ \ `MM.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{\ 8b\ \ \ \ d8\ \ \ MM.\ \ ,M9\ YM\ \ \ \ d9\ MM\ \ \ \ MM\ \ d'\ \ \ \ `MM.\ \ \ MM\ \ \ \ /\ L\ \ \ \ ,M9\ \ d'\ \ \ \ `MM.}}
+\DoxyCodeLine{00013\ \textcolor{comment}{\ \ YMMMM9\ \ \ \ MMYMMM9\ \ \ YMMMM9\ \_MM\_\ \ \_MM\_M(\_\ \ \ \ \_)MM\_\ \_MMMMMMM\ MYMMMM9\ \_M(\_\ \ \ \ \_)MM\_}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ MM}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ MM}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \_MM\_}}
+\DoxyCodeLine{00017\ \textcolor{comment}{}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\ \ Copyright\ (c)\ 2018,\ Kenneth\ Troldal\ Balslev}}
+\DoxyCodeLine{00019\ \textcolor{comment}{}}
+\DoxyCodeLine{00020\ \textcolor{comment}{\ \ All\ rights\ reserved.}}
+\DoxyCodeLine{00021\ \textcolor{comment}{}}
+\DoxyCodeLine{00022\ \textcolor{comment}{\ \ Redistribution\ and\ use\ in\ source\ and\ binary\ forms,\ with\ or\ without}}
+\DoxyCodeLine{00023\ \textcolor{comment}{\ \ modification,\ are\ permitted\ provided\ that\ the\ following\ conditions\ are\ met:}}
+\DoxyCodeLine{00024\ \textcolor{comment}{\ \ -\/\ Redistributions\ of\ source\ code\ must\ retain\ the\ above\ copyright}}
+\DoxyCodeLine{00025\ \textcolor{comment}{\ \ \ \ notice,\ this\ list\ of\ conditions\ and\ the\ following\ disclaimer.}}
+\DoxyCodeLine{00026\ \textcolor{comment}{\ \ -\/\ Redistributions\ in\ binary\ form\ must\ reproduce\ the\ above\ copyright}}
+\DoxyCodeLine{00027\ \textcolor{comment}{\ \ \ \ notice,\ this\ list\ of\ conditions\ and\ the\ following\ disclaimer\ in\ the}}
+\DoxyCodeLine{00028\ \textcolor{comment}{\ \ \ \ documentation\ and/or\ other\ materials\ provided\ with\ the\ distribution.}}
+\DoxyCodeLine{00029\ \textcolor{comment}{\ \ -\/\ Neither\ the\ name\ of\ the\ author\ nor\ the}}
+\DoxyCodeLine{00030\ \textcolor{comment}{\ \ \ \ names\ of\ any\ contributors\ may\ be\ used\ to\ endorse\ or\ promote\ products}}
+\DoxyCodeLine{00031\ \textcolor{comment}{\ \ \ \ derived\ from\ this\ software\ without\ specific\ prior\ written\ permission.}}
+\DoxyCodeLine{00032\ \textcolor{comment}{}}
+\DoxyCodeLine{00033\ \textcolor{comment}{\ \ THIS\ SOFTWARE\ IS\ PROVIDED\ BY\ THE\ COPYRIGHT\ HOLDERS\ AND\ CONTRIBUTORS\ "{}AS\ IS"{}\ AND}}
+\DoxyCodeLine{00034\ \textcolor{comment}{\ \ ANY\ EXPRESS\ OR\ IMPLIED\ WARRANTIES,\ INCLUDING,\ BUT\ NOT\ LIMITED\ TO,\ THE\ IMPLIED}}
+\DoxyCodeLine{00035\ \textcolor{comment}{\ \ WARRANTIES\ OF\ MERCHANTABILITY\ AND\ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE\ ARE}}
+\DoxyCodeLine{00036\ \textcolor{comment}{\ \ DISCLAIMED.\ IN\ NO\ EVENT\ SHALL\ THE\ AUTHOR\ BE\ LIABLE\ FOR\ ANY}}
+\DoxyCodeLine{00037\ \textcolor{comment}{\ \ DIRECT,\ INDIRECT,\ INCIDENTAL,\ SPECIAL,\ EXEMPLARY,\ OR\ CONSEQUENTIAL\ DAMAGES}}
+\DoxyCodeLine{00038\ \textcolor{comment}{\ \ (INCLUDING,\ BUT\ NOT\ LIMITED\ TO,\ PROCUREMENT\ OF\ SUBSTITUTE\ GOODS\ OR\ SERVICES;}}
+\DoxyCodeLine{00039\ \textcolor{comment}{\ \ LOSS\ OF\ USE,\ DATA,\ OR\ PROFITS;\ OR\ BUSINESS\ INTERRUPTION)\ HOWEVER\ CAUSED\ AND}}
+\DoxyCodeLine{00040\ \textcolor{comment}{\ \ ON\ ANY\ THEORY\ OF\ LIABILITY,\ WHETHER\ IN\ CONTRACT,\ STRICT\ LIABILITY,\ OR\ TORT}}
+\DoxyCodeLine{00041\ \textcolor{comment}{\ \ (INCLUDING\ NEGLIGENCE\ OR\ OTHERWISE)\ ARISING\ IN\ ANY\ WAY\ OUT\ OF\ THE\ USE\ OF\ THIS}}
+\DoxyCodeLine{00042\ \textcolor{comment}{\ \ SOFTWARE,\ EVEN\ IF\ ADVISED\ OF\ THE\ POSSIBILITY\ OF\ SUCH\ DAMAGE.}}
+\DoxyCodeLine{00043\ \textcolor{comment}{}}
+\DoxyCodeLine{00044\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \textcolor{preprocessor}{\#ifndef\ OPENXLSX\_XLSHEET\_HPP}}
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\#define\ OPENXLSX\_XLSHEET\_HPP}}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#pragma\ warning(push)}}
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#pragma\ warning(disable\ :\ 4251)}}
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\#pragma\ warning(disable\ :\ 4275)}}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \textcolor{comment}{//\ =====\ External\ Includes\ =====\ //}}
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#include\ <type\_traits>}}
+\DoxyCodeLine{00055\ \textcolor{preprocessor}{\#include\ <variant>}}
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \textcolor{comment}{//\ =====\ OpenXLSX\ Includes\ =====\ //}}
+\DoxyCodeLine{00059\ \textcolor{preprocessor}{\#include\ "{}OpenXLSX-\/Exports.hpp"{}}}
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\#include\ "{}XLCell.hpp"{}}}
+\DoxyCodeLine{00061\ \textcolor{preprocessor}{\#include\ "{}XLCellReference.hpp"{}}}
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\#include\ "{}XLColor.hpp"{}}}
+\DoxyCodeLine{00063\ \textcolor{preprocessor}{\#include\ "{}XLColumn.hpp"{}}}
+\DoxyCodeLine{00064\ \textcolor{preprocessor}{\#include\ "{}XLCommandQuery.hpp"{}}}
+\DoxyCodeLine{00065\ \textcolor{preprocessor}{\#include\ "{}XLDocument.hpp"{}}}
+\DoxyCodeLine{00066\ \textcolor{preprocessor}{\#include\ "{}XLException.hpp"{}}}
+\DoxyCodeLine{00067\ \textcolor{preprocessor}{\#include\ "{}XLRow.hpp"{}}}
+\DoxyCodeLine{00068\ \textcolor{preprocessor}{\#include\ "{}XLXmlFile.hpp"{}}}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \textcolor{keyword}{namespace\ }OpenXLSX}
+\DoxyCodeLine{00071\ \{}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keyword}{enum\ class}\ XLSheetState\ \{\ Visible,\ Hidden,\ VeryHidden\ \};}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T,\ \textcolor{keyword}{typename}\ std::enable\_if<std::is\_same\_v<T,\ XLWorksheet>\ ||\ std::is\_same\_v<T,\ XLChartsheet>>::type*\ =\ \textcolor{keywordtype}{nullptr}>}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keyword}{class\ }OPENXLSX\_EXPORT\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_base}{XLSheetBase}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file}{XLXmlFile}}}
+\DoxyCodeLine{00085\ \ \ \ \ \{}
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_base_a7deb4458fff350479da804df7fa29c2f}{XLSheetBase}}()\ :\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file}{XLXmlFile}}(nullptr)\ \{\};}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_base_a3acc5c179aee9d8179a3a45de8b8155f}{XLSheetBase}}(\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_data}{XLXmlData}}*\ xmlData)\ :\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file}{XLXmlFile}}(xmlData)\ \{\};}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_base_ad489828f38de753c59939728c68ebb21}{XLSheetBase}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_base}{XLSheetBase}}\&\ other)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_base_a31bcb873533f97ad000f06d0c5133985}{XLSheetBase}}(\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_base}{XLSheetBase}}\&\&\ other)\ \textcolor{keyword}{noexcept}\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_base_ad53ea288984eb41411a7c88cf92c3e02}{\string~XLSheetBase}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_base}{XLSheetBase}}\&\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_base_ae4c1b573bd1dc720a316d9a80edeec19}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_base}{XLSheetBase}}\&)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_base}{XLSheetBase}}\&\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_base_a89ca28f3dbd587f3642b79ed9173d93b}{operator=}}(\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_base}{XLSheetBase}}\&\&\ other)\ \textcolor{keyword}{noexcept}\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ XLSheetState\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_base_a5c3ec4e466a6678d4f4982145e664e07}{visibility}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00138\ \textcolor{keyword}{\ \ \ \ \ \ \ \ }\{}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_query}{XLQuery}}\ query(XLQueryType::QuerySheetVisibility);}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \ \ \ \ query.\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_query_ad476ec0e5822fc112946e21429e26209}{setParam}}(\textcolor{stringliteral}{"{}sheetID"{}},\ relationshipID());}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ state\ \ =\ parentDoc().execQuery(query).template\ result<std::string>();}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ result\ =\ XLSheetState::Visible;}
+\DoxyCodeLine{00143\ }
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (state\ ==\ \textcolor{stringliteral}{"{}visible"{}}\ ||\ state.empty())\ \{}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ result\ =\ XLSheetState::Visible;}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (state\ ==\ \textcolor{stringliteral}{"{}hidden"{}})\ \{}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ result\ =\ XLSheetState::Hidden;}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (state\ ==\ \textcolor{stringliteral}{"{}veryHidden"{}})\ \{}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ result\ =\ XLSheetState::VeryHidden;}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00153\ }
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ result;}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00156\ }
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_base_aba1a3b40465a5dce20e66d83aec70b6a}{setVisibility}}(XLSheetState\ state)}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ stateString\ =\ std::string();}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (state)\ \{}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ XLSheetState::Visible:}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ stateString\ =\ \textcolor{stringliteral}{"{}visible"{}};}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00168\ }
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ XLSheetState::Hidden:}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ stateString\ =\ \textcolor{stringliteral}{"{}hidden"{}};}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00172\ }
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ XLSheetState::VeryHidden:}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ stateString\ =\ \textcolor{stringliteral}{"{}veryHidden"{}};}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00177\ }
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \ \ \ \ parentDoc().execCommand(\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_command}{XLCommand}}(XLCommandType::SetSheetVisibility)}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .setParam(\textcolor{stringliteral}{"{}sheetID"{}},\ relationshipID())}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .setParam(\textcolor{stringliteral}{"{}sheetVisibility"{}},\ stateString));}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00182\ }
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_color}{XLColor}}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_base_a1907f6dd2917ceb13525e05ebab0e0ad}{color}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00189\ \textcolor{keyword}{\ \ \ \ \ \ \ \ }\{}
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}\textcolor{keyword}{const\ }T\&\textcolor{keyword}{>}(*this).getColor\_impl();}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00192\ }
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_base_a5a2fbd3bcd56b727a7401c495ef2975a}{setColor}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_color}{XLColor}}\&\ color)}
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static\_cast<}T\&\textcolor{keyword}{>}(*this).setColor\_impl(color);}
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00201\ }
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ uint16\_t\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_base_a43578973b5ca43264bde8f323dac3ce0}{index}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00207\ \textcolor{keyword}{\ \ \ \ \ \ \ \ }\{}
+\DoxyCodeLine{00208\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ return\ uint16\_t(std::stoi(parentDoc().execQuery(R"{}(\{\ "{}query"{}:\ "{}QuerySheetIndex"{},\ "{}sheetID"{}:\ "{})"{}\ +\ relationshipID()\ +\ "{}\(\backslash\)"{}\}"{})));}}
+\DoxyCodeLine{00209\ }
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_query}{XLQuery}}\ query(XLQueryType::QuerySheetIndex);}
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \ \ \ \ query.\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_query_ad476ec0e5822fc112946e21429e26209}{setParam}}(\textcolor{stringliteral}{"{}sheetID"{}},\ relationshipID());}
+\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ uint16\_t(std::stoi(parentDoc().execQuery(query).\textcolor{keyword}{template}\ result<std::string>()));}
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00214\ }
+\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_base_afaff05b523d433b07ea5214523df50b1}{setIndex}}(uint16\_t\ index)}
+\DoxyCodeLine{00220\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ \ \ \ \ parentDoc().execCommand(\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_command}{XLCommand}}(XLCommandType::SetSheetIndex)}
+\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .setParam(\textcolor{stringliteral}{"{}sheetID"{}},\ relationshipID())}
+\DoxyCodeLine{00223\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .setParam(\textcolor{stringliteral}{"{}sheetIndex"{}},\ index));}
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00225\ }
+\DoxyCodeLine{00230\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_base_ae0594428ffc9fec5ec84f9c5748a3aa8}{name}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00231\ \textcolor{keyword}{\ \ \ \ \ \ \ \ }\{}
+\DoxyCodeLine{00232\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_query}{XLQuery}}\ query(XLQueryType::QuerySheetName);}
+\DoxyCodeLine{00233\ \ \ \ \ \ \ \ \ \ \ \ \ query.\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_query_ad476ec0e5822fc112946e21429e26209}{setParam}}(\textcolor{stringliteral}{"{}sheetID"{}},\ relationshipID());}
+\DoxyCodeLine{00234\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ parentDoc().execQuery(query).template\ result<std::string>();}
+\DoxyCodeLine{00235\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00236\ }
+\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_base_a4b3ad16558bea3d278013653ffa4bff2}{setName}}(\textcolor{keyword}{const}\ std::string\&\ sheetName)}
+\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00243\ \ \ \ \ \ \ \ \ \ \ \ \ parentDoc().execCommand(\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_command}{XLCommand}}(XLCommandType::SetSheetName)}
+\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .setParam(\textcolor{stringliteral}{"{}sheetID"{}},\ relationshipID())}
+\DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .setParam(\textcolor{stringliteral}{"{}sheetName"{}},\ name())}
+\DoxyCodeLine{00246\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .setParam(\textcolor{stringliteral}{"{}newName"{}},\ sheetName));}
+\DoxyCodeLine{00247\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00248\ }
+\DoxyCodeLine{00253\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_base_a6374ff663fffd5dcbf8fa469c15a5327}{isSelected}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00254\ \textcolor{keyword}{\ \ \ \ \ \ \ \ }\{}
+\DoxyCodeLine{00255\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}\textcolor{keyword}{const\ }T\&\textcolor{keyword}{>}(*this).isSelected\_impl();}
+\DoxyCodeLine{00256\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00257\ }
+\DoxyCodeLine{00262\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_base_a91b121a27bea18afd3aca5e1d86e530d}{setSelected}}(\textcolor{keywordtype}{bool}\ selected)}
+\DoxyCodeLine{00263\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00264\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static\_cast<}T\&\textcolor{keyword}{>}(*this).setSelected\_impl(selected);}
+\DoxyCodeLine{00265\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00266\ }
+\DoxyCodeLine{00271\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_base_a16bcf516d736ffe6f1eab2b3161de5b5}{isActive}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00272\ \textcolor{keyword}{\ \ \ \ \ \ \ \ }\{}
+\DoxyCodeLine{00273\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}\textcolor{keyword}{const\ }T\&\textcolor{keyword}{>}(*this).isActive\_impl();}
+\DoxyCodeLine{00274\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00275\ }
+\DoxyCodeLine{00280\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_base_a0322612c597cf20cce108507ae2dc88d}{setActive}}()}
+\DoxyCodeLine{00281\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00282\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static\_cast<}T\&\textcolor{keyword}{>}(*this).setActive\_impl();}
+\DoxyCodeLine{00283\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00284\ }
+\DoxyCodeLine{00291\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_base_a9337694b47659cf390a1a941ab63357e}{clone}}(\textcolor{keyword}{const}\ std::string\&\ newName)}
+\DoxyCodeLine{00292\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00293\ \ \ \ \ \ \ \ \ \ \ \ \ parentDoc().execCommand(\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_command}{XLCommand}}(XLCommandType::CloneSheet)}
+\DoxyCodeLine{00294\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .setParam(\textcolor{stringliteral}{"{}sheetID"{}},\ relationshipID())}
+\DoxyCodeLine{00295\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .setParam(\textcolor{stringliteral}{"{}cloneName"{}},\ newName));}
+\DoxyCodeLine{00296\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00297\ \ \ \ \ \};}
+\DoxyCodeLine{00298\ }
+\DoxyCodeLine{00302\ \ \ \ \ \textcolor{keyword}{class\ }OPENXLSX\_EXPORT\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_worksheet}{XLWorksheet}}\ final\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_base}{XLSheetBase}}<XLWorksheet>}
+\DoxyCodeLine{00303\ \ \ \ \ \{}
+\DoxyCodeLine{00304\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell}{XLCell}};}
+\DoxyCodeLine{00305\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row}{XLRow}};}
+\DoxyCodeLine{00306\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_workbook}{XLWorkbook}};}
+\DoxyCodeLine{00307\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_base}{XLSheetBase}}<\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_worksheet}{XLWorksheet}}>;}
+\DoxyCodeLine{00308\ }
+\DoxyCodeLine{00309\ \ \ \ \ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00310\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ Public\ Member\ Functions}}
+\DoxyCodeLine{00311\ \ \ \ \ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00312\ }
+\DoxyCodeLine{00313\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00317\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_worksheet_afffedfceca2a11bfb8c861bf4a8c5465}{XLWorksheet}}()\ :\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_base}{XLSheetBase}}(nullptr)\ \{\};}
+\DoxyCodeLine{00318\ }
+\DoxyCodeLine{00323\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_worksheet_ad7061f0e3d14b020b6e3a2f3dca44ce4}{XLWorksheet}}(\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_data}{XLXmlData}}*\ xmlData);}
+\DoxyCodeLine{00324\ }
+\DoxyCodeLine{00329\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_worksheet_a28277dbd1b085a48eb8839047fe149e6}{XLWorksheet}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_worksheet}{XLWorksheet}}\&\ other)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00330\ }
+\DoxyCodeLine{00335\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_worksheet_a19aefdab88eb41b701ee24cf0b2e5f56}{XLWorksheet}}(\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_worksheet}{XLWorksheet}}\&\&\ other)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00336\ }
+\DoxyCodeLine{00340\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_worksheet_aec40985b7c280e5d41eb149c06364cec}{\string~XLWorksheet}}();}
+\DoxyCodeLine{00341\ }
+\DoxyCodeLine{00346\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_worksheet}{XLWorksheet}}\&\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_worksheet_a4e3c0433981b275da663decd4d38020d}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_worksheet}{XLWorksheet}}\&\ other)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00347\ }
+\DoxyCodeLine{00352\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_worksheet}{XLWorksheet}}\&\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_worksheet_aebce630ef3c709e5bd53c068e59efbc9}{operator=}}(\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_worksheet}{XLWorksheet}}\&\&\ other)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00353\ }
+\DoxyCodeLine{00359\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell}{XLCell}}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_worksheet_ac0e7727e6ff715f7dd5859abf9c66ea5}{cell}}(\textcolor{keyword}{const}\ std::string\&\ ref)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00360\ }
+\DoxyCodeLine{00366\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell}{XLCell}}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_worksheet_a07c69f38a8e3d1ea6c6b1b1ed0ba2b73}{cell}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCellReference}}\&\ ref)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00367\ }
+\DoxyCodeLine{00374\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell}{XLCell}}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_worksheet_af075b27b61125213675ac5ea3a37562b}{cell}}(uint32\_t\ rowNumber,\ uint16\_t\ columnNumber)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00375\ }
+\DoxyCodeLine{00380\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_range}{XLCellRange}}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_worksheet_a58bf1e48f0da6b3b13d169e237c0bfe1}{range}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00381\ }
+\DoxyCodeLine{00388\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_range}{XLCellRange}}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_worksheet_a0aa13199a20e405ccf7f199abf60ecf7}{range}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCellReference}}\&\ topLeft,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCellReference}}\&\ bottomRight)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00389\ }
+\DoxyCodeLine{00394\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_range}{XLRowRange}}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_worksheet_a601b444ea4d4e8151a0f79468d4a45fe}{rows}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00395\ }
+\DoxyCodeLine{00401\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_range}{XLRowRange}}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_worksheet_ad32f36bb484b860e828d80d60d6dccdf}{rows}}(uint32\_t\ rowCount)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00402\ }
+\DoxyCodeLine{00409\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row_range}{XLRowRange}}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_worksheet_aa4e7327ac9b0e3752ca2557f0bf4bd0f}{rows}}(uint32\_t\ firstRow,\ uint32\_t\ lastRow)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00410\ }
+\DoxyCodeLine{00416\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_row}{XLRow}}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_worksheet_ad751b529b9c40c4fbc32343d806cfe19}{row}}(uint32\_t\ rowNumber)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00417\ }
+\DoxyCodeLine{00423\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_column}{XLColumn}}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_worksheet_a24201cfb8d9992c8291805888ca07605}{column}}(uint16\_t\ columnNumber)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00424\ }
+\DoxyCodeLine{00429\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_cell_reference}{XLCellReference}}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_worksheet_aab9e138441ed9d47b0fb3c602e17403b}{lastCell}}()\ const\ noexcept;}
+\DoxyCodeLine{00430\ }
+\DoxyCodeLine{00435\ \ \ \ \ \ \ \ \ uint16\_t\ columnCount()\ const\ noexcept;}
+\DoxyCodeLine{00436\ }
+\DoxyCodeLine{00441\ \ \ \ \ \ \ \ \ uint32\_t\ rowCount()\ const\ noexcept;}
+\DoxyCodeLine{00442\ }
+\DoxyCodeLine{00448\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ updateSheetName(const\ std::\textcolor{keywordtype}{string}\&\ oldName,\ const\ std::\textcolor{keywordtype}{string}\&\ newName);}
+\DoxyCodeLine{00449\ }
+\DoxyCodeLine{00450\ \ \ \ \ private:}
+\DoxyCodeLine{00451\ }
+\DoxyCodeLine{00456\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_color}{XLColor}}\ getColor\_impl()\ const;}
+\DoxyCodeLine{00457\ }
+\DoxyCodeLine{00462\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ setColor\_impl(const\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_color}{XLColor}}\&\ color);}
+\DoxyCodeLine{00463\ }
+\DoxyCodeLine{00468\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ isSelected\_impl()\ const;}
+\DoxyCodeLine{00469\ }
+\DoxyCodeLine{00474\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ setSelected\_impl(\textcolor{keywordtype}{bool}\ selected);}
+\DoxyCodeLine{00475\ }
+\DoxyCodeLine{00480\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ isActive\_impl()\ const;}
+\DoxyCodeLine{00481\ }
+\DoxyCodeLine{00486\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ setActive\_impl();}
+\DoxyCodeLine{00487\ \ \ \ \ \};}
+\DoxyCodeLine{00488\ }
+\DoxyCodeLine{00493\ \ \ \ \ class\ OPENXLSX\_EXPORT\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_chartsheet}{XLChartsheet}}\ final\ :\ public\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_base}{XLSheetBase}}<\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_chartsheet}{XLChartsheet}}>}
+\DoxyCodeLine{00494\ \ \ \ \ \{}
+\DoxyCodeLine{00495\ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_base}{XLSheetBase}}<\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_chartsheet}{XLChartsheet}}>;}
+\DoxyCodeLine{00496\ }
+\DoxyCodeLine{00497\ \ \ \ \ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00498\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ Public\ Member\ Functions}}
+\DoxyCodeLine{00499\ \ \ \ \ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00500\ }
+\DoxyCodeLine{00501\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00505\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_chartsheet_a1b9ccc1de657ae60085fb13d5a874b5d}{XLChartsheet}}()\ :\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_base}{XLSheetBase}}(nullptr)\ \{\};}
+\DoxyCodeLine{00506\ }
+\DoxyCodeLine{00511\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_chartsheet_ab4310382f56050cbe9e7acc2f8815281}{XLChartsheet}}(\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_data}{XLXmlData}}*\ xmlData);}
+\DoxyCodeLine{00512\ }
+\DoxyCodeLine{00517\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_chartsheet_a1eeb67d477dfb559e2a2b281efee0763}{XLChartsheet}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_chartsheet}{XLChartsheet}}\&\ other)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00518\ }
+\DoxyCodeLine{00523\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_chartsheet_af9ec4746b3e727b9d157020cad09577d}{XLChartsheet}}(\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_chartsheet}{XLChartsheet}}\&\&\ other)\ \textcolor{keyword}{noexcept}\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00524\ }
+\DoxyCodeLine{00528\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_chartsheet}{\string~XLChartsheet}}();}
+\DoxyCodeLine{00529\ }
+\DoxyCodeLine{00534\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_chartsheet}{XLChartsheet}}\&\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_chartsheet_a419661feb4c6e07e2a77873388e19bf7}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_chartsheet}{XLChartsheet}}\&\ other)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00535\ }
+\DoxyCodeLine{00541\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_chartsheet}{XLChartsheet}}\&\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_chartsheet_aea150e2dd4ec231eedbba8f4087bf94e}{operator=}}(\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_chartsheet}{XLChartsheet}}\&\&\ other)\ \textcolor{keyword}{noexcept}\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00542\ }
+\DoxyCodeLine{00543\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00544\ }
+\DoxyCodeLine{00549\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_color}{XLColor}}\ getColor\_impl()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00550\ }
+\DoxyCodeLine{00555\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ setColor\_impl(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_color}{XLColor}}\&\ color);}
+\DoxyCodeLine{00556\ }
+\DoxyCodeLine{00561\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ isSelected\_impl()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00562\ }
+\DoxyCodeLine{00567\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ setSelected\_impl(\textcolor{keywordtype}{bool}\ selected);}
+\DoxyCodeLine{00568\ \ \ \ \ \};}
+\DoxyCodeLine{00569\ }
+\DoxyCodeLine{00575\ \ \ \ \ \textcolor{keyword}{class\ }OPENXLSX\_EXPORT\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet}{XLSheet}}\ final\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_file}{XLXmlFile}}}
+\DoxyCodeLine{00576\ \ \ \ \ \{}
+\DoxyCodeLine{00577\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00584\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_a89a94245a6176a42f6fde9ec43dda9c0}{XLSheet}}(\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_xml_data}{XLXmlData}}*\ xmlData);}
+\DoxyCodeLine{00585\ }
+\DoxyCodeLine{00591\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_a131eee8e768cf9974dbe8d6e752aa974}{XLSheet}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet}{XLSheet}}\&\ other)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00592\ }
+\DoxyCodeLine{00597\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_aa24c7c7185fccf713fdce66ba8e44a5c}{XLSheet}}(\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet}{XLSheet}}\&\&\ other)\ \textcolor{keyword}{noexcept}\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00598\ }
+\DoxyCodeLine{00603\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_aa27a67bd1a856415dfc6233388c12217}{\string~XLSheet}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00604\ }
+\DoxyCodeLine{00610\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet}{XLSheet}}\&\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_a51385ca65c78e67dc23bde5f140915b2}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet}{XLSheet}}\&\ other)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00611\ }
+\DoxyCodeLine{00617\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet}{XLSheet}}\&\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_a5f47dfa907d0ea56c688bf5d5adebaca}{operator=}}(\mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet}{XLSheet}}\&\&\ other)\ \textcolor{keyword}{noexcept}\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00618\ }
+\DoxyCodeLine{00623\ \ \ \ \ \ \ \ \ XLSheetState\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_ad6044cb5bd5bf38923cec8ba96ba8e58}{visibility}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00624\ }
+\DoxyCodeLine{00631\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_a839cb51e0f01900e7533f8b873487dee}{setVisibility}}(XLSheetState\ state);}
+\DoxyCodeLine{00632\ }
+\DoxyCodeLine{00637\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_color}{XLColor}}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_a6b72510a8e81bc27773d01676648b0c4}{color}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00638\ }
+\DoxyCodeLine{00643\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_a69d462475e6996c250336b08ddc6af26}{setColor}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_color}{XLColor}}\&\ color);}
+\DoxyCodeLine{00644\ }
+\DoxyCodeLine{00649\ \ \ \ \ \ \ \ \ uint16\_t\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_a41188f8d15e483af78e6b8d170d57564}{index}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00650\ }
+\DoxyCodeLine{00654\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_ad64a6e4ecd6a8c54c5a19d0c0abfd7a2}{setIndex}}(uint16\_t\ index);}
+\DoxyCodeLine{00655\ }
+\DoxyCodeLine{00660\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_adbf4f0eac3b2e6e4a27aab5c075b5635}{name}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00661\ }
+\DoxyCodeLine{00666\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_a625f83afa31da0d18c5403b22b4c8903}{setName}}(\textcolor{keyword}{const}\ std::string\&\ name);}
+\DoxyCodeLine{00667\ }
+\DoxyCodeLine{00672\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_a17347ef96b1386c0f497732ea5653ee0}{setSelected}}(\textcolor{keywordtype}{bool}\ selected);}
+\DoxyCodeLine{00673\ }
+\DoxyCodeLine{00678\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<}
+\DoxyCodeLine{00679\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{typename}\ SheetType,}
+\DoxyCodeLine{00680\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{typename}\ std::enable\_if<std::is\_same\_v<SheetType,\ XLWorksheet>\ ||\ std::is\_same\_v<SheetType,\ XLChartsheet>>::type*\ =\ \textcolor{keyword}{nullptr}>}
+\DoxyCodeLine{00681\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_a183c5f2e3599f4b79e822db95c5944b5}{isType}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00682\ \textcolor{keyword}{\ \ \ \ \ \ \ \ }\{}
+\DoxyCodeLine{00683\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::holds\_alternative<SheetType>(m\_sheet);}
+\DoxyCodeLine{00684\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00685\ }
+\DoxyCodeLine{00692\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_a58df6c2c2c537a1f3a8a2d9bd4fb6829}{clone}}(\textcolor{keyword}{const}\ std::string\&\ newName);}
+\DoxyCodeLine{00693\ }
+\DoxyCodeLine{00699\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T,\ \textcolor{keyword}{typename}\ std::enable\_if<std::is\_same\_v<T,\ XLWorksheet>\ ||\ std::is\_same\_v<T,\ XLChartsheet>>::type*\ =\ \textcolor{keywordtype}{nullptr}>}
+\DoxyCodeLine{00700\ \ \ \ \ \ \ \ \ T\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_a1b82054313e6aaba99d921bc38b1e4da}{get}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00701\ \textcolor{keyword}{\ \ \ \ \ \ \ \ }\{}
+\DoxyCodeLine{00702\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{00703\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ \textcolor{keyword}{constexpr}\ (std::is\_same<T,\ XLWorksheet>::value)}
+\DoxyCodeLine{00704\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::get<XLWorksheet>(m\_sheet);}
+\DoxyCodeLine{00705\ }
+\DoxyCodeLine{00706\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ \textcolor{keyword}{constexpr}\ (std::is\_same<T,\ XLChartsheet>::value)}
+\DoxyCodeLine{00707\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::get<XLChartsheet>(m\_sheet);}
+\DoxyCodeLine{00708\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00709\ }
+\DoxyCodeLine{00710\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}\ (\textcolor{keyword}{const}\ std::bad\_variant\_access\&)\ \{}
+\DoxyCodeLine{00711\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_sheet_error}{XLSheetError}}(\textcolor{stringliteral}{"{}XLSheet\ object\ does\ not\ contain\ the\ requested\ sheet\ type."{}});}
+\DoxyCodeLine{00712\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00713\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00714\ }
+\DoxyCodeLine{00719\ \ \ \ \ \ \ \ \ \textcolor{keyword}{operator}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_worksheet}{XLWorksheet}}()\ \textcolor{keyword}{const};\ \ \ \ \textcolor{comment}{//\ NOLINT}}
+\DoxyCodeLine{00720\ }
+\DoxyCodeLine{00725\ \ \ \ \ \ \ \ \ \textcolor{keyword}{operator}\ \mbox{\hyperlink{class_open_x_l_s_x_1_1_x_l_chartsheet}{XLChartsheet}}()\ \textcolor{keyword}{const};\ \ \ \ \textcolor{comment}{//\ NOLINT}}
+\DoxyCodeLine{00726\ }
+\DoxyCodeLine{00727\ \ \ \ \ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00728\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ Private\ Member\ Variables}}
+\DoxyCodeLine{00729\ \ \ \ \ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00730\ }
+\DoxyCodeLine{00731\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00732\ \ \ \ \ \ \ \ \ std::variant<XLWorksheet,\ XLChartsheet>\ m\_sheet;\ }
+\DoxyCodeLine{00733\ \ \ \ \ \};}
+\DoxyCodeLine{00734\ \}\ \ \ \ \textcolor{comment}{//\ namespace\ OpenXLSX}}
+\DoxyCodeLine{00735\ }
+\DoxyCodeLine{00736\ \textcolor{preprocessor}{\#pragma\ warning(pop)}}
+\DoxyCodeLine{00737\ \textcolor{preprocessor}{\#endif\ \ \ \ }\textcolor{comment}{//\ OPENXLSX\_XLSHEET\_HPP}}
+
+\end{DoxyCode}
