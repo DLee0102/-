@@ -25,17 +25,6 @@ namespace DXXTL {
      */
     int Excelops::getrowCount(OpenXLSX::XLWorksheet wks)
     {
-        // start_row--;
-        // std::vector<OpenXLSX::XLCellValue> readValues;
-        
-        // for (auto itr = wks.rows().begin(); itr != wks.rows().end(); itr ++)
-        // {
-        //     std::cout << itr->cells().size() << std::endl;
-        //     start_row++;
-        // }
-
-        // std::cout << wks.rowCount() << std::endl;
-
         return wks.rowCount();
     }
 
@@ -47,17 +36,6 @@ namespace DXXTL {
      */
     int Excelops::getcolumnCount(OpenXLSX::XLWorksheet wks)
     {
-        // int col_length = 0;
-        // std::vector<OpenXLSX::XLCellValue> readValues;
-        // for (auto& row : wks.rows(start_row, total_length)) {
-        //     readValues = row.values();
-        //     for (int i = 0; i < readValues.size(); i++) {
-        //         if (readValues[i] == "") {break;}
-        //         col_length++;
-        //     }
-        //     break;
-        // }
-
         return wks.columnCount();
     }
 

@@ -55,20 +55,6 @@ void MainWindow::openfileSlot()
         ui->textBrowser->insertPlainText("选择的总文件为：\n" + fileName + "\n");
         filemanager->setFilepath(fileName.toStdString());
         std::cout << filemanager->getFilepath();
-        // DXXTL::FileManagement* f = new DXXTL::FileManagement();
-        // f->searchFiles("./temp/21/2");
-        // f->printFiles();
-        // std::cout << f->getFiles()[19] << std::endl;
-        // DXXTL::Excelops* item = new DXXTL::Excelops(f->getFiles()[19], 2, 3);    // 数据从第几行开始
-        // item->fillWriteValues(0, 2);    // 需要检查的姓名分别在两个文件中所在的列数
-        // item->loadData();       // 从第三行开始记录数据
-        // item->~Excelops();
-
-        // // QFile file(fileName);
-        // // file.open(QIODevice::ReadOnly);
-        // // QByteArray ba = file.readAll();
-        // // ui->textEdit->setText(QString(ba));
-        // // file.close();
     }
 }
 
